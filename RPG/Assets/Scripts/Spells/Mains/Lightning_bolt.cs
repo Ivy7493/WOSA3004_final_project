@@ -11,6 +11,7 @@ public class Lightning_bolt : MonoBehaviour
     Vector3 CurrenPos;
     public float Range;
     public float Speed;
+    public float Damage;
     void Start()
     {
         LR = GetComponent<LineRenderer>();
@@ -41,7 +42,18 @@ public class Lightning_bolt : MonoBehaviour
         }
     }
 
-    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Damagable")
+        {
+            if(collision.gameObject.GetComponent<Enemy_Health>() != null)
+            {
+                collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+            }
+        }
+    }
+
+
 
     // Update is called once per frame
     void Update()

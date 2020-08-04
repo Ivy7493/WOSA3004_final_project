@@ -8,6 +8,8 @@ TagManager:
   - Ability_Manager
   - UI_Manager
   - Experience_Manager
+  - Resource_Manager
+  - Damagable
   layers:
   - Default
   - TransparentFX

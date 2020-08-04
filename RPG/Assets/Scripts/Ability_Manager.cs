@@ -10,6 +10,7 @@ public class Ability_Manager : MonoBehaviour
     GameObject AbilityMain;
     GameObject AbilityOff;
     Spell_Manager SM;
+    UI_Manager UIM;
     public float GCD;
     float counter = 0;
     bool CanCast = true;
@@ -84,25 +85,67 @@ public class Ability_Manager : MonoBehaviour
         }
     }
 
-    private void Awake()
+    void EquipHead(GameObject _head)
     {
-        ///loading spellsetup
-        LoadSpellState();
+        AbilityHead = _head;
+        string Name = AbilityHead.GetComponent<UI_Ability_info>().Name;
+        Sprite Icon = AbilityHead.GetComponent<UI_Ability_info>().Icon;
+        UIM.SetHeadIcon(Icon, Name);
     }
+
+    void EquipMain(GameObject _main)
+    {
+        AbilityMain = _main;
+        string Name = AbilityMain.GetComponent<UI_Ability_info>().Name;
+        Sprite Icon = AbilityMain.GetComponent<UI_Ability_info>().Icon;
+        UIM.SetMainIcon(Icon, Name);
+    }
+
+    void EquipFeet(GameObject _feet)
+    {
+        AbilityFeet = _feet;
+        string Name = AbilityFeet.GetComponent<UI_Ability_info>().Name;
+        Sprite Icon = AbilityFeet.GetComponent<UI_Ability_info>().Icon;
+        UIM.SetFeetIcon(Icon, Name);
+    }
+
+    void EquipOff(GameObject _off)
+    {
+        AbilityOff = _off;
+        string Name = AbilityOff.GetComponent<UI_Ability_info>().Name;
+        Sprite Icon = AbilityOff.GetComponent<UI_Ability_info>().Icon;
+        UIM.SetOffIcon(Icon, Name);
+    }
+
+
+    /// <summary>
+    /// This function controls the loading of gear on game start up, it looks for the gears index in the spell manager and then gets the game object
+    /// it returns the game object to the Equip function
+    /// // the epquid function will then bind the item to the slot and update the UI as needed with Icon's and Names;
+    /// </summary>
 
 
     void LoadSpellState()
     {
         SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         float indexhead = PlayerPrefs.GetFloat("Head", 0);
         float indexMain = PlayerPrefs.GetFloat("Main", 0);
         float indexFeet = PlayerPrefs.GetFloat("Feet", 0);
         float indexOff = PlayerPrefs.GetFloat("Off", 0);
-        AbilityFeet = SM.LookupFeet(indexFeet);
-        AbilityHead = SM.LookupHead(indexhead);
-        AbilityMain = SM.LookupMain(indexMain);
-        AbilityOff = SM.LookupOff(indexOff);
+        EquipMain(SM.LookupMain(indexMain));
+        EquipHead(SM.LookupHead(indexhead));
+        EquipFeet(SM.LookupFeet(indexFeet));
+        EquipOff(SM.LookupOff(indexOff));
     }
+
+    private void Awake()
+    {
+        ///loading spellsetup
+        LoadSpellState();
+    }
+    
+  
 
     private void OnApplicationQuit()
     {

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Spell_Manager
   - Ability_Manager
+  - UI_Manager
+  - Experience_Manager
   layers:
   - Default
   - TransparentFX

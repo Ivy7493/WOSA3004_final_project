@@ -6,6 +6,7 @@ public class Blink : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject Player;
+    public GameObject BlinkEffect;
     public float Distance;
     void Start()
     {
@@ -22,7 +23,9 @@ public class Blink : MonoBehaviour
         float Ypos = Input.GetAxisRaw("Vertical");
         Vector3 Motion = new Vector3(Xpos, Ypos, 0f);
         Motion *= Distance;
+        Instantiate(BlinkEffect, Player.transform.position, Quaternion.identity);
         Player.transform.position += Motion;
+        Instantiate(BlinkEffect, Player.transform.position, Quaternion.identity);
         Debug.Log("Cast: Blink");
         Destroy(gameObject);
     }

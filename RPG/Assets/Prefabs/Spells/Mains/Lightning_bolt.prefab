@@ -133,13 +133,13 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.5
+    widthMultiplier: 2
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.028490603
-        value: 0.88461936
+        time: 0.03134018
+        value: 0.5769259
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -147,8 +147,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.04843174
-        value: 0.12820625
+        time: 0.056980476
+        value: 0.038469315
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -156,8 +156,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.09971434
-        value: 0.8717935
+        time: 0.14244658
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -165,8 +165,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.11680645
-        value: 0.11538577
+        time: 0.15384716
+        value: 0.012816191
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -174,8 +174,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.15954418
-        value: 0.8666667
+        time: 0.22221966
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -183,8 +183,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.21937321
-        value: 0.15512824
+        time: 0.26210546
+        value: 0.033332586
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -192,8 +192,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.23931623
-        value: 0.8282051
+        time: 0.3019917
+        value: 0.96923065
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -201,8 +201,8 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.35042733
-        value: 0.18076926
+        time: 0.45014352
+        value: 0
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -210,8 +210,71 @@ LineRenderer:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.4187988
-        value: 0.81539017
+        time: 0.5042633
+        value: 0.9564157
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.5726569
+        value: 0.102559745
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.729349
+        value: 0.5961529
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.7549871
+        value: 0.06410605
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.8119713
+        value: 0.8782053
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.87750703
+        value: 0.67948407
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.8832051
+        value: 0.08974713
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.95442605
+        value: 1
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -250,8 +313,8 @@ LineRenderer:
       m_Mode: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
-    numCornerVertices: 0
-    numCapVertices: 0
+    numCornerVertices: 5
+    numCapVertices: 5
     alignment: 0
     textureMode: 1
     shadowBias: 0.5

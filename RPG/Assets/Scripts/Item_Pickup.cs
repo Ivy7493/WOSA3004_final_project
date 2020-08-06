@@ -7,39 +7,40 @@ public class Item_Pickup : MonoBehaviour
 {
     // Start is called before the first frame update
     public string Name;
-    public float ItemIndex;
+    float ItemIndex;
     public GameObject Spell;
     public string Slot;
     public string ItemDesc;
-    public GameObject UIpanel;
-    public GameObject UIname;
-    public GameObject UIDesc;
-    public GameObject UISlot;
     Ability_Manager AM;
     GameObject Player;
+    UI_Manager UIM;
+    Spell_Manager SM;
     void Start()
     {
+        SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
         AM = GameObject.FindGameObjectWithTag("Ability_Manager").GetComponent<Ability_Manager>();
         Player = GameObject.FindGameObjectWithTag("Player");
-        UIname.GetComponent<Text>().text = Name;
-        UIDesc.GetComponent<Text>().text = ItemDesc;
-        UISlot.GetComponent<Text>().text = Slot;
-        UIpanel.SetActive(false);
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+        ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
+       
     }
 
 
     private void OnMouseEnter()
     {
-        UIpanel.SetActive(true);
+        UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x ,transform.position.y + 2.5f,0f));
     }
 
 
     private void OnMouseExit()
     {
-        UIpanel.SetActive(false);
+        UIM.DestoryItemDisplay();
     }
 
-
+    private void OnDestroy()
+    {
+        UIM.DestoryItemDisplay();
+    }
 
     private void OnMouseOver()
     {

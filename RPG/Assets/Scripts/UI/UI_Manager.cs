@@ -12,9 +12,14 @@ public class UI_Manager : MonoBehaviour
     public GameObject AbilityHead;
     public GameObject ExpBar;
     public GameObject Level;
+    public GameObject ItemPanel;
+    public GameObject ItemName;
+    public GameObject ItemSlot;
+    public GameObject ItemDesc;
+  
     void Start()
     {
-        
+        ItemPanel.SetActive(false);
     }
 
     public void UpdateLevel(float _Level)
@@ -46,6 +51,20 @@ public class UI_Manager : MonoBehaviour
     public void SetOffIcon(Sprite _icon, string _name)
     {
         AbilityOff.GetComponent<Image>().sprite = _icon;
+    }
+
+    public void CallItemDisplay(string _name, string _slot, string _desc, Vector3 Location)
+    {
+        ItemPanel.SetActive(true);
+        ItemPanel.transform.position = Location;
+        ItemDesc.GetComponent<Text>().text = _desc;
+        ItemName.GetComponent<Text>().text = _name;
+        ItemSlot.GetComponent<Text>().text = _slot;
+    } 
+
+    public void DestoryItemDisplay()
+    {
+        ItemPanel.SetActive(false);
     }
 
 

@@ -37,6 +37,51 @@ public class Spell_Manager : MonoBehaviour
         return Feet[(int)_index];
     }
 
+    public int ReturnSpellIndex(GameObject _spell, string _slot)
+    {
+        switch (_slot)
+        {
+            case "Head":
+                for(int i = 0; i < Head.Length; i++)
+                {
+                    if(_spell.name == Head[i].name)
+                    {
+                        return i;
+                    }
+                }
+                break;
+            case "Feet":
+                for (int i = 0; i < Feet.Length; i++)
+                {
+                    if (_spell.name == Feet[i].name)
+                    {
+                        return i;
+                    }
+                }
+                    break;
+            case "Main":
+                for (int i = 0; i < Main.Length; i++)
+                {
+                    if (_spell.name == Main[i].name)
+                    {
+                        return i;
+                    }
+                }
+                    break;
+            case "Off":
+                for (int i = 0; i < Off.Length; i++)
+                {
+                    if (_spell.name == Off[i].name)
+                    {
+                        return i;
+                    }
+                }
+                    break;
+           
+        }
+        return 420;
+    }
+
     void Update()
     {
         

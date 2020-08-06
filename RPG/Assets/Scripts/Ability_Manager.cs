@@ -85,7 +85,7 @@ public class Ability_Manager : MonoBehaviour
         }
     }
 
-    void EquipHead(GameObject _head)
+    public void EquipHead(GameObject _head)
     {
         AbilityHead = _head;
         string Name = AbilityHead.GetComponent<UI_Ability_info>().Name;
@@ -93,7 +93,7 @@ public class Ability_Manager : MonoBehaviour
         UIM.SetHeadIcon(Icon, Name);
     }
 
-    void EquipMain(GameObject _main)
+    public void EquipMain(GameObject _main)
     {
         AbilityMain = _main;
         string Name = AbilityMain.GetComponent<UI_Ability_info>().Name;
@@ -101,7 +101,7 @@ public class Ability_Manager : MonoBehaviour
         UIM.SetMainIcon(Icon, Name);
     }
 
-    void EquipFeet(GameObject _feet)
+    public void EquipFeet(GameObject _feet)
     {
         AbilityFeet = _feet;
         string Name = AbilityFeet.GetComponent<UI_Ability_info>().Name;
@@ -109,7 +109,7 @@ public class Ability_Manager : MonoBehaviour
         UIM.SetFeetIcon(Icon, Name);
     }
 
-    void EquipOff(GameObject _off)
+    public void EquipOff(GameObject _off)
     {
         AbilityOff = _off;
         string Name = AbilityOff.GetComponent<UI_Ability_info>().Name;

@@ -15,6 +15,8 @@ public class Item_Pickup : MonoBehaviour
     GameObject Player;
     UI_Manager UIM;
     Spell_Manager SM;
+    float DestoryRange = 30f;
+    
     void Start()
     {
         SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
@@ -22,7 +24,17 @@ public class Item_Pickup : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
+        InvokeRepeating("DestoryItem", 0, 5f);
        
+    }
+
+
+    void DestoryItem()
+    {
+        if(Vector3.Distance(transform.position,Player.transform.position) > DestoryRange)
+        {
+            Destroy(gameObject);
+        }
     }
 
 

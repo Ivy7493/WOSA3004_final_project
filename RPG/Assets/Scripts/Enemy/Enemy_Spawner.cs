@@ -23,6 +23,7 @@ public class Enemy_Spawner : MonoBehaviour
         if(CurrentSpawn == null && counter >= RespawnTime && Vector3.Distance(transform.position, Player.transform.position) < DespawnDistance)
         {
             CurrentSpawn = Instantiate(Enemy, transform.position, Quaternion.identity);
+            counter = 0;
         }
     }
 
@@ -30,20 +31,29 @@ public class Enemy_Spawner : MonoBehaviour
     {
         if(Vector3.Distance(transform.position,Player.transform.position) > DespawnDistance)
         {
-            CurrentSpawn.SetActive(false);
+            if (CurrentSpawn != null)
+            {
+                CurrentSpawn.SetActive(false);
+            }
+            
         }
         else
         {
-            if(CurrentSpawn.activeInHierarchy == false)
+            if(CurrentSpawn != null)
             {
-                CurrentSpawn.SetActive(true);
+                if (CurrentSpawn.activeInHierarchy == false)
+                {
+                    CurrentSpawn.SetActive(true);
+                }
             }
+           
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        counter += Time.deltaTime;
         Spawn();
         Despawn();
     }

@@ -6,9 +6,14 @@ ScriptsOnlyBuild:
     - BlinkEffect
     - Camera_Manager
     - EarthQuake
+    - Enemy_Health
+    - Enemy_Spawner
+    - Exp
     - Experience_Manager
+    - Exploder_AI
     - Item_Pickup
     - Lightning_bolt
+    - LootTable
     - Main_Menu_Manager
     - Player_motor
     - Resource_Manager
@@ -141,11 +146,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12370}
     - Class: 114
+      Script: {instanceID: 12390}
+    - Class: 114
       Script: {instanceID: 12524}
+    - Class: 114
+      Script: {instanceID: 12536}
     - Class: 114
       Script: {instanceID: 12568}
     - Class: 114
+      Script: {instanceID: 12876}
+    - Class: 114
       Script: {instanceID: 12968}
+    - Class: 114
+      Script: {instanceID: 13122}
+    - Class: 114
+      Script: {instanceID: 13346}
     - Class: 114
       Script: {instanceID: 13354}
     - Class: 114

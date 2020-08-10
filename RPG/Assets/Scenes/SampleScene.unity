@@ -665,10 +665,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Head:
   - {fileID: 6671680780190411479, guid: fbbf59cb5ea8af248bab81690632f74b, type: 3}
+  - {fileID: 1423831258971103850, guid: 7d8a5c5fb0f460b44b2fd97a82803a2d, type: 3}
   Main:
   - {fileID: 9051032994593478310, guid: 2861aa1a8c31b87489b6bb518bf1232a, type: 3}
   Off:
   - {fileID: 4283333029888424258, guid: 230b5471aa910b04e87f14121279c009, type: 3}
+  - {fileID: 4658015910140567079, guid: dffe7328ac3b5f247bf6a337b09d048b, type: 3}
   Feet:
   - {fileID: 3599466192895673017, guid: 3dc5735e067360141af95b226e8cfa94, type: 3}
   - {fileID: 1729003323192945251, guid: 24f34c263e278584782fa01298fe8096, type: 3}
@@ -1991,7 +1993,7 @@ Transform:
   m_LocalScale: {x: 100, y: 100, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3019484615753917421
 PrefabInstance:
@@ -2038,7 +2040,7 @@ PrefabInstance:
     - target: {fileID: 3019484616736966828, guid: 21c3f8654d9252c46b6b553461f3bf94,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3019484616736966828, guid: 21c3f8654d9252c46b6b553461f3bf94,
         type: 3}

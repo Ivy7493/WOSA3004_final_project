@@ -64,7 +64,11 @@ public class UI_Manager : MonoBehaviour
 
     public void DestoryItemDisplay()
     {
-        ItemPanel.SetActive(false);
+        if(ItemPanel != null)
+        {
+            ItemPanel.SetActive(false);
+        }
+        
     }
 
 

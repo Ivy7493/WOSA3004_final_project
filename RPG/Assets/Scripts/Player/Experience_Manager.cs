@@ -26,6 +26,11 @@ public class Experience_Manager : MonoBehaviour
         LoadExpData();
     }
 
+    public float ReturnLevel()
+    {
+        return CurrentLevel;
+    }
+
     public void AddExp(float _amount)
     {
         Expcount += _amount;

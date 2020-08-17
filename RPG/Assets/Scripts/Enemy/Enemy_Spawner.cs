@@ -8,6 +8,7 @@ public class Enemy_Spawner : MonoBehaviour
     public GameObject Enemy;
     public float RespawnTime;
     public float DespawnDistance;
+    public float ResetDistance;
     GameObject CurrentSpawn;
     GameObject Player;
     float counter;
@@ -50,11 +51,24 @@ public class Enemy_Spawner : MonoBehaviour
         }
     }
 
+    void ResetEnemy()
+    {
+        if(CurrentSpawn != null)
+        {
+            if (Vector3.Distance(transform.position, CurrentSpawn.transform.position) > ResetDistance)
+            {
+                CurrentSpawn.transform.position = transform.position;
+            }
+        }
+       
+    }
+
     // Update is called once per frame
     void Update()
     {
         counter += Time.deltaTime;
         Spawn();
         Despawn();
+        ResetEnemy();
     }
 }

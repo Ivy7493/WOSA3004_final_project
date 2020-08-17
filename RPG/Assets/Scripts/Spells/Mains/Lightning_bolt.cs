@@ -46,6 +46,7 @@ public class Lightning_bolt : MonoBehaviour
     {
         if(collision.gameObject.tag == "Damagable")
         {
+            Debug.Log("Hit " + collision.gameObject.name + "!");
             if(collision.gameObject.GetComponent<Enemy_Health>() != null)
             {
                 collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);

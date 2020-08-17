@@ -6,14 +6,14 @@ public class Player_motor : MonoBehaviour
 {
     // Start is called before the first frame update
     public float _speed;
-
+    Rigidbody2D RB;
     private void Awake()
     {
         LoadPlayerPosition();
     }
     void Start()
     {
-        
+        RB = GetComponent<Rigidbody2D>();
     }
 
 
@@ -40,6 +40,10 @@ public class Player_motor : MonoBehaviour
         Vector3 Direction = new Vector3(Xpos, Ypos, 0f);
         Direction *= _speed * Time.deltaTime;
         transform.position += Direction;
+        if(RB.velocity.magnitude != 0)
+        {
+            RB.velocity = Vector2.zero;
+        }
     }
 
     private void OnApplicationQuit()

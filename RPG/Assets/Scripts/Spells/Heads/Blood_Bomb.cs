@@ -34,7 +34,15 @@ public class Blood_Bomb : MonoBehaviour
             {
                 if (Vector3.Distance(transform.position, LocalEnemies[i].transform.position) < Range)
                 {
-                    LocalEnemies[i].GetComponent<Enemy_Health>().Damage(Damage);
+                    if(LocalEnemies[i].GetComponent<Enemy_Health>() == null)
+                    {
+                        Destroy(LocalEnemies[i]);
+                    }
+                    else
+                    {
+                        LocalEnemies[i].GetComponent<Enemy_Health>().Damage(Damage);
+                    }
+                   
                 }
             }
             Destroy(gameObject);

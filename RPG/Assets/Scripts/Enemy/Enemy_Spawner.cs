@@ -8,7 +8,6 @@ public class Enemy_Spawner : MonoBehaviour
     public GameObject Enemy;
     public float RespawnTime;
     public float DespawnDistance;
-    public float ResetDistance;
     GameObject CurrentSpawn;
     GameObject Player;
     float counter;
@@ -30,34 +29,15 @@ public class Enemy_Spawner : MonoBehaviour
 
     void Despawn()
     {
-        if(Vector3.Distance(transform.position,Player.transform.position) > DespawnDistance)
+        if(CurrentSpawn != null)
         {
-            if (CurrentSpawn != null)
+            if (Vector3.Distance(transform.position, CurrentSpawn.transform.position) < 1 && Vector3.Distance(Player.transform.position, transform.position) > DespawnDistance)
             {
                 CurrentSpawn.SetActive(false);
             }
-            
-        }
-        else
-        {
-            if(CurrentSpawn != null)
+            else
             {
-                if (CurrentSpawn.activeInHierarchy == false)
-                {
-                    CurrentSpawn.SetActive(true);
-                }
-            }
-           
-        }
-    }
-
-    void ResetEnemy()
-    {
-        if(CurrentSpawn != null)
-        {
-            if (Vector3.Distance(transform.position, CurrentSpawn.transform.position) > ResetDistance)
-            {
-                CurrentSpawn.transform.position = transform.position;
+                CurrentSpawn.SetActive(true);
             }
         }
        
@@ -69,6 +49,5 @@ public class Enemy_Spawner : MonoBehaviour
         counter += Time.deltaTime;
         Spawn();
         Despawn();
-        ResetEnemy();
     }
 }

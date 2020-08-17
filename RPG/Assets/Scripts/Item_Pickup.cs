@@ -40,7 +40,11 @@ public class Item_Pickup : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x ,transform.position.y + 2.5f,0f));
+        if(UIM != null)
+        {
+            UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 2.5f, 0f));
+        }
+       
     }
 
 
@@ -51,7 +55,11 @@ public class Item_Pickup : MonoBehaviour
 
     private void OnDestroy()
     {
-        UIM.DestoryItemDisplay();
+        if(UIM != null)
+        {
+            UIM.DestoryItemDisplay();
+        }
+        
     }
 
     private void OnMouseOver()

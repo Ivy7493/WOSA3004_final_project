@@ -18,10 +18,14 @@ public class Exp : MonoBehaviour
 
     private void OnDestroy()
     {
-        if(Vector3.Distance(transform.position,Player.transform.position) < ExpDistance)
+        if(Player != null)
         {
-            EM.AddExp(ExpReward);
+            if (Vector3.Distance(transform.position, Player.transform.position) < ExpDistance)
+            {
+                EM.AddExp(ExpReward);
+            }
         }
+       
     }
 
     // Update is called once per frame

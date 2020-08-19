@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1729003323192945180}
   - component: {fileID: 1729003323192945181}
   - component: {fileID: 1729003323192945250}
+  - component: {fileID: 7743003639781051051}
   m_Layer: 0
   m_Name: EarthQuake
   m_TagString: Untagged
@@ -60,3 +61,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 7
   DamageScale: 3
+--- !u!114 &7743003639781051051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729003323192945251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaScale: 10

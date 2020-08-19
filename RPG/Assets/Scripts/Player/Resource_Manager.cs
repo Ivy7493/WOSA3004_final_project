@@ -13,19 +13,34 @@ public class Resource_Manager : MonoBehaviour
     float CurrentMP;
     public float HPgen;
     public float MPgen;
+    UI_Manager UIM;
+
     void Start()
     {
-        
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();    
     }
 
     public void Damage(float _damage)
     {
         CurrentHP -= _damage;
         Debug.Log(CurrentHP);
+        UIM.UpdateHealth(CurrentHP / MaxHP);
         if(CurrentHP <= 0)
         {
             //Put death code here, IDK what this does yet
+            CurrentHP = MaxHP;
         }
+    }
+
+    public void MinusMana(float _mana)
+    {
+        CurrentMP -= _mana;
+        UIM.UpdateMana(CurrentMP/MaxMP);
+    }
+
+    public float ReturnMana()
+    {
+        return CurrentMP;
     }
 
     void HPregen()
@@ -37,6 +52,7 @@ public class Resource_Manager : MonoBehaviour
             {
                 CurrentHP = MaxHP;
             }
+            UIM.UpdateHealth(CurrentHP / MaxHP);
         }
     }
 
@@ -49,6 +65,7 @@ public class Resource_Manager : MonoBehaviour
             {
                 CurrentMP = MaxMP;
             }
+            UIM.UpdateMana(CurrentMP / MaxMP);
         }
     }
 

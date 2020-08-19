@@ -16,6 +16,8 @@ public class UI_Manager : MonoBehaviour
     public GameObject ItemName;
     public GameObject ItemSlot;
     public GameObject ItemDesc;
+    public GameObject HealthBar;
+    public GameObject ManaBar;
   
     void Start()
     {
@@ -61,6 +63,17 @@ public class UI_Manager : MonoBehaviour
         ItemName.GetComponent<Text>().text = _name;
         ItemSlot.GetComponent<Text>().text = _slot;
     } 
+
+
+    public void UpdateHealth(float _health)
+    {
+        HealthBar.GetComponent<Slider>().value = _health;
+    }
+
+    public void UpdateMana(float _Mana)
+    {
+        ManaBar.GetComponent<Slider>().value = _Mana;
+    }
 
     public void DestoryItemDisplay()
     {

@@ -46,7 +46,11 @@ public class Enemy_Spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        counter += Time.deltaTime;
+        if(CurrentSpawn == null)
+        {
+            counter += Time.deltaTime;
+        }
+        
         Spawn();
         Despawn();
     }

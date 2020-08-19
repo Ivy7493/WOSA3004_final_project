@@ -41,6 +41,7 @@ public class Experience_Manager : MonoBehaviour
             ExpForNextLevel = BaseLineExp * (ExpPerLevelScale) / (100) * CurrentLevel;
             UIM.UpdateLevel(CurrentLevel);
             UIM.UpdateExpBar(0);
+            GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().RecalculateStatValues();
         }
         float temp = (Expcount / ExpForNextLevel) * 100f;
         UIM.UpdateExpBar(temp);

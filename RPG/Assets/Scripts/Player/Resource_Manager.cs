@@ -5,19 +5,48 @@ using UnityEngine;
 public class Resource_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float DefaultHP;
-    public float DefaultMP;
+
     float MaxHP;
     float MaxMP;
     float CurrentHP;
     float CurrentMP;
-    public float HPgen;
-    public float MPgen;
+    float HPgen;
+    float MPgen;
+    public float MpScale;
+    public float HpScale;
+    float PlayerLevel;
     UI_Manager UIM;
 
     void Start()
     {
-        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();    
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+       
+        HPgen = HpScale * PlayerLevel;
+        MPgen = MpScale * PlayerLevel;
+        HealthScale();
+        ManaScale();
+
+    }
+
+    public void RecalculateStatValues()
+    {
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        HPgen = HpScale * PlayerLevel;
+        MPgen = MpScale * PlayerLevel;
+        HealthScale();
+        ManaScale();
+    }
+
+    float HealthScale()
+    {
+        MaxHP = HpScale * PlayerLevel;
+        return MaxHP;
+    }
+
+    float ManaScale()
+    {
+        MaxMP = MpScale * PlayerLevel;
+        return MaxMP;
     }
 
     public void Damage(float _damage)
@@ -47,7 +76,7 @@ public class Resource_Manager : MonoBehaviour
     {
         if(CurrentHP < MaxHP)
         {
-            CurrentHP += HPgen * Time.deltaTime; ;
+            CurrentHP += HPgen * Time.deltaTime/10;
             if(CurrentHP > MaxHP)
             {
                 CurrentHP = MaxHP;
@@ -60,7 +89,7 @@ public class Resource_Manager : MonoBehaviour
     {
         if(CurrentMP < MaxMP)
         {
-            CurrentMP += MPgen * Time.deltaTime; ;
+            CurrentMP += MPgen * Time.deltaTime/5; ;
             if(CurrentMP > MaxMP)
             {
                 CurrentMP = MaxMP;
@@ -76,10 +105,12 @@ public class Resource_Manager : MonoBehaviour
 
     void LoadPlayerResources()
     {
-        MaxHP = PlayerPrefs.GetFloat("MaxHP", DefaultHP);
-        MaxMP = PlayerPrefs.GetFloat("MaxMP", DefaultMP);
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        MaxHP = PlayerPrefs.GetFloat("MaxHP", HealthScale());
+        MaxMP = PlayerPrefs.GetFloat("MaxMP", ManaScale());
         CurrentHP = PlayerPrefs.GetFloat("CurrentHP", MaxHP);
         CurrentMP = PlayerPrefs.GetFloat("CurrentMP", MaxMP);
+        Debug.Log("Max HP: " + MaxHP + "Max MP: " + MaxMP);
         
     }
 

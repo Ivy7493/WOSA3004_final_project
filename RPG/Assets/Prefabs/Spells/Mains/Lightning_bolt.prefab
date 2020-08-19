@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 4
   Speed: 100
-  Damage: 100
+  DamageScale: 3
 --- !u!114 &9051032994593478307
 MonoBehaviour:
   m_ObjectHideFlags: 0

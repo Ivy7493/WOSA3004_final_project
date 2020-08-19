@@ -10,7 +10,9 @@ public class Exploder_AI : MonoBehaviour
     GameObject StartTransform;
     public float EngageRange;
     public float MaxRange;
-    public float Damage;
+    public float DamageScale;
+    float PlayerLevel;
+    float Damage;
     Transform StartPos;
     AIDestinationSetter Motor;
     /// <summary>
@@ -31,6 +33,8 @@ public class Exploder_AI : MonoBehaviour
         StartPos = TempStartPos.transform;
         Player = GameObject.FindGameObjectWithTag("Player");
         Motor = GetComponent<AIDestinationSetter>();
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = PlayerLevel * DamageScale;
     }
 
     //Movement Control for AI and engage range

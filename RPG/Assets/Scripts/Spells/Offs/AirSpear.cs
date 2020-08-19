@@ -7,13 +7,13 @@ public class AirSpear : MonoBehaviour
     // Start is called before the first frame update
     GameObject Player;
     public float Speed;
-    public float DamagePerLevel;
+    public float DamageScale;
     float Damage;
     float DeltaOff = 2;
     Vector3 pos;
     void Start()
     {
-        Damage = DamagePerLevel * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             Player = GameObject.FindGameObjectWithTag("Player");

@@ -7,12 +7,16 @@ public class Flame_Explosion : MonoBehaviour
     // Start is called before the first frame update
     GameObject Player;
     Resource_Manager RM;
-    public float Damage;
+    public float DamageScale;
+    float Damage;
+    float PlayerLevel;
     float counter;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = DamageScale * PlayerLevel;
     }
 
     void Encounter()

@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TrackTimer: 10
-  Damage: 20
+  DamageScale: 3
 --- !u!58 &8602010791685454990
 CircleCollider2D:
   m_ObjectHideFlags: 0

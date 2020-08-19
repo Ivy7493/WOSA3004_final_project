@@ -11,7 +11,9 @@ public class Lightning_bolt : MonoBehaviour
     Vector3 CurrenPos;
     public float Range;
     public float Speed;
-    public float Damage;
+    public float DamageScale;
+    float Damage;
+    float PlayerLevel;
     void Start()
     {
         LR = GetComponent<LineRenderer>();
@@ -25,6 +27,8 @@ public class Lightning_bolt : MonoBehaviour
         CurrenPos = transform.position;
         LR.SetPosition(1, Player.transform.position);
         LR.SetPosition(0, pos);
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = DamageScale * PlayerLevel;
 
     }
 

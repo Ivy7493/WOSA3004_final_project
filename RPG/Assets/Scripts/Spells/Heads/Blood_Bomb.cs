@@ -8,8 +8,11 @@ public class Blood_Bomb : MonoBehaviour
     Vector3 pos;
     SpriteRenderer SR;
     public float Range;
-    public float Damage;
-    public float SelfDamage;
+    public float DamageScale;
+    public float SelfDamageScale;
+    float Damage;
+    float SelfDamage;
+    float PlayerLevel;
     float counter;
     void Start()
     {
@@ -18,7 +21,9 @@ public class Blood_Bomb : MonoBehaviour
         pos = new Vector3(pos.x, pos.y, 0f);
         transform.position = pos;
         GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(SelfDamage);
-        
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = DamageScale * PlayerLevel;
+        SelfDamage = SelfDamageScale * PlayerLevel;
     }
 
 

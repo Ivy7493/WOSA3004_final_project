@@ -9,12 +9,16 @@ public class Fire_Ball : MonoBehaviour
     GameObject Player;
     AIDestinationSetter Motor;
     public float TrackTimer;
-    public float Damage;
+    public float DamageScale;
+    float PlayerLevel;
+    float Damage;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         Motor = GetComponent<AIDestinationSetter>();
         Motor.target = Player.transform;
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = PlayerLevel * DamageScale;
     }
 
     void Encounter()

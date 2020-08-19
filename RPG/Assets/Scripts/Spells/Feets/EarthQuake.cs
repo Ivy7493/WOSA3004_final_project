@@ -6,11 +6,15 @@ public class EarthQuake : MonoBehaviour
 {
     // Start is called before the first frame update
     public float Range;
-    public float Damage;
+    public float DamageScale;
+    float PlayerLevel;
+    float Damage;
     GameObject Player;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        Damage = DamageScale * PlayerLevel;
         SpellMain();
     }
 

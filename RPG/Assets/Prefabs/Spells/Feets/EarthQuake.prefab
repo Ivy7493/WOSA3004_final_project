@@ -59,4 +59,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 7
-  Damage: 30
+  DamageScale: 3

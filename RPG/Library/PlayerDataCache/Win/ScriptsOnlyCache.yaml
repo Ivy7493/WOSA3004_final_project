@@ -13,7 +13,9 @@ ScriptsOnlyBuild:
     - Exp
     - Experience_Manager
     - Exploder_AI
+    - Fire_Ball
     - Flame_Explosion
+    - Flame_archer_AI
     - Flamer_AI
     - Item_Pickup
     - Lightning_bolt
@@ -30,10 +32,6 @@ ScriptsOnlyBuild:
     - Pathfinding.AIDestinationSetter
     - Pathfinding.AIPath
     - Pathfinding.Seeker
-    AstarPathfindingProjectEditor.dll:
-    - Pathfinding.SeekerEditor
-    PackageToolsEditor.dll:
-    - Pathfinding.EditorBase
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -52,10 +50,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -91,23 +87,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11704}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 12072}
     - Class: 114
-      Script: {instanceID: 12190}
+      Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12902}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13544}
     - Class: 114
-      Script: {instanceID: 14286}
+      Script: {instanceID: 14400}
     - Class: 114
-      Script: {instanceID: 31798}
+      Script: {instanceID: 15078}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -154,73 +150,77 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 590}
+      Script: {instanceID: 596}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11334}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 11462}
+      Script: {instanceID: 12018}
     - Class: 114
-      Script: {instanceID: 11516}
+      Script: {instanceID: 12072}
     - Class: 114
-      Script: {instanceID: 11622}
+      Script: {instanceID: 12114}
     - Class: 114
-      Script: {instanceID: 11760}
+      Script: {instanceID: 12186}
     - Class: 114
-      Script: {instanceID: 11916}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 11976}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12116}
+      Script: {instanceID: 12496}
     - Class: 114
-      Script: {instanceID: 12190}
+      Script: {instanceID: 12556}
     - Class: 114
-      Script: {instanceID: 12372}
+      Script: {instanceID: 12706}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12786}
     - Class: 114
-      Script: {instanceID: 12526}
+      Script: {instanceID: 12982}
     - Class: 114
-      Script: {instanceID: 12538}
+      Script: {instanceID: 13002}
     - Class: 114
-      Script: {instanceID: 12570}
+      Script: {instanceID: 13060}
     - Class: 114
-      Script: {instanceID: 12764}
+      Script: {instanceID: 13142}
     - Class: 114
-      Script: {instanceID: 12880}
+      Script: {instanceID: 13154}
     - Class: 114
-      Script: {instanceID: 12972}
+      Script: {instanceID: 13190}
     - Class: 114
-      Script: {instanceID: 13126}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13350}
+      Script: {instanceID: 13482}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13616}
     - Class: 114
-      Script: {instanceID: 14134}
+      Script: {instanceID: 13782}
     - Class: 114
-      Script: {instanceID: 14156}
+      Script: {instanceID: 14036}
     - Class: 114
-      Script: {instanceID: 14158}
+      Script: {instanceID: 14044}
     - Class: 114
-      Script: {instanceID: 14286}
+      Script: {instanceID: 14168}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14284}
     - Class: 114
-      Script: {instanceID: 16330}
+      Script: {instanceID: 14400}
     - Class: 114
-      Script: {instanceID: 16380}
+      Script: {instanceID: 14916}
     - Class: 114
-      Script: {instanceID: 16406}
+      Script: {instanceID: 14940}
     - Class: 114
-      Script: {instanceID: 16478}
+      Script: {instanceID: 14942}
     - Class: 114
-      Script: {instanceID: 19872}
+      Script: {instanceID: 14948}
     - Class: 114
-      Script: {instanceID: 37970}
+      Script: {instanceID: 15078}
+    - Class: 114
+      Script: {instanceID: 15106}
+    - Class: 114
+      Script: {instanceID: 15122}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -264,6 +264,12 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
+      Hash: 557b8d683142468c7c52e0163c1928a6
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: ProceduralGridMover
+  - hash:
+      serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -280,6 +286,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 482b4788a1650225af3664f1486faf28
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: ObjectPlacer
   - hash:
       serializedVersion: 2
       Hash: ed10b619a944cae0edfac6e8139d057f
@@ -354,6 +366,12 @@ ScriptsOnlyBuild:
     className: SpriteShapeController
   - hash:
       serializedVersion: 2
+      Hash: aac6f99dc84c9a5a1171e2927e8f7014
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AIPath
+  - hash:
+      serializedVersion: 2
       Hash: 234235b9fb07320d11497e08a726cc56
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -370,6 +388,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ability_Manager
+  - hash:
+      serializedVersion: 2
+      Hash: 092869651707e1dc3bde895f9044bf15
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Flamer_AI
   - hash:
       serializedVersion: 2
       Hash: 523ce309f50d9eee6a8fc0e2f86c9c97
@@ -408,6 +432,18 @@ ScriptsOnlyBuild:
     className: UI_Ability_info
   - hash:
       serializedVersion: 2
+      Hash: a5a60d0b9e6d53d72e12aef88e23ee68
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: FunnelModifier
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Transform_Holder
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -424,6 +460,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
     className: SpriteLibrary
+  - hash:
+      serializedVersion: 2
+      Hash: f08fcc1618ec9915d9530432bf8be751
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: SingleNodeBlocker
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -450,7 +492,7 @@ ScriptsOnlyBuild:
     className: PixelPerfectCamera
   - hash:
       serializedVersion: 2
-      Hash: 74fa25c3c814c73c08332dd7d6f7b0c5
+      Hash: 31c45906624ffad4a63fb9ba826249df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Lightning_bolt
@@ -480,7 +522,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: d6b03c508e845d023b8c778490243199
+      Hash: 0e78c63280c81596ab2f6d47ac5b1503
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AirSpear
@@ -490,6 +532,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Add_Exp
+  - hash:
+      serializedVersion: 2
+      Hash: 1d6bc7fb33fcc56237df7c329c31fac2
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AILerp
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -508,6 +556,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 46cdbf48786f1faf06540c1959cd7b81
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: NodeLink
   - hash:
       serializedVersion: 2
       Hash: 0edeba255bdbade25edc357f1412ba38
@@ -540,10 +594,22 @@ ScriptsOnlyBuild:
     className: Player_motor
   - hash:
       serializedVersion: 2
-      Hash: 7d3bfa72ab7073e03c27fa9ec61a96b8
+      Hash: 7f9ea236f6cd1609c670d41ff006e0df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy_Health
+  - hash:
+      serializedVersion: 2
+      Hash: 427e4ae6223362877cde7ac01baa97c3
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: NodeLink2
+  - hash:
+      serializedVersion: 2
+      Hash: bcb1cb4a9395b5b5db8b7a2dd4db50da
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: 
+    className: AstarPath
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -594,7 +660,19 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
-      Hash: 0a1b4baf806c83dd0e9c8cdf284c6e0d
+      Hash: e59b4ddbf539212f3d2f911f95cc1bb3
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: AstarSmoothFollow2
+  - hash:
+      serializedVersion: 2
+      Hash: 0cceca996e1eb1401d74a841f34c4f83
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: SimpleSmoothModifier
+  - hash:
+      serializedVersion: 2
+      Hash: fd6a77d187ffdc16ceec35f55e69e991
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Blood_Bomb
@@ -606,13 +684,25 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 43acdecfcc62de1110964c47067c846f
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AlternativePath
+  - hash:
+      serializedVersion: 2
+      Hash: 3dd5460199f4f71ddeb16f492607b8fb
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AIDestinationSetter
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 49ed4760655ac3e10d22364bb43fc9ce
+      Hash: de79dc0dbd7cf837780dde0428c0b211
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Exploder_AI
@@ -648,6 +738,12 @@ ScriptsOnlyBuild:
     className: Exp
   - hash:
       serializedVersion: 2
+      Hash: e7af7273c8177a5779551d022b323d84
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: RaycastModifier
+  - hash:
+      serializedVersion: 2
       Hash: 71b711096c6c32621c1d4c02310898b7
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
@@ -664,6 +760,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 424c99376ea3422d85441e7a4c2141fb
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: MineBotAnimation
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -696,6 +798,12 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: c181fc48305e752f3e25e609d7495634
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AstarDebugger
+  - hash:
+      serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -708,7 +816,7 @@ ScriptsOnlyBuild:
     className: Enemy_Spawner
   - hash:
       serializedVersion: 2
-      Hash: 7035f7145520b7027ada9bbcdc7e0ccf
+      Hash: 1efc9975532fe798822d3a9518e5a0c2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EarthQuake
@@ -720,16 +828,70 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 66c061c17549c495f74c9dcc30aaaab2
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: MineBotAI
+  - hash:
+      serializedVersion: 2
+      Hash: 60b984ae162b4ff3f0d114db096cf253
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fire_Ball
+  - hash:
+      serializedVersion: 2
+      Hash: 8abe5c5970b933d28c84fe29c2232578
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: RelevantGraphSurface
+  - hash:
+      serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: 95ec5ef41811e64837c657c402b6d78f
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: Seeker
+  - hash:
+      serializedVersion: 2
+      Hash: cbdd099350fe077cb17fee9dea4b37a1
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: TargetMover
+  - hash:
+      serializedVersion: 2
+      Hash: 6cd30e66b8b8737cd9e9c9402bc9f6e1
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: UnityReferenceHelper
+  - hash:
+      serializedVersion: 2
+      Hash: b478fca366fa93f5a93f584cd5ba32cc
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: DoorController
+  - hash:
+      serializedVersion: 2
+      Hash: e2c52df92f5a11103c324ae820575e40
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: TurnBasedAI
+  - hash:
+      serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ff653aebffb231eb559930e8cf311d62
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: GraphUpdateScene
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -744,6 +906,24 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 607ec805afd8d80d43f15ef06639440f
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: BlockManager
+  - hash:
+      serializedVersion: 2
+      Hash: 427e4ae6223362877cde7ac01baa97c3
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: NodeLink3
+  - hash:
+      serializedVersion: 2
+      Hash: 2fde15209800c4e94cf99bcad8981a24
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Examples
+    className: ProceduralWorld
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -754,6 +934,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: 0aab9b0491f3a88d6459f7add40022e4
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding.Legacy
+    className: LegacyAIPath
+  - hash:
+      serializedVersion: 2
+      Hash: 2d57f4d10d5ed795e4304ee5d6404144
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: DynamicGridObstacle
+  - hash:
+      serializedVersion: 2
+      Hash: b349b142d600a2478af04cea15b41a0b
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: AnimationLink
   - hash:
       serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
@@ -772,6 +970,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Blink
+  - hash:
+      serializedVersion: 2
+      Hash: c0e31dd31c35455f422978da26bb908a
+    assemblyName: AstarPathfindingProject.dll
+    namespaceName: Pathfinding
+    className: Patrol
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -796,6 +1000,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: 42bf0d73d1f8ab4b1b36f1a823de6b05
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Flame_Explosion
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -852,6 +1062,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: 01787c6673b6780ea0acde8eae25aa31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Flame_archer_AI
+  - hash:
+      serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -868,210 +1084,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 557b8d683142468c7c52e0163c1928a6
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: ProceduralGridMover
-  - hash:
-      serializedVersion: 2
-      Hash: 482b4788a1650225af3664f1486faf28
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ObjectPlacer
-  - hash:
-      serializedVersion: 2
-      Hash: aac6f99dc84c9a5a1171e2927e8f7014
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AIPath
-  - hash:
-      serializedVersion: 2
-      Hash: a5a60d0b9e6d53d72e12aef88e23ee68
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: FunnelModifier
-  - hash:
-      serializedVersion: 2
-      Hash: f08fcc1618ec9915d9530432bf8be751
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: SingleNodeBlocker
-  - hash:
-      serializedVersion: 2
-      Hash: 1d6bc7fb33fcc56237df7c329c31fac2
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AILerp
-  - hash:
-      serializedVersion: 2
-      Hash: 46cdbf48786f1faf06540c1959cd7b81
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink
-  - hash:
-      serializedVersion: 2
-      Hash: 427e4ae6223362877cde7ac01baa97c3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink2
-  - hash:
-      serializedVersion: 2
-      Hash: bcb1cb4a9395b5b5db8b7a2dd4db50da
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: 
-    className: AstarPath
-  - hash:
-      serializedVersion: 2
-      Hash: e59b4ddbf539212f3d2f911f95cc1bb3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: AstarSmoothFollow2
-  - hash:
-      serializedVersion: 2
-      Hash: 0cceca996e1eb1401d74a841f34c4f83
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: SimpleSmoothModifier
-  - hash:
-      serializedVersion: 2
-      Hash: 43acdecfcc62de1110964c47067c846f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AlternativePath
-  - hash:
-      serializedVersion: 2
-      Hash: 3dd5460199f4f71ddeb16f492607b8fb
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AIDestinationSetter
-  - hash:
-      serializedVersion: 2
-      Hash: e7af7273c8177a5779551d022b323d84
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RaycastModifier
-  - hash:
-      serializedVersion: 2
-      Hash: 424c99376ea3422d85441e7a4c2141fb
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: MineBotAnimation
-  - hash:
-      serializedVersion: 2
-      Hash: c181fc48305e752f3e25e609d7495634
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AstarDebugger
-  - hash:
-      serializedVersion: 2
-      Hash: 66c061c17549c495f74c9dcc30aaaab2
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: MineBotAI
-  - hash:
-      serializedVersion: 2
-      Hash: 8abe5c5970b933d28c84fe29c2232578
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: RelevantGraphSurface
-  - hash:
-      serializedVersion: 2
-      Hash: 95ec5ef41811e64837c657c402b6d78f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: Seeker
-  - hash:
-      serializedVersion: 2
-      Hash: cbdd099350fe077cb17fee9dea4b37a1
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: TargetMover
-  - hash:
-      serializedVersion: 2
-      Hash: 6cd30e66b8b8737cd9e9c9402bc9f6e1
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: UnityReferenceHelper
-  - hash:
-      serializedVersion: 2
-      Hash: b478fca366fa93f5a93f584cd5ba32cc
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: DoorController
-  - hash:
-      serializedVersion: 2
-      Hash: e2c52df92f5a11103c324ae820575e40
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: TurnBasedAI
-  - hash:
-      serializedVersion: 2
-      Hash: ff653aebffb231eb559930e8cf311d62
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: GraphUpdateScene
-  - hash:
-      serializedVersion: 2
-      Hash: 607ec805afd8d80d43f15ef06639440f
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: BlockManager
-  - hash:
-      serializedVersion: 2
-      Hash: 427e4ae6223362877cde7ac01baa97c3
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: NodeLink3
-  - hash:
-      serializedVersion: 2
-      Hash: 2fde15209800c4e94cf99bcad8981a24
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Examples
-    className: ProceduralWorld
-  - hash:
-      serializedVersion: 2
-      Hash: 0aab9b0491f3a88d6459f7add40022e4
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding.Legacy
-    className: LegacyAIPath
-  - hash:
-      serializedVersion: 2
-      Hash: 2d57f4d10d5ed795e4304ee5d6404144
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: DynamicGridObstacle
-  - hash:
-      serializedVersion: 2
-      Hash: b349b142d600a2478af04cea15b41a0b
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: AnimationLink
-  - hash:
-      serializedVersion: 2
-      Hash: c0e31dd31c35455f422978da26bb908a
-    assemblyName: AstarPathfindingProject.dll
-    namespaceName: Pathfinding
-    className: Patrol
-  - hash:
-      serializedVersion: 2
-      Hash: 092869651707e1dc3bde895f9044bf15
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Flamer_AI
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Transform_Holder
-  - hash:
-      serializedVersion: 2
-      Hash: 46395500fc479d714d8a1f79f5bf0484
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Flame_Explosion
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main_Menu.unity

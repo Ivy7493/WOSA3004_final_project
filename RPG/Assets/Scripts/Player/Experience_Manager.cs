@@ -11,7 +11,6 @@ public class Experience_Manager : MonoBehaviour
     public float ExpPerLevelScale;
     float Expcount;
     float ExpForNextLevel;
-    AudioSource AS;
     UI_Manager UIM;
     void Start()
     {
@@ -19,7 +18,6 @@ public class Experience_Manager : MonoBehaviour
         float temp = (Expcount / ExpForNextLevel) * 100f;
         UIM.UpdateExpBar(temp);
         UIM.UpdateLevel(CurrentLevel);
-        AS = GetComponent<AudioSource>();
     }
 
     private void Awake()
@@ -44,7 +42,6 @@ public class Experience_Manager : MonoBehaviour
             UIM.UpdateLevel(CurrentLevel);
             UIM.UpdateExpBar(0);
             GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().RecalculateStatValues();
-            AS.Play();
         }
         float temp = (Expcount / ExpForNextLevel) * 100f;
         UIM.UpdateExpBar(temp);

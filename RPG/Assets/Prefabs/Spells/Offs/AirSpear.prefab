@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4658015910140567078}
   - component: {fileID: 4658015910140567083}
   - component: {fileID: -1373757431921794175}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: AirSpear
   m_TagString: Untagged
   m_Icon: {fileID: 0}

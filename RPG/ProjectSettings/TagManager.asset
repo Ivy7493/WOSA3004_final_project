@@ -23,10 +23,10 @@ TagManager:
   - 
   - ui
   - Obstacle
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Enemy_Proj
+  - Player_Proj
   - 
   - 
   - 

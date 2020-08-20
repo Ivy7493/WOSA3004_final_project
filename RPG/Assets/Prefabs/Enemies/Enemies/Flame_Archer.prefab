@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9205469567725966841}
   - component: {fileID: 9205469567725966840}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Graphics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 9205469568447790946}
   - component: {fileID: 9205469568447790947}
   - component: {fileID: 6374506252188534038}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Flame_Archer
   m_TagString: Damagable
   m_Icon: {fileID: 0}
@@ -210,10 +210,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9205469568447790944}
     m_Modifications:
+    - target: {fileID: 6089122156601034524, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089122157553238054, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089122157696873266, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089122158606688465, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6089122158693145789, guid: 4c7a0659438ef7e419c4d754e065c370,
         type: 3}
       propertyPath: m_Name
       value: Enemy_HUD
+      objectReference: {fileID: 0}
+    - target: {fileID: 6089122158693145789, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6089122158693145790, guid: 4c7a0659438ef7e419c4d754e065c370,
         type: 3}

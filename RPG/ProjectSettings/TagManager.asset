@@ -10,6 +10,8 @@ TagManager:
   - Experience_Manager
   - Resource_Manager
   - Damagable
+  - Game_Manager
+  - RespawnPoint
   layers:
   - Default
   - TransparentFX

@@ -18,10 +18,11 @@ public class UI_Manager : MonoBehaviour
     public GameObject ItemDesc;
     public GameObject HealthBar;
     public GameObject ManaBar;
-  
+    public GameObject DeathEffect;
     void Start()
     {
         ItemPanel.SetActive(false);
+        DeathEffect.SetActive(false);
     }
 
     public void UpdateLevel(float _Level)
@@ -73,6 +74,11 @@ public class UI_Manager : MonoBehaviour
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
+    }
+
+    public void CallDeathEffect()
+    {
+        DeathEffect.SetActive(true);
     }
 
     public void DestoryItemDisplay()

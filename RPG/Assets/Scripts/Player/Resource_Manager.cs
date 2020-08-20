@@ -16,10 +16,12 @@ public class Resource_Manager : MonoBehaviour
     public float HpScale;
     float PlayerLevel;
     UI_Manager UIM;
+    Game_Manager GM;
 
     void Start()
     {
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+        GM = GameObject.FindGameObjectWithTag("Game_Manager").GetComponent<Game_Manager>();
        
         HPgen = HpScale * PlayerLevel;
         MPgen = MpScale * PlayerLevel;
@@ -58,6 +60,7 @@ public class Resource_Manager : MonoBehaviour
         {
             //Put death code here, IDK what this does yet
             CurrentHP = MaxHP;
+            GM.Death();
         }
     }
 

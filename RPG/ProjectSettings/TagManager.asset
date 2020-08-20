@@ -12,6 +12,7 @@ TagManager:
   - Damagable
   - Game_Manager
   - RespawnPoint
+  - Sound_Manager
   layers:
   - Default
   - TransparentFX

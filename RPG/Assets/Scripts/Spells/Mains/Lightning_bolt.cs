@@ -6,9 +6,9 @@ public class Lightning_bolt : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject Player;
-    LineRenderer LR;
     Vector3 pos;
     Vector3 CurrenPos;
+    Vector3 Direction;
     public float Range;
     public float Speed;
     public float DamageScale;
@@ -16,7 +16,6 @@ public class Lightning_bolt : MonoBehaviour
     float PlayerLevel;
     void Start()
     {
-        LR = GetComponent<LineRenderer>();
         if (GameObject.FindGameObjectWithTag("Player") != null)
         {
             Player = GameObject.FindGameObjectWithTag("Player");
@@ -25,20 +24,27 @@ public class Lightning_bolt : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         CurrenPos = transform.position;
-        LR.SetPosition(1, Player.transform.position);
-        LR.SetPosition(0, pos);
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = DamageScale * PlayerLevel;
+        Direction = (pos - Player.transform.position).normalized;
+        FixRotation();
 
+
+    }
+
+    void FixRotation()
+    {
+        Vector3 temp = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - temp;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     void Motion()
     {
-        LR.SetPosition(1, Player.transform.position);
-        LR.SetPosition(0, pos);
         if (Vector3.Distance(transform.position,pos) > 0.1f)
         {
-            transform.position = Vector3.MoveTowards(transform.position, pos, Speed * Time.deltaTime);
+            transform.position += Direction * Speed * Time.deltaTime;
         }
         else
         {
@@ -56,6 +62,7 @@ public class Lightning_bolt : MonoBehaviour
                 collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
             }
         }
+        Destroy(gameObject);
     }
 
 

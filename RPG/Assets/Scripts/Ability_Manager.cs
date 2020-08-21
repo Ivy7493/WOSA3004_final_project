@@ -11,12 +11,13 @@ public class Ability_Manager : MonoBehaviour
     GameObject AbilityOff;
     Spell_Manager SM;
     UI_Manager UIM;
+    GameObject Player;
     public float GCD;
     float counter = 0;
     bool CanCast = true;
     void Start()
     {
-        
+        Player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void GCDCounter()
@@ -39,7 +40,7 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityMain != null)
             {
-                Instantiate(AbilityMain, transform.position, Quaternion.identity);
+                Instantiate(AbilityMain, Player.transform.position, Quaternion.identity);
                 CanCast = false;
             }
            
@@ -52,7 +53,7 @@ public class Ability_Manager : MonoBehaviour
         {
             if (AbilityOff != null)
             {
-                Instantiate(AbilityOff, transform.position, Quaternion.identity);
+                Instantiate(AbilityOff, Player.transform.position, Quaternion.identity);
                 CanCast = false;
             }
            
@@ -65,7 +66,7 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityFeet != null)
             {
-                Instantiate(AbilityFeet, transform.position, Quaternion.identity);
+                Instantiate(AbilityFeet, Player.transform.position, Quaternion.identity);
                 CanCast = false;
             }
            
@@ -78,7 +79,7 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityHead != null)
             {
-                Instantiate(AbilityHead, transform.position, Quaternion.identity);
+                Instantiate(AbilityHead, Player.transform.position, Quaternion.identity);
                 CanCast = false;
             }
            

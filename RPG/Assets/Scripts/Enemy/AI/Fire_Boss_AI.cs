@@ -8,6 +8,7 @@ public class Fire_Boss_AI : MonoBehaviour
     public GameObject[] FireLocations;
     public GameObject FireBombs;
     GameObject Player;
+    Game_Manager GM;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -16,14 +17,47 @@ public class Fire_Boss_AI : MonoBehaviour
     public float SwipeRange;
     public float SwipeDamageScale;
     float CameraStart;
+    float Status;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        GM = GameObject.FindGameObjectWithTag("Game_Manager").GetComponent<Game_Manager>();
+        ///returns the status of the boss to see whether we must keep the spawn or not
+        Status = GM.ReturnBossStatus("FIRE");
+        CheckBossStatus();
+        //Just a function to change camera size when player gets close to boss
         CameraStart = Camera.main.orthographicSize;
         InvokeRepeating("CameraProspective", 0, 0.1f);
     }
 
 
+    /// <summary>
+    /// Checks to see if the boss has been killed already if so, it destorys the boss
+    /// </summary>
+    void CheckBossStatus()
+    {
+        if(Status == 1)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    //Stuff that must occur when boss dies
+    private void OnDestroy()
+    {
+        if(Status == 1)
+        {
+
+        }else if(Status == 0)
+        {
+            GM.BossDefeated("FIRE");
+        }
+
+        Camera.main.orthographicSize = CameraStart;
+    }
+
+    //THe explosive ability of the boss
     void RainFire()
     {
         float Select = Random.Range(0, FireLocations.Length);
@@ -34,6 +68,8 @@ public class Fire_Boss_AI : MonoBehaviour
 
     }
 
+
+    //melee swipe of the boss, missing animation!
     void Swipe()
     {
         if(Vector3.Distance(Player.transform.position, transform.position) < SwipeRange)
@@ -43,6 +79,8 @@ public class Fire_Boss_AI : MonoBehaviour
         }
     }
 
+
+    //will zoom the camera out when the player gets close to the boss
     void CameraProspective()
     {
         if(Vector3.Distance(Player.transform.position, transform.position) < EngageRange)
@@ -67,6 +105,8 @@ public class Fire_Boss_AI : MonoBehaviour
        
     }
 
+
+    //The boss works on patterns, this is just a simple function which repeats the bosses attack patterns
     void SelectAbility()
     {
         if(Vector3.Distance(Player.transform.position,transform.position) < EngageRange)

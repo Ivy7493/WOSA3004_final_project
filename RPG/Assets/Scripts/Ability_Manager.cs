@@ -20,6 +20,8 @@ public class Ability_Manager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
     }
 
+
+    //THe globale GCD function stops players from being able to spam abilities through the setting of the CanCast bool after GCD amount of time
     void GCDCounter()
     {
         if(CanCast == false)
@@ -32,6 +34,10 @@ public class Ability_Manager : MonoBehaviour
             }
         }
     }
+
+    /// <summary>
+    /// These functions are called when a player casts one of their abilities
+    /// </summary>
 
 
     void UseMain()
@@ -85,6 +91,12 @@ public class Ability_Manager : MonoBehaviour
            
         }
     }
+    //------------------------------------------------------------------------------------------------------------------------------------------
+
+    /// <summary>
+    /// These functions are called when a player wants to equip new item
+    /// </summary>
+
 
     public void EquipHead(GameObject _head)
     {
@@ -118,6 +130,7 @@ public class Ability_Manager : MonoBehaviour
         UIM.SetOffIcon(Icon, Name);
     }
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------
 
     /// <summary>
     /// This function controls the loading of gear on game start up, it looks for the gears index in the spell manager and then gets the game object
@@ -125,7 +138,7 @@ public class Ability_Manager : MonoBehaviour
     /// // the epquid function will then bind the item to the slot and update the UI as needed with Icon's and Names;
     /// </summary>
 
-
+    
     void LoadSpellState()
     {
         SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
@@ -140,6 +153,8 @@ public class Ability_Manager : MonoBehaviour
         EquipOff(SM.LookupOff(indexOff));
     }
 
+
+    //Loads game data assosiated with the ability manager on scene load
     private void Awake()
     {
         ///loading spellsetup

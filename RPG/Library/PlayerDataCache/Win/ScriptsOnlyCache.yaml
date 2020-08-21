@@ -14,19 +14,23 @@ ScriptsOnlyBuild:
     - Experience_Manager
     - Exploder_AI
     - Fire_Ball
+    - Fire_Boss_AI
     - Flame_Explosion
     - Flame_archer_AI
     - Flamer_AI
+    - Game_Manager
     - Item_Pickup
     - Lightning_bolt
     - LootTable
     - Main_Menu_Manager
     - Mana_cost
+    - Player_Graphics
     - Player_motor
     - Resource_Manager
     - Spell_Manager
     - Transform_Holder
     - UI_Ability_info
+    - UI_DeathEffect
     - UI_Enemy_HUD
     - UI_Manager
     AstarPathfindingProject.dll:
@@ -89,23 +93,23 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11704}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 12348}
+      Script: {instanceID: 11824}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 13544}
+      Script: {instanceID: 13026}
     - Class: 114
-      Script: {instanceID: 14398}
+      Script: {instanceID: 13886}
     - Class: 114
-      Script: {instanceID: 15076}
+      Script: {instanceID: 14570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,6 +149,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -154,82 +162,88 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 600}
     - Class: 114
-      Script: {instanceID: 11708}
+      Script: {instanceID: 11182}
     - Class: 114
-      Script: {instanceID: 11884}
+      Script: {instanceID: 11244}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11360}
     - Class: 114
-      Script: {instanceID: 12072}
+      Script: {instanceID: 11494}
     - Class: 114
-      Script: {instanceID: 12114}
+      Script: {instanceID: 11548}
     - Class: 114
-      Script: {instanceID: 12186}
+      Script: {instanceID: 11590}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 11662}
     - Class: 114
-      Script: {instanceID: 12328}
+      Script: {instanceID: 11672}
     - Class: 114
-      Script: {instanceID: 12496}
+      Script: {instanceID: 11804}
     - Class: 114
-      Script: {instanceID: 12556}
+      Script: {instanceID: 11972}
     - Class: 114
-      Script: {instanceID: 12706}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12262}
     - Class: 114
-      Script: {instanceID: 13002}
+      Script: {instanceID: 12458}
     - Class: 114
-      Script: {instanceID: 13060}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 13142}
+      Script: {instanceID: 12536}
     - Class: 114
-      Script: {instanceID: 13154}
+      Script: {instanceID: 12622}
     - Class: 114
-      Script: {instanceID: 13190}
+      Script: {instanceID: 12634}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 12670}
     - Class: 114
-      Script: {instanceID: 13482}
+      Script: {instanceID: 12800}
+    - Class: 114
+      Script: {instanceID: 12880}
+    - Class: 114
+      Script: {instanceID: 12964}
+    - Class: 114
+      Script: {instanceID: 13004}
+    - Class: 114
+      Script: {instanceID: 13098}
+    - Class: 114
+      Script: {instanceID: 13260}
+    - Class: 114
+      Script: {instanceID: 13266}
+    - Class: 114
+      Script: {instanceID: 13332}
     - Class: 114
       Script: {instanceID: 13522}
     - Class: 114
-      Script: {instanceID: 13616}
+      Script: {instanceID: 13530}
     - Class: 114
-      Script: {instanceID: 13782}
+      Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 14036}
+      Script: {instanceID: 13770}
     - Class: 114
-      Script: {instanceID: 14044}
+      Script: {instanceID: 13886}
     - Class: 114
-      Script: {instanceID: 14168}
+      Script: {instanceID: 14356}
     - Class: 114
-      Script: {instanceID: 14282}
+      Script: {instanceID: 14406}
     - Class: 114
-      Script: {instanceID: 14398}
+      Script: {instanceID: 14430}
     - Class: 114
-      Script: {instanceID: 14914}
+      Script: {instanceID: 14432}
     - Class: 114
-      Script: {instanceID: 14938}
+      Script: {instanceID: 14438}
     - Class: 114
-      Script: {instanceID: 14940}
+      Script: {instanceID: 14444}
     - Class: 114
-      Script: {instanceID: 14946}
+      Script: {instanceID: 14570}
     - Class: 114
-      Script: {instanceID: 15076}
+      Script: {instanceID: 14598}
     - Class: 114
-      Script: {instanceID: 15104}
-    - Class: 114
-      Script: {instanceID: 15120}
-    - Class: 114
-      Script: {instanceID: 19920}
-    - Class: 114
-      Script: {instanceID: 27112}
+      Script: {instanceID: 14614}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 120
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -280,6 +294,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 5fef63fd9b1380a00a5fbd6713317a42
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI_DeathEffect
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -642,7 +662,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 9a6ffc5dbca64b88183d66eccd161f6b
+      Hash: 562d9a40763a46d0bc62c377cc248ffc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Resource_Manager
@@ -658,6 +678,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinEntity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player_Graphics
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -738,6 +764,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 25f38dffd2d4a8f9c39b6503624eabbc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Mana_cost
+  - hash:
+      serializedVersion: 2
       Hash: 96d4573520eb0968fdc7aec0872da8df
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -754,6 +786,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
+  - hash:
+      serializedVersion: 2
+      Hash: 78fa991d054773463b00900111f24f84
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UI_Enemy_HUD
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -960,6 +998,12 @@ ScriptsOnlyBuild:
     className: AnimationLink
   - hash:
       serializedVersion: 2
+      Hash: 47374502093c9aaa9937fd33ef1e1a91
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fire_Boss_AI
+  - hash:
+      serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -996,7 +1040,7 @@ ScriptsOnlyBuild:
     className: BlinkEffect
   - hash:
       serializedVersion: 2
-      Hash: e6e2e189ac96883eaeadea8df7c47d5d
+      Hash: aba5072e311a830c6aafe3f01a23e157
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_Manager
@@ -1012,6 +1056,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Flame_Explosion
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Game_Manager
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -1090,18 +1140,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 78fa991d054773463b00900111f24f84
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UI_Enemy_HUD
-  - hash:
-      serializedVersion: 2
-      Hash: 25f38dffd2d4a8f9c39b6503624eabbc
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Mana_cost
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main_Menu.unity

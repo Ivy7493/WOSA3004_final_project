@@ -146,6 +146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 10
   HUD: {fileID: 1185460679210556253}
+  HitEffect: 1
 --- !u!114 &9205469568447790946
 MonoBehaviour:
   m_ObjectHideFlags: 0

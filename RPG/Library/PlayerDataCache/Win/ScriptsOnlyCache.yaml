@@ -1016,7 +1016,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 64a92c0b1ffd8963214246aef2e4beb1
+      Hash: 7368c2e4a0f7ecd6eefd1a63eb5bd26c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Blink

@@ -42,7 +42,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseMain()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && CanCast)
+        if (Input.GetKeyDown(KeyCode.Q) && CanCast)
         {
             if(AbilityMain != null)
             {
@@ -55,7 +55,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseOff()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2) && CanCast)
+        if (Input.GetKeyDown(KeyCode.E) && CanCast)
         {
             if (AbilityOff != null)
             {
@@ -68,7 +68,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseFeet()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha4) && CanCast)
+        if (Input.GetKeyDown(KeyCode.Space) && CanCast)
         {
             if(AbilityFeet != null)
             {
@@ -81,7 +81,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseHead()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha3) && CanCast)
+        if (Input.GetKeyDown(KeyCode.F) && CanCast)
         {
             if(AbilityHead != null)
             {

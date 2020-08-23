@@ -48,6 +48,8 @@ MonoBehaviour:
   BlinkEffect: {fileID: 4855007367273594085, guid: e7974579c3bff5c47bf5275b0327caf7,
     type: 3}
   Distance: 5
+  Speed: 50
+  DashTime: 0.2
 --- !u!114 &3599466192895673018
 MonoBehaviour:
   m_ObjectHideFlags: 0

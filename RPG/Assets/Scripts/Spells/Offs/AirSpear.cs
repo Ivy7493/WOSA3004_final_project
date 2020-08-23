@@ -39,7 +39,15 @@ public class AirSpear : MonoBehaviour
             Vector3 offset = collision.gameObject.transform.position - Player.transform.position;
             offset = offset.normalized;
             Player.transform.position = new Vector3(collision.gameObject.transform.position.x - offset.x * DeltaOff, collision.gameObject.transform.position.y - offset.y * DeltaOff, 0f);
-            collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+            try
+            {
+                collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+            }
+            catch
+            {
+                Debug.Log("Enemy_Health component not found!");
+            }
+            
             Destroy(gameObject);
         }
     }

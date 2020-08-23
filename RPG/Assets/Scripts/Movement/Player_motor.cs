@@ -42,8 +42,16 @@ public class Player_motor : MonoBehaviour
         transform.position += Direction;
         if(RB.velocity.magnitude != 0)
         {
-            RB.velocity = Vector2.zero;
+          //  RB.velocity = Vector2.zero;
+          //Testing
         }
+    }
+
+    
+    //SO if an enemy projectile hits us it wont apply a force
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        RB.velocity = Vector2.zero;
     }
 
     private void OnApplicationQuit()

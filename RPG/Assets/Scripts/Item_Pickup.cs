@@ -78,7 +78,7 @@ public class Item_Pickup : MonoBehaviour
                     break;
                 case "Main":
                     AM.EquipMain(Spell);
-                    PlayerPrefs.SetFloat("Head", ItemIndex);
+                    PlayerPrefs.SetFloat("Main", ItemIndex);
                     break;
                 case "Off":
                     AM.EquipOff(Spell);

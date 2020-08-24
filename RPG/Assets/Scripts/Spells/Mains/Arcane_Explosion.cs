@@ -24,8 +24,7 @@ public class Arcane_Explosion : MonoBehaviour
     {
         transform.position = Player.transform.position;
         counter += Time.deltaTime;
-        transform.localScale = Vector3.Lerp(new Vector3(1f, 1f, 1f), new Vector3(Range * 2, Range * 2, 1f), counter*Speed);
-        SR.color = Color.Lerp(Color.clear, Color.magenta, counter*Speed);
+        transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(Range * 2, Range * 2, 1f), counter);
         if(counter*Speed >= 1)
         {
             Destroy(gameObject);

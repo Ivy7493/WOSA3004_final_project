@@ -12,6 +12,7 @@ public class Experience_Manager : MonoBehaviour
     float Expcount;
     float ExpForNextLevel;
     UI_Manager UIM;
+    public GameObject LevelUpEffect;
     void Start()
     {
         ExpForNextLevel = BaseLineExp * (ExpPerLevelScale/100) * CurrentLevel;
@@ -41,7 +42,9 @@ public class Experience_Manager : MonoBehaviour
             ExpForNextLevel = BaseLineExp * (ExpPerLevelScale) / (100) * CurrentLevel;
             UIM.UpdateLevel(CurrentLevel);
             UIM.UpdateExpBar(0);
+            Instantiate(LevelUpEffect, transform.position, Quaternion.identity);
             GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().RecalculateStatValues();
+
         }
         float temp = (Expcount / ExpForNextLevel) * 100f;
         UIM.UpdateExpBar(temp);

@@ -64,7 +64,11 @@ public class DemonicPain : MonoBehaviour
     {
         Rotation();
         Duration -= Time.deltaTime;
-        transform.position = Target.transform.position;
+        if(Target != null)
+        {
+            transform.position = Target.transform.position;
+        }
+       
         if (Duration <= 0)
         {
             Destroy(gameObject);

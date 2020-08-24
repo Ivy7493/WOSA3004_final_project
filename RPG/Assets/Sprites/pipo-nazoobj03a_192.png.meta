@@ -1,0 +1,1544 @@
+fileFormatVersion: 2
+guid: 81965f48d0afb7a46a76d42c59a73341
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1309205892079651072
+    second: pipo-nazoobj03a_192_0
+  - first:
+      213: 3926792904356120526
+    second: pipo-nazoobj03a_192_1
+  - first:
+      213: -731491096408522957
+    second: pipo-nazoobj03a_192_2
+  - first:
+      213: 4301736235461011075
+    second: pipo-nazoobj03a_192_3
+  - first:
+      213: -6426137826728181107
+    second: pipo-nazoobj03a_192_4
+  - first:
+      213: -3343996162723533211
+    second: pipo-nazoobj03a_192_5
+  - first:
+      213: -3014251554408325756
+    second: pipo-nazoobj03a_192_6
+  - first:
+      213: -2883279534117932551
+    second: pipo-nazoobj03a_192_7
+  - first:
+      213: -226410349010876962
+    second: pipo-nazoobj03a_192_8
+  - first:
+      213: -5686164726716595529
+    second: pipo-nazoobj03a_192_9
+  - first:
+      213: 8820361005232808631
+    second: pipo-nazoobj03a_192_10
+  - first:
+      213: -5067933099984623150
+    second: pipo-nazoobj03a_192_11
+  - first:
+      213: -3145617747831340957
+    second: pipo-nazoobj03a_192_12
+  - first:
+      213: 3197235194590270688
+    second: pipo-nazoobj03a_192_13
+  - first:
+      213: -2507139503354881429
+    second: pipo-nazoobj03a_192_14
+  - first:
+      213: -5400409057496622418
+    second: pipo-nazoobj03a_192_15
+  - first:
+      213: -1239801689770647624
+    second: pipo-nazoobj03a_192_16
+  - first:
+      213: -3918784853875496182
+    second: pipo-nazoobj03a_192_17
+  - first:
+      213: 4326904449854395400
+    second: pipo-nazoobj03a_192_18
+  - first:
+      213: 565665569086477318
+    second: pipo-nazoobj03a_192_19
+  - first:
+      213: 7972773920254618473
+    second: pipo-nazoobj03a_192_20
+  - first:
+      213: -5809622838636294060
+    second: pipo-nazoobj03a_192_21
+  - first:
+      213: -5564116925950888427
+    second: pipo-nazoobj03a_192_22
+  - first:
+      213: -50518147938148124
+    second: pipo-nazoobj03a_192_23
+  - first:
+      213: -1885881666090033922
+    second: pipo-nazoobj03a_192_24
+  - first:
+      213: 8727023845238629307
+    second: pipo-nazoobj03a_192_25
+  - first:
+      213: 4000371953793089206
+    second: pipo-nazoobj03a_192_26
+  - first:
+      213: 4859804137430999929
+    second: pipo-nazoobj03a_192_27
+  - first:
+      213: -3907342311513819731
+    second: pipo-nazoobj03a_192_28
+  - first:
+      213: 8512279332639161286
+    second: pipo-nazoobj03a_192_29
+  - first:
+      213: -3526468401089220550
+    second: pipo-nazoobj03a_192_30
+  - first:
+      213: -8692219152009218315
+    second: pipo-nazoobj03a_192_31
+  - first:
+      213: -3599016842659696079
+    second: pipo-nazoobj03a_192_32
+  - first:
+      213: 6748076159986488449
+    second: pipo-nazoobj03a_192_33
+  - first:
+      213: 7867154370191760438
+    second: pipo-nazoobj03a_192_34
+  - first:
+      213: 6978206729710258157
+    second: pipo-nazoobj03a_192_35
+  - first:
+      213: 4350480773411417507
+    second: pipo-nazoobj03a_192_36
+  - first:
+      213: 8578977372717375270
+    second: pipo-nazoobj03a_192_37
+  - first:
+      213: -7775933123638572087
+    second: pipo-nazoobj03a_192_38
+  - first:
+      213: 5451937096542754141
+    second: pipo-nazoobj03a_192_39
+  - first:
+      213: 3872588492247623214
+    second: pipo-nazoobj03a_192_40
+  - first:
+      213: 8995405032656127753
+    second: pipo-nazoobj03a_192_41
+  - first:
+      213: 9118613578759853019
+    second: pipo-nazoobj03a_192_42
+  - first:
+      213: 5641348175800571723
+    second: pipo-nazoobj03a_192_43
+  - first:
+      213: 1341148471186696478
+    second: pipo-nazoobj03a_192_44
+  - first:
+      213: 696839741448144491
+    second: pipo-nazoobj03a_192_45
+  - first:
+      213: -5761908942015948660
+    second: pipo-nazoobj03a_192_46
+  - first:
+      213: -3169131972959308076
+    second: pipo-nazoobj03a_192_47
+  - first:
+      213: 5128009551091197500
+    second: pipo-nazoobj03a_192_48
+  - first:
+      213: 7488811777597852893
+    second: pipo-nazoobj03a_192_49
+  - first:
+      213: -8472717692603838805
+    second: pipo-nazoobj03a_192_50
+  - first:
+      213: -1836608618938457535
+    second: pipo-nazoobj03a_192_51
+  - first:
+      213: 169914523027090839
+    second: pipo-nazoobj03a_192_52
+  - first:
+      213: 2644967669555235796
+    second: pipo-nazoobj03a_192_53
+  - first:
+      213: 3830658647570143518
+    second: pipo-nazoobj03a_192_54
+  - first:
+      213: -4046368068181331562
+    second: pipo-nazoobj03a_192_55
+  - first:
+      213: 5411624778870665721
+    second: pipo-nazoobj03a_192_56
+  - first:
+      213: 6230555283757021802
+    second: pipo-nazoobj03a_192_57
+  - first:
+      213: 3046643042583918232
+    second: pipo-nazoobj03a_192_58
+  - first:
+      213: 8488829226555165081
+    second: pipo-nazoobj03a_192_59
+  - first:
+      213: -1076430582078441998
+    second: pipo-nazoobj03a_192_60
+  - first:
+      213: -5776395113207506140
+    second: pipo-nazoobj03a_192_61
+  - first:
+      213: -1826592469715671886
+    second: pipo-nazoobj03a_192_62
+  - first:
+      213: 2797269902229518893
+    second: pipo-nazoobj03a_192_63
+  - first:
+      213: 7891231527096210576
+    second: pipo-nazoobj03a_192_64
+  - first:
+      213: 6461079793991616416
+    second: pipo-nazoobj03a_192_65
+  - first:
+      213: 6470058967158458025
+    second: pipo-nazoobj03a_192_66
+  - first:
+      213: -1177845088818339206
+    second: pipo-nazoobj03a_192_67
+  - first:
+      213: 2525218729072941065
+    second: pipo-nazoobj03a_192_68
+  - first:
+      213: 6317138193236269242
+    second: pipo-nazoobj03a_192_69
+  - first:
+      213: -6552973448145268958
+    second: pipo-nazoobj03a_192_70
+  - first:
+      213: 5324107995365421276
+    second: pipo-nazoobj03a_192_71
+  - first:
+      213: 77400504159537050
+    second: pipo-nazoobj03a_192_72
+  - first:
+      213: -46364119614848041
+    second: pipo-nazoobj03a_192_73
+  - first:
+      213: 6149653614880189542
+    second: pipo-nazoobj03a_192_74
+  - first:
+      213: 6275517736376521366
+    second: pipo-nazoobj03a_192_75
+  - first:
+      213: 8199318160672796489
+    second: pipo-nazoobj03a_192_76
+  - first:
+      213: 6892224434101461697
+    second: pipo-nazoobj03a_192_77
+  - first:
+      213: 4520353772909017080
+    second: pipo-nazoobj03a_192_78
+  - first:
+      213: 2097235068236750364
+    second: pipo-nazoobj03a_192_79
+  - first:
+      213: -2663139146594538951
+    second: pipo-nazoobj03a_192_80
+  - first:
+      213: -4246943082437920985
+    second: pipo-nazoobj03a_192_81
+  - first:
+      213: 5506338790192383616
+    second: pipo-nazoobj03a_192_82
+  - first:
+      213: 5665599777886251110
+    second: pipo-nazoobj03a_192_83
+  - first:
+      213: -3912675053690604389
+    second: pipo-nazoobj03a_192_84
+  - first:
+      213: 3895690295310132277
+    second: pipo-nazoobj03a_192_85
+  - first:
+      213: 7007288731232719280
+    second: pipo-nazoobj03a_192_86
+  - first:
+      213: -1451533634339812764
+    second: pipo-nazoobj03a_192_87
+  - first:
+      213: -1531155730511656248
+    second: pipo-nazoobj03a_192_88
+  - first:
+      213: -775373134864249470
+    second: pipo-nazoobj03a_192_89
+  - first:
+      213: 1705789505696555409
+    second: pipo-nazoobj03a_192_90
+  - first:
+      213: -3062794663893931324
+    second: pipo-nazoobj03a_192_91
+  - first:
+      213: -8844303177604331732
+    second: pipo-nazoobj03a_192_92
+  - first:
+      213: -9007124701541291865
+    second: pipo-nazoobj03a_192_93
+  - first:
+      213: 8420780794503608336
+    second: pipo-nazoobj03a_192_94
+  - first:
+      213: 8714003108080350356
+    second: pipo-nazoobj03a_192_95
+  - first:
+      213: -250377695876079112
+    second: pipo-nazoobj03a_192_96
+  - first:
+      213: -2063028682599768135
+    second: pipo-nazoobj03a_192_97
+  - first:
+      213: 1575356618649700435
+    second: pipo-nazoobj03a_192_98
+  - first:
+      213: 6121807187773229352
+    second: pipo-nazoobj03a_192_99
+  - first:
+      213: 6000131495988599537
+    second: pipo-nazoobj03a_192_100
+  - first:
+      213: 509397235510058168
+    second: pipo-nazoobj03a_192_101
+  - first:
+      213: -1150502622137406342
+    second: pipo-nazoobj03a_192_102
+  - first:
+      213: -6946110141265275659
+    second: pipo-nazoobj03a_192_103
+  - first:
+      213: 8896967138862277597
+    second: pipo-nazoobj03a_192_104
+  - first:
+      213: -5588682492086511179
+    second: pipo-nazoobj03a_192_105
+  - first:
+      213: 4223429266911294335
+    second: pipo-nazoobj03a_192_106
+  - first:
+      213: -8428591717323422892
+    second: pipo-nazoobj03a_192_107
+  - first:
+      213: 4216425431070370606
+    second: pipo-nazoobj03a_192_108
+  - first:
+      213: -875320609326786520
+    second: pipo-nazoobj03a_192_109
+  - first:
+      213: -1490954937043027812
+    second: pipo-nazoobj03a_192_110
+  - first:
+      213: 6740189277991792403
+    second: pipo-nazoobj03a_192_111
+  - first:
+      213: 1340588779405536006
+    second: pipo-nazoobj03a_192_112
+  - first:
+      213: 7047142299889325
+    second: pipo-nazoobj03a_192_113
+  - first:
+      213: 7352403763755334959
+    second: pipo-nazoobj03a_192_114
+  - first:
+      213: -5207766735303007083
+    second: pipo-nazoobj03a_192_115
+  - first:
+      213: -7694082851212909943
+    second: pipo-nazoobj03a_192_116
+  - first:
+      213: -8117451285827911155
+    second: pipo-nazoobj03a_192_117
+  - first:
+      213: 7062082271300009398
+    second: pipo-nazoobj03a_192_118
+  - first:
+      213: 2005142754544676822
+    second: pipo-nazoobj03a_192_119
+  - first:
+      213: 6662732151662188577
+    second: pipo-nazoobj03a_192_120
+  - first:
+      213: 5475045145063662875
+    second: pipo-nazoobj03a_192_121
+  - first:
+      213: -9049244103263073727
+    second: pipo-nazoobj03a_192_122
+  - first:
+      213: 1724408364969044874
+    second: pipo-nazoobj03a_192_123
+  - first:
+      213: -2129056084141023505
+    second: pipo-nazoobj03a_192_124
+  - first:
+      213: 2211169345764477788
+    second: pipo-nazoobj03a_192_125
+  - first:
+      213: -6851456511270578955
+    second: pipo-nazoobj03a_192_126
+  - first:
+      213: 5757385186485495184
+    second: pipo-nazoobj03a_192_127
+  - first:
+      213: 5229140094474804668
+    second: pipo-nazoobj03a_192_128
+  - first:
+      213: 6207449561858779588
+    second: pipo-nazoobj03a_192_129
+  - first:
+      213: 821646132468487305
+    second: pipo-nazoobj03a_192_130
+  - first:
+      213: 3799935472399376464
+    second: pipo-nazoobj03a_192_131
+  - first:
+      213: -3317198891546338274
+    second: pipo-nazoobj03a_192_132
+  - first:
+      213: -7468818733084470977
+    second: pipo-nazoobj03a_192_133
+  - first:
+      213: 2914610284422718112
+    second: pipo-nazoobj03a_192_134
+  - first:
+      213: -7137535492481676059
+    second: pipo-nazoobj03a_192_135
+  - first:
+      213: 7844274080491724087
+    second: pipo-nazoobj03a_192_136
+  - first:
+      213: 4557590554066297161
+    second: pipo-nazoobj03a_192_137
+  - first:
+      213: 1417026618455709430
+    second: pipo-nazoobj03a_192_138
+  - first:
+      213: 7098285968654443717
+    second: pipo-nazoobj03a_192_139
+  - first:
+      213: -3153470173335706100
+    second: pipo-nazoobj03a_192_140
+  - first:
+      213: 4551489859848139181
+    second: pipo-nazoobj03a_192_141
+  - first:
+      213: 6364521002993938397
+    second: pipo-nazoobj03a_192_142
+  - first:
+      213: 1695051610295053936
+    second: pipo-nazoobj03a_192_143
+  - first:
+      213: -3733480497292761412
+    second: pipo-nazoobj03a_192_144
+  - first:
+      213: 6751741490084498119
+    second: pipo-nazoobj03a_192_145
+  - first:
+      213: -1239191542560360502
+    second: pipo-nazoobj03a_192_146
+  - first:
+      213: -3385064422011553193
+    second: pipo-nazoobj03a_192_147
+  - first:
+      213: 542319253306898771
+    second: pipo-nazoobj03a_192_148
+  - first:
+      213: -8810485841693705994
+    second: pipo-nazoobj03a_192_149
+  - first:
+      213: -4151712352999431355
+    second: pipo-nazoobj03a_192_150
+  - first:
+      213: 7171055804617125896
+    second: pipo-nazoobj03a_192_151
+  - first:
+      213: -8603461878591555237
+    second: pipo-nazoobj03a_192_152
+  - first:
+      213: 2217009904877190201
+    second: pipo-nazoobj03a_192_153
+  - first:
+      213: -8635956305935610735
+    second: pipo-nazoobj03a_192_154
+  - first:
+      213: 8891402777758834011
+    second: pipo-nazoobj03a_192_155
+  - first:
+      213: 572185057188171734
+    second: pipo-nazoobj03a_192_156
+  - first:
+      213: -4996666101644827611
+    second: pipo-nazoobj03a_192_157
+  - first:
+      213: 6923764162402012047
+    second: pipo-nazoobj03a_192_158
+  - first:
+      213: -1273244519800358839
+    second: pipo-nazoobj03a_192_159
+  - first:
+      213: 2607491158499128745
+    second: pipo-nazoobj03a_192_160
+  - first:
+      213: -261554026469497709
+    second: pipo-nazoobj03a_192_161
+  - first:
+      213: 5618811134637838757
+    second: pipo-nazoobj03a_192_162
+  - first:
+      213: -9149290130411404252
+    second: pipo-nazoobj03a_192_163
+  - first:
+      213: -905173548825598281
+    second: pipo-nazoobj03a_192_164
+  - first:
+      213: -9213432815102090469
+    second: pipo-nazoobj03a_192_165
+  - first:
+      213: 1282880083985316515
+    second: pipo-nazoobj03a_192_166
+  - first:
+      213: -1325456714482026
+    second: pipo-nazoobj03a_192_167
+  - first:
+      213: 2597280009924813930
+    second: pipo-nazoobj03a_192_168
+  - first:
+      213: -2480972400010858049
+    second: pipo-nazoobj03a_192_169
+  - first:
+      213: 2066156885661674570
+    second: pipo-nazoobj03a_192_170
+  - first:
+      213: -2981008099886595295
+    second: pipo-nazoobj03a_192_171
+  - first:
+      213: 2947371227125397578
+    second: pipo-nazoobj03a_192_172
+  - first:
+      213: -6500339546963973146
+    second: pipo-nazoobj03a_192_173
+  - first:
+      213: 72781447168808419
+    second: pipo-nazoobj03a_192_174
+  - first:
+      213: 2482097213177313377
+    second: pipo-nazoobj03a_192_175
+  - first:
+      213: -4350901321463164340
+    second: pipo-nazoobj03a_192_176
+  - first:
+      213: -3703357474374982192
+    second: pipo-nazoobj03a_192_177
+  - first:
+      213: 7357660687705137893
+    second: pipo-nazoobj03a_192_178
+  - first:
+      213: 8114706030912054122
+    second: pipo-nazoobj03a_192_179
+  - first:
+      213: -4450730523829723989
+    second: pipo-nazoobj03a_192_180
+  - first:
+      213: 4451145133393762112
+    second: pipo-nazoobj03a_192_181
+  - first:
+      213: 5016993879068619087
+    second: pipo-nazoobj03a_192_182
+  - first:
+      213: -8519562811260133340
+    second: pipo-nazoobj03a_192_183
+  - first:
+      213: 3463570211830572886
+    second: pipo-nazoobj03a_192_184
+  - first:
+      213: 2509933803506813194
+    second: pipo-nazoobj03a_192_185
+  - first:
+      213: -9049139185882528979
+    second: pipo-nazoobj03a_192_186
+  - first:
+      213: -5359545978891960321
+    second: pipo-nazoobj03a_192_187
+  - first:
+      213: -4360452099384900803
+    second: pipo-nazoobj03a_192_188
+  - first:
+      213: 1563798125676801395
+    second: pipo-nazoobj03a_192_189
+  - first:
+      213: 6914312601149165574
+    second: pipo-nazoobj03a_192_190
+  - first:
+      213: 8646975895060672092
+    second: pipo-nazoobj03a_192_191
+  - first:
+      213: 2611522446023028133
+    second: pipo-nazoobj03a_192_192
+  - first:
+      213: 1139907152071392765
+    second: pipo-nazoobj03a_192_193
+  - first:
+      213: 6820034287675652877
+    second: pipo-nazoobj03a_192_194
+  - first:
+      213: 935786748235373790
+    second: pipo-nazoobj03a_192_195
+  - first:
+      213: -2824139990519431125
+    second: pipo-nazoobj03a_192_196
+  - first:
+      213: -619393632523686247
+    second: pipo-nazoobj03a_192_197
+  - first:
+      213: -5871614205264625986
+    second: pipo-nazoobj03a_192_198
+  - first:
+      213: 8658949004936640139
+    second: pipo-nazoobj03a_192_199
+  - first:
+      213: 4778576307674318438
+    second: pipo-nazoobj03a_192_200
+  - first:
+      213: -3532550322294419965
+    second: pipo-nazoobj03a_192_201
+  - first:
+      213: -1182190352319217277
+    second: pipo-nazoobj03a_192_202
+  - first:
+      213: -3787392320050081434
+    second: pipo-nazoobj03a_192_203
+  - first:
+      213: 2756749586348104732
+    second: pipo-nazoobj03a_192_204
+  - first:
+      213: -8347670488667269163
+    second: pipo-nazoobj03a_192_205
+  - first:
+      213: -7550154330139939372
+    second: pipo-nazoobj03a_192_206
+  - first:
+      213: 4334689417377127793
+    second: pipo-nazoobj03a_192_207
+  - first:
+      213: 1416267967231949465
+    second: pipo-nazoobj03a_192_208
+  - first:
+      213: 7336870100942962668
+    second: pipo-nazoobj03a_192_209
+  - first:
+      213: 7802979470346411991
+    second: pipo-nazoobj03a_192_210
+  - first:
+      213: -196421347604442320
+    second: pipo-nazoobj03a_192_211
+  - first:
+      213: -2544045770109562227
+    second: pipo-nazoobj03a_192_212
+  - first:
+      213: 4613497288634169018
+    second: pipo-nazoobj03a_192_213
+  - first:
+      213: 3212969481909729448
+    second: pipo-nazoobj03a_192_214
+  - first:
+      213: 5805904903053829957
+    second: pipo-nazoobj03a_192_215
+  - first:
+      213: -3452073522195429396
+    second: pipo-nazoobj03a_192_216
+  - first:
+      213: -7538557119704606523
+    second: pipo-nazoobj03a_192_217
+  - first:
+      213: -9207228082148413432
+    second: pipo-nazoobj03a_192_218
+  - first:
+      213: -310510167025867709
+    second: pipo-nazoobj03a_192_219
+  - first:
+      213: -3670653989441235016
+    second: pipo-nazoobj03a_192_220
+  - first:
+      213: -6681420317937860343
+    second: pipo-nazoobj03a_192_221
+  - first:
+      213: -8361070786848265293
+    second: pipo-nazoobj03a_192_222
+  - first:
+      213: 1066724509329961252
+    second: pipo-nazoobj03a_192_223
+  - first:
+      213: -497293430739364226
+    second: pipo-nazoobj03a_192_224
+  - first:
+      213: 7976234470171513703
+    second: pipo-nazoobj03a_192_225
+  - first:
+      213: -6548188974387296919
+    second: pipo-nazoobj03a_192_226
+  - first:
+      213: -1647950990774519050
+    second: pipo-nazoobj03a_192_227
+  - first:
+      213: -7103562943539318827
+    second: pipo-nazoobj03a_192_228
+  - first:
+      213: 3255696899135896472
+    second: pipo-nazoobj03a_192_229
+  - first:
+      213: 3229614126049396232
+    second: pipo-nazoobj03a_192_230
+  - first:
+      213: 644727954307875242
+    second: pipo-nazoobj03a_192_231
+  - first:
+      213: -275119507197412828
+    second: pipo-nazoobj03a_192_232
+  - first:
+      213: -5482433524372847100
+    second: pipo-nazoobj03a_192_233
+  - first:
+      213: -1515583523837563740
+    second: pipo-nazoobj03a_192_234
+  - first:
+      213: 1815612845781727388
+    second: pipo-nazoobj03a_192_235
+  - first:
+      213: 8624097739970289474
+    second: pipo-nazoobj03a_192_236
+  - first:
+      213: 1584321087152719682
+    second: pipo-nazoobj03a_192_237
+  - first:
+      213: 3257500528452428017
+    second: pipo-nazoobj03a_192_238
+  - first:
+      213: -3974374469916270944
+    second: pipo-nazoobj03a_192_239
+  - first:
+      213: 5697957872838450327
+    second: pipo-nazoobj03a_192_240
+  - first:
+      213: 338729561710107244
+    second: pipo-nazoobj03a_192_241
+  - first:
+      213: -5614687910583682742
+    second: pipo-nazoobj03a_192_242
+  - first:
+      213: 3953677399415762043
+    second: pipo-nazoobj03a_192_243
+  - first:
+      213: -2649132507960396382
+    second: pipo-nazoobj03a_192_244
+  - first:
+      213: 865649701128593438
+    second: pipo-nazoobj03a_192_245
+  - first:
+      213: 114636801841608278
+    second: pipo-nazoobj03a_192_246
+  - first:
+      213: -5529642212280671224
+    second: pipo-nazoobj03a_192_247
+  - first:
+      213: -1483330005051135097
+    second: pipo-nazoobj03a_192_248
+  - first:
+      213: -8167889097143215932
+    second: pipo-nazoobj03a_192_249
+  - first:
+      213: 9185435117118541447
+    second: pipo-nazoobj03a_192_250
+  - first:
+      213: -7314180902535053202
+    second: pipo-nazoobj03a_192_251
+  - first:
+      213: -8848821748960923218
+    second: pipo-nazoobj03a_192_252
+  - first:
+      213: -4567665912412408419
+    second: pipo-nazoobj03a_192_253
+  - first:
+      213: 4946209641035670958
+    second: pipo-nazoobj03a_192_254
+  - first:
+      213: 1483966224340408524
+    second: pipo-nazoobj03a_192_255
+  - first:
+      213: 7964309964232713123
+    second: pipo-nazoobj03a_192_256
+  - first:
+      213: 313942968698158470
+    second: pipo-nazoobj03a_192_257
+  - first:
+      213: -839703621453403763
+    second: pipo-nazoobj03a_192_258
+  - first:
+      213: -2656950718106346822
+    second: pipo-nazoobj03a_192_259
+  - first:
+      213: -3131421834532173654
+    second: pipo-nazoobj03a_192_260
+  - first:
+      213: 6981609855032985544
+    second: pipo-nazoobj03a_192_261
+  - first:
+      213: 7231659736329379626
+    second: pipo-nazoobj03a_192_262
+  - first:
+      213: -2447218386834153040
+    second: pipo-nazoobj03a_192_263
+  - first:
+      213: -5908474225138235613
+    second: pipo-nazoobj03a_192_264
+  - first:
+      213: -5561219782257596210
+    second: pipo-nazoobj03a_192_265
+  - first:
+      213: -1890582072686092985
+    second: pipo-nazoobj03a_192_266
+  - first:
+      213: 7171758447030688525
+    second: pipo-nazoobj03a_192_267
+  - first:
+      213: 5952104626980552559
+    second: pipo-nazoobj03a_192_268
+  - first:
+      213: 8132243640567211440
+    second: pipo-nazoobj03a_192_269
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 993
+        width: 113
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0077eb87d24c4dde0800000000000000
+      internalID: -1309205892079651072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_1
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 989
+        width: 140
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7cbaa6755ce7630800000000000000
+      internalID: 3926792904356120526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 983
+        width: 162
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f753239b839d5f0800000000000000
+      internalID: -731491096408522957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_3
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 981
+        width: 182
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38664188056d2bb30800000000000000
+      internalID: 4301736235461011075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_4
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 977
+        width: 190
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d828a2891b5c1d6a0800000000000000
+      internalID: -6426137826728181107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_6
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 189
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d92d37e2a3b26d0800000000000000
+      internalID: -3014251554408325756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_7
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 6
+        width: 173
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f13fbc3a888cf7d0800000000000000
+      internalID: -2883279534117932551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 15
+        width: 160
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed50cb5bcf0abdcf0800000000000000
+      internalID: -226410349010876962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_9
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 23
+        width: 143
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b283b1ce4fa611b0800000000000000
+      internalID: -5686164726716595529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_10
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 26
+        width: 129
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2eb9b1a97386a70800000000000000
+      internalID: 8820361005232808631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_5
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 805
+        width: 128
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e289e053db791d0800000000000000
+      internalID: -3343996162723533211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_11
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 789
+        width: 148
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d9e8f552b51ba9b0800000000000000
+      internalID: -5067933099984623150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_12
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 785
+        width: 157
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 360495513558854d0800000000000000
+      internalID: -3145617747831340957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_13
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 784
+        width: 152
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e41ee4487cde5c20800000000000000
+      internalID: 3197235194590270688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_14
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 785
+        width: 132
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ade24b7e9d43dd0800000000000000
+      internalID: -2507139503354881429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_15
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 610
+        width: 156
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa9c162394ed05b0800000000000000
+      internalID: -5400409057496622418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_16
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 596
+        width: 126
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bf9a419ee65bcee0800000000000000
+      internalID: -1239801689770647624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_17
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 581
+        width: 148
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0be19120fdad99c0800000000000000
+      internalID: -3918784853875496182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_18
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 579
+        width: 124
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 804d0a61ca04c0c30800000000000000
+      internalID: 4326904449854395400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_19
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 599
+        width: 140
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 604911b86d5a9d700800000000000000
+      internalID: 565665569086477318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_20
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 389
+        width: 151
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96b664f83abf4ae60800000000000000
+      internalID: 7972773920254618473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_21
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 398
+        width: 181
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45056181fc2106fa0800000000000000
+      internalID: -5809622838636294060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_22
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 381
+        width: 161
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51675f3c22948c2b0800000000000000
+      internalID: -5564116925950888427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_23
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 383
+        width: 145
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0af6913068c4ff0800000000000000
+      internalID: -50518147938148124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_24
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 387
+        width: 155
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efc1844dd9004d5e0800000000000000
+      internalID: -1885881666090033922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_25
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 207
+        width: 141
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3efc113fd9c1970800000000000000
+      internalID: 8727023845238629307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_26
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 206
+        width: 162
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6beb54bd81d248730800000000000000
+      internalID: 4000371953793089206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_27
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 212
+        width: 158
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9736c895d1e717340800000000000000
+      internalID: 4859804137430999929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_28
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 212
+        width: 123
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da57d52aed456c9c0800000000000000
+      internalID: -3907342311513819731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pipo-nazoobj03a_192_29
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 208
+        width: 116
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb3bdaf3f0b12670800000000000000
+      internalID: 8512279332639161286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

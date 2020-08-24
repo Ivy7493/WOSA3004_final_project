@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5022195744730379115}
   - component: {fileID: 5022195744730379116}
   - component: {fileID: 5022195744730379117}
+  - component: {fileID: 7827377029371578877}
   m_Layer: 0
   m_Name: Toxic_Trap
   m_TagString: Untagged
@@ -100,8 +101,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 8
-  m_Sprite: {fileID: 21300000, guid: a63981f42fcc2f143ad9f6472cf379b0, type: 3}
-  m_Color: {r: 0, g: 0.4433962, b: 0.04437404, a: 0.5254902}
+  m_Sprite: {fileID: 1559519453630844348, guid: c6e3b0856558a3d46be52365ae17decd,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -123,7 +125,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25587ae36e2838149878c4f8f1b25dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 5
+  Range: 3
   DamageScale: 2
   Duration: 6
-  TickRate: 2
+  TickRate: 1
+--- !u!95 &7827377029371578877
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022195744730379118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a3d6fa07c818e55418697f00647baa3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

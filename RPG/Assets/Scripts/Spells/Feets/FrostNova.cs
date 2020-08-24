@@ -20,7 +20,7 @@ public class FrostNova : MonoBehaviour
         SR = GetComponent<SpriteRenderer>();
         Player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("Spell", 0f, TickRate);
-        transform.localScale = new Vector3(Range * 2, Range * 2, 1f);
+        transform.localScale = new Vector3(Range, Range, 1f);
     }
 
     void Spell()

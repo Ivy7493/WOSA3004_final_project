@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1946706513414914342}
   - component: {fileID: 1946706513414914343}
   - component: {fileID: 1946706513414914340}
+  - component: {fileID: 4457784767802839109}
   m_Layer: 0
   m_Name: Frost_Nova
   m_TagString: Untagged
@@ -75,7 +76,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 5
   DamageScale: 2
-  TickRate: 2
+  TickRate: 1
   Duration: 6
 --- !u!212 &1946706513414914340
 SpriteRenderer:
@@ -116,14 +117,33 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: a63981f42fcc2f143ad9f6472cf379b0, type: 3}
+  m_Sprite: {fileID: 34436643182540056, guid: 0e2f8110cc38c1e4188d808ab235e3c5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.8, y: 3.7206054}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4457784767802839109
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946706513414914341}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a923632055293c47920c42e27a8bc48, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpDistance: 10
-  ExpReward: 50
+  ExpReward: 10
 --- !u!114 &7749638599392397910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EngageRange: 5
   MaxRange: 20
-  DamageScale: 5
+  DamageScale: 6
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 5
   HUD: {fileID: 4048234132855678399}
+  HitEffect: 0
 --- !u!114 &3919601027547320563
 MonoBehaviour:
   m_ObjectHideFlags: 0

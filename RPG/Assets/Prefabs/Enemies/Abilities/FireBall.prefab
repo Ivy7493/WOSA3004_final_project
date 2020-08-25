@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f241186bfaa42d045928c09da12f4718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackTimer: 15
+  TrackTimer: 12
   DamageScale: 3
 --- !u!58 &8602010791685454990
 CircleCollider2D:

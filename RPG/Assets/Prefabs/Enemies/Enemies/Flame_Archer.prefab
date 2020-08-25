@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d80fb7fb2ffa5c4192e95f546d4bcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageRange: 10
+  EngageRange: 20
   AbilityFrequency: 2
   FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
     type: 3}

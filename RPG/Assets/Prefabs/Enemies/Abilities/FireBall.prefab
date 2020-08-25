@@ -164,7 +164,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 7
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f241186bfaa42d045928c09da12f4718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackTimer: 10
+  TrackTimer: 15
   DamageScale: 3
 --- !u!58 &8602010791685454990
 CircleCollider2D:

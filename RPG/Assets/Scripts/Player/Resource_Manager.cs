@@ -60,6 +60,7 @@ public class Resource_Manager : MonoBehaviour
         {
             //Put death code here, IDK what this does yet
             CurrentHP = MaxHP;
+            UIM.UpdateHealth(CurrentHP / MaxHP);
             GM.Death();
         }
     }

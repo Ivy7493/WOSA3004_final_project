@@ -17,6 +17,7 @@ public class Enemy_Health : MonoBehaviour
     SpriteRenderer Graphics;
     float FlashCounter = 0f;
     Color32 StartCol;
+    LootTable LT;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
@@ -28,6 +29,14 @@ public class Enemy_Health : MonoBehaviour
             HUD.GetComponent<UI_Enemy_HUD>().UpdateHealthBar(1f);
         }
         StartCol = Graphics.color;
+        try
+        {
+            LT = GetComponent<LootTable>();
+        }
+        catch
+        {
+            Debug.Log("LootTable was not found on enemy");
+        }
     }
 
 
@@ -75,6 +84,10 @@ public class Enemy_Health : MonoBehaviour
         }
         if(Health <= 0)
         {
+            if(LT != null)
+            {
+                LT.DropLoot();
+            }
             Destroy(gameObject);
         }
     }

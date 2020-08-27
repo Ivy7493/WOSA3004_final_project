@@ -19,12 +19,20 @@ public class Item_Pickup : MonoBehaviour
     
     void Start()
     {
-        SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
-        AM = GameObject.FindGameObjectWithTag("Ability_Manager").GetComponent<Ability_Manager>();
-        Player = GameObject.FindGameObjectWithTag("Player");
-        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
-        ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
-        InvokeRepeating("DestoryItem", 0, 5f);
+        try
+        {
+            SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
+            AM = GameObject.FindGameObjectWithTag("Ability_Manager").GetComponent<Ability_Manager>();
+            Player = GameObject.FindGameObjectWithTag("Player");
+            UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+            ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
+            InvokeRepeating("DestoryItem", 0, 5f);
+        }
+        catch
+        {
+            Debug.Log("Caught loading error");
+        }
+     
        
     }
 

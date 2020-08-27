@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Air Spear
-  Icon: {fileID: 21300000, guid: cfd99961264a5294094f77dbf959ade1, type: 3}
+  Icon: {fileID: 21300000, guid: 117684b4c397f31499e7452b260c772c, type: 3}
 --- !u!61 &4658015910140567083
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EngageRange: 5
-  MaxRange: 20
+  MaxRange: 15
   DamageScale: 6
 --- !u!114 &7234259118866252233
 MonoBehaviour:

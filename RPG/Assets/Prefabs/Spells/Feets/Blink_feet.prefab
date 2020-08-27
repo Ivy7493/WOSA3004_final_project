@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Blink
-  Icon: {fileID: 21300000, guid: 828cbb9d146f9604db1455a05b97f7b5, type: 3}
+  Icon: {fileID: 21300000, guid: 6b30ac45ccd866241bf52338419b1cc2, type: 3}
 --- !u!114 &4162285194520008073
 MonoBehaviour:
   m_ObjectHideFlags: 0

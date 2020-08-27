@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Enemy: {fileID: 9205469568447790950, guid: d46436a133f5eab4ea8454391266ec6d, type: 3}
-  RespawnTime: 10
+  RespawnTime: 60
   DespawnDistance: 30

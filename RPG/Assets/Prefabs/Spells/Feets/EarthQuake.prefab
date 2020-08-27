@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Earth Quake
-  Icon: {fileID: 21300000, guid: 2855b5e5a104cb749acd782185f0c6a4, type: 3}
+  Icon: {fileID: 21300000, guid: 87e5ef7dfb1929c4e902b59d3ac723ac, type: 3}
 --- !u!114 &1729003323192945250
 MonoBehaviour:
   m_ObjectHideFlags: 0

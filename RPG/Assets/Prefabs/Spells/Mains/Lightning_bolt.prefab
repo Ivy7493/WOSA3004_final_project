@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Lightning bolt
-  Icon: {fileID: 21300000, guid: 37ef735b451b09641a8ecf30785fa7df, type: 3}
+  Icon: {fileID: 21300000, guid: 6113f7cbbe2929941a9dfef9c03c47da, type: 3}
 --- !u!61 &9051032994593478308
 BoxCollider2D:
   m_ObjectHideFlags: 0

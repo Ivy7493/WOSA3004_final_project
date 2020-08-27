@@ -62,12 +62,21 @@ public class Experience_Manager : MonoBehaviour
         Expcount = PlayerPrefs.GetFloat("Expcount", 0);
     }
 
+    private void OnDestroy()
+    {
+        SavePlayerData();
+    }
 
     private void OnApplicationQuit()
     {
+        SavePlayerData();
+    }
+
+    private void SavePlayerData()
+    {
         PlayerPrefs.SetFloat("Level", CurrentLevel);
         PlayerPrefs.SetFloat("Expcount", Expcount);
-    }
+    }    
 
     // Update is called once per frame
     void Update()

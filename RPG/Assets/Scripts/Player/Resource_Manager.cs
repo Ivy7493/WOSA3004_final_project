@@ -14,6 +14,8 @@ public class Resource_Manager : MonoBehaviour
     float MPgen;
     public float MpScale;
     public float HpScale;
+    public float MP_GenScale;
+    public float HP_GenScale;
     float PlayerLevel;
     UI_Manager UIM;
     Game_Manager GM;
@@ -23,8 +25,8 @@ public class Resource_Manager : MonoBehaviour
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         GM = GameObject.FindGameObjectWithTag("Game_Manager").GetComponent<Game_Manager>();
        
-        HPgen = HpScale * PlayerLevel;
-        MPgen = MpScale * PlayerLevel;
+        HPgen = HP_GenScale * PlayerLevel;
+        MPgen = MP_GenScale * PlayerLevel;
         HealthScale();
         ManaScale();
 
@@ -33,8 +35,8 @@ public class Resource_Manager : MonoBehaviour
     public void RecalculateStatValues()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-        HPgen = HpScale * PlayerLevel;
-        MPgen = MpScale * PlayerLevel;
+        HPgen = HP_GenScale * PlayerLevel;
+        MPgen = MP_GenScale * PlayerLevel;
         HealthScale();
         ManaScale();
     }
@@ -116,6 +118,11 @@ public class Resource_Manager : MonoBehaviour
         CurrentMP = PlayerPrefs.GetFloat("CurrentMP", MaxMP);
         Debug.Log("Max HP: " + MaxHP + "Max MP: " + MaxMP);
         
+    }
+
+    private void OnDestroy()
+    {
+        SaveResources();
     }
 
     private void OnApplicationQuit()

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI_Manager : MonoBehaviour
@@ -19,8 +20,11 @@ public class UI_Manager : MonoBehaviour
     public GameObject HealthBar;
     public GameObject ManaBar;
     public GameObject DeathEffect;
+    public GameObject PauseScreenUI;
+    public static bool GameIsPaused = false;
     void Start()
     {
+        PauseScreenUI.SetActive(false);
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
     }
@@ -90,10 +94,47 @@ public class UI_Manager : MonoBehaviour
         
     }
 
+    public void ResumeGame()
+    {
+        Time.timeScale = 1f;
+        PauseScreenUI.SetActive(false);
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        PauseScreenUI.SetActive(true);
+    }
+
+    public void NewGame()
+    {
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(0);
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(GameIsPaused)
+            {
+                ResumeGame();
+            }
+            else
+            {
+                PauseGame();
+            }
+        }
     }
 }

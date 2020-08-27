@@ -54,6 +54,11 @@ public class Player_motor : MonoBehaviour
         RB.velocity = Vector2.zero;
     }
 
+    private void OnDestroy()
+    {
+        SavePlayerPosition();
+    }
+
     private void OnApplicationQuit()
     {
         SavePlayerPosition();

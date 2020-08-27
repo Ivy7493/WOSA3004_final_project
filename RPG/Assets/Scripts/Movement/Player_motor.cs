@@ -40,9 +40,9 @@ public class Player_motor : MonoBehaviour
         Vector3 Direction = new Vector3(Xpos, Ypos, 0f);
         Direction *= _speed * Time.deltaTime;
         transform.position += Direction;
-        if(RB.velocity.magnitude != 0)
+        if(RB.velocity.magnitude <= 10)
         {
-          //  RB.velocity = Vector2.zero;
+            RB.velocity = Vector2.zero;
           //Testing
         }
     }

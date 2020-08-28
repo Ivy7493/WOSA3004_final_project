@@ -30,7 +30,9 @@ public class Blink : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         Vector3 Direction = (pos - Player.transform.position).normalized;
-        Vector2 DashDirection = new Vector2(Direction.x, Direction.y);
+        float Xpos = Input.GetAxisRaw("Horizontal");
+        float Ypos = Input.GetAxisRaw("Vertical");
+        Vector2 DashDirection = new Vector2(Xpos, Ypos);
         RB.velocity = DashDirection * Speed;
     }
 

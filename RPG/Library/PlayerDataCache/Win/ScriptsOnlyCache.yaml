@@ -35,6 +35,7 @@ ScriptsOnlyBuild:
     - Player_motor
     - Resource_Manager
     - Spell_Manager
+    - Stat_Manager
     - ToxicTrap
     - Transform_Holder
     - UI_Ability_info
@@ -356,6 +357,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 15258}
     - Class: 114
       Script: {instanceID: 15274}
+    - Class: 114
+      Script: {instanceID: 21152}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1225,7 +1228,7 @@ ScriptsOnlyBuild:
     className: BlinkEffect
   - hash:
       serializedVersion: 2
-      Hash: 8363a540474ca1a8970deb68ff48e8a8
+      Hash: 568f689d63be75a20d40853951a353d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UI_Manager
@@ -1337,6 +1340,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 18b60fedb507b49476c7fdbf77a1f0cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Stat_Manager
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main_Menu.unity

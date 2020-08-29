@@ -18,9 +18,11 @@ public class Enemy_Health : MonoBehaviour
     float FlashCounter = 0f;
     Color32 StartCol;
     LootTable LT;
+    Stat_Manager STM;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         Graphics = GetComponentInChildren<SpriteRenderer>();
         Health = PlayerLevel * HealthScale;
         MaxHealth = Health;
@@ -70,7 +72,8 @@ public class Enemy_Health : MonoBehaviour
 
     public void Damage(float _damage)
     {
-        Health -= _damage;
+        float TempDamage = STM.IsCrit(_damage);
+        Health -= TempDamage;
         ///Will play the hit effect if not playing the hit effect
         if(EffectPlaying != true)
         {

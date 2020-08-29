@@ -44,6 +44,7 @@ public class Experience_Manager : MonoBehaviour
             UIM.UpdateExpBar(0);
             Instantiate(LevelUpEffect, transform.position, Quaternion.identity);
             GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().RecalculateStatValues();
+            GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().ResetResources();
 
         }
         float temp = (Expcount / ExpForNextLevel) * 100f;

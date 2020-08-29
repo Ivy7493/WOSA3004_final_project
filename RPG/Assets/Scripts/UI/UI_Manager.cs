@@ -21,6 +21,8 @@ public class UI_Manager : MonoBehaviour
     public GameObject ManaBar;
     public GameObject DeathEffect;
     public GameObject PauseScreenUI;
+    public GameObject TalentPanel;
+    public GameObject TalentNumber;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -32,6 +34,21 @@ public class UI_Manager : MonoBehaviour
     public void UpdateLevel(float _Level)
     {
         Level.GetComponent<Text>().text = _Level + "";
+    }
+
+    public void ActiveTalentPanel()
+    {
+        TalentPanel.SetActive(true);
+    }
+
+    public void DestroyTalentPanel()
+    {
+        TalentPanel.SetActive(false);
+    }
+
+    public void SetTalentNumber(float _number)
+    {
+        TalentNumber.GetComponent<Text>().text = "Talent points: " + _number;
     }
 
     public void UpdateExpBar(float _percent)

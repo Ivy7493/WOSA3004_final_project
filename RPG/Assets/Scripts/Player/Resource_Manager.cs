@@ -19,37 +19,60 @@ public class Resource_Manager : MonoBehaviour
     float PlayerLevel;
     UI_Manager UIM;
     Game_Manager GM;
+    Stat_Manager STM;
+
+
+    void Awake()
+    {
+
+        LoadPlayerResources();
+    }
 
     void Start()
     {
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         GM = GameObject.FindGameObjectWithTag("Game_Manager").GetComponent<Game_Manager>();
-       
-        HPgen = HP_GenScale * PlayerLevel;
-        MPgen = MP_GenScale * PlayerLevel;
-        HealthScale();
-        ManaScale();
+        STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
+        RecalculateStatValues();
 
+    }
+
+    public void ResetResources()
+    {
+        CurrentHP = MaxHP;
+        CurrentMP = MaxMP;
     }
 
     public void RecalculateStatValues()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-        HPgen = HP_GenScale * PlayerLevel;
-        MPgen = MP_GenScale * PlayerLevel;
+        HPgenScale();
+        MPgenScale();
         HealthScale();
         ManaScale();
+        Debug.Log("MaxMP: " + MaxMP);
     }
 
     float HealthScale()
     {
-        MaxHP = HpScale * PlayerLevel;
+        MaxHP = HpScale * PlayerLevel * STM.ReturnMaxHealth();
         return MaxHP;
     }
 
+    void MPgenScale()
+    {
+        MPgen = MP_GenScale * PlayerLevel * STM.ReturnMP5();
+    }
+
+    void HPgenScale()
+    {
+        HPgen = HP_GenScale * PlayerLevel * STM.ReturnHP5();
+    } 
+
     float ManaScale()
     {
-        MaxMP = MpScale * PlayerLevel;
+        Debug.Log("STM Value: " + STM.ReturnMaxMana());
+        MaxMP = MpScale * PlayerLevel * STM.ReturnMaxMana();
         return MaxMP;
     }
 
@@ -89,6 +112,8 @@ public class Resource_Manager : MonoBehaviour
             }
             UIM.UpdateHealth(CurrentHP / MaxHP);
         }
+
+       
     }
 
     void MPregen()
@@ -102,21 +127,21 @@ public class Resource_Manager : MonoBehaviour
             }
             UIM.UpdateMana(CurrentMP / MaxMP);
         }
+
+        Debug.Log("Mana: " + CurrentMP);
+        Debug.Log("MaxMana: " + MaxMP);
     }
 
-    private void Awake()
-    {
-        LoadPlayerResources();
-    }
+    
 
     void LoadPlayerResources()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-        MaxHP = PlayerPrefs.GetFloat("MaxHP", HealthScale());
-        MaxMP = PlayerPrefs.GetFloat("MaxMP", ManaScale());
+        STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
+        MaxHP = HealthScale();
+        MaxMP = ManaScale();
         CurrentHP = PlayerPrefs.GetFloat("CurrentHP", MaxHP);
         CurrentMP = PlayerPrefs.GetFloat("CurrentMP", MaxMP);
-        Debug.Log("Max HP: " + MaxHP + "Max MP: " + MaxMP);
         
     }
 
@@ -134,8 +159,6 @@ public class Resource_Manager : MonoBehaviour
     {
         PlayerPrefs.SetFloat("CurrentHP", CurrentHP);
         PlayerPrefs.SetFloat("CurrentMP", CurrentMP);
-        PlayerPrefs.SetFloat("MaxHP", MaxHP);
-        PlayerPrefs.SetFloat("MaxMP", MaxMP);
     }
 
     // Update is called once per frame

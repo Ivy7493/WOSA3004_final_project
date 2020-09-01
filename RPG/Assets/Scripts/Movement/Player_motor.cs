@@ -7,6 +7,7 @@ public class Player_motor : MonoBehaviour
     // Start is called before the first frame update
     public float _speed;
     Rigidbody2D RB;
+    public GameObject DefaultSpawn;
     private void Awake()
     {
         LoadPlayerPosition();
@@ -19,8 +20,8 @@ public class Player_motor : MonoBehaviour
 
     void LoadPlayerPosition()
     {
-        float Xpos = PlayerPrefs.GetFloat("Xpos", 0);
-        float Ypos = PlayerPrefs.GetFloat("Ypos", 0);
+        float Xpos = PlayerPrefs.GetFloat("Xpos", DefaultSpawn.transform.position.x);
+        float Ypos = PlayerPrefs.GetFloat("Ypos", DefaultSpawn.transform.position.y);
         transform.position = new Vector3(Xpos, Ypos, 0f);
     }
 

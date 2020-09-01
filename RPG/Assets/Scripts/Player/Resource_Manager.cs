@@ -128,8 +128,6 @@ public class Resource_Manager : MonoBehaviour
             UIM.UpdateMana(CurrentMP / MaxMP);
         }
 
-        Debug.Log("Mana: " + CurrentMP);
-        Debug.Log("MaxMana: " + MaxMP);
     }
 
     

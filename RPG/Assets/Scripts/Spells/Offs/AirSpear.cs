@@ -21,6 +21,7 @@ public class AirSpear : MonoBehaviour
         transform.position = Player.transform.position;
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
+        FixRotation();
     }
 
     void Spell()
@@ -30,6 +31,14 @@ public class AirSpear : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void FixRotation()
+    {
+        Vector3 temp = Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 dir = Input.mousePosition - temp;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle -20f, Vector3.forward);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

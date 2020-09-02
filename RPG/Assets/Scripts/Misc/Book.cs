@@ -25,7 +25,7 @@ public class Book : MonoBehaviour
                 UIT.deactivate_book_txt();
                 open = false;
             }
-          
+            Destroy(this.gameObject);
 
         }
     }

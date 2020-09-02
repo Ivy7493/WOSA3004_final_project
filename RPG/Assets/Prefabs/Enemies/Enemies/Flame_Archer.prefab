@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpDistance: 10
-  ExpReward: 65
+  ExpRewardScale: 3
 --- !u!114 &9205469568447790945
 MonoBehaviour:
   m_ObjectHideFlags: 0

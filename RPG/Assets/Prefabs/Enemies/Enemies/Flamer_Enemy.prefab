@@ -202,6 +202,7 @@ MonoBehaviour:
   EngageRange: 8
   AbilityFrequency: 1
   AttackRange: 1
+  DamageScale: 3
   Ability: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c, type: 3}
 --- !u!114 &9010847026189783853
 MonoBehaviour:
@@ -261,7 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpDistance: 10
-  ExpReward: 75
+  ExpRewardScale: 3
 --- !u!114 &-6956494731438830971
 MonoBehaviour:
   m_ObjectHideFlags: 0

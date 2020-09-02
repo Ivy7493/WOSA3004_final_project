@@ -11,6 +11,7 @@ public class Item_Pickup : MonoBehaviour
     public GameObject Spell;
     public string Slot;
     public string ItemDesc;
+    public bool Permanent = false;
     Ability_Manager AM;
     GameObject Player;
     UI_Manager UIM;
@@ -39,10 +40,14 @@ public class Item_Pickup : MonoBehaviour
 
     void DestoryItem()
     {
-        if(Vector3.Distance(transform.position,Player.transform.position) > DestoryRange)
+        if(Permanent == false)
         {
-            Destroy(gameObject);
+            if (Vector3.Distance(transform.position, Player.transform.position) > DestoryRange)
+            {
+                Destroy(gameObject);
+            }
         }
+       
     }
 
 
@@ -100,6 +105,6 @@ public class Item_Pickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DestoryItem();
     }
 }

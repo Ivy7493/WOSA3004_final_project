@@ -60,21 +60,25 @@ public class UI_Manager : MonoBehaviour
     public void SetHeadIcon(Sprite _icon, string _name)
     {
         AbilityHead.GetComponent<Image>().sprite = _icon;
+        GameObject.FindGameObjectWithTag("UI_HeadName").GetComponent<Text>().text = _name;
     }
 
     public void SetMainIcon(Sprite _icon, string _name)
     {
         AbilityMain.GetComponent<Image>().sprite = _icon;
+        GameObject.FindGameObjectWithTag("UI_MainName").GetComponent<Text>().text = _name;
     }
 
     public void SetFeetIcon(Sprite _icon, string _name)
     {
         AbilityFeet.GetComponent<Image>().sprite = _icon;
+        GameObject.FindGameObjectWithTag("UI_FeetName").GetComponent<Text>().text = _name;
     }
 
     public void SetOffIcon(Sprite _icon, string _name)
     {
         AbilityOff.GetComponent<Image>().sprite = _icon;
+        GameObject.FindGameObjectWithTag("UI_OffName").GetComponent<Text>().text = _name;
     }
 
     public void CallItemDisplay(string _name, string _slot, string _desc, Vector3 Location)

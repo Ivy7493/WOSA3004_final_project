@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3411084810994120109}
   - component: {fileID: 1354351631792352352}
+  - component: {fileID: 6885295430194151363}
   m_Layer: 0
   m_Name: Main_Test
   m_TagString: Untagged
@@ -43,5 +44,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b095f2e16496e41b078e1367be2be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Main Test
-  Icon: {fileID: 21300000, guid: 37ef735b451b09641a8ecf30785fa7df, type: 3}
+  Name: Unknown
+  Icon: {fileID: 21300000, guid: f55bf8d3615e2b940b71950a87ec586c, type: 3}
+--- !u!114 &6885295430194151363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988474159345550638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 176f60e189fdfed4da803f8cf7046bf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

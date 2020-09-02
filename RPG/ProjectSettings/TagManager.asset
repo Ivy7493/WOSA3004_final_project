@@ -17,6 +17,10 @@ TagManager:
   - Point2
   - Point3
   - Point4
+  - UI_HeadName
+  - UI_MainName
+  - UI_OffName
+  - UI_FeetName
   layers:
   - Default
   - TransparentFX
@@ -32,7 +36,7 @@ TagManager:
   - Enemy
   - Enemy_Proj
   - Player_Proj
-  - 
+  - MiniMap
   - 
   - 
   - 

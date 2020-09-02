@@ -7,8 +7,10 @@ public class Fire_Boss_AI : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] FireLocations;
     public GameObject FireBombs;
+    public GameObject FireBall;
     GameObject Player;
     Game_Manager GM;
+    Enemy_Health EM;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -16,6 +18,7 @@ public class Fire_Boss_AI : MonoBehaviour
     public float CameraZoom;
     public float SwipeRange;
     public float SwipeDamageScale;
+    public float NumOfFireBall;
     float CameraStart;
     float Status;
     void Start()
@@ -28,6 +31,7 @@ public class Fire_Boss_AI : MonoBehaviour
         //Just a function to change camera size when player gets close to boss
         CameraStart = Camera.main.orthographicSize;
         InvokeRepeating("CameraProspective", 0, 0.1f);
+        EM = GetComponent<Enemy_Health>();
     }
 
 
@@ -42,6 +46,14 @@ public class Fire_Boss_AI : MonoBehaviour
         }
     }
 
+    void CheckHealth()
+    {
+        if(EM.ReturnCurrentHealth() <= 0)
+        {
+            GM.BossDefeated("FIRE");
+        }
+    }
+
 
     //Stuff that must occur when boss dies
     private void OnDestroy()
@@ -51,7 +63,7 @@ public class Fire_Boss_AI : MonoBehaviour
 
         }else if(Status == 0)
         {
-            GM.BossDefeated("FIRE");
+            CheckHealth();
         }
 
         Camera.main.orthographicSize = CameraStart;
@@ -76,6 +88,19 @@ public class Fire_Boss_AI : MonoBehaviour
         {
             float Damage = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel() * SwipeDamageScale;
             GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
+        }
+    }
+
+    //Spawns A lot of fire balls
+    void FireBalls()
+    {
+        float Tempcounter = 0;
+        while(Tempcounter != NumOfFireBall)
+        {
+            Tempcounter++;
+            float RandomDiff = Random.Range(-3f, 3f);
+            Vector3 SpawnPos = new Vector3(transform.position.x + RandomDiff, transform.position.y + RandomDiff, 0f);
+            Instantiate(FireBall, SpawnPos, Quaternion.identity);
         }
     }
 
@@ -123,6 +148,10 @@ public class Fire_Boss_AI : MonoBehaviour
                         break;
                     case 1:
                         Swipe();
+                        CurrentStage = 2f;
+                        break;
+                    case 2:
+                        FireBalls();
                         CurrentStage = 0f;
                         break;
                 }

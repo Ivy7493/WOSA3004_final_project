@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Enemy_Health : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class Enemy_Health : MonoBehaviour
     float FlashCounter = 0f;
     Color32 StartCol;
     LootTable LT;
+    Exp Experience;
     Stat_Manager STM;
     void Start()
     {
@@ -31,6 +33,11 @@ public class Enemy_Health : MonoBehaviour
             HUD.GetComponent<UI_Enemy_HUD>().UpdateHealthBar(1f);
         }
         StartCol = Graphics.color;
+        SystemQuery();
+    }
+
+    void SystemQuery()
+    {
         try
         {
             LT = GetComponent<LootTable>();
@@ -38,6 +45,15 @@ public class Enemy_Health : MonoBehaviour
         catch
         {
             Debug.Log("LootTable was not found on enemy");
+        }
+
+        try
+        {
+            Experience = GetComponent<Exp>();
+        }
+        catch
+        {
+            Debug.Log("Experience component not found on enemy");
         }
     }
 
@@ -74,6 +90,7 @@ public class Enemy_Health : MonoBehaviour
     {
         float TempDamage = STM.IsCrit(_damage);
         Health -= TempDamage;
+        EngagePlayer();
         ///Will play the hit effect if not playing the hit effect
         if(EffectPlaying != true)
         {
@@ -91,7 +108,25 @@ public class Enemy_Health : MonoBehaviour
             {
                 LT.DropLoot();
             }
+            if(Experience != null)
+            {
+                Experience.AwardExp();
+            }
             Destroy(gameObject);
+        }
+    }
+
+    //used to fix enemies doing nothing when being attacked from out of range
+    void EngagePlayer()
+    {
+        try
+        {
+            AIDestinationSetter motor = GetComponent<AIDestinationSetter>();
+            motor.target = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+        catch
+        {
+            Debug.Log("Pathfinding not found, this enemy can't move");
         }
     }
 

@@ -12,9 +12,13 @@ public class Flamer_AI : MonoBehaviour
     public float EngageRange;
     public float AbilityFrequency;
     public float AttackRange;
+    public float DamageScale;
+    float Damage;
     public GameObject Ability;
     GameObject Player;
     AIDestinationSetter Motor;
+    Resource_Manager RM;
+    Experience_Manager EM;
     float counter;
     /// <summary>
     ///Start Transform 411
@@ -34,6 +38,9 @@ public class Flamer_AI : MonoBehaviour
         StartPos = TempStartPos.transform;
         Player = GameObject.FindGameObjectWithTag("Player");
         Motor = GetComponent<AIDestinationSetter>();
+        RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
+        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
+        
     }
 
    
@@ -74,13 +81,15 @@ public class Flamer_AI : MonoBehaviour
             {
                 counter = 0;
                 Instantiate(Ability, transform.position, Quaternion.identity);
+
+                if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
+                {
+                    Damage = DamageScale * EM.ReturnLevel();
+                    RM.Damage(Damage);
+                }
             }
         }
 
-        if(Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
-        {
-
-        }
     }
 
     //NB ALL AI NEED TO DESTORY THEIR START TRANSFORM WHEN THEY GET DESTORYED FOR SYSTEM RESOURCES

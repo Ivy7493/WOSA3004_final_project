@@ -216,6 +216,7 @@ GameObject:
   - component: {fileID: 1739284155574404022}
   - component: {fileID: 4903499149294156905}
   - component: {fileID: 1546225901808765283}
+  - component: {fileID: 2519644126509833560}
   m_Layer: 11
   m_Name: Fire_Boss
   m_TagString: Damagable
@@ -258,11 +259,14 @@ MonoBehaviour:
   - {fileID: 1739284154860656290}
   FireBombs: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c,
     type: 3}
+  FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
+    type: 3}
   StageTime: 2
   EngageRange: 30
   CameraZoom: 12
   SwipeRange: 10
   SwipeDamageScale: 100
+  NumOfFireBall: 5
 --- !u!114 &4903499149294156905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -304,6 +308,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 10.533081, y: 13.068344}
   m_EdgeRadius: 0
+--- !u!114 &2519644126509833560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739284155574404020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExpDistance: 10
+  ExpRewardScale: 5
 --- !u!1001 &6809115380697045152
 PrefabInstance:
   m_ObjectHideFlags: 0

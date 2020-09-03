@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Frost Nova
-  Icon: {fileID: 21300000, guid: 6da73535dce5d4d4581907f98b3604cd, type: 3}
+  Icon: {fileID: 21300000, guid: a29cb6cd026af044bbbaf0b6bf55ce89, type: 3}
 --- !u!114 &1946706513414914342
 MonoBehaviour:
   m_ObjectHideFlags: 0

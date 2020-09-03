@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Arcane Explosion
-  Icon: {fileID: 21300000, guid: 2b4eccfa164dd1047a5d1c195469df3e, type: 3}
+  Icon: {fileID: 21300000, guid: 80fa83291c7b3544281e4e57c554b69e, type: 3}
 --- !u!114 &804567230079049288
 MonoBehaviour:
   m_ObjectHideFlags: 0

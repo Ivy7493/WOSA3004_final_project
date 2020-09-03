@@ -17,6 +17,7 @@ public class Item_Pickup : MonoBehaviour
     UI_Manager UIM;
     Spell_Manager SM;
     float DestoryRange = 30f;
+    public float pickup_range=5f;
     
     void Start()
     {
@@ -77,7 +78,7 @@ public class Item_Pickup : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButton(0) && Vector3.Distance(transform.position,Player.transform.position) <= 2 )
+        if (Input.GetMouseButton(0) && Vector3.Distance(transform.position,Player.transform.position) <= pickup_range)
         {
             switch (Slot)
             {

@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Wind Shear
-  Icon: {fileID: 21300000, guid: 7198570cb2b55d944bbcc2b965255d9b, type: 3}
+  Icon: {fileID: 21300000, guid: 465e0eb6c99b32b44bed1076307425d4, type: 3}
 --- !u!212 &3795369454528019292
 SpriteRenderer:
   m_ObjectHideFlags: 0

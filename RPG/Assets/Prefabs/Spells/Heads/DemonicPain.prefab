@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 'Demonic Word: Pain'
-  Icon: {fileID: 21300000, guid: 53c6deca9f7b7f941ad70ec93da9ff66, type: 3}
+  Icon: {fileID: 21300000, guid: d6ad7c9e943085a498fd8f3071a1a039, type: 3}
 --- !u!212 &4988719114982080981
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageScale: 1
   TickRate: 2
-  Duration: 6
+  Duration: 2
 --- !u!82 &8055282562796129930
 AudioSource:
   m_ObjectHideFlags: 0

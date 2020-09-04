@@ -10,6 +10,7 @@ public class Item_Pickup : MonoBehaviour
     float ItemIndex;
     public GameObject Spell;
     public string Slot;
+    public string Rarity;
     public string ItemDesc;
     public bool Permanent = false;
     Ability_Manager AM;
@@ -38,6 +39,16 @@ public class Item_Pickup : MonoBehaviour
        
     }
 
+    public string ReturnSlot()
+    {
+        return Slot;
+    }
+
+    public string ReturnRarity()
+    {
+        return Rarity;
+    }
+
 
     void DestoryItem()
     {
@@ -56,7 +67,7 @@ public class Item_Pickup : MonoBehaviour
     {
         if(UIM != null)
         {
-            UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 2.5f, 0f));
+            UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 2.5f, 0f),Rarity);
         }
        
     }

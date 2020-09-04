@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Earth Quake
   Spell: {fileID: 1729003323192945251, guid: 24f34c263e278584782fa01298fe8096, type: 3}
   Slot: Feet
+  Rarity: common
   ItemDesc: Smash the ground, Performing an AOE attack
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &9016682867274287546
 BoxCollider2D:
   m_ObjectHideFlags: 0

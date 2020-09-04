@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Black Hole
   Spell: {fileID: 1723517289924574810, guid: 018b8d2847d61e64d8a07702d01d56f6, type: 3}
   Slot: Head
+  Rarity: Rare
   ItemDesc: Pull enemies in
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &8659085869652186860
 BoxCollider2D:
   m_ObjectHideFlags: 0

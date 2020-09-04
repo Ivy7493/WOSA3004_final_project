@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Mana Shield
   Spell: {fileID: 2906368874781742930, guid: 3968067dd0c993e4aace38740ac2ef16, type: 3}
   Slot: Off
+  Rarity: Rare
   ItemDesc: Create a protective barrier
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &4064689059808018247
 BoxCollider2D:
   m_ObjectHideFlags: 0

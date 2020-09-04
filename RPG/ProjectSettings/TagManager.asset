@@ -21,6 +21,7 @@ TagManager:
   - UI_MainName
   - UI_OffName
   - UI_FeetName
+  - Loot_Manager
   layers:
   - Default
   - TransparentFX

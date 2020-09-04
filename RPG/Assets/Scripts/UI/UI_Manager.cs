@@ -81,13 +81,32 @@ public class UI_Manager : MonoBehaviour
         GameObject.FindGameObjectWithTag("UI_OffName").GetComponent<Text>().text = _name;
     }
 
-    public void CallItemDisplay(string _name, string _slot, string _desc, Vector3 Location)
+    public void CallItemDisplay(string _name, string _slot, string _desc, Vector3 Location, string Rarity)
     {
+        Color ItemColor = Color.white;
+        switch (Rarity)
+        {
+            case "Epic":
+                ItemColor = Color.magenta;
+                break;
+            case "Rare":
+                ItemColor = Color.blue;
+                break;
+            case "Uncommon":
+                ItemColor = Color.green;
+                break;
+            case "Common":
+                ItemColor = Color.white;
+                break;
+        }
         ItemPanel.SetActive(true);
         ItemPanel.transform.position = Location;
         ItemDesc.GetComponent<Text>().text = _desc;
+        ItemDesc.GetComponent<Text>().color = ItemColor;
         ItemName.GetComponent<Text>().text = _name;
+        ItemName.GetComponent<Text>().color = ItemColor;
         ItemSlot.GetComponent<Text>().text = _slot;
+        ItemSlot.GetComponent<Text>().color = ItemColor;
     } 
 
 

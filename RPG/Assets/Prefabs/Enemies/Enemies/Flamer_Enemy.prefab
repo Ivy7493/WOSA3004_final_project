@@ -278,6 +278,7 @@ MonoBehaviour:
   - {fileID: 5475625417914990602, guid: 438ff76455290034f87cef13e05d8bba, type: 3}
   - {fileID: 7660522417821616838, guid: 1e6229db24ed4a24fa1f945c1d104588, type: 3}
   DropRate: 100
+  MagicFind: 60
 --- !u!50 &1989646899905353647
 Rigidbody2D:
   serializedVersion: 4

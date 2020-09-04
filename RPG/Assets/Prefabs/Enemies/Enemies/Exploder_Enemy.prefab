@@ -198,6 +198,7 @@ MonoBehaviour:
   - {fileID: 221420538385684927, guid: 5bfebe58101432140b0d02cb7e557c86, type: 3}
   - {fileID: 9016682867274287542, guid: 676553c507ea85644b5d6d610129ba4b, type: 3}
   DropRate: 100
+  MagicFind: 20
 --- !u!114 &1028688180346310620
 MonoBehaviour:
   m_ObjectHideFlags: 0

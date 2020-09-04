@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Demonic Pain
   Spell: {fileID: 4988719114982080979, guid: 8692dd142e25b004296e5034598a9e99, type: 3}
   Slot: Head
+  Rarity: Uncommon
   ItemDesc: Curse the nearest target
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &8041124947799264328
 BoxCollider2D:
   m_ObjectHideFlags: 0

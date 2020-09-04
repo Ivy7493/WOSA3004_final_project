@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Wind Shear
   Spell: {fileID: 3795369454528019290, guid: b7b001240db5bd140a22b3b83eee6fba, type: 3}
   Slot: Main
+  Rarity: Common
   ItemDesc: Create a slash of wind
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &1453635297894407245
 BoxCollider2D:
   m_ObjectHideFlags: 0

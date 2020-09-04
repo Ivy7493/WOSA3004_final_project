@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Frost Nova
   Spell: {fileID: 1946706513414914341, guid: b391f840ce24bb549b92fd393a114d17, type: 3}
   Slot: Feet
+  Rarity: Epic
   ItemDesc: AOE DoT around player
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &8209652529460080714
 BoxCollider2D:
   m_ObjectHideFlags: 0

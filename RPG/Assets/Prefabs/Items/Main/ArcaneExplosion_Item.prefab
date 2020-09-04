@@ -98,7 +98,10 @@ MonoBehaviour:
   Name: Arcane Explosion
   Spell: {fileID: 804567230079049289, guid: 5db5be5b9d7990443bde32be391b1ab9, type: 3}
   Slot: Main
+  Rarity: Rare
   ItemDesc: Aoe Attack around player
+  Permanent: 0
+  pickup_range: 5
 --- !u!61 &5758023291365410301
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 4903499149294156905}
   - component: {fileID: 1546225901808765283}
   - component: {fileID: 2519644126509833560}
+  - component: {fileID: -1814982098650554217}
   m_Layer: 11
   m_Name: Fire_Boss
   m_TagString: Damagable
@@ -320,8 +321,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpDistance: 10
   ExpRewardScale: 5
+--- !u!114 &-1814982098650554217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739284155574404020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Table: []
+  DropRate: 0
+  MagicFind: 100
 --- !u!1001 &6809115380697045152
 PrefabInstance:
   m_ObjectHideFlags: 0

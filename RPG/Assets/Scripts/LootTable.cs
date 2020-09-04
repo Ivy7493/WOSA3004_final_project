@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class LootTable : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject[] Table;
-    public float DropRate;
     public float MagicFind;
     
     void Start()

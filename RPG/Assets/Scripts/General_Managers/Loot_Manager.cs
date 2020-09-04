@@ -23,10 +23,10 @@ public class Loot_Manager : MonoBehaviour
     private void Awake()
     {
         Setup();
-        Debug.Log(Epics);
-        Debug.Log(Rares);
-        Debug.Log(Uncommons);
-        Debug.Log(Commons);
+        Debug.Log(Epics.Length);
+        Debug.Log(Rares.Length);
+        Debug.Log(Uncommons.Length);
+        Debug.Log(Commons.Length);
     }
     void Start()
     {
@@ -117,7 +117,8 @@ public class Loot_Manager : MonoBehaviour
     public GameObject ReturnLoot(float _magic)
     {
         float RandomChance = Random.Range(0, 101);
-        RandomChance = RandomChance/2 + _magic;
+        RandomChance = RandomChance/2 + _magic/2;
+        Debug.Log("Magic find value: " + RandomChance);
        
         if (RandomChance >= EpicThrehold)
         {

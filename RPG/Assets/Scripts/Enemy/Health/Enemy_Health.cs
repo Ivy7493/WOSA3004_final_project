@@ -21,6 +21,7 @@ public class Enemy_Health : MonoBehaviour
     LootTable LT;
     Exp Experience;
     Stat_Manager STM;
+    GameObject DeathEffect;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
@@ -34,6 +35,7 @@ public class Enemy_Health : MonoBehaviour
         }
         StartCol = Graphics.color;
         SystemQuery();
+        DeathEffect = Resources.Load("Blood_Effect", typeof(GameObject)) as GameObject;
     }
 
     void SystemQuery()
@@ -112,6 +114,7 @@ public class Enemy_Health : MonoBehaviour
             {
                 Experience.AwardExp();
             }
+            Instantiate(DeathEffect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

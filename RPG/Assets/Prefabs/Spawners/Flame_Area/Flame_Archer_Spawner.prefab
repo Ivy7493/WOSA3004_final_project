@@ -43,6 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85be17ca8578c34449e172479eefcffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy: {fileID: 9205469568447790950, guid: d46436a133f5eab4ea8454391266ec6d, type: 3}
+  Enemy: {fileID: 804567230079049289, guid: 5db5be5b9d7990443bde32be391b1ab9, type: 3}
   RespawnTime: 60
   DespawnDistance: 30

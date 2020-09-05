@@ -145,14 +145,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1383316059652745512}
-  m_LocalRotation: {x: -0, y: -0, z: 0.00936732, w: 0.99995613}
+  m_LocalRotation: {x: -0, y: -0, z: -0.008765234, w: 0.9999617}
   m_LocalPosition: {x: 1.4655511, y: -0.0000003217708, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8681157327586071001}
   m_Father: {fileID: 8457642470780530809}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1.0730001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -1.0040001}
 --- !u!1 &1815590632628172028
 GameObject:
   m_ObjectHideFlags: 0
@@ -472,6 +472,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1161602698842225286}
   - component: {fileID: 56671340583275948}
+  - component: {fileID: 307852481690850604}
   m_Layer: 0
   m_Name: Archer IK Body V.2
   m_TagString: Untagged
@@ -487,8 +488,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4595401775374169944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -46.609737, y: 2.4517236, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -46.589, y: 4.5178, z: 0}
+  m_LocalScale: {x: 0.59511185, y: 0.59511185, z: 0.59511185}
   m_Children:
   - {fileID: 1276542615167233628}
   - {fileID: 5690219952195424250}
@@ -518,6 +519,25 @@ MonoBehaviour:
     showGizmo: 1
   - color: {r: 0, g: 1, b: 0, a: 1}
     showGizmo: 1
+--- !u!95 &307852481690850604
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4595401775374169944}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4d5805350bc66848a58a88d1245dbf6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4654174770393528468
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1109,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_Sprite: {fileID: -4365160972010093899, guid: f21bbc612e078de4289c72e8eaf918ca,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1140,8 +1160,8 @@ MonoBehaviour:
   - {fileID: 2065006062550712794}
   - {fileID: 3876566797855655717}
   m_Bounds:
-    m_Center: {x: -0.09440136, y: 0.0012784004, z: 0}
-    m_Extent: {x: 2.8544068, y: 4.006279, z: 0}
+    m_Center: {x: -0.09440184, y: 0.000030517578, z: 0}
+    m_Extent: {x: 2.8544025, y: 4.0050306, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1001 &6731435625771750720

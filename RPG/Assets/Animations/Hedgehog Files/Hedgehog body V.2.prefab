@@ -101,7 +101,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 8
+  m_SortingOrder: 9
   m_Sprite: {fileID: -1504860120146077814, guid: fd6d2484b0f696f429b1c943598dda83,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -135,8 +135,8 @@ MonoBehaviour:
   - {fileID: 2710603135287534338}
   - {fileID: 7625873609527640796}
   m_Bounds:
-    m_Center: {x: 0.0014986992, y: -0.010664344, z: 0}
-    m_Extent: {x: 3.7485013, y: 1.9358566, z: 0}
+    m_Center: {x: 0.001502037, y: -0.010663748, z: 0}
+    m_Extent: {x: 3.7484975, y: 1.9358567, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4599907381861965955
@@ -303,6 +303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4573147311551476647}
+  - component: {fileID: 874236696435701626}
   m_Layer: 0
   m_Name: Hedgehog body V.2
   m_TagString: Untagged
@@ -318,14 +319,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9067904610625936985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.551, y: -5.0714, z: 0}
-  m_LocalScale: {x: 0.60622, y: 0.60622, z: 0.60622}
+  m_LocalPosition: {x: -50.435, y: -4.0103, z: 0}
+  m_LocalScale: {x: 0.3749775, y: 0.3749775, z: 0.3749775}
   m_Children:
   - {fileID: 2826735851117168064}
   - {fileID: 7442214543648884240}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &874236696435701626
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9067904610625936985}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 22a6757b7e20a5b4a87167e93b075d12, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &7152076237766065950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -417,6 +437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2939654044082648549, guid: 1a65e6f94db674046bc5f08d26000e17,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9130812083769894517, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}

@@ -232,7 +232,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_Sprite: {fileID: -9103487966280285916, guid: c77c697d32e7ead4fb1a550f115814a0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -265,8 +265,8 @@ MonoBehaviour:
   - {fileID: 3011670850371250447}
   - {fileID: 53424355433581185}
   m_Bounds:
-    m_Center: {x: -0.110000014, y: -0.023934603, z: 0}
-    m_Extent: {x: 1.8050003, y: 1.4420557, z: 0}
+    m_Center: {x: -0.110000014, y: -0.023936987, z: 0}
+    m_Extent: {x: 1.8050003, y: 1.4420571, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &2774624687840318866
@@ -278,6 +278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6782520500143711546}
+  - component: {fileID: 7728896451823718542}
   m_Layer: 0
   m_Name: Blob Body V.2
   m_TagString: Untagged
@@ -293,8 +294,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2774624687840318866}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.871513, y: 7.7062325, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -44.515, y: 11.035, z: 0}
+  m_LocalScale: {x: 0.407237, y: 0.407237, z: 0.407237}
   m_Children:
   - {fileID: 4422777029407543855}
   - {fileID: 1899532634151097176}
@@ -303,6 +304,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &7728896451823718542
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2774624687840318866}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 966f03afc2565364eaab4a1a1f2d9b79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4352989973582380857
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,7 +423,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 9
   m_Sprite: {fileID: -4339220226163619024, guid: c77c697d32e7ead4fb1a550f115814a0,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -445,8 +465,8 @@ MonoBehaviour:
   - {fileID: 3011670850371250447}
   - {fileID: 53424355433581185}
   m_Bounds:
-    m_Center: {x: -0.0000009536743, y: 0.2300005, z: 0}
-    m_Extent: {x: 4.14, y: 4.625, z: 0}
+    m_Center: {x: 0.0000071525574, y: 0.22999525, z: 0}
+    m_Extent: {x: 4.1400003, y: 4.625, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4771139352968014693

@@ -25,7 +25,11 @@ public class LootTable : MonoBehaviour
         }
         */
         GameObject Loot = GameObject.FindGameObjectWithTag("Loot_Manager").GetComponent<Loot_Manager>().ReturnLoot(MagicFind);
-        Instantiate(Loot, transform.position, Quaternion.identity);
+        if(Loot != null)
+        {
+            Instantiate(Loot, transform.position, Quaternion.identity);
+        }
+        
     }
 
       

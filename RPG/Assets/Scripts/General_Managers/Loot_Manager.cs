@@ -23,10 +23,29 @@ public class Loot_Manager : MonoBehaviour
     private void Awake()
     {
         Setup();
-        Debug.Log(Epics.Length);
-        Debug.Log(Rares.Length);
-        Debug.Log(Uncommons.Length);
-        Debug.Log(Commons.Length);
+        
+        Debug.Log("Epics!");
+        for(int i = 0; i < Epics.Length; i ++)
+        {
+            Debug.Log(Epics[i].name);
+        }
+        Debug.Log("Rares!");
+        for (int i = 0; i < Rares.Length; i++)
+        {
+            Debug.Log(Rares[i].name);
+        }
+        Debug.Log("Uncommons!");
+        for (int i = 0; i < Uncommons.Length; i++)
+        {
+          
+            Debug.Log(Uncommons[i].name);
+        }
+        Debug.Log("Commons!");
+        for (int i = 0; i < Commons.Length; i++)
+        {
+            Debug.Log(Commons[i].name);
+        }
+       
     }
     void Start()
     {
@@ -42,15 +61,19 @@ public class Loot_Manager : MonoBehaviour
             {
                 case "Epic":
                     AddItem(Items[i], "Epic");
+                    Debug.Log(Items[i].name + " was added to Epics!");
                     break;
                 case "Rare":
                     AddItem(Items[i], "Rare");
+                    Debug.Log(Items[i].name + " was added to Rares!");
                     break;
                 case "Uncommon":
                     AddItem(Items[i], "Uncommon");
+                    Debug.Log(Items[i].name + " was added to Uncommons!");
                     break;
                 case "Common":
                     AddItem(Items[i], "Common");
+                    Debug.Log(Items[i].name + " was added to Commons!");
                     break;
             }
         }
@@ -77,14 +100,51 @@ public class Loot_Manager : MonoBehaviour
         GameObject[] NewArray = new GameObject[(int)Resize + 1];
         for(int i = 0; i < Resize; i++)
         {
-            try
+            switch (_Rarity)
             {
-                NewArray[i] = Epics[i];
+                case "Epic":
+                    try
+                    {
+                        NewArray[i] = Epics[i];
+                    }
+                    catch
+                    {
+                        Debug.Log("Probs first time set up");
+                    }
+                    break;
+                case "Rare":
+                    try
+                    {
+                        NewArray[i] = Rares[i];
+                    }
+                    catch
+                    {
+                        Debug.Log("Probs first time set up");
+                    }
+                    break;
+                case "Uncommon":
+                    try
+                    {
+                        NewArray[i] = Uncommons[i];
+                    }
+                    catch
+                    {
+                        Debug.Log("Probs first time set up");
+                    }
+                    break;
+                case "Common":
+                    try
+                    {
+                        NewArray[i] = Commons[i];
+                    }
+                    catch
+                    {
+                        Debug.Log("Probs first time set up");
+                    }
+                    break;
+
             }
-            catch
-            {
-                Debug.Log("Probs first time set up");
-            }
+           
            
         }
         NewArray[(int)Resize] = _item;
@@ -122,22 +182,25 @@ public class Loot_Manager : MonoBehaviour
        
         if (RandomChance >= EpicThrehold)
         {
-
+            Debug.Log("Epic!: " + RandomChance + ", " + EpicThrehold);
             float select = Random.Range(0, Epics.Length);
             return Epics[(int)select];
         }
         else if (RandomChance >= RareThreshold)
         {
+            Debug.Log("Rare!: " + RandomChance + ", " + RareThreshold);
             float select = Random.Range(0, Rares.Length);
             return Rares[(int)select];
         }
         else if (RandomChance >= UncommonThreshold)
         {
+            Debug.Log("Uncommon!: " + RandomChance + ", " + UncommonThreshold);
             float select = Random.Range(0, Uncommons.Length);
             return Uncommons[(int)select];
         }
         else if (RandomChance >= CommonThreshold)
         {
+            Debug.Log("Common!: " + RandomChance + ", " + CommonThreshold);
             float select = Random.Range(0, Commons.Length);
             return Commons[(int)select];
         }

@@ -65,8 +65,15 @@ public class Fire_Boss_AI : MonoBehaviour
         {
             CheckHealth();
         }
-
-        Camera.main.orthographicSize = CameraStart;
+        try
+        {
+            Camera.main.orthographicSize = CameraStart;
+        }
+        catch
+        {
+            Debug.Log("Caught camera issue");
+        }
+        
     }
 
     //THe explosive ability of the boss

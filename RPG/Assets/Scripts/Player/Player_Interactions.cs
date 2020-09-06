@@ -14,7 +14,7 @@ public class Player_Interactions : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Working");
+       
       
         if (collision.gameObject.tag == "Point1")
         {

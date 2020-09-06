@@ -42,18 +42,23 @@ public class Exploder_AI : MonoBehaviour
     // AT engage range will engage the player
     void Movement()
     {
+       
         if (Vector3.Distance(StartPos.position, transform.position) > MaxRange)
         {
             Motor.target = StartPos;
         }
         else if (Vector3.Distance(transform.position, Player.transform.position) <= EngageRange)
         {
+            Debug.Log("here silly goose! but 1 step out");
             if (Player.transform != null)
             {
+                Debug.Log("here silly goose!");
                 Motor.target = Player.transform;
             }
 
         }
+
+        Debug.Log(Vector3.Distance(transform.position, Player.transform.position) + " : " + EngageRange);
     }
 
 

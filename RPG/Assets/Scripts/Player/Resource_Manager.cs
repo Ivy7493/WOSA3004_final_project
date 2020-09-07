@@ -20,6 +20,7 @@ public class Resource_Manager : MonoBehaviour
     UI_Manager UIM;
     Game_Manager GM;
     Stat_Manager STM;
+    Music_Manager MM;
 
 
     void Awake()
@@ -33,6 +34,7 @@ public class Resource_Manager : MonoBehaviour
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         GM = GameObject.FindGameObjectWithTag("Game_Manager").GetComponent<Game_Manager>();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
+        MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         RecalculateStatValues();
 
     }
@@ -87,6 +89,7 @@ public class Resource_Manager : MonoBehaviour
             CurrentHP = MaxHP;
             UIM.UpdateHealth(CurrentHP / MaxHP);
             GM.Death();
+            MM.PlayStartingArea();
         }
     }
 

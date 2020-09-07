@@ -38,7 +38,7 @@ public class AirSpear : MonoBehaviour
         Vector3 temp = Camera.main.WorldToScreenPoint(transform.position);
         Vector3 dir = Input.mousePosition - temp;
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle -20f, Vector3.forward);
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

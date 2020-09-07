@@ -19,6 +19,7 @@ public class Flamer_AI : MonoBehaviour
     AIDestinationSetter Motor;
     Resource_Manager RM;
     Experience_Manager EM;
+    AudioSource AS;
     float counter;
     /// <summary>
     ///Start Transform 411
@@ -40,6 +41,7 @@ public class Flamer_AI : MonoBehaviour
         Motor = GetComponent<AIDestinationSetter>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
+        AS = GetComponent<AudioSource>();
         
     }
 
@@ -85,7 +87,13 @@ public class Flamer_AI : MonoBehaviour
                 if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
                 {
                     Damage = DamageScale * EM.ReturnLevel();
+                    Debug.Log("YOOOOOOOOOOOOOOOOOOOOOOOOOO");
                     RM.Damage(Damage);
+                    if(AS.isPlaying == false)
+                    {
+                        AS.Play();
+                    }
+                   
                 }
             }
         }

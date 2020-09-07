@@ -22,6 +22,8 @@ TagManager:
   - UI_OffName
   - UI_FeetName
   - Loot_Manager
+  - Music_Manager
+  - FireBoss_SoundPoint
   layers:
   - Default
   - TransparentFX

@@ -11,6 +11,7 @@ public class Fire_Boss_AI : MonoBehaviour
     GameObject Player;
     Game_Manager GM;
     Enemy_Health EM;
+    Music_Manager MM;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -32,6 +33,7 @@ public class Fire_Boss_AI : MonoBehaviour
         CameraStart = Camera.main.orthographicSize;
         InvokeRepeating("CameraProspective", 0, 0.1f);
         EM = GetComponent<Enemy_Health>();
+        MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
     }
 
 
@@ -42,6 +44,7 @@ public class Fire_Boss_AI : MonoBehaviour
     {
         if(Status == 1)
         {
+            Destroy(GameObject.FindGameObjectWithTag("FireBoss_SoundPoint"));
             Destroy(gameObject);
         }
     }
@@ -51,6 +54,8 @@ public class Fire_Boss_AI : MonoBehaviour
         if(EM.ReturnCurrentHealth() <= 0)
         {
             GM.BossDefeated("FIRE");
+            MM.PlayFireArea();
+            Destroy(GameObject.FindGameObjectWithTag("FireBoss_SoundPoint"));
         }
     }
 
@@ -80,10 +85,18 @@ public class Fire_Boss_AI : MonoBehaviour
     void RainFire()
     {
         float Select = Random.Range(0, FireLocations.Length);
-        for(int i = 0; i <= Select; i++)
-        {
-            Instantiate(FireBombs, FireLocations[i].transform.position, Quaternion.identity);
-        }
+        //right
+        Vector3 Pos = new Vector3(Player.transform.position.x + 4, Player.transform.position.y, 0f);
+        Instantiate(FireBombs, Pos, Quaternion.identity);
+        //left
+        Pos = new Vector3(Player.transform.position.x - 4, Player.transform.position.y, 0f);
+        Instantiate(FireBombs, Pos, Quaternion.identity);
+        //up
+        Pos = new Vector3(Player.transform.position.x, Player.transform.position.y + 4, 0f);
+        Instantiate(FireBombs, Pos, Quaternion.identity);
+        //down
+        Pos = new Vector3(Player.transform.position.x, Player.transform.position.y - 4, 0f);
+        Instantiate(FireBombs, Pos, Quaternion.identity);
 
     }
 
@@ -118,7 +131,7 @@ public class Fire_Boss_AI : MonoBehaviour
         if(Vector3.Distance(Player.transform.position, transform.position) < EngageRange)
         {
             float CameraSize = Camera.main.orthographicSize;
-            
+           
             if(CameraSize < CameraZoom)
             {
                 Debug.Log("HERE!");

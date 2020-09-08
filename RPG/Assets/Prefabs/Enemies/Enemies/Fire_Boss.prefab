@@ -267,7 +267,7 @@ MonoBehaviour:
   EngageRange: 30
   CameraZoom: 12
   SwipeRange: 10
-  SwipeDamageScale: 25
+  SwipeDamageScale: 100
   NumOfFireBall: 5
 --- !u!114 &4903499149294156905
 MonoBehaviour:

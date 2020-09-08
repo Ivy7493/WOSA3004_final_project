@@ -12,7 +12,6 @@ public class UI_Tutorial : MonoBehaviour
     public GameObject Start_txt;
     public GameObject Mages_encounter;
     public GameObject Book_encounter;
-    public GameObject first_enemy_encounter;
 
     
 
@@ -22,7 +21,7 @@ public class UI_Tutorial : MonoBehaviour
     {
         if(PlayerPrefs.GetFloat("StartText",0f) == 0f)
         {
-            Invoke("deactivate_start_txt", 5f);
+            Invoke("deactivate_start_txt", 8f);
             PlayerPrefs.SetFloat("StartText", 1f);
         }else if(PlayerPrefs.GetFloat("StartText",0f) == 1f)
         {
@@ -41,7 +40,7 @@ public class UI_Tutorial : MonoBehaviour
     {
        if(PlayerPrefs.GetFloat("MovementText",0f) == 0f)
         {
-            Movement_txt.SetActive(true);
+            Start_txt.SetActive(true);
         }
       
 
@@ -50,9 +49,8 @@ public class UI_Tutorial : MonoBehaviour
     {
         if(PlayerPrefs.GetFloat("MovementText", 0f) == 0f)
         {
-            Destroy(Movement_txt);
             PlayerPrefs.SetFloat("MovementText", 1f);
-            
+            Destroy(Movement_txt);
            
         }
        
@@ -108,22 +106,6 @@ public class UI_Tutorial : MonoBehaviour
         
     }
 
-    public void activate_first_enemy()
-    {
-        if (PlayerPrefs.GetFloat("FirstEnemy", 0f) == 0f)
-        {
-            first_enemy_encounter.SetActive(true);
-        }
-    }
-
-    public void deactivate_first_enemy()
-    {
-        if (PlayerPrefs.GetFloat("FirstEnemy", 0f) == 0f)
-        {
-            Destroy(first_enemy_encounter);
-            PlayerPrefs.SetFloat("FirstEnemy", 1f);
-        }
-    }
    
 
 

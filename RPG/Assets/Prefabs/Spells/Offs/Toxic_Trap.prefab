@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 3
   DamageScale: 2
-  Duration: 1.5
+  Duration: 6
   TickRate: 1
 --- !u!95 &7827377029371578877
 Animator:

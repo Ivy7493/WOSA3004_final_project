@@ -203,9 +203,15 @@ MonoBehaviour:
   MaxRange: 18
   EngageRange: 9
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   AbilityFrequency: 2
   AttackRange: 2
   DamageScale: 3
+=======
+  AbilityFrequency: 1
+  AttackRange: 1
+  DamageScale: 4
+>>>>>>> Stashed changes
 =======
   AbilityFrequency: 1
   AttackRange: 1

@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 3
+  ExpRewardScale: 4
 --- !u!114 &9205469568447790945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,10 +159,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Table:
   - {fileID: 3997570621691734410, guid: d41ad8ba4dc98f8409a3c7f13d72a80c, type: 3}
   DropRate: 100
   MagicFind: 50
+=======
+  MagicFind: 60
+>>>>>>> Stashed changes
 --- !u!114 &9205469568447790947
 MonoBehaviour:
   m_ObjectHideFlags: 0

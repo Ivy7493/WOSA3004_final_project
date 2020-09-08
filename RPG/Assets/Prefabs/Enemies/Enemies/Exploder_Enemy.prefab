@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 7749638599392397916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2077017, y: -2.5222065, z: 1099.447}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4048234132855678396}
   m_Father: {fileID: 0}
@@ -163,9 +163,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79fd8853d726c4b87f6c586ce44668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   EngageRange: 5
   MaxRange: 15
   DamageScale: 6
+=======
+  EngageRange: 8
+  MaxRange: 18
+  DamageScale: 3
+>>>>>>> Stashed changes
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 5
+  HealthScale: 3
   HUD: {fileID: 4048234132855678399}
   HitEffect: 0
 --- !u!114 &3919601027547320563
@@ -193,12 +199,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Table:
   - {fileID: 3997570621691734410, guid: d41ad8ba4dc98f8409a3c7f13d72a80c, type: 3}
   - {fileID: 221420538385684927, guid: 5bfebe58101432140b0d02cb7e557c86, type: 3}
   - {fileID: 9016682867274287542, guid: 676553c507ea85644b5d6d610129ba4b, type: 3}
   DropRate: 100
   MagicFind: 20
+=======
+  MagicFind: 30
+>>>>>>> Stashed changes
 --- !u!114 &1028688180346310620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +255,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 8
+  maxSpeed: 10
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

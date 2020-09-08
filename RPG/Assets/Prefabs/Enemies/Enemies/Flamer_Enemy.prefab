@@ -116,7 +116,7 @@ Transform:
   m_GameObject: {fileID: 9010847026189783841}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.24, y: -7.52, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_Children:
   - {fileID: 9010847024294549190}
   - {fileID: 6622557131255535483}
@@ -170,7 +170,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 7
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -202,9 +202,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 18
   EngageRange: 9
+<<<<<<< Updated upstream
   AbilityFrequency: 2
   AttackRange: 2
   DamageScale: 3
+=======
+  AbilityFrequency: 1
+  AttackRange: 1
+  DamageScale: 4
+>>>>>>> Stashed changes
   Ability: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c, type: 3}
 --- !u!114 &9010847026189783853
 MonoBehaviour:

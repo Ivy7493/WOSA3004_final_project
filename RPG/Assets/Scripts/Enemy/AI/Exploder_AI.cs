@@ -15,6 +15,9 @@ public class Exploder_AI : MonoBehaviour
     float Damage;
     Transform StartPos;
     AIDestinationSetter Motor;
+    Vector3 PreviousPosition;
+    Vector3 CurrentPosition;
+    Animator Anim;
     /// <summary>
     ///Start Transform 411
     ///okay so, we need to create an empty game object with a transform attached. That way we can spawn it at the start location of the enemy and have a reference to pass
@@ -35,6 +38,8 @@ public class Exploder_AI : MonoBehaviour
         Motor = GetComponent<AIDestinationSetter>();
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = PlayerLevel * DamageScale;
+        PreviousPosition = transform.position;
+        Anim = GetComponentInChildren<Animator>();
     }
 
     //Movement Control for AI and engage range
@@ -49,16 +54,29 @@ public class Exploder_AI : MonoBehaviour
         }
         else if (Vector3.Distance(transform.position, Player.transform.position) <= EngageRange)
         {
-            Debug.Log("here silly goose! but 1 step out");
+           
             if (Player.transform != null)
             {
-                Debug.Log("here silly goose!");
+                
                 Motor.target = Player.transform;
             }
 
         }
+        RunningAnimation();
 
-        Debug.Log(Vector3.Distance(transform.position, Player.transform.position) + " : " + EngageRange);
+       
+    }
+
+    void RunningAnimation()
+    {
+        CurrentPosition = transform.position;
+        if(Vector3.Distance(CurrentPosition,PreviousPosition) > 0.1)
+        {
+            Anim.SetBool("Running", true);
+        }else if(Vector3.Distance(CurrentPosition, PreviousPosition) < 0.1)
+        {
+            Anim.SetBool("Running", false);
+        }
     }
 
 

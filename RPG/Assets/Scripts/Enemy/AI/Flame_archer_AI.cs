@@ -11,10 +11,12 @@ public class Flame_archer_AI : MonoBehaviour
     float offset = 2.5f;
     GameObject Player;
     float counter = 0f;
+    Animator Anim;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         counter = AbilityFrequency;
+        Anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -27,6 +29,7 @@ public class Flame_archer_AI : MonoBehaviour
             counter += Time.deltaTime;
             if(counter >= AbilityFrequency)
             {
+                Anim.SetTrigger("Attack");
                 Vector3 Direction = (Player.transform.position - transform.position).normalized;
                 Instantiate(FireBall, transform.position + (Direction * offset), Quaternion.identity);
                 counter = 0;

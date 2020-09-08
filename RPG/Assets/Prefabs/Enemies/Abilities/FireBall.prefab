@@ -165,14 +165,14 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 10
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 4294967295
   centerOffsetCompatibility: NaN
   orientation: 1
-  enableRotation: 0
+  enableRotation: 1
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 360
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f241186bfaa42d045928c09da12f4718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrackTimer: 10
+  TrackTimer: 5
   DamageScale: 3
 --- !u!58 &8602010791685454990
 CircleCollider2D:
@@ -283,12 +283,12 @@ PrefabInstance:
     - target: {fileID: 2537347666802824582, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2537347666802824582, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2537347666802824582, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}
@@ -308,7 +308,7 @@ PrefabInstance:
     - target: {fileID: 2537347666802824582, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 9130812083769894517, guid: 1a65e6f94db674046bc5f08d26000e17,
         type: 3}

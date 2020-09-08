@@ -96,10 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Table:
-  - {fileID: 5758023291365410289, guid: 3a8e53db86214c64a84b5fb996f6c899, type: 3}
-  - {fileID: 1295073914733656193, guid: a7a1843016d05c14dabdda11f5b3ec9d, type: 3}
-  DropRate: 100
+  MagicFind: 70
 --- !u!114 &4367524548215945293
 MonoBehaviour:
   m_ObjectHideFlags: 0

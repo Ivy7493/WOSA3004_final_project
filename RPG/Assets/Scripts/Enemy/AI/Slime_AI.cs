@@ -20,6 +20,7 @@ public class Slime_AI : MonoBehaviour
     Transform StartPos;
     Vector3 PreviousPosition;
     Enemy_Health EH;
+    Animator Anim;
     public GameObject Slime;
     public bool Recursion;
     void Start()
@@ -37,6 +38,7 @@ public class Slime_AI : MonoBehaviour
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PreviousPosition = transform.position;
         EH = GetComponent<Enemy_Health>();
+        Anim = GetComponentInChildren<Animator>();
     }
 
     void Animations()
@@ -84,6 +86,7 @@ public class Slime_AI : MonoBehaviour
         if(Vector3.Distance(Player.transform.position,transform.position) <= AttackRange && counter >= AttackSpeed)
         {
             // put Attack Animation here
+            Anim.SetTrigger("Attack");
             RM.Damage(Damage);
             counter = 0f;
         }

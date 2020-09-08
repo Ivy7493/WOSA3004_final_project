@@ -12,6 +12,7 @@ public class Fire_Boss_AI : MonoBehaviour
     Game_Manager GM;
     Enemy_Health EM;
     Music_Manager MM;
+    Animator Anim;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -34,6 +35,7 @@ public class Fire_Boss_AI : MonoBehaviour
         InvokeRepeating("CameraProspective", 0, 0.1f);
         EM = GetComponent<Enemy_Health>();
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
+        Anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -79,6 +81,24 @@ public class Fire_Boss_AI : MonoBehaviour
             Debug.Log("Caught camera issue");
         }
         
+    }
+    IEnumerator ExecuteAfterTime(float time, string _Animation)
+    {
+        yield return new WaitForSeconds(time);
+
+        // Code to execute after the delay
+        switch (_Animation)
+        {
+            case "Smash":
+                Swipe();
+                break;
+            case "Conjure":
+                RainFire();
+                break;
+            case "Blast":
+                FireBalls();
+                break;
+        }
     }
 
     //THe explosive ability of the boss
@@ -163,15 +183,23 @@ public class Fire_Boss_AI : MonoBehaviour
                 switch (CurrentStage)
                 {
                     case 0:
-                        RainFire();
+                        Anim.SetTrigger("Blast");
+                        //RainFire();
+                        StartCoroutine(ExecuteAfterTime(1,"Blast"));
                         CurrentStage = 1f;
+                       
                         break;
                     case 1:
-                        Swipe();
+                        Anim.SetTrigger("Smash");
+                        //Swipe();
+                        StartCoroutine(ExecuteAfterTime(1, "Smash"));
                         CurrentStage = 2f;
+                        
                         break;
                     case 2:
-                        FireBalls();
+                        Anim.SetTrigger("Conjure");
+                        // FireBalls();
+                        StartCoroutine(ExecuteAfterTime(1, "Conjure"));
                         CurrentStage = 0f;
                         break;
                 }

@@ -20,6 +20,7 @@ public class Flamer_AI : MonoBehaviour
     Resource_Manager RM;
     Experience_Manager EM;
     AudioSource AS;
+    Animator Anim;
     float counter;
     /// <summary>
     ///Start Transform 411
@@ -42,6 +43,7 @@ public class Flamer_AI : MonoBehaviour
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
         AS = GetComponent<AudioSource>();
+        Anim = GetComponentInChildren<Animator>();
         
     }
 
@@ -82,14 +84,18 @@ public class Flamer_AI : MonoBehaviour
             if(counter >= AbilityFrequency)
             {
                 counter = 0;
-                Instantiate(Ability, transform.position, Quaternion.identity);
-
+                Vector3 TempLocation1 = new Vector3(Player.transform.position.x, Player.transform.position.y, 0f);
+                Vector3 TempLocation2 = new Vector3(transform.position.x, transform.position.y, 0f);
+                Vector3 result = (TempLocation2 - TempLocation1).normalized * 1f;
+                result = result + transform.position;
+                Instantiate(Ability, result, Quaternion.identity);
+               
                 if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
                 {
                     Damage = DamageScale * EM.ReturnLevel();
-                    Debug.Log("YOOOOOOOOOOOOOOOOOOOOOOOOOO");
                     RM.Damage(Damage);
-                    if(AS.isPlaying == false)
+                    Anim.SetTrigger("Attack");
+                    if (AS.isPlaying == false)
                     {
                         AS.Play();
                     }

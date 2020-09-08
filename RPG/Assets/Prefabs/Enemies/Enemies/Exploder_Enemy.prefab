@@ -164,15 +164,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   EngageRange: 5
   MaxRange: 15
   DamageScale: 6
-=======
-  EngageRange: 8
-  MaxRange: 18
-  DamageScale: 3
->>>>>>> Stashed changes
 =======
   EngageRange: 8
   MaxRange: 18
@@ -206,16 +200,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   Table:
   - {fileID: 3997570621691734410, guid: d41ad8ba4dc98f8409a3c7f13d72a80c, type: 3}
   - {fileID: 221420538385684927, guid: 5bfebe58101432140b0d02cb7e557c86, type: 3}
   - {fileID: 9016682867274287542, guid: 676553c507ea85644b5d6d610129ba4b, type: 3}
   DropRate: 100
   MagicFind: 20
-=======
-  MagicFind: 30
->>>>>>> Stashed changes
 =======
   MagicFind: 30
 >>>>>>> Stashed changes

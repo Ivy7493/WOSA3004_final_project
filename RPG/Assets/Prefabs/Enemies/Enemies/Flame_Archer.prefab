@@ -160,14 +160,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   Table:
   - {fileID: 3997570621691734410, guid: d41ad8ba4dc98f8409a3c7f13d72a80c, type: 3}
   DropRate: 100
   MagicFind: 50
-=======
-  MagicFind: 60
->>>>>>> Stashed changes
 =======
   MagicFind: 60
 >>>>>>> Stashed changes

@@ -99,13 +99,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   Speed: 15
   DamageScale: 2
-=======
-  Speed: 20
-  DamageScale: 4
->>>>>>> Stashed changes
 =======
   Speed: 20
   DamageScale: 4
@@ -163,11 +158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   ManaScale: 5
-=======
-  ManaScale: 4
->>>>>>> Stashed changes
 =======
   ManaScale: 4
 >>>>>>> Stashed changes

@@ -24,6 +24,7 @@ TagManager:
   - Loot_Manager
   - Music_Manager
   - FireBoss_SoundPoint
+  - UI_Zone
   layers:
   - Default
   - TransparentFX

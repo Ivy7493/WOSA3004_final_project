@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartAndFire : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class StartAndFire : MonoBehaviour
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
+       
     }
 
     void ChangeSound()
@@ -18,11 +20,13 @@ public class StartAndFire : MonoBehaviour
         if (Player.transform.position.y > transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)
         {
             MM.PlayStartingArea();
+          
 
         }
         else if (Player.transform.position.y < transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)
         {
             MM.PlayFireArea();
+           
         }
     }
 

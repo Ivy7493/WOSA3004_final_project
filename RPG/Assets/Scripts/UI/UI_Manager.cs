@@ -23,12 +23,14 @@ public class UI_Manager : MonoBehaviour
     public GameObject PauseScreenUI;
     public GameObject TalentPanel;
     public GameObject TalentNumber;
+    public GameObject ZoneText;
     public static bool GameIsPaused = false;
     void Start()
     {
         PauseScreenUI.SetActive(false);
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
+        ZoneText.SetActive(false);
     }
 
     public void UpdateLevel(float _Level)
@@ -132,6 +134,12 @@ public class UI_Manager : MonoBehaviour
             ItemPanel.SetActive(false);
         }
         
+    }
+
+    public void DisplayZone(string _Zone)
+    {
+        ZoneText.SetActive(true);
+        ZoneText.GetComponentInChildren<Text>().text = _Zone;
     }
 
     public void ResumeGame()

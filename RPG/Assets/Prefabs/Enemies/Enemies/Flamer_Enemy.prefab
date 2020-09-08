@@ -203,9 +203,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 18
   EngageRange: 9
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+>>>>>>> parent of 19ee18a5... System changes
   AbilityFrequency: 2
   AttackRange: 4
   DamageScale: 3
+<<<<<<< HEAD
+=======
+=======
+  AbilityFrequency: 1
+  AttackRange: 1
+  DamageScale: 4
+>>>>>>> Stashed changes
+>>>>>>> parent of 19ee18a5... System changes
   Ability: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c, type: 3}
 --- !u!114 &9010847026189783853
 MonoBehaviour:

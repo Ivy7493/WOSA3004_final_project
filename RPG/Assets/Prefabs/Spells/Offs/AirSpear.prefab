@@ -98,8 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afd8494274851540981b9292348585c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   Speed: 20
   DamageScale: 2
+=======
+<<<<<<< Updated upstream
+  Speed: 15
+  DamageScale: 2
+=======
+  Speed: 20
+  DamageScale: 4
+>>>>>>> Stashed changes
+>>>>>>> parent of 19ee18a5... System changes
 --- !u!114 &4658015910140567078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,7 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   ManaScale: 3
+=======
+<<<<<<< Updated upstream
+  ManaScale: 5
+=======
+  ManaScale: 4
+>>>>>>> Stashed changes
+>>>>>>> parent of 19ee18a5... System changes
 --- !u!82 &180406390182036763
 AudioSource:
   m_ObjectHideFlags: 0

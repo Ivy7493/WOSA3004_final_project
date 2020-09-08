@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4658015910140567079}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.745059, y: -1.2194518, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,16 +74,16 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 9
-  m_Sprite: {fileID: 21300000, guid: 1c2d1c3837bce3e44b4f3891bb7b365f, type: 3}
+  m_SortingOrder: 8
+  m_Sprite: {fileID: 21300000, guid: cfd99961264a5294094f77dbf959ade1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 1.28}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4658015910140567082
@@ -98,8 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5afd8494274851540981b9292348585c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 20
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  Speed: 15
   DamageScale: 2
+=======
+  Speed: 20
+  DamageScale: 4
+>>>>>>> Stashed changes
+=======
+  Speed: 20
+  DamageScale: 4
+>>>>>>> Stashed changes
 --- !u!114 &4658015910140567078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,18 +137,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 2.8714504, y: 0.85293615}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 1.28}
-    newSize: {x: 4, y: 1.28}
+    oldSize: {x: 10.5, y: 4.02}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4, y: 1.28}
+  m_Size: {x: 3.5533485, y: 2.3141277}
   m_EdgeRadius: 0
 --- !u!114 &-1373757431921794175
 MonoBehaviour:
@@ -152,7 +162,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 3
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+  ManaScale: 5
+=======
+  ManaScale: 4
+>>>>>>> Stashed changes
+=======
+  ManaScale: 4
+>>>>>>> Stashed changes
 --- !u!82 &180406390182036763
 AudioSource:
   m_ObjectHideFlags: 0

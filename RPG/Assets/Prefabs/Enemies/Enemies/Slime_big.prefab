@@ -124,7 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   ExpRewardScale: 5
+=======
+  ExpRewardScale: 6
+>>>>>>> Gift_branch
 --- !u!114 &83661204774290340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   MagicFind: 30
+=======
+  MagicFind: 55
+>>>>>>> Gift_branch
 --- !u!114 &83661204774290337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,7 +158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   HealthScale: 5
+=======
+  HealthScale: 10
+>>>>>>> Gift_branch
   HUD: {fileID: 6172694817185284899}
   HitEffect: 0
 --- !u!114 &83661204774290342
@@ -199,7 +211,11 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
+<<<<<<< HEAD
   maxSpeed: 7
+=======
+  maxSpeed: 8
+>>>>>>> Gift_branch
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

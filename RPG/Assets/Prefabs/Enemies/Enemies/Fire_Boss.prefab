@@ -264,10 +264,10 @@ MonoBehaviour:
   FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
     type: 3}
   StageTime: 2
-  EngageRange: 35
-  CameraZoom: 15
+  EngageRange: 30
+  CameraZoom: 12
   SwipeRange: 10
-  SwipeDamageScale: 35
+  SwipeDamageScale: 25
   NumOfFireBall: 5
 --- !u!114 &4903499149294156905
 MonoBehaviour:
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 300
+  HealthScale: 20
   HUD: {fileID: 792138804445430813}
   HitEffect: 1
 --- !u!61 &1546225901808765283
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 10
+  ExpRewardScale: 5
 --- !u!114 &-1814982098650554217
 MonoBehaviour:
   m_ObjectHideFlags: 0

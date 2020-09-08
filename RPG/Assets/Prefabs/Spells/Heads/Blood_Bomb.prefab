@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64315df7153a9374ba8212c753b735fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 4
+  Range: 5
   DamageScale: 8
   SelfDamageScale: 3
 --- !u!114 &1423831258971103849

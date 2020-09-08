@@ -49,7 +49,7 @@ MonoBehaviour:
     type: 3}
   Distance: 5
   Speed: 50
-  DashTime: 0.1
+  DashTime: 0.2
 --- !u!114 &3599466192895673018
 MonoBehaviour:
   m_ObjectHideFlags: 0

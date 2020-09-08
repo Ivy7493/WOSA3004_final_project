@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 3
+  ExpRewardScale: 4
 --- !u!114 &9205469568447790945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicFind: 50
+  MagicFind: 60
 --- !u!114 &9205469568447790947
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 6768703813121990941, guid: ed8a66fccbeeaba45b857592437fe569,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.000032424927
+      value: 0.00002861023
       objectReference: {fileID: 0}
     - target: {fileID: 6768703813121990941, guid: ed8a66fccbeeaba45b857592437fe569,
         type: 3}

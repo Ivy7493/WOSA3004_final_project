@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 7749638599392397916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2077017, y: -2.5222065, z: 1099.447}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 4048234132855678396}
   - {fileID: 7653105202165653468}
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79fd8853d726c4b87f6c586ce44668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageRange: 10
-  MaxRange: 15
-  DamageScale: 6
+  EngageRange: 8
+  MaxRange: 18
+  DamageScale: 3
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 5
+  HealthScale: 3
   HUD: {fileID: 4048234132855678399}
   HitEffect: 0
 --- !u!114 &3919601027547320563
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicFind: 20
+  MagicFind: 30
 --- !u!114 &1028688180346310620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 8
+  maxSpeed: 10
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -310,12 +310,12 @@ PrefabInstance:
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.0014929771
+      value: 0.0014939308
       objectReference: {fileID: 0}
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.010663509
+      value: -0.01066339
       objectReference: {fileID: 0}
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
@@ -325,7 +325,7 @@ PrefabInstance:
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.9358569
+      value: 1.9358566
       objectReference: {fileID: 0}
     - target: {fileID: 9067904610625936985, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}

@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 4
+  ExpRewardScale: 25
 --- !u!114 &9205469568447790945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 10
+  HealthScale: 12
   HUD: {fileID: 1185460679210556253}
   HitEffect: 1
 --- !u!114 &9205469568447790946
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d80fb7fb2ffa5c4192e95f546d4bcf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageRange: 15
+  EngageRange: 20
   AbilityFrequency: 2
   FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
     type: 3}

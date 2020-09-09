@@ -23,7 +23,7 @@ public class Arcane_Explosion : MonoBehaviour
     void Spell()
     {
         transform.position = Player.transform.position;
-        counter += Time.deltaTime;
+        counter += Time.deltaTime*2;
         transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(Range * 2, Range * 2, 1f), counter);
         if(counter*Speed >= 1)
         {

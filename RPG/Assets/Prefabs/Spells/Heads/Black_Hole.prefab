@@ -73,7 +73,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79bed3c551c40545b98252e82530cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.5
+  Duration: 3
   Range: 5
   PullStrength: 40
 --- !u!212 &4825106419489585483

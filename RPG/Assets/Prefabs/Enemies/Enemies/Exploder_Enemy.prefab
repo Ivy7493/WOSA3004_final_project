@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 2
+  ExpRewardScale: 10
 --- !u!114 &7749638599392397910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79fd8853d726c4b87f6c586ce44668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageRange: 8
-  MaxRange: 18
-  DamageScale: 3
+  EngageRange: 15
+  MaxRange: 25
+  DamageScale: 6
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 10
+  maxSpeed: 12
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

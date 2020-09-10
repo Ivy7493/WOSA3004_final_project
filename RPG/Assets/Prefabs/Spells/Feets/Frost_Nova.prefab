@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 8
-  DamageScale: 4
+  DamageScale: 5
   TickRate: 1
   Duration: 4
 --- !u!212 &1946706513414914340

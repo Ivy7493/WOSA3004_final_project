@@ -124,8 +124,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f17856b8aafc5241873649274ffd60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 4
-  TickRate: 1.5
+  DamageScale: 1.5
+  TickRate: 0.5
   Duration: 3
 --- !u!82 &8055282562796129930
 AudioSource:

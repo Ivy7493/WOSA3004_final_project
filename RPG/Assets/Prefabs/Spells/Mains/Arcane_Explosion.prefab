@@ -76,9 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67b849ba875cc1244ae96e2b48bf2229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 15
-  Speed: 4
-  DamageScale: 5
+  Range: 8
+  Speed: 1.25
+  DamageScale: 6
 --- !u!212 &485284724696468206
 SpriteRenderer:
   m_ObjectHideFlags: 0

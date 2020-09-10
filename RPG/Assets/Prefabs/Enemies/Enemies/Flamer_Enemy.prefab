@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1241487959534449771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4095131611536188501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60997c33dcb77d4c80ec2c704af9c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9010847024294549191
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,7 +111,6 @@ GameObject:
   - component: {fileID: -2978916136817474067}
   - component: {fileID: -6956494731438830971}
   - component: {fileID: 1989646899905353647}
-  - component: {fileID: 4206428960059529507}
   - component: {fileID: 1795443082602184506}
   m_Layer: 11
   m_Name: Flamer_Enemy
@@ -265,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpRewardScale: 10
+  BaseExp: 10
 --- !u!114 &-6956494731438830971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,18 +311,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4206428960059529507
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9010847026189783841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a60997c33dcb77d4c80ec2c704af9c92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &1795443082602184506
 AudioSource:
   m_ObjectHideFlags: 0
@@ -672,6 +672,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67d8eae0ea0dadf4bb9cedecc41a29f3, type: 3}
+--- !u!1 &4095131611536188501 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3275341528210436226, guid: 67d8eae0ea0dadf4bb9cedecc41a29f3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1558400797573059799}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1011771198430894055 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1993412174255932208, guid: 67d8eae0ea0dadf4bb9cedecc41a29f3,

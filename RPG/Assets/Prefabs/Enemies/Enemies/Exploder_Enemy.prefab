@@ -1,5 +1,17 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2947554574741272094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924512712274063906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a60997c33dcb77d4c80ec2c704af9c92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7749638599392397916
 GameObject:
   m_ObjectHideFlags: 0
@@ -18,7 +30,6 @@ GameObject:
   - component: {fileID: 1028688180346310620}
   - component: {fileID: -3653334133165230020}
   - component: {fileID: -4038445403473157731}
-  - component: {fileID: 8914275859932690580}
   m_Layer: 11
   m_Name: Exploder_Enemy
   m_TagString: Damagable
@@ -35,7 +46,7 @@ Transform:
   m_GameObject: {fileID: 7749638599392397916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.2077017, y: -2.5222065, z: 1099.447}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_Children:
   - {fileID: 4048234132855678396}
   - {fileID: 7653105202165653468}
@@ -102,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpRewardScale: 6
+  BaseExp: 10
 --- !u!114 &7749638599392397910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,18 +235,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &8914275859932690580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7749638599392397916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a60997c33dcb77d4c80ec2c704af9c92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6143578266915171451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -334,6 +334,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba634546c6396e04aa025ed97343af99, type: 3}
+--- !u!1 &2924512712274063906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9067904610625936985, guid: ba634546c6396e04aa025ed97343af99,
+    type: 3}
+  m_PrefabInstance: {fileID: 6143578266915171451}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7653105202165653468 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4573147311551476647, guid: ba634546c6396e04aa025ed97343af99,

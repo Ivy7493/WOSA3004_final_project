@@ -133,6 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ExpRewardScale: 15
+  BaseExp: 10
 --- !u!114 &9205469568447790945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +224,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!1001 &3742317485334913896
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3997570621691734408}
   - component: {fileID: 3997570621691734411}
   - component: {fileID: 3997570621691734406}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: LightningBolt_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

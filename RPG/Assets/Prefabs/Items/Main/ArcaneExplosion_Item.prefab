@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5758023291365410291}
   - component: {fileID: 5758023291365410288}
   - component: {fileID: 5758023291365410301}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: ArcaneExplosion_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

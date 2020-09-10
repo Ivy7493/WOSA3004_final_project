@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9016682867274287540}
   - component: {fileID: 9016682867274287543}
   - component: {fileID: 9016682867274287546}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: EarthQuake_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

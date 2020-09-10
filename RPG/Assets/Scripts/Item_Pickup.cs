@@ -63,6 +63,7 @@ public class Item_Pickup : MonoBehaviour
     }
 
 
+
     private void OnMouseEnter()
     {
         if(UIM != null)

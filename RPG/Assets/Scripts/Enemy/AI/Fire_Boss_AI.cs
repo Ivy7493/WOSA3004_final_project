@@ -135,13 +135,19 @@ public class Fire_Boss_AI : MonoBehaviour
     void FireBalls()
     {
         float Tempcounter = 0;
+        for(int i = 0; i < FireLocations.Length; i++)
+        {
+            Instantiate(FireBall, FireLocations[i].transform.position, Quaternion.identity);
+        }
+        /*
         while(Tempcounter != NumOfFireBall)
         {
             Tempcounter++;
             float RandomDiff = Random.Range(-3f, 3f);
-            Vector3 SpawnPos = new Vector3(transform.position.x + RandomDiff, transform.position.y + RandomDiff, 0f);
+            Vector3 SpawnPos = new Vector3(transform.position.x - 35 + RandomDiff, transform.position.y + RandomDiff, 0f);
             Instantiate(FireBall, SpawnPos, Quaternion.identity);
         }
+        */
     }
 
 

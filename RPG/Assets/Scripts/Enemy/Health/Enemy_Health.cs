@@ -38,6 +38,19 @@ public class Enemy_Health : MonoBehaviour
         DeathEffect = Resources.Load("Blood_Effect", typeof(GameObject)) as GameObject;
     }
 
+    private void OnEnable()
+    {
+        RescaleHealth();
+    }
+
+    void RescaleHealth()
+    {
+        float CurrentPercent = Health / MaxHealth;
+        PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
+        MaxHealth = PlayerLevel * HealthScale;
+        Health = CurrentPercent * MaxHealth;
+    }
+
     void SystemQuery()
     {
         try

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 221420538385684925}
   - component: {fileID: 221420538385684926}
   - component: {fileID: 221420538385684915}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Blink_Item
   m_TagString: Untagged
   m_Icon: {fileID: 0}

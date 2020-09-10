@@ -8,6 +8,8 @@ public class Exp : MonoBehaviour
     GameObject Player;
     public float ExpRewardScale;
     float ExpReward;
+    [SerializeField]
+    float BaseExp = 10f;
     Experience_Manager EM;
     void Start()
     {
@@ -18,7 +20,7 @@ public class Exp : MonoBehaviour
 
     public void AwardExp()
     {
-        ExpReward = EM.ReturnLevel() * ExpRewardScale;
+        ExpReward = BaseExp + BaseExp * (ExpRewardScale / 100f) * EM.ReturnLevel();
         if (Player != null)
         {
            

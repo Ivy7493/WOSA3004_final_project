@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8209652529460080708}
   - component: {fileID: 8209652529460080711}
   - component: {fileID: 8209652529460080714}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: FrostNova_Pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

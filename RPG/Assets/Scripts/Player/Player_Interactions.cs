@@ -6,7 +6,7 @@ public class Player_Interactions : MonoBehaviour
 {
     public UI_Tutorial tut;
     [Header("Invoke timers")]
-    public float movementTut;
+    public float startText;
     public float mage_encounter;
     public float spell_encounter;
     public float first_enemy_counter;
@@ -18,8 +18,8 @@ public class Player_Interactions : MonoBehaviour
       
         if (collision.gameObject.tag == "Point1")
         {
-            tut.activate_movement_txt();
-            tut.Invoke("deactivate_movement_txt", movementTut);
+            tut.activate_start_txt();
+            tut.Invoke("deactivate_start_txt", startText);
             Destroy(collision.gameObject);
         }
 
@@ -41,6 +41,7 @@ public class Player_Interactions : MonoBehaviour
         {
             tut.activate_first_enemy();
             tut.Invoke("deactivate_first_enemy", first_enemy_counter);
+            Destroy(collision.gameObject);
         }
        
     }

@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 10
+  ExpRewardScale: 6
 --- !u!114 &7749638599392397910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 3
+  HealthScale: 5
   HUD: {fileID: 4048234132855678399}
   HitEffect: 0
 --- !u!114 &3919601027547320563

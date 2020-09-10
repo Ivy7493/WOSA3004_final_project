@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 15
+  ExpRewardScale: 10
 --- !u!114 &-6956494731438830971
 MonoBehaviour:
   m_ObjectHideFlags: 0

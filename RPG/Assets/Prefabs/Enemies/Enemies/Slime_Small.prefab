@@ -88,7 +88,7 @@ MonoBehaviour:
   EngageRange: 15
   AttackSpeed: 2
   DamageScale: 2
-  AttackRange: 4
+  AttackRange: 2
   Slime: {fileID: 735037684219438122}
   Recursion: 0
 --- !u!50 &735037684219438120
@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 0
+  ExpRewardScale: 4
 --- !u!114 &735037684219438118
 MonoBehaviour:
   m_ObjectHideFlags: 0

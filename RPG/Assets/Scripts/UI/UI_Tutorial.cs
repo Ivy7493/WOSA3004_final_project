@@ -14,27 +14,39 @@ public class UI_Tutorial : MonoBehaviour
     public GameObject Book_encounter;
     public GameObject first_enemy_encounter;
 
+    public float movement_time;
+
     
 
 
 
     void Start()
     {
-        if(PlayerPrefs.GetFloat("StartText",0f) == 0f)
+        if(PlayerPrefs.GetFloat("MovementText",0f) == 0f)
         {
-            Invoke("deactivate_start_txt", 5f);
-            PlayerPrefs.SetFloat("StartText", 1f);
-        }else if(PlayerPrefs.GetFloat("StartText",0f) == 1f)
+            Invoke("deactivate_movement_txt", movement_time);
+            PlayerPrefs.SetFloat("MovementText", 1f);
+        }else if(PlayerPrefs.GetFloat("MovementText",0f) == 1f)
         {
-            deactivate_start_txt();
+            deactivate_movement_txt();
         }
        
     }
 
-   
+   public void activate_start_txt()
+    {
+        if (PlayerPrefs.GetFloat("StartText", 0f) == 0f)
+        {
+            Start_txt.SetActive(true);
+        }
+    }
     public void deactivate_start_txt()
     {
-        Destroy(Start_txt);
+        if (PlayerPrefs.GetFloat("StartText", 0f) == 0f)
+        {
+            Destroy(Start_txt);
+        }
+        
     }
 
     public void activate_movement_txt()
@@ -47,15 +59,9 @@ public class UI_Tutorial : MonoBehaviour
 
     }
     public void deactivate_movement_txt()
-    {
-        if(PlayerPrefs.GetFloat("MovementText", 0f) == 0f)
-        {
-            Destroy(Movement_txt);
-            PlayerPrefs.SetFloat("MovementText", 1f);
-            
-           
-        }
-       
+    {    
+       Destroy(Movement_txt);
+       PlayerPrefs.SetFloat("MovementText", 1f);
     }
 
     public void activate_book_txt()

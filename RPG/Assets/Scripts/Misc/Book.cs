@@ -7,7 +7,7 @@ public class Book : MonoBehaviour
     // Start is called before the first frame update
     public UI_Tutorial UIT;
     bool open = false;
-    float counter = 3f;
+    float counter = 5f;
     void Start()
     {
         
@@ -21,8 +21,8 @@ public class Book : MonoBehaviour
             counter -= Time.deltaTime;
             if (counter <= 0)
             {
-                open = false;
                 UIT.deactivate_book_txt();
+                open = false;
             }
         }
        

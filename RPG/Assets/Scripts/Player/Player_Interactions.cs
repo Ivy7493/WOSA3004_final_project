@@ -10,6 +10,7 @@ public class Player_Interactions : MonoBehaviour
     public float mage_encounter;
     public float spell_encounter;
     public float first_enemy_counter;
+    public float central_block;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -43,7 +44,13 @@ public class Player_Interactions : MonoBehaviour
             tut.Invoke("deactivate_first_enemy", first_enemy_counter);
             Destroy(collision.gameObject);
         }
-       
+
+        if (collision.gameObject.CompareTag("Point5"))
+        {
+            tut.activate_central_block();
+            tut.Invoke("deactivate_central_block", central_block);
+            Destroy(collision.gameObject);
+        }
     }
 
    

@@ -13,6 +13,7 @@ public class UI_Tutorial : MonoBehaviour
     public GameObject Mages_encounter;
     public GameObject Book_encounter;
     public GameObject first_enemy_encounter;
+    public GameObject Central_block;
 
     public float movement_time;
 
@@ -128,6 +129,23 @@ public class UI_Tutorial : MonoBehaviour
         {
             Destroy(first_enemy_encounter);
             PlayerPrefs.SetFloat("FirstEnemy", 1f);
+        }
+    }
+
+    public void activate_central_block()
+    {
+        if(PlayerPrefs.GetFloat("CentralBlock", 0f)== 0f)
+        {
+            Central_block.SetActive(true);
+        }
+    }
+
+    public void deactivate_central_block()
+    {
+        if(PlayerPrefs.GetFloat("CentralBlock",0f)== 0f)
+        {
+            Destroy(Central_block);
+            PlayerPrefs.SetFloat("CentralBlock", 1f);
         }
     }
    

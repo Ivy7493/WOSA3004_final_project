@@ -100,6 +100,11 @@ public class Enemy_Health : MonoBehaviour
         return Health;
     }
 
+    public float ReturnCurrentHealthPercent()
+    {
+        return Health / MaxHealth;
+    }
+
 
     public void Damage(float _damage)
     {

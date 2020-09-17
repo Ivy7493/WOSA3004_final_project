@@ -6,8 +6,10 @@ public class Player_motor : MonoBehaviour
 {
     // Start is called before the first frame update
     public float _speed;
+    float DefaultSpeed;
     Rigidbody2D RB;
     public GameObject DefaultSpawn;
+    bool Slowed = false;
     private void Awake()
     {
         LoadPlayerPosition();
@@ -15,6 +17,26 @@ public class Player_motor : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        DefaultSpeed = _speed;
+    }
+
+    public void SetPlayerSlow(float SlowPercent, float time)
+    {
+        if(Slowed == false)
+        {
+            Slowed = true;
+            float ActualSlow = 1 - SlowPercent;
+            _speed = _speed * (ActualSlow);
+            StartCoroutine(Slow(time));
+        }
+       
+    }
+
+    IEnumerator Slow(float time)
+    {
+        yield return new WaitForSeconds(time);
+        _speed = DefaultSpeed;
+        Slowed = false;
     }
 
 

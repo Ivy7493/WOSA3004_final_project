@@ -6,8 +6,11 @@ public class FrostSlice : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject Player;
+    Player_motor PM;
     public float Speed;
     public float DamageScale;
+    public float SlowPercent;
+    public float SlowDuration;
     float Damage;
     Experience_Manager EM;
     Vector2 Dir;
@@ -21,6 +24,7 @@ public class FrostSlice : MonoBehaviour
         Dir = new Vector2(Temp.x, Temp.y);
         RB = GetComponent<Rigidbody2D>();
         RB.velocity = Dir * Speed;
+        PM = Player.GetComponent<Player_motor>();
         FixRotation();
     }
 
@@ -37,6 +41,7 @@ public class FrostSlice : MonoBehaviour
             if (collision.gameObject.tag == "Player")
             {
                 GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
+                PM.SetPlayerSlow(SlowPercent, SlowDuration);
                 Destroy(gameObject);
             }
             Debug.Log(collision.gameObject.name);

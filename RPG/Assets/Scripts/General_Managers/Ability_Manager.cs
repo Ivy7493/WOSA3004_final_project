@@ -68,7 +68,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseFeet()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && CanCast)
+        if (Input.GetKeyDown(KeyCode.W) && CanCast)
         {
             if(AbilityFeet != null)
             {

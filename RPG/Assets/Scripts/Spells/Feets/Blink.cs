@@ -32,7 +32,7 @@ public class Blink : MonoBehaviour
         Vector3 Direction = (pos - Player.transform.position).normalized;
         float Xpos = Input.GetAxisRaw("Horizontal");
         float Ypos = Input.GetAxisRaw("Vertical");
-        Vector2 DashDirection = new Vector2(Xpos, Ypos);
+        Vector2 DashDirection = new Vector2(Direction.x, Direction.y);
         RB.velocity = DashDirection * Speed;
     }
 

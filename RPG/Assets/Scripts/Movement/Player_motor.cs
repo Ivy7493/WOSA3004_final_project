@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class Player_motor : MonoBehaviour
 {
@@ -8,6 +9,14 @@ public class Player_motor : MonoBehaviour
     public float _speed;
     float DefaultSpeed;
     Rigidbody2D RB;
+    AIPath PathControl;
+    AIDestinationSetter Motor;
+    Vector3 pos;
+    GameObject StartTransform;
+    GameObject CurrentTransform;
+    Vector3 mousePosition;
+    Vector2 direction;
+    public GameObject Mouse_Effect;
     public GameObject DefaultSpawn;
     bool Slowed = false;
     private void Awake()
@@ -16,7 +25,7 @@ public class Player_motor : MonoBehaviour
     }
     void Start()
     {
-        RB = GetComponent<Rigidbody2D>();
+        RB = GetComponent<Rigidbody2D>();  
         DefaultSpeed = _speed;
     }
 
@@ -56,6 +65,32 @@ public class Player_motor : MonoBehaviour
 
 
 
+    void ClickMotion()
+    {
+        if((Input.GetMouseButtonDown(1)))
+        {
+           
+            pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            pos = new Vector3(pos.x, pos.y, 0f);
+            Instantiate(Mouse_Effect, pos, Quaternion.identity);
+            if(RB.velocity.magnitude != 0)
+            {
+                RB.velocity = Vector2.zero;
+            }
+            Vector3 temp = (pos - transform.position ).normalized;
+            direction = new Vector2(temp.x, temp.y) * _speed;
+            RB.velocity = direction;
+
+        }
+        if (Input.GetKey(KeyCode.LeftShift)){
+            RB.velocity = Vector2.zero;
+        }
+
+        if (Vector3.Distance(transform.position,pos) < 0.5f)
+        {
+            RB.velocity = Vector2.zero;
+        }
+    }
     void Motion()
     {
         float Xpos = Input.GetAxisRaw("Horizontal");
@@ -90,6 +125,7 @@ public class Player_motor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Motion();
+        // Motion();
+        ClickMotion();
     }
 }

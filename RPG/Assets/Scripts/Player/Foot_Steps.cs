@@ -7,6 +7,7 @@ public class Foot_Steps : MonoBehaviour
     // Start is called before the first frame update
     public GameObject FootStep1;
     public GameObject FootStep2;
+    public Rigidbody2D RB;
     bool Change = false;
     public float StepTiming;
     float counter;
@@ -22,7 +23,7 @@ public class Foot_Steps : MonoBehaviour
         switch (Change)
         {
             case false:
-                if (counter >= StepTiming && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
+                if (counter >= StepTiming && RB.velocity.magnitude != 0)
                 {
                     counter = 0;
                     Change = true;
@@ -30,7 +31,7 @@ public class Foot_Steps : MonoBehaviour
                 }
                 break;
             case true:
-                if (counter >= StepTiming && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
+                if (counter >= StepTiming && RB.velocity.magnitude != 0)
                 {
                     counter = 0;
                     Change = false;

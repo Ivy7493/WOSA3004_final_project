@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Graphics : MonoBehaviour
 {
     Animator playeranim;
+    public Rigidbody2D RB;
 
     // Start is called before the first frame update
     void Start()
@@ -14,11 +15,11 @@ public class Player_Graphics : MonoBehaviour
 
     void AnimationManagement()
     {
-        if (Input.GetAxisRaw("Horizontal") == 0)
+        if (RB.velocity.magnitude == 0)
         {
             playeranim.SetBool("running", false);
         }
-        if (Input.GetAxisRaw("Vertical") == 1 || Input.GetAxisRaw("Vertical") == -1)
+        if (RB.velocity.magnitude > 0 || RB.velocity.magnitude < 0)
         {
             playeranim.SetBool("running", true);
         } 
@@ -26,13 +27,13 @@ public class Player_Graphics : MonoBehaviour
 
     void Rotate()
     {
-        if (Input.GetAxisRaw("Horizontal") == 1)
+        if (RB.velocity.x > 0)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             playeranim.SetBool("running", true);
 
         }
-        else if (Input.GetAxisRaw("Horizontal") == -1)
+        else if (RB.velocity.x < 0)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             playeranim.SetBool("running", true);

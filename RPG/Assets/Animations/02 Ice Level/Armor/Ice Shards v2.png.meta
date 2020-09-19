@@ -1,0 +1,452 @@
+fileFormatVersion: 2
+guid: 2973533644aa450428fd46c09ca797e9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 348813481757411538
+    second: Ice Shards v2_0
+  - first:
+      213: -4063870337475186305
+    second: Ice Shards v2_1
+  - first:
+      213: 2976198256045318445
+    second: Ice Shards v2_2
+  - first:
+      213: -4963703828589070928
+    second: Ice Shards v2_3
+  - first:
+      213: -6160640492626150558
+    second: Ice Shards v2_4
+  - first:
+      213: 3034423146427742255
+    second: Ice Shards v2_5
+  - first:
+      213: 9193851733305788591
+    second: Ice Shards v2_6
+  - first:
+      213: -1861226788385454457
+    second: Ice Shards v2_7
+  - first:
+      213: -4934281674257170462
+    second: Ice Shards v2_8
+  - first:
+      213: 8211761162796056734
+    second: Ice Shards v2_9
+  - first:
+      213: 8399230990511581042
+    second: Ice Shards v2_10
+  - first:
+      213: -3249774173127866064
+    second: Ice Shards v2_11
+  - first:
+      213: 5155353811399663452
+    second: Ice Shards v2_0
+  - first:
+      213: 5784221215167595210
+    second: Ice Shards v2_1
+  - first:
+      213: -6683162006165087483
+    second: Ice Shards v2_2
+  - first:
+      213: 2344893493008924904
+    second: Ice Shards v2_3
+  - first:
+      213: -3897398856880697296
+    second: Ice Shards v2_4
+  - first:
+      213: -8033873775656199098
+    second: Ice Shards v2_5
+  - first:
+      213: 93771154668096428
+    second: Ice Shards v2_6
+  - first:
+      213: -1658516017598436146
+    second: Ice Shards v2_7
+  - first:
+      213: 2168377355433196615
+    second: Ice Shards v2_8
+  - first:
+      213: -36026597264217771
+    second: Ice Shards v2_9
+  - first:
+      213: 4527611182003329111
+    second: Ice Shards v2_10
+  - first:
+      213: 1788205305579809992
+    second: Ice Shards v2_11
+  - first:
+      213: 7486825932656868288
+    second: Ice Shards v2_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ice Shards v2_0
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 396
+        width: 137
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fdeeb2afe7b8740800000000000000
+      internalID: 5155353811399663452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_1
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 654
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2c7509c8ea54050800000000000000
+      internalID: 5784221215167595210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_2
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 627
+        width: 16
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b94267093a043a0800000000000000
+      internalID: -6683162006165087483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_3
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 487
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e00ce6453cba8020800000000000000
+      internalID: 2344893493008924904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_4
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 463
+        width: 40
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030dc939368a9e9c0800000000000000
+      internalID: -3897398856880697296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_5
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 335
+        width: 59
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c9fa7cd52f18090800000000000000
+      internalID: -8033873775656199098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_6
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 452
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cab8b2c4e542d4100800000000000000
+      internalID: 93771154668096428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_7
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 369
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eccefbc1874cbf8e0800000000000000
+      internalID: -1658516017598436146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_8
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 280
+        width: 123
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74cb89957bf971e10800000000000000
+      internalID: 2168377355433196615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_9
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 6
+        width: 148
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 559a99b2002008ff0800000000000000
+      internalID: -36026597264217771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 100
+        width: 113
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7581568b16e45de30800000000000000
+      internalID: 4527611182003329111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_11
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 18
+        width: 137
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccad88404bf0d810800000000000000
+      internalID: 1788205305579809992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ice Shards v2_12
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 35
+        width: 15
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cbf133d48c86e760800000000000000
+      internalID: 7486825932656868288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

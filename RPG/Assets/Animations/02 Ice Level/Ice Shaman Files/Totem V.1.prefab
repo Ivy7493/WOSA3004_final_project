@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 13
   m_Sprite: {fileID: -3083882827534695752, guid: 1b1fd6f8dcdb90040b3ae3c72cefed25,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 13
   m_Sprite: {fileID: 6666713500794765190, guid: 1b1fd6f8dcdb90040b3ae3c72cefed25,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3065595603640219005}
   - component: {fileID: 6771531374062969870}
   m_Layer: 0
-  m_Name: Totem V.1.2
+  m_Name: Totem V.1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -397,7 +397,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 13
   m_Sprite: {fileID: -4377788543700635647, guid: 1b1fd6f8dcdb90040b3ae3c72cefed25,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -23,7 +23,7 @@ public class Foot_Steps : MonoBehaviour
         switch (Change)
         {
             case false:
-                if (counter >= StepTiming && RB.velocity.magnitude != 0)
+                if (counter >= StepTiming && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
                 {
                     counter = 0;
                     Change = true;
@@ -31,7 +31,7 @@ public class Foot_Steps : MonoBehaviour
                 }
                 break;
             case true:
-                if (counter >= StepTiming && RB.velocity.magnitude != 0)
+                if (counter >= StepTiming && (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
                 {
                     counter = 0;
                     Change = false;

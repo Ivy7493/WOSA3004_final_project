@@ -25,6 +25,7 @@ TagManager:
   - Music_Manager
   - FireBoss_SoundPoint
   - UI_Zone
+  - Cursor_Manager
   layers:
   - Default
   - TransparentFX

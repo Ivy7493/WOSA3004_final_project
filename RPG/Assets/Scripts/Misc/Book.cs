@@ -6,11 +6,12 @@ public class Book : MonoBehaviour
 {
     // Start is called before the first frame update
     public UI_Tutorial UIT;
+    Cursor_Manager CM;
     bool open = false;
     float counter = 3f;
     void Start()
     {
-        
+        CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
     }
 
 
@@ -32,6 +33,7 @@ public class Book : MonoBehaviour
 
     private void OnMouseOver()
     {
+        CM.SwitchCursor("Item");
         if (Input.GetMouseButtonDown(0))
         {
             if(open == false)
@@ -42,6 +44,11 @@ public class Book : MonoBehaviour
            
 
         }
+    }
+
+    private void OnMouseExit()
+    {
+        CM.SwitchCursor("Default");
     }
 
     // Update is called once per frame

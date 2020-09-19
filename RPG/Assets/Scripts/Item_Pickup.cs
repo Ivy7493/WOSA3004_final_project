@@ -17,6 +17,7 @@ public class Item_Pickup : MonoBehaviour
     GameObject Player;
     UI_Manager UIM;
     Spell_Manager SM;
+    Cursor_Manager CM;
     float DestoryRange = 30f;
     public float pickup_range=5f;
     
@@ -28,6 +29,7 @@ public class Item_Pickup : MonoBehaviour
             AM = GameObject.FindGameObjectWithTag("Ability_Manager").GetComponent<Ability_Manager>();
             Player = GameObject.FindGameObjectWithTag("Player");
             UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+            CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
             ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
             InvokeRepeating("DestoryItem", 0, 5f);
         }
@@ -66,10 +68,11 @@ public class Item_Pickup : MonoBehaviour
 
     private void OnMouseEnter()
     {
-        if(UIM != null)
+        if(UIM != null && Vector3.Distance(transform.position, Player.transform.position) <= pickup_range)
         {
             UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 2.5f, 0f),Rarity);
         }
+        CM.SwitchCursor("Item");
        
     }
 
@@ -77,6 +80,7 @@ public class Item_Pickup : MonoBehaviour
     private void OnMouseExit()
     {
         UIM.DestoryItemDisplay();
+        CM.SwitchCursor("Default");
     }
 
     private void OnDestroy()
@@ -85,12 +89,13 @@ public class Item_Pickup : MonoBehaviour
         {
             UIM.DestoryItemDisplay();
         }
-        
+        CM.SwitchCursor("Default");
+
     }
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButton(0) && Vector3.Distance(transform.position,Player.transform.position) <= pickup_range)
+        if (Input.GetKeyDown(KeyCode.E) && Vector3.Distance(transform.position,Player.transform.position) <= pickup_range)
         {
             switch (Slot)
             {

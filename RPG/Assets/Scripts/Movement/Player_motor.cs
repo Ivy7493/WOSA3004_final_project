@@ -125,7 +125,7 @@ public class Player_motor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Motion();
-        ClickMotion();
+         Motion();
+       // ClickMotion();
     }
 }

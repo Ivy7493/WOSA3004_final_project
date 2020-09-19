@@ -15,11 +15,11 @@ public class Player_Graphics : MonoBehaviour
 
     void AnimationManagement()
     {
-        if (RB.velocity.magnitude == 0)
+        if ((Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0))
         {
             playeranim.SetBool("running", false);
         }
-        if (RB.velocity.magnitude > 0 || RB.velocity.magnitude < 0)
+        if ((Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0))
         {
             playeranim.SetBool("running", true);
         } 
@@ -27,13 +27,13 @@ public class Player_Graphics : MonoBehaviour
 
     void Rotate()
     {
-        if (RB.velocity.x > 0)
+        if (Input.GetAxisRaw("Horizontal") >= 1)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             playeranim.SetBool("running", true);
 
         }
-        else if (RB.velocity.x < 0)
+        else if (Input.GetAxisRaw("Horizontal") <= -1)
         {
             transform.rotation = Quaternion.Euler(0f, 180f, 0f);
             playeranim.SetBool("running", true);

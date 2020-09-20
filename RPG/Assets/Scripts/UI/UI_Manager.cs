@@ -102,6 +102,7 @@ public class UI_Manager : MonoBehaviour
                 ItemColor = Color.white;
                 break;
         }
+        ObjectInteractionTxt.SetActive(true);
         ItemPanel.SetActive(true);
         ItemPanel.transform.position = Location;
         ItemDesc.GetComponent<Text>().text = _desc;
@@ -110,7 +111,25 @@ public class UI_Manager : MonoBehaviour
         ItemName.GetComponent<Text>().color = ItemColor;
         ItemSlot.GetComponent<Text>().text = _slot;
         ItemSlot.GetComponent<Text>().color = ItemColor;
+        ObjectInteractionTxt.transform.position = new Vector3(Location.x, Location.y - 5f, 0f);
     } 
+
+    public void CallInteractionDisplay(Vector3 Location)
+    {
+        if(ObjectInteractionTxt.activeInHierarchy == false)
+        {
+            ObjectInteractionTxt.SetActive(true);
+        }
+        ObjectInteractionTxt.transform.position = Location;
+    }
+
+    public void DestroyInteractionDisplay()
+    {
+        if(ObjectInteractionTxt.activeInHierarchy == true)
+        {
+            ObjectInteractionTxt.SetActive(false);
+        }
+    }
 
 
     public void UpdateHealth(float _health)
@@ -133,6 +152,7 @@ public class UI_Manager : MonoBehaviour
         if(ItemPanel != null)
         {
             ItemPanel.SetActive(false);
+            ObjectInteractionTxt.SetActive(false);
         }
         
     }

@@ -70,7 +70,7 @@ public class Item_Pickup : MonoBehaviour
     {
         if(UIM != null && Vector3.Distance(transform.position, Player.transform.position) <= pickup_range)
         {
-            UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 2.5f, 0f),Rarity);
+            UIM.CallItemDisplay(Name, Slot, ItemDesc, new Vector3(transform.position.x, transform.position.y + 3.5f, 0f),Rarity);
         }
         CM.SwitchCursor("Item");
        

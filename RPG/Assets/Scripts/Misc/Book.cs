@@ -34,7 +34,7 @@ public class Book : MonoBehaviour
     private void OnMouseOver()
     {
         CM.SwitchCursor("Item");
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if(open == false)
             {

@@ -8,6 +8,7 @@ public class Enemy_Spawner : MonoBehaviour
     public GameObject Enemy;
     public float RespawnTime;
     public float DespawnDistance;
+    float SpawnProtect = 10f;
     GameObject CurrentSpawn;
     GameObject Player;
     float counter;
@@ -20,7 +21,7 @@ public class Enemy_Spawner : MonoBehaviour
 
     void Spawn()
     {
-        if(CurrentSpawn == null && counter >= RespawnTime && Vector3.Distance(transform.position, Player.transform.position) < DespawnDistance)
+        if(CurrentSpawn == null && counter >= RespawnTime && Vector3.Distance(transform.position, Player.transform.position) < DespawnDistance && Vector3.Distance(transform.position, Player.transform.position) >= SpawnProtect)
         {
             CurrentSpawn = Instantiate(Enemy, transform.position, Quaternion.identity);
             counter = 0;

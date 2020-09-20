@@ -7,6 +7,7 @@ public class Chest : MonoBehaviour
     // Start is called before the first frame update
     SpriteRenderer SR;
     LootTable LT;
+    UI_Manager UIM;
     public Sprite ChestOpen;
     float counter = 0.5f;
     bool Opened = false;
@@ -18,7 +19,7 @@ public class Chest : MonoBehaviour
 
     private void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Opened = true;
             SR.sprite = ChestOpen;

@@ -22,6 +22,7 @@ public class Enemy_Health : MonoBehaviour
     Exp Experience;
     Stat_Manager STM;
     GameObject DeathEffect;
+    Cursor_Manager CM;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
@@ -36,6 +37,7 @@ public class Enemy_Health : MonoBehaviour
         StartCol = Graphics.color;
         SystemQuery();
         DeathEffect = Resources.Load("Blood_Effect", typeof(GameObject)) as GameObject;
+        CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
     }
 
     private void OnEnable()
@@ -70,6 +72,16 @@ public class Enemy_Health : MonoBehaviour
         {
             Debug.Log("Experience component not found on enemy");
         }
+    }
+
+    private void OnMouseOver()
+    {
+      //  CM.SwitchCursor("Enemy");
+    }
+
+    private void OnMouseExit()
+    {
+        CM.SwitchCursor("Default");
     }
 
 

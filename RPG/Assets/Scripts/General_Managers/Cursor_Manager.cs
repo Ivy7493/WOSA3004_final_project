@@ -7,6 +7,7 @@ public class Cursor_Manager : MonoBehaviour
     // Start is called before the first frame update
     public Sprite DefaultCursor;
     public Sprite ItemCursor;
+    public Sprite EnemyCursor;
     Vector3 TargetLocation;
     SpriteRenderer SR;
     void Start()
@@ -26,6 +27,9 @@ public class Cursor_Manager : MonoBehaviour
                 break;
             case "Default":
                 SR.sprite = DefaultCursor;
+                break;
+            case "Enemy":
+                SR.sprite = EnemyCursor;
                 break;
         } 
     }

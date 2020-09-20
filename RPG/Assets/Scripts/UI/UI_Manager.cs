@@ -24,6 +24,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject TalentPanel;
     public GameObject TalentNumber;
     public GameObject ZoneText;
+    public GameObject ObjectInteractionTxt;
     public static bool GameIsPaused = false;
     void Start()
     {

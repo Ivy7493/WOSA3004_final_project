@@ -8,6 +8,7 @@ using TMPro;
 public class UI_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
+    Resource_Manager RM;
     public GameObject AbilityMain;
     public GameObject AbilityFeet;
     public GameObject AbilityOff;
@@ -27,9 +28,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject ZoneText;
     public GameObject ObjectInteractionTxt;
     public GameObject DamageText;
-    public GameObject HPVal_txt;
-    public GameObject ManaVal_txt;
-    public GameObject ExpVal_txt;
+    public TextMeshPro HPVal_txt;
+    public TextMeshPro ManaVal_txt;
+    public TextMeshPro ExpVal_txt;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -37,6 +38,7 @@ public class UI_Manager : MonoBehaviour
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
         ZoneText.SetActive(false);
+        RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
     }
 
     public void UpdateLevel(float _Level)
@@ -146,14 +148,21 @@ public class UI_Manager : MonoBehaviour
     public void UpdateHealth(float _health)
     {
         HealthBar.GetComponent<Slider>().value = _health;
-        HPVal_txt.GetComponent<TextMeshPro>().text = _health.ToString();
+        
 
+    }
+
+    public void UpdateHealthText()
+    {
+        float _healthtxt = RM.ReturnHealth();
+        HPVal_txt = GetComponent<TextMeshPro>();
+        HPVal_txt.SetText(_healthtxt.ToString());
     }
 
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
-        ManaVal_txt.GetComponent<TextMeshPro>().text = _Mana.ToString();
+        //ManaVal_txt.GetComponent<TextMeshPro>().text = _Mana.ToString();
     }
 
     public void CallDeathEffect()
@@ -214,7 +223,7 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(GameIsPaused)
             {

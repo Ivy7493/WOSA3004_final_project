@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class UI_Manager : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject TalentNumber;
     public GameObject ZoneText;
     public GameObject ObjectInteractionTxt;
+    public GameObject DamageText;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -129,6 +131,12 @@ public class UI_Manager : MonoBehaviour
         {
             ObjectInteractionTxt.SetActive(false);
         }
+    }
+
+    public void SpawnDamageText(Vector3 location, float damage)
+    {
+        GameObject temp = Instantiate(DamageText, location, Quaternion.identity);
+        temp.GetComponent<TextMeshPro>().text = (int)damage + "";
     }
 
 

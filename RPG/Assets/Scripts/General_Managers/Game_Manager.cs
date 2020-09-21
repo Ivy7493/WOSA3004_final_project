@@ -7,9 +7,10 @@ public class Game_Manager : MonoBehaviour
     // Start is called before the first frame update
     UI_Manager UIM;
     GameObject Player;
+    Effect_Manager EFM;
     float KeyCount = 0;
     float FirstBoss = 0;
-
+    float FrostBoss = 0f;
     private void Awake()
     {
         LoadGameData();
@@ -20,6 +21,7 @@ public class Game_Manager : MonoBehaviour
     {
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        EFM = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
     }
 
     //Loads Saved Game Data assosiated with the Game Manager
@@ -27,6 +29,7 @@ public class Game_Manager : MonoBehaviour
     {
         KeyCount = PlayerPrefs.GetFloat("KeyCount", 0);
         FirstBoss = PlayerPrefs.GetFloat("FirstBoss", 0);
+        FrostBoss = PlayerPrefs.GetFloat("FrostBoss", 0);
     }
 
 
@@ -37,6 +40,9 @@ public class Game_Manager : MonoBehaviour
         {
             case "FIRE":
                 return FirstBoss;
+                break;
+            case "FROST":
+                return FrostBoss;
                 break;
         }
         return 2;
@@ -52,6 +58,13 @@ public class Game_Manager : MonoBehaviour
                 FirstBoss = 1;
                 PlayerPrefs.SetFloat("FirstBoss", 1);
                 KeyCount++;
+                EFM.ScreenShake(2f);
+                break;
+            case "FROST":
+                FrostBoss = 1;
+                PlayerPrefs.SetFloat("FrostBoss", 1);
+                KeyCount++;
+                EFM.ScreenShake(2f);
                 break;
         }
        

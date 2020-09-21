@@ -23,10 +23,12 @@ public class Enemy_Health : MonoBehaviour
     Stat_Manager STM;
     GameObject DeathEffect;
     Cursor_Manager CM;
+    UI_Manager UIM;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         Graphics = GetComponentInChildren<SpriteRenderer>();
         Health = PlayerLevel * HealthScale;
         MaxHealth = Health;
@@ -123,6 +125,7 @@ public class Enemy_Health : MonoBehaviour
         float TempDamage = STM.IsCrit(_damage);
         Health -= TempDamage;
         EngagePlayer();
+        UIM.SpawnDamageText(new Vector3(transform.position.x,transform.position.y + 2, 0f), TempDamage);
         ///Will play the hit effect if not playing the hit effect
         if(EffectPlaying != true)
         {

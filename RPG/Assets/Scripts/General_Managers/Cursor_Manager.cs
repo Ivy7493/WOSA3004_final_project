@@ -26,7 +26,11 @@ public class Cursor_Manager : MonoBehaviour
                 SR.sprite = ItemCursor;
                 break;
             case "Default":
-                SR.sprite = DefaultCursor;
+                if(SR != null)
+                {
+                    SR.sprite = DefaultCursor;
+                }
+               
                 break;
             case "Enemy":
                 SR.sprite = EnemyCursor;
@@ -34,10 +38,18 @@ public class Cursor_Manager : MonoBehaviour
         } 
     }
 
+    
+
+    private void OnDestroy()
+    {
+        Cursor.visible = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
         TargetLocation = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = new Vector3(TargetLocation.x, TargetLocation.y, 0f);
+       
     }
 }

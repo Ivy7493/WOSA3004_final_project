@@ -12,7 +12,7 @@ public class Loot_Manager : MonoBehaviour
     GameObject[] Rares = new GameObject[0];
     GameObject[] Uncommons = new GameObject[0];
     GameObject[] Commons = new GameObject[0];
-
+    Experience_Manager EM;
     
 
     public float CommonThreshold;
@@ -49,7 +49,7 @@ public class Loot_Manager : MonoBehaviour
     }
     void Start()
     {
-        
+        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
     }
 
     void Setup()
@@ -177,7 +177,8 @@ public class Loot_Manager : MonoBehaviour
     public GameObject ReturnLoot(float _magic)
     {
         float RandomChance = Random.Range(0, 101);
-        RandomChance = RandomChance/2 + _magic/2;
+        float LevelChance = EM.ReturnLevel() / EM.ReturnMaxLevel() * 100;
+        RandomChance = RandomChance*(4/10) + _magic/2 + LevelChance*(1/10);
         Debug.Log("Magic find value: " + RandomChance);
        
         if (RandomChance >= EpicThrehold)

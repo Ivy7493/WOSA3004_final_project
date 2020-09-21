@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Resource_Manager : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Resource_Manager : MonoBehaviour
     Stat_Manager STM;
     Music_Manager MM;
     Effect_Manager EFM;
-
+    
 
     void Awake()
     {
@@ -37,6 +38,8 @@ public class Resource_Manager : MonoBehaviour
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         EFM = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
+        UIM.UpdateHealth(CurrentHP);
+        UIM.UpdateMana(CurrentMP);
         RecalculateStatValues();
 
     }
@@ -45,6 +48,7 @@ public class Resource_Manager : MonoBehaviour
     {
         CurrentHP = MaxHP;
         CurrentMP = MaxMP;
+        
     }
 
     public void RecalculateStatValues()

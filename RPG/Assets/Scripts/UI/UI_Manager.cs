@@ -27,6 +27,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject ZoneText;
     public GameObject ObjectInteractionTxt;
     public GameObject DamageText;
+    public GameObject HPVal_txt;
+    public GameObject ManaVal_txt;
+    public GameObject ExpVal_txt;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -143,11 +146,14 @@ public class UI_Manager : MonoBehaviour
     public void UpdateHealth(float _health)
     {
         HealthBar.GetComponent<Slider>().value = _health;
+        HPVal_txt.GetComponent<TextMeshPro>().text = _health.ToString();
+
     }
 
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
+        ManaVal_txt.GetComponent<TextMeshPro>().text = _Mana.ToString();
     }
 
     public void CallDeathEffect()
@@ -171,6 +177,12 @@ public class UI_Manager : MonoBehaviour
         ZoneText.GetComponentInChildren<Text>().text = _Zone;
     }
 
+
+    public void SetExptxt(float exp)
+    {
+        ExpVal_txt.GetComponent<TextMeshPro>().text = exp.ToString();
+    }
+   
     public void ResumeGame()
     {
         Time.timeScale = 1f;

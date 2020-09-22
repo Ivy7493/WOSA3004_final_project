@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: side lava
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: 21300000, guid: bf9b0c46646c78343b64b5e22e2db30f, type: 3}
+  - {fileID: 21300000, guid: 0ce20ac816f63f246a0155b5a05e59b3, type: 3}
+  - {fileID: 21300000, guid: fc99196c370ac834697f6697f04bace1, type: 3}
+  - {fileID: 21300000, guid: 49e085bdc5b6b7a4290e2cb107c4b93e, type: 3}
+  - {fileID: 21300000, guid: 533f6109b1925fd4f94afcb58ce10db8, type: 3}
+  - {fileID: 21300000, guid: 14161cfa315b95348bd81ef63b1f6d76, type: 3}
+  - {fileID: 21300000, guid: 980177a8d75dcf04cb2dd366a66c048c, type: 3}
+  - {fileID: 21300000, guid: 7a959a06351595e458ca1a440074fb2a, type: 3}
+  m_MinSpeed: 10
+  m_MaxSpeed: 10
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0

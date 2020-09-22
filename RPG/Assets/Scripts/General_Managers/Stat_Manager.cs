@@ -34,6 +34,12 @@ public class Stat_Manager : MonoBehaviour
     }
 
 
+    public float ReturnSpellCrit()
+    {
+        return SpellCrit;
+    }
+
+
     public void IncreaseSpellCrit()
     {
         SpellCrit += ScaleRate;

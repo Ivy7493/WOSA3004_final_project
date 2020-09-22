@@ -20,6 +20,7 @@ public class Zone_Trigger : MonoBehaviour
     {
         if(Vector3.Distance(transform.position,Player.transform.position) < TriggerDistance)
         {
+
             if (UIM.ZoneText.GetComponentInChildren<Text>().text != Zone)
             {
                 UIM.DisplayZone(Zone);

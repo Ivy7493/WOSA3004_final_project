@@ -31,13 +31,32 @@ public class UI_Manager : MonoBehaviour
     public GameObject ManaVal_txt;
     public GameObject ExpVal_txt;
     public GameObject StatsMenu;
+    public GameObject CritStat_txt;
+    public GameObject HealthStat_txt;
+    public GameObject ManaStat_txt;
+    Resource_Manager RM;
     public static bool GameIsPaused = false;
     void Start()
     {
+        RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PauseScreenUI.SetActive(false);
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
         ZoneText.SetActive(false);
+        SetHUDValues();
+    }
+
+    void SetStats()
+    {
+        HealthStat_txt.GetComponent<TextMeshProUGUI>().text = "HPS: " + RM.ReturnHPregen() + "";
+        ManaStat_txt.GetComponent<TextMeshProUGUI>().text = "MPS: " + RM.ReturnMPregen() + "";
+        CritStat_txt.GetComponent<TextMeshProUGUI>().text = "Crit: " + (int)((GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>().ReturnSpellCrit() - 1)*100) + "%";
+    }
+
+    void SetHUDValues()
+    {
+        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "";
+        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "";
     }
 
     public void UpdateLevel(float _Level)
@@ -57,12 +76,13 @@ public class UI_Manager : MonoBehaviour
 
     public void SetTalentNumber(float _number)
     {
-        TalentNumber.GetComponent<Text>().text = "Talent points: " + _number;
+        TalentNumber.GetComponent<TextMeshProUGUI>().text = "Talent points: " + _number;
     }
 
     public void UpdateExpBar(float _percent)
     {
         ExpBar.GetComponent<Slider>().value = _percent;
+        ExpVal_txt.GetComponent<TextMeshProUGUI>().text = (int)(_percent) + "%";
     }
 
 
@@ -90,9 +110,17 @@ public class UI_Manager : MonoBehaviour
         GameObject.FindGameObjectWithTag("UI_OffName").GetComponent<Text>().text = _name;
     }
 
-    public void TurnOnStatsMenu()
+    public void ToggleStatMenu()
     {
-        StatsMenu.SetActive(true);
+        if(StatsMenu.activeInHierarchy == false)
+        {
+            StatsMenu.SetActive(true);
+            SetStats();
+        }else if(StatsMenu.activeInHierarchy == true)
+        {
+            StatsMenu.SetActive(false);
+        }
+       
     }
 
     public void TurnOffStatsMenu()
@@ -156,6 +184,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateHealth(float _health)
     {
         HealthBar.GetComponent<Slider>().value = _health;
+        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "";
 
 
     }
@@ -163,6 +192,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
+        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "";
     }
 
     public void CallDeathEffect()

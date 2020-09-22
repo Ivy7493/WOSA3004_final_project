@@ -38,8 +38,6 @@ public class Resource_Manager : MonoBehaviour
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         EFM = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
-        UIM.UpdateHealth(CurrentHP);
-        UIM.UpdateMana(CurrentMP);
         RecalculateStatValues();
 
     }
@@ -112,6 +110,11 @@ public class Resource_Manager : MonoBehaviour
         return CurrentMP;
     }
 
+    public float ReturnCurrentHP()
+    {
+        return CurrentHP;
+    }
+
     void HPregen()
     {
         if(CurrentHP < MaxHP)
@@ -125,6 +128,16 @@ public class Resource_Manager : MonoBehaviour
         }
 
        
+    }
+
+    public float ReturnHPregen()
+    {
+        return HPgen;
+    }
+
+    public float ReturnMPregen()
+    {
+        return MPgen;
     }
 
     void MPregen()

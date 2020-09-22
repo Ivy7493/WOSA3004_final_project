@@ -30,6 +30,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject HPVal_txt;
     public GameObject ManaVal_txt;
     public GameObject ExpVal_txt;
+    public GameObject StatsMenu;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -89,6 +90,15 @@ public class UI_Manager : MonoBehaviour
         GameObject.FindGameObjectWithTag("UI_OffName").GetComponent<Text>().text = _name;
     }
 
+    public void TurnOnStatsMenu()
+    {
+        StatsMenu.SetActive(true);
+    }
+
+    public void TurnOffStatsMenu()
+    {
+        StatsMenu.SetActive(false);
+    }
     public void CallItemDisplay(string _name, string _slot, string _desc, Vector3 Location, string Rarity)
     {
         Color ItemColor = Color.white;
@@ -146,14 +156,13 @@ public class UI_Manager : MonoBehaviour
     public void UpdateHealth(float _health)
     {
         HealthBar.GetComponent<Slider>().value = _health;
-        HPVal_txt.GetComponent<TextMeshPro>().text = _health.ToString();
+
 
     }
 
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
-        ManaVal_txt.GetComponent<TextMeshPro>().text = _Mana.ToString();
     }
 
     public void CallDeathEffect()

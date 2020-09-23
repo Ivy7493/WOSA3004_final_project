@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5022195744730379117}
   - component: {fileID: 7827377029371578877}
   - component: {fileID: -7279952069515120102}
+  - component: {fileID: 8701236904950255558}
   m_Layer: 0
   m_Name: Toxic_Trap
   m_TagString: Untagged
@@ -245,3 +246,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8701236904950255558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022195744730379118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83953f33768adbf47bceeb77987e5ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slot: Off

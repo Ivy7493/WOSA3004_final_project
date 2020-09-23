@@ -119,7 +119,7 @@ public class Ability_Manager : MonoBehaviour
         AbilityFeet = _feet;
         string Name = AbilityFeet.GetComponent<UI_Ability_info>().Name;
         Sprite Icon = AbilityFeet.GetComponent<UI_Ability_info>().Icon;
-        UIM.SetFeetIcon(Icon, Name);
+      //  UIM.SetFeetIcon(Icon, Name);
     }
 
     public void EquipOff(GameObject _off)

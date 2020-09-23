@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1423831258971103848}
   - component: {fileID: 1423831258971103846}
   - component: {fileID: 1423831258971103849}
+  - component: {fileID: 5601376567581670060}
   m_Layer: 0
   m_Name: Blood_Bomb
   m_TagString: Untagged
@@ -112,3 +113,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Blood Bomb
   Icon: {fileID: 21300000, guid: 121216c9c3766b84cadde801d18efc80, type: 3}
+--- !u!114 &5601376567581670060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423831258971103850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83953f33768adbf47bceeb77987e5ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slot: Head

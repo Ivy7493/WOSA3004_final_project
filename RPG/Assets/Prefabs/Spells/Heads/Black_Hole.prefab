@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1723517289924574811}
   - component: {fileID: 1107660571148974605}
   - component: {fileID: 4825106419489585483}
+  - component: {fileID: 6292604412519350309}
   m_Layer: 0
   m_Name: Black_Hole
   m_TagString: Untagged
@@ -127,3 +128,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6292604412519350309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723517289924574810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83953f33768adbf47bceeb77987e5ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slot: Head

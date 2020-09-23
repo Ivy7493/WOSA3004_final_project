@@ -59,6 +59,7 @@ public class Stat_Manager : MonoBehaviour
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);
         Debug.Log("MaxMana: " + MaxMana);
         RM.RecalculateStatValues();
+        Debug.Log(MaxMana + ": MaxMana");
     }
 
     public void IncreaseMaxHealth()

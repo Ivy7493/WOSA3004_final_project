@@ -9,7 +9,7 @@ public class Item_Pickup : MonoBehaviour
     public string Name;
     float ItemIndex;
     public GameObject Spell;
-    public string Slot;
+    string Slot;
     public string Rarity;
     public string ItemDesc;
     public bool Permanent = false;
@@ -30,8 +30,11 @@ public class Item_Pickup : MonoBehaviour
             Player = GameObject.FindGameObjectWithTag("Player");
             UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
             CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
+            Slot = Spell.GetComponent<Slot>().ReturnSlot();
             ItemIndex = SM.ReturnSpellIndex(Spell, Slot);
             InvokeRepeating("DestoryItem", 0, 5f);
+          
+            Debug.Log(Slot);
         }
         catch
         {

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 9177716662380450724}
   - component: {fileID: 4958591358088410135}
   - component: {fileID: 1434022181439443940}
+  - component: {fileID: 4778106396909747781}
   m_Layer: 13
   m_Name: Arcane_Explosion
   m_TagString: Untagged
@@ -261,3 +262,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4778106396909747781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 804567230079049289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83953f33768adbf47bceeb77987e5ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _slot: Main

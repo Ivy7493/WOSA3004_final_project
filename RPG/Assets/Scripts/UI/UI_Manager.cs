@@ -34,11 +34,15 @@ public class UI_Manager : MonoBehaviour
     public GameObject CritStat_txt;
     public GameObject HealthStat_txt;
     public GameObject ManaStat_txt;
+    public GameObject HPSStat_txt;
+    public GameObject MPSStat_txt;
     Resource_Manager RM;
+    Stat_Manager STM;
     public static bool GameIsPaused = false;
     void Start()
     {
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
+        STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         PauseScreenUI.SetActive(false);
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
@@ -48,9 +52,11 @@ public class UI_Manager : MonoBehaviour
 
     void SetStats()
     {
-        HealthStat_txt.GetComponent<TextMeshProUGUI>().text = "HPS: " + RM.ReturnHPregen() + "";
-        ManaStat_txt.GetComponent<TextMeshProUGUI>().text = "MPS: " + RM.ReturnMPregen() + "";
-        CritStat_txt.GetComponent<TextMeshProUGUI>().text = "Crit: " + (int)((GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>().ReturnSpellCrit() - 1)*100) + "%";
+        HealthStat_txt.GetComponent<TextMeshProUGUI>().text = "MaxHealth: " + Mathf.RoundToInt((STM.ReturnMaxHealth() - 1)*100) + "%";
+        ManaStat_txt.GetComponent<TextMeshProUGUI>().text = "MaxMana: " + Mathf.RoundToInt((STM.ReturnMaxMana() - 1)*100) + "%";
+        CritStat_txt.GetComponent<TextMeshProUGUI>().text = "Crit: " + (int)((STM.ReturnSpellCrit() - 1)*100) + "%";
+        HPSStat_txt.GetComponent<TextMeshProUGUI>().text = "HPS: " + Mathf.RoundToInt((STM.ReturnHP5() - 1)*100) + "%";
+        MPSStat_txt.GetComponent<TextMeshProUGUI>().text = "MPS: " + Mathf.RoundToInt((STM.ReturnMP5() - 1)*100) + "%";
     }
 
     void SetHUDValues()

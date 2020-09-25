@@ -30,6 +30,7 @@ GameObject:
   - component: {fileID: 1028688180346310620}
   - component: {fileID: -3653334133165230020}
   - component: {fileID: -4038445403473157731}
+  - component: {fileID: 6017337861316242097}
   m_Layer: 11
   m_Name: Exploder_Enemy
   m_TagString: Damagable
@@ -235,6 +236,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &6017337861316242097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7749638599392397916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329e83d8116f89340a766c7e61861bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6143578266915171451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,22 +323,22 @@ PrefabInstance:
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.0014939308
+      value: 0.0014972687
       objectReference: {fileID: 0}
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.01066339
+      value: -0.010662556
       objectReference: {fileID: 0}
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 3.7485056
+      value: 3.748506
       objectReference: {fileID: 0}
     - target: {fileID: 4842182157639955110, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.9358566
+      value: 1.9358569
       objectReference: {fileID: 0}
     - target: {fileID: 9067904610625936985, guid: ba634546c6396e04aa025ed97343af99,
         type: 3}

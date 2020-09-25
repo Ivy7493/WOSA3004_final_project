@@ -7,16 +7,22 @@ public class Wind_Shear : MonoBehaviour
     // Start is called before the first frame update
     public float DamageScale;
     public float Speed;
+    public float Range;
     Vector3 pos;
     Vector3 StartPos;
+    Vector3 Direction;
+    GameObject Player;
+    public float KnockBack;
+
     float Damage;
    
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-       
+        Direction = (pos - Player.transform.position).normalized;
         StartPos = transform.position;
         FixRotation();
         Spell();
@@ -32,7 +38,23 @@ public class Wind_Shear : MonoBehaviour
 
     void Spell()
     {
-        transform.position = Vector3.MoveTowards(transform.position, pos, Speed * Time.deltaTime);
+        transform.position += Direction * Speed * Time.deltaTime;
+        DistanceCheck();
+    }
+
+    IEnumerator KnockBackEffect(float Duration, GameObject Target)
+    {
+      Target.gameObject.transform.position += ((Target.gameObject.transform.position - StartPos).normalized * (KnockBack*Time.deltaTime));
+        yield return new WaitForSeconds(Duration);
+        Destroy(gameObject);
+    }
+
+    void DistanceCheck()
+    {
+        if (Vector3.Distance(StartPos, transform.position) >= Range)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
@@ -43,6 +65,11 @@ public class Wind_Shear : MonoBehaviour
             try
             {
                 collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                StartCoroutine(KnockBackEffect(1f,collision.gameObject));
+              
                 Destroy(gameObject);
             }
             catch
@@ -57,9 +84,6 @@ public class Wind_Shear : MonoBehaviour
     void Update()
     {
         Spell();
-        if(Vector3.Distance(transform.position,pos) < 0.1f)
-        {
-            Destroy(gameObject);
-        }
+      
     }
 }

@@ -186,6 +186,13 @@ public class UI_Manager : MonoBehaviour
         temp.GetComponent<TextMeshPro>().text = (int)damage + "";
     }
 
+    public void SpawnStatusText(Vector3 location, string Effect)
+    {
+        Debug.Log("HERE YOU SILLY GOOSE");
+        GameObject temp = Instantiate(DamageText, location + new Vector3(0,1,0), Quaternion.identity);
+        temp.GetComponent<TextMeshPro>().text = Effect;
+    }
+
 
     public void UpdateHealth(float _health)
     {

@@ -18,6 +18,7 @@ public class Frost_Slicer_AI : MonoBehaviour
     AIPath PathControl;
     Resource_Manager RM;
     float counter = 0f;
+    Enemy_Status ES;
     void Start()
     {
         if (StartTransform == null)
@@ -35,6 +36,14 @@ public class Frost_Slicer_AI : MonoBehaviour
         if(StartPos == null)
         {
             Debug.Log("Its The StartPos");
+        }
+        try
+        {
+            ES = GetComponent<Enemy_Status>();
+        }
+        catch
+        {
+
         }
     }
 
@@ -96,7 +105,11 @@ public class Frost_Slicer_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Encounter();
+        if(ES.ReturnStunStatus() == false)
+        {
+            Movement();
+            Encounter();
+        }
+     
     }
 }

@@ -13,8 +13,12 @@ public class Ability_Manager : MonoBehaviour
     UI_Manager UIM;
     GameObject Player;
     public float GCD;
+    public float BlinkCD;
     float counter = 0;
     bool CanCast = true;
+    bool CanBlink = true;
+    float BlinkCounter;
+
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
@@ -32,6 +36,16 @@ public class Ability_Manager : MonoBehaviour
                 counter = 0;
                 CanCast = true;
             }
+        }
+        if(CanBlink == false)
+        {
+            BlinkCounter += Time.deltaTime;
+            if(BlinkCounter > BlinkCD)
+            {
+                BlinkCounter = 0;
+                CanBlink = true;
+            }
+
         }
     }
 
@@ -68,12 +82,12 @@ public class Ability_Manager : MonoBehaviour
 
     void UseFeet()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && CanCast)
+        if (Input.GetKeyDown(KeyCode.Space) && CanBlink)
         {
             if(AbilityFeet != null)
             {
                 Instantiate(AbilityFeet, Player.transform.position, Quaternion.identity);
-                CanCast = false;
+                CanBlink = false;
             }
            
         }
@@ -81,7 +95,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseHead()
     {
-        if (Input.GetKeyDown(KeyCode.F) && CanCast)
+        if (Input.GetMouseButtonDown(2) && CanCast)
         {
             if(AbilityHead != null)
             {

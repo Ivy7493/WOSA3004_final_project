@@ -12,30 +12,42 @@ public class Flame_archer_AI : MonoBehaviour
     GameObject Player;
     float counter = 0f;
     Animator Anim;
+    Enemy_Status ES;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         counter = AbilityFrequency;
         Anim = GetComponentInChildren<Animator>();
+        try
+        {
+            ES = GetComponent<Enemy_Status>();
+        }
+        catch
+        {
+
+        }
     }
 
 
     void encounter()
     {
-       
-        if(Vector3.Distance(transform.position,Player.transform.position) < EngageRange)
+       if(ES.ReturnStunStatus() == false)
         {
-           
-            counter += Time.deltaTime;
-            if(counter >= AbilityFrequency)
+            if (Vector3.Distance(transform.position, Player.transform.position) < EngageRange)
             {
-                Anim.SetTrigger("Attack");
-                Vector3 Direction = (Player.transform.position - transform.position).normalized;
-                Instantiate(FireBall, transform.position + (Direction * offset), Quaternion.identity);
-                counter = 0;
+
+                counter += Time.deltaTime;
+                if (counter >= AbilityFrequency)
+                {
+                    Anim.SetTrigger("Attack");
+                    Vector3 Direction = (Player.transform.position - transform.position).normalized;
+                    Instantiate(FireBall, transform.position + (Direction * offset), Quaternion.identity);
+                    counter = 0;
+                }
+
             }
-            
         }
+       
     }
 
     // Update is called once per frame

@@ -24,6 +24,7 @@ public class Frost_Giant_AI : MonoBehaviour
     public float EnrageThresold;
     public float EnrageHealthLose;
     bool enraged = false;
+    Enemy_Status ES;
     void Start()
     {
         if (StartTransform == null)
@@ -39,7 +40,15 @@ public class Frost_Giant_AI : MonoBehaviour
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PathControl = GetComponent<AIPath>();
         EH = GetComponent<Enemy_Health>();
-       
+        try
+        {
+            ES = GetComponent<Enemy_Status>();
+        }
+        catch
+        {
+
+        }
+
     }
 
     //Movement Control for AI and engage range
@@ -112,9 +121,13 @@ public class Frost_Giant_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Encounter();
-        Enrage();
+        if(ES.ReturnStunStatus() == false)
+        {
+            Movement();
+            Encounter();
+            Enrage();
+        }
+      
        
     }
 }

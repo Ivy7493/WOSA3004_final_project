@@ -11,6 +11,7 @@ public class Lightning_bolt : MonoBehaviour
     Vector3 Direction;
     public float Range;
     public float Speed;
+    public float ExplosionRange;
     public float DamageScale;
     float Damage;
     float PlayerLevel;
@@ -42,11 +43,15 @@ public class Lightning_bolt : MonoBehaviour
 
     void Motion()
     {
-        if (Vector3.Distance(transform.position,pos) > 0.1f)
-        {
-            transform.position += Direction * Speed * Time.deltaTime;
-        }
-        else
+
+        transform.position += Direction * Speed * Time.deltaTime;
+        DistanceCheck();
+
+    }
+
+    void DistanceCheck()
+    {
+        if (Vector3.Distance(CurrenPos, transform.position) >= Range)
         {
             Destroy(gameObject);
         }
@@ -55,11 +60,23 @@ public class Lightning_bolt : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Damagable")
-        {
-            Debug.Log("Hit " + collision.gameObject.name + "!");
+        { 
             if(collision.gameObject.GetComponent<Enemy_Health>() != null)
             {
                 collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+            
+            }
+            GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Damagable");
+            for (int i = 0; i < Enemies.Length; i++)
+            {
+                if (Vector3.Distance(transform.position, Enemies[i].transform.position) < ExplosionRange && collision.gameObject != Enemies[i])
+                {
+                    if(Enemies[i] != null)
+                    {
+                        Enemies[i].GetComponent<Enemy_Health>().Damage(Damage / 2);
+                    }
+                   
+                }
             }
         }
         Destroy(gameObject);

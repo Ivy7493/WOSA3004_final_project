@@ -153,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 15
   Speed: 25
+  ExplosionRange: 10
   DamageScale: 3
 --- !u!114 &9051032994593478307
 MonoBehaviour:
@@ -166,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b095f2e16496e41b078e1367be2be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Lightning bolt
+  Name: Lightning Explosion
   Icon: {fileID: 21300000, guid: 5591f33ec26c26043af983f55d15f867, type: 3}
 --- !u!61 &9051032994593478308
 BoxCollider2D:

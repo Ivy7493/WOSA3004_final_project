@@ -21,6 +21,7 @@ public class Flamer_AI : MonoBehaviour
     Experience_Manager EM;
     AudioSource AS;
     Animator Anim;
+    Enemy_Status ES;
     float counter;
     /// <summary>
     ///Start Transform 411
@@ -44,7 +45,15 @@ public class Flamer_AI : MonoBehaviour
         EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
         AS = GetComponent<AudioSource>();
         Anim = GetComponentInChildren<Animator>();
-        
+        try
+        {
+            ES = GetComponent<Enemy_Status>();
+        }
+        catch
+        {
+
+        }
+
     }
 
    
@@ -116,7 +125,11 @@ public class Flamer_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Encounter();
+        if(ES.ReturnStunStatus() == false)
+        {
+            Movement();
+            Encounter();
+        }
+      
     }
 }

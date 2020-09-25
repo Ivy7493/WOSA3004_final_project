@@ -23,6 +23,7 @@ public class Slime_AI : MonoBehaviour
     Animator Anim;
     public GameObject Slime;
     public bool Recursion;
+    Enemy_Status ES;
     void Start()
     {
         if (StartTransform == null)
@@ -39,6 +40,14 @@ public class Slime_AI : MonoBehaviour
         PreviousPosition = transform.position;
         EH = GetComponent<Enemy_Health>();
         Anim = GetComponentInChildren<Animator>();
+        try
+        {
+            ES = GetComponent<Enemy_Status>();
+        }
+        catch
+        {
+
+        }
     }
 
     void Animations()
@@ -71,7 +80,7 @@ public class Slime_AI : MonoBehaviour
             
             if (Player.transform != null)
             {
-                Debug.Log("Getting here Silly!");
+
                 Motor.target = Player.transform;
             }
 
@@ -105,8 +114,12 @@ public class Slime_AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Animations();
-        Encounter();
+        if(ES.ReturnStunStatus() == false)
+        {
+            Movement();
+            Animations();
+            Encounter();
+        }
+     
     }
 }

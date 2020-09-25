@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 9205469568447790947}
   - component: {fileID: 6374506252188534038}
   - component: {fileID: 8595818913903946306}
+  - component: {fileID: -6852845807821870869}
   m_Layer: 11
   m_Name: Flame_Archer
   m_TagString: Damagable
@@ -225,6 +226,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &-6852845807821870869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9205469568447790950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 329e83d8116f89340a766c7e61861bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3742317485334913896
 PrefabInstance:
   m_ObjectHideFlags: 0

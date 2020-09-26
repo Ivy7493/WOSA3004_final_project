@@ -62,6 +62,7 @@ public class AirSpear : MonoBehaviour
         {
             UIM.SetCastBarOff();
             Destroy(gameObject);
+            
         }else if(Input.GetMouseButtonUp(1) && WindUp >= ChargeTime)
         {
             released = true;

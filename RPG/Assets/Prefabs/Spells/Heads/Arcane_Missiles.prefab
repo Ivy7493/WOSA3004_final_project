@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8381762872399352035}
   m_Layer: 13
   m_Name: Arcane_Missiles
-  m_TagString: Untagged
+  m_TagString: Arcane_Missiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,10 +86,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5684197946a99428b82f432235c18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 2
-  Speed: 20
-  Range: 20
-  Duration: 3
-  TickRate: 1
+  DamageScale: 0.9
+  Speed: 80
+  Range: 6
+  Duration: 1
+  TickRate: 0.2
   Missile: {fileID: 3129603236497611906, guid: 23ee8483f4c2a0347a61695463c67f41, type: 3}
   KnockBack: 0

@@ -30,22 +30,33 @@ public class Arcane_Missiles : MonoBehaviour
         Direction = (pos - Player.transform.position).normalized;
         StartPos = transform.position;
         InvokeRepeating("Spell", 0f, TickRate);
+        Debug.Log(GameObject.FindGameObjectsWithTag("Arcane_Missiles").Length + " : Active spells");
+        if(GameObject.FindGameObjectsWithTag("Arcane_Missiles").Length > 1)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Spell()
     {
-        float Ypos = Mathf.Sin((2 * Mathf.PI) * counter);
-        float Xpos = Mathf.Cos((2 * Mathf.PI) * counter);
-        GameObject CurrentMissile = Instantiate(Missile, new Vector3(Player.transform.position.x+ Xpos,Player.transform.position.y + Ypos, 0f), Quaternion.identity);
-        try
-        {
-           CurrentMissile.GetComponent<Missile>().SetValues(Damage, Range, Speed);
-        }
-        catch
-        {
-            Debug.Log("YPPPPPP:");
-        }
+
+
+        float Xpos = 0;
+        float Ypos = 0;
+            GameObject CurrentMissile = Instantiate(Missile, new Vector3(Player.transform.position.x + Xpos, Player.transform.position.y + Ypos, 0f), Quaternion.identity);
+            try
+            {
+                CurrentMissile.GetComponent<Missile>().SetValues(Damage / 2, Range, Speed);
+            }
+            catch
+            {
+                Debug.Log("YPPPPPP:");
+            }
+
         
+
+
+
     }
 
     void ChannelingCheck()
@@ -62,7 +73,7 @@ public class Arcane_Missiles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Spell();
+        
         ChannelingCheck();
     }
 }

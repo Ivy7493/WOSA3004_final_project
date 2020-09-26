@@ -12,13 +12,18 @@ public class Missile : MonoBehaviour
     Vector3 pos;
     Vector3 Direction;
     Vector3 StartPos;
+    GameObject Player;
     bool Set = false;
+    bool Phase = false;
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
-        Direction = Direction = (pos - transform.position).normalized;
+        Direction = (pos - transform.position).normalized;
         StartPos = transform.position;
+       
+       // FixRotation();
     }
 
     public void SetValues(float _damage, float _range, float _speed)
@@ -40,9 +45,27 @@ public class Missile : MonoBehaviour
     void Spell()
     {
         counter += Time.deltaTime;
+        float Ypos = 2 * Mathf.Sin(5*counter);
+        float Xpos = 2 * Mathf.Cos(5*counter);
+        if(Phase == false)
+        {
+            transform.position = new Vector3(Player.transform.position.x+Xpos,Player.transform.position.y+Ypos,0f);
+            GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Damagable");
+            for(int i = 0; i < Enemies.Length; i++)
+            {
+                if(Vector3.Distance(transform.position,Enemies[i].transform.position) < Range)
+                {
+                    Phase = true;
+                    Direction = (Enemies[i].transform.position - transform.position).normalized;
+                }
+            }
+        }
+        if(Phase == true)
+        {
+              transform.position += new Vector3(Direction.x ,Direction.y ,0f)* Speed * Time.deltaTime;
+        }
 
-        transform.position += Direction * Speed * Time.deltaTime;
-        if (Vector3.Distance(StartPos,transform.position) >= Range)
+        if (Vector3.Distance(Player.transform.position,transform.position) >= Range)
         {
             Destroy(gameObject);
         }
@@ -73,7 +96,7 @@ public class Missile : MonoBehaviour
     {
         if(Set == true)
         {
-            FixRotation();
+           
             Spell();
         }
       

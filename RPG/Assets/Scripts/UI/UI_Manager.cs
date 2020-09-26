@@ -8,6 +8,7 @@ using TMPro;
 public class UI_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject CastBar;
     public GameObject AbilityMain;
     public GameObject AbilityFeet;
     public GameObject AbilityOff;
@@ -47,6 +48,7 @@ public class UI_Manager : MonoBehaviour
         ItemPanel.SetActive(false);
         DeathEffect.SetActive(false);
         ZoneText.SetActive(false);
+        CastBar.SetActive(false);
         SetHUDValues();
     }
 
@@ -74,6 +76,27 @@ public class UI_Manager : MonoBehaviour
     {
         TalentPanel.SetActive(true);
     }
+
+   public void SetCastBar(float _percent)
+    {
+        if(CastBar.activeInHierarchy == false)
+        {
+            CastBar.SetActive(true);
+        }
+        CastBar.GetComponent<Slider>().value = _percent;
+        if(_percent >= 1)
+        {
+            CastBar.SetActive(false);
+        }
+    }
+
+    public void SetCastBarOff()
+    {
+        CastBar.GetComponent<Slider>().value = 0f;
+        CastBar.SetActive(false);
+    }
+
+    
 
     public void DestroyTalentPanel()
     {

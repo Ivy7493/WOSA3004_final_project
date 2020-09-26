@@ -8,10 +8,26 @@ public class AirSpear : MonoBehaviour
     GameObject Player;
     public float Speed;
     public float DamageScale;
+    public float ChargeTime;
+    public float StunDuration;
+    public float Range;
     float Damage;
     float DeltaOff = 2;
     Vector3 pos;
+    SpriteRenderer SR;
+    float WindUp;
+    bool casted = false;
+    bool released = false;
+    Vector3 StartPos;
+    Vector3 Direction;
+    UI_Manager UIM;
     void Start()
+    {
+        SR = GetComponent<SpriteRenderer>();
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+    }
+
+    void Setup()
     {
         Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         if (GameObject.FindGameObjectWithTag("Player") != null)
@@ -22,15 +38,48 @@ public class AirSpear : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         FixRotation();
+        StartPos = transform.position;
+        Direction = Direction = (pos - Player.transform.position).normalized;
+    }
+
+    void ActivateSpell()
+    {
+        if (Input.GetMouseButton(1) && released == false)
+        {
+            SR.color = Color.Lerp(Color.white, Color.yellow, WindUp/ChargeTime);
+            WindUp += Time.deltaTime;
+            Setup();
+            UIM.SetCastBar(WindUp / ChargeTime);
+            if (WindUp >= ChargeTime)
+            {
+                if(casted == false)
+                {
+                    SR.color = Color.red;
+                    casted = true;
+                }
+            }
+        }else if(Input.GetMouseButtonUp(1) && WindUp < ChargeTime)
+        {
+            UIM.SetCastBarOff();
+            Destroy(gameObject);
+        }else if(Input.GetMouseButtonUp(1) && WindUp >= ChargeTime)
+        {
+            released = true;
+            
+        }
     }
 
     void Spell()
     {
-        transform.position = Vector3.MoveTowards(transform.position, pos, Speed *Time.deltaTime);
-        if(Mathf.Abs(Vector3.Distance(transform.position,pos) ) < 0.1)
+        if(casted == true)
         {
-            Destroy(gameObject);
+            transform.position += Direction * Speed * Time.deltaTime;
+            if (Mathf.Abs(Vector3.Distance(transform.position, StartPos)) >= Range)
+            {
+                Destroy(gameObject);
+            }
         }
+       
     }
 
     void FixRotation()
@@ -45,16 +94,23 @@ public class AirSpear : MonoBehaviour
     {
         if(collision.gameObject.tag == "Damagable")
         {
-            Vector3 offset = collision.gameObject.transform.position - Player.transform.position;
-            offset = offset.normalized;
-            Player.transform.position = new Vector3(collision.gameObject.transform.position.x - offset.x * DeltaOff, collision.gameObject.transform.position.y - offset.y * DeltaOff, 0f);
+          
             try
             {
                 collision.gameObject.GetComponent<Enemy_Health>().Damage(Damage);
+              
             }
             catch
             {
                 Debug.Log("Enemy_Health component not found!");
+            }
+            try
+            {
+                collision.gameObject.GetComponent<Enemy_Status>().SetEnemyStun(StunDuration);
+            }
+            catch
+            {
+                Debug.Log("Enemy is immune to status effects");
             }
             
             Destroy(gameObject);
@@ -64,6 +120,7 @@ public class AirSpear : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ActivateSpell();
         Spell();
     }
 }

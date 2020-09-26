@@ -63,8 +63,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DamageScale: 4
-  Speed: 40
-  Range: 20
+  Speed: 35
+  Range: 10
   KnockBack: 60
 --- !u!114 &3795369454528019295
 MonoBehaviour:

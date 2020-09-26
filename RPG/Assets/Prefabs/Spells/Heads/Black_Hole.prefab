@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 5
+  ManaScale: 4
 --- !u!114 &1723517289924574811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,9 +74,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d79bed3c551c40545b98252e82530cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 3
+  Duration: 2
   Range: 5
-  PullStrength: 40
+  PullStrength: 20
 --- !u!212 &4825106419489585483
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 4
+  ManaScale: 4.5
 --- !u!114 &5022195744730379115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25587ae36e2838149878c4f8f1b25dc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 3
+  Range: 4
   DamageScale: 1
   Duration: 2
   TickRate: 0.25

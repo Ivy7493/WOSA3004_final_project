@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 15
+  HealthScale: 30
   HUD: {fileID: 7934789900005433685}
   HitEffect: 0
 --- !u!114 &4224060927207316568
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRange: 20
-  EngageRange: 15
-  AttackFrequency: 3
-  AttackRange: 4
+  EngageRange: 10
+  AttackFrequency: 1
+  AttackRange: 3
   DamageScale: 20
   EnrageThresold: 0.4
   EnrageHealthLose: 0.02

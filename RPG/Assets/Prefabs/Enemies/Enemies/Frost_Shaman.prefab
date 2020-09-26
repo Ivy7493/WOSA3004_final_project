@@ -81,7 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 8
+  HealthScale: 10
   HUD: {fileID: 8186395043630712049}
   HitEffect: 0
 --- !u!114 &2673733810732552869
@@ -99,7 +99,7 @@ MonoBehaviour:
   MaxRange: 20
   EngageRange: 15
   TotemReplaceTime: 5
-  KiteDistance: 10
+  KiteDistance: 12
   Totem: {fileID: 2240554531716902997, guid: ac4f7ac57e9e7c848b2af4f691a51239, type: 3}
 --- !u!114 &2673733810732552866
 MonoBehaviour:

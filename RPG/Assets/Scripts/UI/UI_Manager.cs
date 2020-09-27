@@ -39,9 +39,11 @@ public class UI_Manager : MonoBehaviour
     public GameObject MPSStat_txt;
     Resource_Manager RM;
     Stat_Manager STM;
+    GameObject Player;
     public static bool GameIsPaused = false;
     void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         PauseScreenUI.SetActive(false);
@@ -176,13 +178,13 @@ public class UI_Manager : MonoBehaviour
         }
         ObjectInteractionTxt.SetActive(true);
         ItemPanel.SetActive(true);
-        ItemPanel.transform.position = Location;
-        ItemDesc.GetComponent<Text>().text = _desc;
-        ItemDesc.GetComponent<Text>().color = ItemColor;
-        ItemName.GetComponent<Text>().text = _name;
-        ItemName.GetComponent<Text>().color = ItemColor;
-        ItemSlot.GetComponent<Text>().text = _slot;
-        ItemSlot.GetComponent<Text>().color = ItemColor;
+       // ItemPanel.transform.position = new Vector3(Player.transform.position.x - 2, Player.transform.position.y, 0f);//Location;
+        ItemDesc.GetComponent<TextMeshProUGUI>().text = _desc;
+        ItemDesc.GetComponent<TextMeshProUGUI>().color = ItemColor;
+        ItemName.GetComponent<TextMeshProUGUI>().text = _name;
+        ItemName.GetComponent<TextMeshProUGUI>().color = ItemColor;
+        ItemSlot.GetComponent<TextMeshProUGUI>().text = _slot;
+        ItemSlot.GetComponent<TextMeshProUGUI>().color = ItemColor;
         ObjectInteractionTxt.transform.position = new Vector3(Location.x, Location.y - 5f, 0f);
     } 
 

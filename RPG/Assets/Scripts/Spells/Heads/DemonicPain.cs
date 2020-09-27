@@ -8,6 +8,7 @@ public class DemonicPain : MonoBehaviour
     public float DamageScale;
     public float TickRate;
     public float Duration;
+    public float Range;
     float Damage;
     GameObject Target;
     Vector3 pos;
@@ -25,17 +26,21 @@ public class DemonicPain : MonoBehaviour
     {
         GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Damagable");
         float TempDist = 1000f;
-        int CurrentIndex = 0;
+        int CurrentIndex = -1;
         for (int i = 0; i < Enemies.Length; i++)
         {
-            if (Vector3.Distance(transform.position, Enemies[i].transform.position) < TempDist)
+            if (Vector3.Distance(transform.position, Enemies[i].transform.position) < TempDist && Vector3.Distance(transform.position, Enemies[i].transform.position) < Range)
             {
                 TempDist = Vector3.Distance(transform.position, Enemies[i].transform.position);
                 CurrentIndex = i;
             }
         }
-        Target = Enemies[CurrentIndex];
-        transform.position = Target.transform.position;
+        if(CurrentIndex != -1)
+        {
+            Target = Enemies[CurrentIndex];
+            transform.position = Target.transform.position;
+        }
+       
     }
 
     void Spell()

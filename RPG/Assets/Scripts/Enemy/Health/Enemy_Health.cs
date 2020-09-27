@@ -11,6 +11,7 @@ public class Enemy_Health : MonoBehaviour
     float MaxHealth;
     float PlayerLevel;
     public GameObject HUD;
+    Material Death;
 
 
     public bool HitEffect;
@@ -24,6 +25,9 @@ public class Enemy_Health : MonoBehaviour
     GameObject DeathEffect;
     Cursor_Manager CM;
     UI_Manager UIM;
+    AIPath Motor;
+    float DeathCounter = 0f;
+    bool DeathOn = false;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
@@ -40,6 +44,8 @@ public class Enemy_Health : MonoBehaviour
         SystemQuery();
         DeathEffect = Resources.Load("Blood_Effect", typeof(GameObject)) as GameObject;
         CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
+        Death = Resources.Load("Disolve", typeof(Material)) as Material;
+        Motor = GetComponent<AIPath>();
     }
 
     private void OnEnable()
@@ -53,6 +59,7 @@ public class Enemy_Health : MonoBehaviour
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         MaxHealth = PlayerLevel * HealthScale;
         Health = CurrentPercent * MaxHealth;
+        
     }
 
     void SystemQuery()
@@ -104,6 +111,68 @@ public class Enemy_Health : MonoBehaviour
         }
     }
 
+  
+    void Disolve()
+    {
+        SpriteRenderer[] Renders = GetComponentsInChildren<SpriteRenderer>();
+        for(int i = 0; i < Renders.Length; i++)
+        {
+            Renders[i].material = Death;
+        }
+        //StartCoroutine(DestoryAfterTime());
+        DeathOn = true;
+    }
+
+    void DeathEffectFuc()
+    {
+        if(DeathOn == true)
+        {
+            if(Motor != null)
+            {
+                Motor.canMove = false;
+            }
+            DeathCounter += Time.deltaTime;
+            SpriteRenderer[] Renders = GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 0; i < Renders.Length; i++)
+            {
+                Renders[i].material.SetFloat("_fade", 1 - DeathCounter);
+            }
+            if(DeathCounter >= 1f)
+            {
+                if (LT != null)
+                {
+                    LT.DropLoot();
+                }
+                if (Experience != null)
+                {
+                    Experience.AwardExp();
+                }
+                Destroy(gameObject);
+            }
+        }
+       
+    }
+
+    IEnumerator DestoryAfterTime()
+    {
+        DeathCounter += Time.deltaTime;
+        SpriteRenderer[] Renders = GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 0; i < Renders.Length; i++)
+        {
+            Renders[i].material.SetFloat("_fade", 1 - DeathCounter);
+        }
+        yield return new WaitForSeconds(1f);
+        if (LT != null)
+        {
+            LT.DropLoot();
+        }
+        if (Experience != null)
+        {
+            Experience.AwardExp();
+        }
+        Destroy(gameObject);
+    }
+
     public float ReturnMaxHealth()
     {
         return MaxHealth;
@@ -139,6 +208,7 @@ public class Enemy_Health : MonoBehaviour
         }
         if(Health <= 0)
         {
+            /*
             if(LT != null)
             {
                 LT.DropLoot();
@@ -148,7 +218,9 @@ public class Enemy_Health : MonoBehaviour
                 Experience.AwardExp();
             }
             Instantiate(DeathEffect, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+            */
+            Disolve();
+           // Destroy(gameObject);
         }
     }
 
@@ -170,5 +242,6 @@ public class Enemy_Health : MonoBehaviour
     void Update()
     {
         DamageEffect();
+        DeathEffectFuc();
     }
 }

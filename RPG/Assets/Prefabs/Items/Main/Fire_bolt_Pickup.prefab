@@ -98,7 +98,7 @@ MonoBehaviour:
   Name: Fire bolt
   Spell: {fileID: 1346630116303822229, guid: 60404684111f6bb49bea02702ac3ce9e, type: 3}
   Rarity: Common
-  ItemDesc: Burn Babty burn
+  ItemDesc: Conjure a bolt of fire from the player to the direction of the mouse
   Permanent: 0
   pickup_range: 5
 --- !u!61 &7746043225739743426

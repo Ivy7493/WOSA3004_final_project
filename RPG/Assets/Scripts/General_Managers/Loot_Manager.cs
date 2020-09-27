@@ -184,25 +184,25 @@ public class Loot_Manager : MonoBehaviour
             RandomChance = Random.Range(0, 101);
             Debug.Log("Magic find value: " + RandomChance);
 
-            if (RandomChance >= (EpicThrehold - EM.ReturnLevel()))
+            if (RandomChance >= (EpicThrehold - EM.ReturnLevel()/5))
             {
                 Debug.Log("Epic!: " + RandomChance + ", " + (EpicThrehold - EM.ReturnLevel()));
                 float select = Random.Range(0, Epics.Length);
                 return Epics[(int)select];
             }
-            else if (RandomChance >= (RareThreshold - EM.ReturnLevel()))
+            else if (RandomChance >= (RareThreshold - EM.ReturnLevel()/5))
             {
                 Debug.Log("Rare!: " + RandomChance + ", " + (RareThreshold - EM.ReturnLevel()));
                 float select = Random.Range(0, Rares.Length);
                 return Rares[(int)select];
             }
-            else if (RandomChance >= (UncommonThreshold - EM.ReturnLevel()))
+            else if (RandomChance >= (UncommonThreshold - EM.ReturnLevel()/5))
             {
                 Debug.Log("Uncommon!: " + RandomChance + ", " + (UncommonThreshold - EM.ReturnLevel()));
                 float select = Random.Range(0, Uncommons.Length);
                 return Uncommons[(int)select];
             }
-            else if (RandomChance >= CommonThreshold - EM.ReturnLevel())
+            else if (RandomChance >= CommonThreshold - EM.ReturnLevel()/5)
             {
                 Debug.Log("Common!: " + RandomChance + ", " + (CommonThreshold - EM.ReturnLevel()));
                 float select = Random.Range(0, Commons.Length);

@@ -58,6 +58,7 @@ public class Fire_Boss_AI : MonoBehaviour
             GM.BossDefeated("FIRE");
             MM.PlayFireArea();
             Destroy(GameObject.FindGameObjectWithTag("FireBoss_SoundPoint"));
+           
         }
     }
 

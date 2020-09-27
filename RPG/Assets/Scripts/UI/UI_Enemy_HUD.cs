@@ -32,6 +32,10 @@ public class UI_Enemy_HUD : MonoBehaviour
 
     public void UpdateHealthBar(float _percent)
     {
+        if(_percent < 0)
+        {
+            _percent = 0;
+        }
         Bar.transform.localScale = new Vector3(_percent, 1, 1);
        
     }

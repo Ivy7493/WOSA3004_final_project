@@ -28,6 +28,7 @@ TagManager:
   - Cursor_Manager
   - Effect_Manager
   - Arcane_Missiles
+  - PostProcessing
   layers:
   - Default
   - TransparentFX

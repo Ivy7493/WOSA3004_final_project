@@ -87,7 +87,7 @@ public class Resource_Manager : MonoBehaviour
         CurrentHP -= _damage;
         Debug.Log(CurrentHP);
         UIM.UpdateHealth(CurrentHP / MaxHP);
-        EFM.ScreenShake(0.1f);
+        EFM.DamageEffect(0.1f);
         if (CurrentHP <= 0)
         {
             //Put death code here, IDK what this does yet

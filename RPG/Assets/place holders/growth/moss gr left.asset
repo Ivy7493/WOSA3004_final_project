@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: moss gr left
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 39e638272471fd549a9cdbc9ee1a2b02, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0ce3edc8431be8043bafac6f55f373b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

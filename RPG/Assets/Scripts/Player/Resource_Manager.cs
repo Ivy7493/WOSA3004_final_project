@@ -23,6 +23,7 @@ public class Resource_Manager : MonoBehaviour
     Stat_Manager STM;
     Music_Manager MM;
     Effect_Manager EFM;
+    Experience_Manager EM;
     
 
     void Awake()
@@ -38,6 +39,7 @@ public class Resource_Manager : MonoBehaviour
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         EFM = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
+        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
         RecalculateStatValues();
 
     }
@@ -84,7 +86,8 @@ public class Resource_Manager : MonoBehaviour
 
     public void Damage(float _damage)
     {
-        CurrentHP -= _damage;
+        float Diff = Random.Range(-1, 1f) * EM.ReturnLevel() / 2;
+        CurrentHP -= (_damage + Diff);
         Debug.Log(CurrentHP);
         UIM.UpdateHealth(CurrentHP / MaxHP);
         EFM.DamageEffect(0.1f);

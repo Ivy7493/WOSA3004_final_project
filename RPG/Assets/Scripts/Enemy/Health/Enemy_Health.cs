@@ -191,7 +191,9 @@ public class Enemy_Health : MonoBehaviour
 
     public void Damage(float _damage)
     {
+        float Diff = Random.Range(-1, 1f) * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel()/2;
         float TempDamage = STM.IsCrit(_damage);
+        TempDamage += Diff;
         Health -= TempDamage;
         EngagePlayer();
         UIM.SpawnDamageText(new Vector3(transform.position.x,transform.position.y + 2, 0f), TempDamage);

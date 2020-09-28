@@ -37,9 +37,12 @@ public class UI_Manager : MonoBehaviour
     public GameObject ManaStat_txt;
     public GameObject HPSStat_txt;
     public GameObject MPSStat_txt;
+    public GameObject PushNotif;
     Resource_Manager RM;
     Stat_Manager STM;
     GameObject Player;
+    Queue<string> NotificationLog;
+    Queue<float> NotificantionDuration;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -52,6 +55,9 @@ public class UI_Manager : MonoBehaviour
         ZoneText.SetActive(false);
         CastBar.SetActive(false);
         SetHUDValues();
+        NotificationLog = new Queue<string>();
+        NotificantionDuration = new Queue<float>();
+      
     }
 
     void SetStats()
@@ -90,6 +96,32 @@ public class UI_Manager : MonoBehaviour
         {
             CastBar.SetActive(false);
         }
+    }
+
+    public void SendNotification(string _note, float _duration)
+    {
+        NotificationLog.Enqueue(_note);
+        NotificantionDuration.Enqueue(_duration);
+    }
+
+
+    //used to display control
+    void NotificationDisplayControl()
+    {
+        if(NotificationLog.Count > 0 && PushNotif.activeInHierarchy == false)
+        {
+            PushNotif.SetActive(true);
+            PushNotif.GetComponentInChildren<TextMeshProUGUI>().text = NotificationLog.Dequeue();
+            float tempTime = NotificantionDuration.Dequeue();
+            StartCoroutine(DisplayNotification(tempTime));
+                
+        }
+    }
+
+    IEnumerator DisplayNotification(float Time)
+    {
+        yield return new WaitForSeconds(Time);
+        PushNotif.SetActive(false);
     }
 
     public void SetCastBarOff()
@@ -291,6 +323,7 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        NotificationDisplayControl();
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(GameIsPaused)

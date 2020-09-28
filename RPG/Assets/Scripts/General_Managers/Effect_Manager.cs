@@ -18,7 +18,9 @@ public class Effect_Manager : MonoBehaviour
      
         Post = GameObject.FindGameObjectWithTag("PostProcessing");
         _pro = _Profile.profile;
-   
+        Debug.Log(_pro.components[1]);
+        VolumeComponent CA = _pro.components[1];
+        
     
         
     }

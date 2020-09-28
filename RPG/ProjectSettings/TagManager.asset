@@ -29,6 +29,7 @@ TagManager:
   - Effect_Manager
   - Arcane_Missiles
   - PostProcessing
+  - Sound_Manager
   layers:
   - Default
   - TransparentFX

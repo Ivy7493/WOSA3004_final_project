@@ -12,19 +12,28 @@ public class Frost_Rain : MonoBehaviour
     public float Speed;
     GameObject Player;
     Resource_Manager RM;
+    Vector3 Direction;
     float Damage;
+    bool Set = false;
+    float SinCounter = 0f;
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-        
+       // Direction = (Player.transform.position - transform.position).normalized;
+    }
+
+    public void SetDirection(Vector3 _direction)
+    {
+        Direction = _direction;
+        Set = true;
     }
 
     void Effect()
     {
-       
-        if(Vector3.Distance(Player.transform.position,transform.position) <= Range)
+        //new Vector3(-0.3f, -1.2f, 0f)
+        if (Vector3.Distance(Player.transform.position,transform.position) <= Range)
         {
             RM.Damage(Damage);
         }
@@ -32,18 +41,24 @@ public class Frost_Rain : MonoBehaviour
     }
     void Motion()
     {
-        transform.position = transform.position + new Vector3(-0.3f, -1.2f, 0f) * Time.deltaTime * Speed; ;
+        counter += Time.deltaTime;
+        transform.position = transform.position + Direction* Time.deltaTime * Speed * 1/2;
+        transform.position = new Vector3(transform.position.x + 1/2*Mathf.Cos(5*counter), transform.position.y + 1/2*Mathf.Sin(5*counter), 0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        counter += Time.deltaTime;
-        Motion();
-        if (counter >= Duration)
+        if(Set == true)
         {
-            Effect();
-            Destroy(gameObject);
+            counter += Time.deltaTime;
+            Motion();
+            if (counter >= Duration)
+            {
+                Effect();
+                Destroy(gameObject);
+            }
         }
+      
     }
 }

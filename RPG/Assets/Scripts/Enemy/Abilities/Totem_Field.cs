@@ -44,7 +44,14 @@ public class Totem_Field : MonoBehaviour
 
         if(currentIndex == Totems.Length)
         {
-            if(Vector3.Distance(Player.transform.position,transform.position) < Vector3.Distance(transform.position, Totems[0].transform.position))
+            float Delta = 0;
+            for(int i = 0; i < Totems.Length; i++)
+            {
+                Delta += Vector3.Distance(transform.position, Totems[i].transform.position);
+            }
+            Delta /= Totems.Length;
+            CheckTotem();
+            if(Vector3.Distance(Player.transform.position,transform.position) < Delta)
             {
                 GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
             }
@@ -57,7 +64,7 @@ public class Totem_Field : MonoBehaviour
     {
         for(int i = 0; i < Totems.Length; i++)
         {
-            if(Totems[i] == null)
+            if(Totems[i] == null || Totems[i].GetComponent<Enemy_Health>().ReturnCurrentHealth() <= 0)
             {
                 Destroy(gameObject);
             }

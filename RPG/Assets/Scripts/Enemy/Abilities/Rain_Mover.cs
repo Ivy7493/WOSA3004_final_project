@@ -27,7 +27,8 @@ public class Rain_Mover : MonoBehaviour
             float Randy;
             Randx = Random.Range(-2, 3f);
             Randy = Random.Range(-2, 3f);
-            Instantiate(FrostRain, new Vector3(transform.position.x + Randx - 4, transform.position.y + 10f + Randy, 0f), Quaternion.Euler(0f,0f,165f));
+           GameObject CurrentSpawn = Instantiate(FrostRain, new Vector3(transform.position.x + Randx, transform.position.y + Randy, 0f), Quaternion.Euler(0f,0f,165f));
+            CurrentSpawn.GetComponent<Frost_Rain>().SetDirection(direction);
         }
 
     }

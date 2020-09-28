@@ -67,6 +67,8 @@ public class Game_Manager : MonoBehaviour
                 EFM.ScreenShake(2f);
                 break;
         }
+
+        UIM.SendNotification("Warden Defeated", 5f);
        
     }
 

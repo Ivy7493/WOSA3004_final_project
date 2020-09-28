@@ -12,7 +12,11 @@ public class Stat_Manager : MonoBehaviour
     float MP5;
     float HP5;
     float SpentPoints;
-    public float ScaleRate;
+    public float ScaleRateCrit;
+    public float ScaleRateMaxHealth;
+    public float ScaleRateMaxMana;
+    public float ScaleRateHealthRegen;
+    public float ScaleRateManaRegen;
     public float CritMultiplyer;
     Experience_Manager EM;
     UI_Manager UIM;
@@ -28,7 +32,11 @@ public class Stat_Manager : MonoBehaviour
         EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
-        ScaleRate = ScaleRate / 100;
+        ScaleRateCrit = ScaleRateCrit / 100;
+        ScaleRateMaxHealth = ScaleRateMaxHealth / 100;
+        ScaleRateMaxMana = ScaleRateMaxMana / 100;
+        ScaleRateHealthRegen = ScaleRateHealthRegen / 100;
+        ScaleRateManaRegen = ScaleRateManaRegen / 100;
         CritMultiplyer = CritMultiplyer / 100;
         
     }
@@ -42,7 +50,7 @@ public class Stat_Manager : MonoBehaviour
 
     public void IncreaseSpellCrit()
     {
-        SpellCrit += ScaleRate;
+        SpellCrit += ScaleRateCrit;
         SpentPoints += 1f;
         PlayerPrefs.SetFloat("SpellCrit", SpellCrit);
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);
@@ -53,7 +61,7 @@ public class Stat_Manager : MonoBehaviour
 
     public void IncreaseMaxMana()
     {
-        MaxMana += ScaleRate;
+        MaxMana += ScaleRateMaxMana;
         SpentPoints += 1f;
         PlayerPrefs.SetFloat("MaxMana", MaxMana);
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);
@@ -64,7 +72,7 @@ public class Stat_Manager : MonoBehaviour
 
     public void IncreaseMaxHealth()
     {
-        MaxHealth += ScaleRate;
+        MaxHealth += ScaleRateMaxHealth;
         SpentPoints += 1f;
         PlayerPrefs.SetFloat("MaxHealth", MaxHealth);
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);
@@ -74,7 +82,7 @@ public class Stat_Manager : MonoBehaviour
 
     public void IncreaseMP5()
     {
-        MP5 += ScaleRate;
+        MP5 += ScaleRateManaRegen;
         SpentPoints += 1f;
         PlayerPrefs.SetFloat("MP5", MP5);
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);
@@ -84,7 +92,7 @@ public class Stat_Manager : MonoBehaviour
 
     public void IncreaseHP5()
     {
-        HP5 += ScaleRate;
+        HP5 += ScaleRateHealthRegen;
         SpentPoints += 1f;
         PlayerPrefs.SetFloat("HP5", HP5);
         PlayerPrefs.SetFloat("SpentPoints", SpentPoints);

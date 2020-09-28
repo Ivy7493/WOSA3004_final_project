@@ -151,10 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22003b3e0039864e8ebb294887eee0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 10
-  Speed: 25
+  Range: 20
+  Speed: 40
   ExplosionRange: 5
-  DamageScale: 4
+  DamageScale: 3
 --- !u!114 &9051032994593478307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 3
+  ManaScale: 2.5
 --- !u!82 &7366132230162335258
 AudioSource:
   m_ObjectHideFlags: 0

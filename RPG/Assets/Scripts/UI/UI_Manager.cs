@@ -71,8 +71,8 @@ public class UI_Manager : MonoBehaviour
 
     void SetHUDValues()
     {
-        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "";
-        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "";
+        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "/" + (int)RM.returnMaxHP(); ;
+        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "/" + (int)RM.returnMaxMP(); ;
     }
 
     public void UpdateLevel(float _Level)
@@ -254,7 +254,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateHealth(float _health)
     {
         HealthBar.GetComponent<Slider>().value = _health;
-        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "";
+        HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "/" + (int)RM.returnMaxHP();
 
 
     }
@@ -262,7 +262,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateMana(float _Mana)
     {
         ManaBar.GetComponent<Slider>().value = _Mana;
-        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "";
+        ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "/" + +(int)RM.returnMaxMP();
     }
 
     public void CallDeathEffect()

@@ -118,6 +118,16 @@ public class Resource_Manager : MonoBehaviour
         return CurrentHP;
     }
 
+    public float returnMaxHP()
+    {
+        return MaxHP;
+    }
+
+    public float returnMaxMP()
+    {
+        return MaxMP;
+    }
+
     void HPregen()
     {
         if(CurrentHP < MaxHP)

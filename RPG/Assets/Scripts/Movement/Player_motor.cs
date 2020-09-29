@@ -19,6 +19,7 @@ public class Player_motor : MonoBehaviour
     public GameObject Mouse_Effect;
     public GameObject DefaultSpawn;
     bool Slowed = false;
+    bool blink = false;
     private void Awake()
     {
         LoadPlayerPosition();
@@ -39,6 +40,32 @@ public class Player_motor : MonoBehaviour
             StartCoroutine(Slow(time));
         }
        
+    }
+
+    public void StartBlink()
+    {
+        if(blink == false)
+        {
+            blink = true;
+        }
+    }
+
+    public void EndBlick()
+    {
+        if(blink == true)
+        {
+            blink = false;
+        }
+    }
+    public void ToggleBlink()
+    {
+        if(blink == false)
+        {
+            blink = true;
+        }else if(blink == true)
+        {
+            blink = false;
+        }
     }
 
     IEnumerator Slow(float time)
@@ -93,11 +120,15 @@ public class Player_motor : MonoBehaviour
     }
     void Motion()
     {
-        float Xpos = Input.GetAxisRaw("Horizontal");
-        float Ypos = Input.GetAxisRaw("Vertical");
-        Vector3 Direction = new Vector3(Xpos, Ypos, 0f);
-        Direction *= _speed * Time.deltaTime;
-        transform.position += Direction;
+        if(blink == false)
+        {
+            float Xpos = Input.GetAxisRaw("Horizontal");
+            float Ypos = Input.GetAxisRaw("Vertical");
+            Vector3 Direction = new Vector3(Xpos, Ypos, 0f);
+            Direction *= _speed * Time.deltaTime;
+            transform.position += Direction;
+        }
+      
         if(RB.velocity.magnitude <= 10)
         {
             RB.velocity = Vector2.zero;

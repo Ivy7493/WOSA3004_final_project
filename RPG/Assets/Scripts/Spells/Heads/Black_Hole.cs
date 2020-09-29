@@ -22,47 +22,63 @@ public class Black_Hole : MonoBehaviour
 
     void Spell()
     {
-       
-        for(int i = 0; i < Enemies.Length; i++)
-        {
-            if (Vector3.Distance(transform.position, Enemies[i].transform.position) < Range)
-            {
-                Vector3 Direction = (transform.position - Enemies[i].transform.position).normalized;
-                try
-                {
-                    
-                    Enemies[i].transform.position += Direction * PullStrength * Time.deltaTime;
-                }
-                catch
-                {
-                    Debug.Log("Couldn't find rigidbody for " + i);
-                }
-            }
-           
-        }
-    }
 
-
-    private void OnDestroy()
-    {
-        for(int i = 0; i < Enemies.Length; i++)
+        try
         {
-            if(Enemies[i] != null)
+            for (int i = 0; i < Enemies.Length; i++)
             {
                 if (Vector3.Distance(transform.position, Enemies[i].transform.position) < Range)
                 {
+                    Vector3 Direction = (transform.position - Enemies[i].transform.position).normalized;
                     try
                     {
-                        Enemies[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+                        Enemies[i].transform.position += Direction * PullStrength * Time.deltaTime;
                     }
                     catch
                     {
                         Debug.Log("Couldn't find rigidbody for " + i);
                     }
                 }
+
             }
-           
         }
+        catch
+        {
+
+        }
+      
+    }
+
+
+    private void OnDestroy()
+    {
+        try
+        {
+            for (int i = 0; i < Enemies.Length; i++)
+            {
+                if (Enemies[i] != null)
+                {
+                    if (Vector3.Distance(transform.position, Enemies[i].transform.position) < Range)
+                    {
+                        try
+                        {
+                            Enemies[i].GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                        }
+                        catch
+                        {
+                            Debug.Log("Couldn't find rigidbody for " + i);
+                        }
+                    }
+                }
+
+            }
+        }
+        catch
+        {
+
+        }
+       
     }
 
     // Update is called once per frame

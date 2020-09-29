@@ -325,6 +325,11 @@ PrefabInstance:
       propertyPath: m_Bounds.m_Extent.y
       value: 4.0050297
       objectReference: {fileID: 0}
+    - target: {fileID: 8688772851316073064, guid: ed8a66fccbeeaba45b857592437fe569,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33f9294e57851954abe50e522adb3789, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8a66fccbeeaba45b857592437fe569, type: 3}
 --- !u!4 &2590051839256746478 stripped

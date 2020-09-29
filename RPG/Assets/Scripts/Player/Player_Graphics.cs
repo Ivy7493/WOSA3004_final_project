@@ -5,12 +5,21 @@ using UnityEngine;
 public class Player_Graphics : MonoBehaviour
 {
     Animator playeranim;
+    Animator UpAnim;
+    Animator DownAnim;
+    Animator SideAnim;
     public Rigidbody2D RB;
+    public GameObject Up;
+    public GameObject Down;
+    public GameObject Side;
 
     // Start is called before the first frame update
     void Start()
     {
         playeranim = GetComponent<Animator>();
+        UpAnim = Up.GetComponent<Animator>();
+        DownAnim = Down.GetComponent<Animator>();
+        SideAnim = Side.GetComponent<Animator>();
     }
 
     void AnimationManagement()
@@ -44,9 +53,49 @@ public class Player_Graphics : MonoBehaviour
         
     }
 
+    void SpriteManagement()
+    {
+        if (Input.GetAxisRaw("Vertical") == 1)
+        {
+            Up.SetActive(true);
+            Down.SetActive(false);
+            Side.SetActive(false);
+        }else if (Input.GetAxisRaw("Vertical") == -1)
+        {
+            Up.SetActive(false);
+            Down.SetActive(true);
+            Side.SetActive(false);
+        }
+        else
+        if (Input.GetAxisRaw("Horizontal") == 1)
+        {
+            Up.SetActive(false);
+            Down.SetActive(false);
+            Side.SetActive(true);
+            Side.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            SideAnim.SetBool("running", true);
+        }
+        else if(Input.GetAxisRaw("Horizontal") == -1)
+        {
+            Up.SetActive(false);
+            Down.SetActive(false);
+            Side.SetActive(true);
+            Side.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            SideAnim.SetBool("running", true);
+        }
+        if(Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
+        {
+            Up.SetActive(false);
+            Down.SetActive(false);
+            Side.SetActive(true);
+            Side.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            SideAnim.SetBool("running", false);
+        }
+    }
     private void Update()
     {
-        Rotate();
-        AnimationManagement();
+        SpriteManagement();
+      //  Rotate();
+     //   AnimationManagement();
     }
 }

@@ -11,10 +11,12 @@ public class Blink : MonoBehaviour
     public float DashTime;
     float counter = 0f;
     Rigidbody2D RB;
-    public Material BlinkEffect;
-    Material DefaultMaterial;
+    public GameObject BlinkEffect;
+    Vector2 DashDirection;
     public bool isBlinking = false;
     SpriteRenderer[] PlayerGraphics;
+    Player_motor PM;
+    Vector3 StartPos;
 
     void Start()
     {
@@ -23,9 +25,12 @@ public class Blink : MonoBehaviour
             Player = GameObject.FindGameObjectWithTag("Player");
             RB = Player.GetComponent<Rigidbody2D>();
         }
-        // blink();
+      
         PlayerGraphics = Player.GetComponentsInChildren<SpriteRenderer>();
-        NewBlink();
+        PM = Player.GetComponent<Player_motor>();
+        StartPos = Player.transform.position;
+         NewBlink();
+       
     }
 
 
@@ -38,28 +43,30 @@ public class Blink : MonoBehaviour
         Vector3 Direction = (pos - Player.transform.position).normalized;
         float Xpos = Input.GetAxisRaw("Horizontal");
         float Ypos = Input.GetAxisRaw("Vertical");
-        Vector2 DashDirection = new Vector2(Xpos, Ypos);
+        DashDirection = new Vector2(Xpos, Ypos);
         RB.velocity = DashDirection * Speed;
-        DefaultMaterial = PlayerGraphics[0].material;
-        for(int i = 0; i < PlayerGraphics.Length; i++)
+        GetComponent<SpriteRenderer>().material.SetVector("_Direction", DashDirection);
+        GetComponent<SpriteRenderer>().material.SetFloat("_Speed", 3);
+        SpriteRenderer[] Renders = Player.GetComponentsInChildren<SpriteRenderer>();
+        for(int i = 0; i < Renders.Length; i++)
         {
-            PlayerGraphics[i].material = BlinkEffect;
-            PlayerGraphics[i].material.SetVector("_Direction", DashDirection);
-            PlayerGraphics[i].material.SetFloat("_Speed", Speed);
+            Renders[i].color = Color.clear;
         }
+       // PM.StartBlink();
     }
 
     void EndBlink()
     {
         counter += Time.deltaTime;
+       
         if(counter >= DashTime)
         {
             RB.velocity = Vector2.zero;
-            isBlinking = false;
-            for (int i = 0; i < PlayerGraphics.Length; i++)
+           // PM.EndBlick();
+            SpriteRenderer[] Renders = Player.GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 0; i < Renders.Length; i++)
             {
-                PlayerGraphics[i].material = DefaultMaterial;
-               
+                Renders[i].color = Color.white;
             }
             Destroy(gameObject);
         }
@@ -87,5 +94,8 @@ public class Blink : MonoBehaviour
     void Update()
     {
         EndBlink();
+        transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, Speed);
+        float angle = Mathf.Atan2(DashDirection.y, DashDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
     }
 }

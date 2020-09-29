@@ -14,7 +14,11 @@ public class Camera_Manager : MonoBehaviour
 
     void Motion()
     {
-        transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, -10f);
+        if(transform.position != new Vector3(_player.transform.position.x, _player.transform.position.y, -10f))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(_player.transform.position.x, _player.transform.position.y, -10f), 2f);
+        }
+        //transform.position = new Vector3(_player.transform.position.x, _player.transform.position.y, -10f);
     }
 
     // Update is called once per frame

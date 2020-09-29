@@ -44,11 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769f509e25ac8c4469e13fc6a2176667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlinkEffect: {fileID: 4855007367273594085, guid: e7974579c3bff5c47bf5275b0327caf7,
-    type: 3}
   Distance: 5
-  Speed: 25
-  DashTime: 0.2
+  Speed: 15
+  DashTime: 1
+  BlinkEffect: {fileID: 2100000, guid: 908b7bed920999c4582fd28162e9c9ce, type: 2}
   isBlinking: 0
 --- !u!114 &3599466192895673018
 MonoBehaviour:

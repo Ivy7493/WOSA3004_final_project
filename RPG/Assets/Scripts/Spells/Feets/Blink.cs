@@ -6,13 +6,15 @@ public class Blink : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject Player;
-    public GameObject BlinkEffect;
     public float Distance;
     public float Speed;
     public float DashTime;
     float counter = 0f;
     Rigidbody2D RB;
+    public Material BlinkEffect;
+    Material DefaultMaterial;
     public bool isBlinking = false;
+    SpriteRenderer[] PlayerGraphics;
 
     void Start()
     {
@@ -22,6 +24,7 @@ public class Blink : MonoBehaviour
             RB = Player.GetComponent<Rigidbody2D>();
         }
         // blink();
+        PlayerGraphics = Player.GetComponentsInChildren<SpriteRenderer>();
         NewBlink();
     }
 
@@ -37,6 +40,13 @@ public class Blink : MonoBehaviour
         float Ypos = Input.GetAxisRaw("Vertical");
         Vector2 DashDirection = new Vector2(Xpos, Ypos);
         RB.velocity = DashDirection * Speed;
+        DefaultMaterial = PlayerGraphics[0].material;
+        for(int i = 0; i < PlayerGraphics.Length; i++)
+        {
+            PlayerGraphics[i].material = BlinkEffect;
+            PlayerGraphics[i].material.SetVector("_Direction", DashDirection);
+            PlayerGraphics[i].material.SetFloat("_Speed", Speed);
+        }
     }
 
     void EndBlink()
@@ -46,6 +56,11 @@ public class Blink : MonoBehaviour
         {
             RB.velocity = Vector2.zero;
             isBlinking = false;
+            for (int i = 0; i < PlayerGraphics.Length; i++)
+            {
+                PlayerGraphics[i].material = DefaultMaterial;
+               
+            }
             Destroy(gameObject);
         }
     }
@@ -63,7 +78,7 @@ public class Blink : MonoBehaviour
         Motion *= Distance;
         Instantiate(BlinkEffect, Player.transform.position, Quaternion.identity);
         Player.transform.position += Motion;
-        Instantiate(BlinkEffect, Player.transform.position, Quaternion.identity);
+    //    Instantiate(BlinkEffect, Player.transform.position, Quaternion.identity);
         Debug.Log("Cast: Blink");
         Destroy(gameObject);
     }

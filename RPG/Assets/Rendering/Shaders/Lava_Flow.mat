@@ -27,10 +27,10 @@ Material:
     m_Floats:
     - Vector1_53207D74: 2
     - Vector1_685066CA: 0.2
-    - Vector1_E5F1E02C: 6
+    - Vector1_E5F1E02C: 8
     m_Colors:
     - Color_44842B69: {r: 1, g: 1, b: 1, a: 0}
-    - Color_8EAEFB90: {r: 21.361254, g: 1.7591621, b: 0, a: 0}
+    - Color_8EAEFB90: {r: 12.376148, g: 0.69732904, b: 0, a: 0}
     - Vector2_28F8846B: {r: 0.2, g: 0.2, b: 0, a: 0}
     - Vector2_8EEAF593: {r: 0, g: 0, b: 0, a: 0}
     - Vector2_DD06E53B: {r: 1, g: 1, b: 0, a: 0}

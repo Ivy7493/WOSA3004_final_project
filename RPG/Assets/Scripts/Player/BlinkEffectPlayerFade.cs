@@ -14,12 +14,13 @@ public class BlinkEffectPlayerFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BlinkScr = GameObject.FindGameObjectWithTag("Blink_feet").GetComponent<Blink>();
+       // BlinkScr = GameObject.FindGameObjectWithTag("Blink_feet").GetComponent<Blink>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        /*
         if(BlinkScr.ReturnIsBlinking())
         {
             if (timeBetweenSpawns <= 0)
@@ -33,6 +34,7 @@ public class BlinkEffectPlayerFade : MonoBehaviour
                 timeBetweenSpawns -= Time.deltaTime;
             }
         }
+        */
         
     }
 }

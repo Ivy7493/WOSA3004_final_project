@@ -30,6 +30,7 @@ TagManager:
   - Arcane_Missiles
   - PostProcessing
   - Sound_Manager
+  - Blink_feet
   layers:
   - Default
   - TransparentFX

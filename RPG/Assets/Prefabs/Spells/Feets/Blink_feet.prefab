@@ -49,6 +49,7 @@ MonoBehaviour:
   Distance: 5
   Speed: 25
   DashTime: 0.2
+  isBlinking: 0
 --- !u!114 &3599466192895673018
 MonoBehaviour:
   m_ObjectHideFlags: 0

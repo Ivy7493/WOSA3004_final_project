@@ -12,6 +12,8 @@ public class Blink : MonoBehaviour
     public float DashTime;
     float counter = 0f;
     Rigidbody2D RB;
+    public bool isBlinking = false;
+
     void Start()
     {
         if (GameObject.FindGameObjectWithTag("Player") != null)
@@ -26,6 +28,7 @@ public class Blink : MonoBehaviour
 
     void NewBlink()
     {
+        isBlinking = true;
         Vector3 pos;
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
@@ -42,8 +45,14 @@ public class Blink : MonoBehaviour
         if(counter >= DashTime)
         {
             RB.velocity = Vector2.zero;
+            isBlinking = false;
             Destroy(gameObject);
         }
+    }
+
+    public bool ReturnIsBlinking()
+    {
+        return isBlinking;
     }
 
     void blink()

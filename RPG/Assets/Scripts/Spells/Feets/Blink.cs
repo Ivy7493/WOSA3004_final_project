@@ -36,6 +36,9 @@ public class Blink : MonoBehaviour
     }
 
 
+    
+
+
     void NewBlink()
     {
         isBlinking = true;
@@ -65,6 +68,7 @@ public class Blink : MonoBehaviour
         {
             RB.velocity = Vector2.zero;
            // PM.EndBlick();
+           
             SpriteRenderer[] Renders = Player.GetComponentsInChildren<SpriteRenderer>();
             for (int i = 0; i < Renders.Length; i++)
             {

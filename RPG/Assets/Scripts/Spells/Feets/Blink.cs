@@ -17,6 +17,7 @@ public class Blink : MonoBehaviour
     SpriteRenderer[] PlayerGraphics;
     Player_motor PM;
     Vector3 StartPos;
+    Player_Graphics PG;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class Blink : MonoBehaviour
       
         PlayerGraphics = Player.GetComponentsInChildren<SpriteRenderer>();
         PM = Player.GetComponent<Player_motor>();
+        PG = Player.GetComponentInChildren<Player_Graphics>();
         StartPos = Player.transform.position;
          NewBlink();
        
@@ -68,6 +70,7 @@ public class Blink : MonoBehaviour
             {
                 Renders[i].color = Color.white;
             }
+            PG.ResetPlayerColor();
             Destroy(gameObject);
         }
     }

@@ -12,7 +12,7 @@ public class Player_Graphics : MonoBehaviour
     public GameObject Up;
     public GameObject Down;
     public GameObject Side;
-
+    SpriteRenderer[] Renderers;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +20,15 @@ public class Player_Graphics : MonoBehaviour
         UpAnim = Up.GetComponent<Animator>();
         DownAnim = Down.GetComponent<Animator>();
         SideAnim = Side.GetComponent<Animator>();
+        Renderers = GetComponentsInChildren<SpriteRenderer>();
+    }
+
+    public void ResetPlayerColor()
+    {
+        for(int i = 0; i < Renderers.Length; i++)
+        {
+            Renderers[i].color = Color.white;
+        }
     }
 
     void AnimationManagement()

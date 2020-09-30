@@ -97,9 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Toxic Trap
   Spell: {fileID: 5022195744730379118, guid: 585fdd3cdd2ccaa4a91f5ba24072ec6a, type: 3}
-  Slot: Off
   Rarity: Uncommon
-  ItemDesc: Throw poison on ground
+  ItemDesc: Throw poison on ground, enemies that walk on it will recieve a DOT.
   Permanent: 0
   pickup_range: 5
 --- !u!61 &1295073914733656205

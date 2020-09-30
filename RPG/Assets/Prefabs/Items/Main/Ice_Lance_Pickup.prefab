@@ -98,7 +98,7 @@ MonoBehaviour:
   Name: Ice Lance
   Spell: {fileID: 6372697014322973409, guid: dcdd0f7a2c2013d49b8936779bfda73d, type: 3}
   Rarity: Rare
-  ItemDesc: Ice ice baby
+  ItemDesc: Shoots an Ice lance in the direction of the mouse, slows enemies on hit.
   Permanent: 0
   pickup_range: 5
 --- !u!61 &7060144657325473491

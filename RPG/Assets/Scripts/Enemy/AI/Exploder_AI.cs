@@ -97,11 +97,19 @@ public class Exploder_AI : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
-            Destroy(gameObject);
+            try
+            {
+                if (GetComponent<Enemy_Status>().ReturnStunStatus() == false)
+                {
+                    GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
+                    Destroy(gameObject);
+                }
+            }
+            catch
+            {
 
-        }
-       
+            }
+        } 
     }
     //NB ALL AI NEED TO DESTORY THEIR START TRANSFORM WHEN THEY GET DESTORYED FOR SYSTEM RESOURCES
     private void OnDestroy()

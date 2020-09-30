@@ -29,6 +29,7 @@ public class Fire_bolt : MonoBehaviour
         Damage = DamageScale * PlayerLevel;
         Direction = (pos - Player.transform.position).normalized;
         FixRotation();
+        GetComponentInChildren<SpriteRenderer>().material.SetFloat("_Speed", Speed);
 
 
     }

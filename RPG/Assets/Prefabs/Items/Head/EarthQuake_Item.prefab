@@ -97,8 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Earth Quake
   Spell: {fileID: 1729003323192945251, guid: 24f34c263e278584782fa01298fe8096, type: 3}
-  Slot: Head
-  Rarity: common
+  Rarity: Common
   ItemDesc: Smash the ground, Performing an AOE attack
   Permanent: 0
   pickup_range: 5

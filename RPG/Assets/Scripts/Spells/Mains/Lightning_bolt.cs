@@ -73,7 +73,15 @@ public class Lightning_bolt : MonoBehaviour
                 {
                     if(Enemies[i] != null)
                     {
-                        Enemies[i].GetComponent<Enemy_Health>().Damage(Damage / 2);
+                        try
+                        {
+                            Enemies[i].GetComponent<Enemy_Health>().Damage(Damage / 2);
+                        }
+                        catch
+                        {
+
+                        }
+                       
                     }
                    
                 }

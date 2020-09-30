@@ -14,6 +14,7 @@ public class Blood_Bomb : MonoBehaviour
     float SelfDamage;
     float PlayerLevel;
     float counter;
+    float StartScale;
     void Start()
     {
         SR = GetComponent<SpriteRenderer>();
@@ -23,7 +24,9 @@ public class Blood_Bomb : MonoBehaviour
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = DamageScale * PlayerLevel;
         SelfDamage = SelfDamageScale * PlayerLevel;
-        GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(SelfDamage);
+       
+        StartScale = transform.localScale.x;
+        SR.color = Color.clear;
     }
 
 
@@ -31,9 +34,10 @@ public class Blood_Bomb : MonoBehaviour
     {
         counter += Time.deltaTime*2;
         SR.color = Color.Lerp(Color.clear, Color.red, counter);
-        transform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(Range, Range, 1), counter);
+        transform.localScale = Vector3.Lerp(Vector3.zero, new Vector3(StartScale, StartScale, 1), counter);
         if(counter >= 1)
         {
+            GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(SelfDamage);
             GameObject[] LocalEnemies = GameObject.FindGameObjectsWithTag("Damagable");
             for (int i = 0; i < LocalEnemies.Length; i++)
             {
@@ -54,9 +58,16 @@ public class Blood_Bomb : MonoBehaviour
         }
     }
 
+
+    void FuckUnity()
+    {
+        transform.Rotate(0f, 0f, 360 * Time.deltaTime);
+    }
+
     // Update is called once per frame
     void Update()
     {
         Spell();
+        FuckUnity();
     }
 }

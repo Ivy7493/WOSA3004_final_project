@@ -31,6 +31,11 @@ public class Arcane_Explosion : MonoBehaviour
         }
     }
 
+   void FuckUnity()
+    {
+        transform.Rotate(0f, 0f, 360 * Time.deltaTime);
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -50,5 +55,6 @@ public class Arcane_Explosion : MonoBehaviour
     void Update()
     {
         Spell();
+        FuckUnity();
     }
 }

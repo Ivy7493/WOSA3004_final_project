@@ -56,6 +56,16 @@ public class Experience_Manager : MonoBehaviour
         UIM.UpdateExpBar(temp);
     }
 
+    public float ReturnMaxEXPforLevel()
+    {
+        return ExpForNextLevel;
+    }
+
+    public float ReturnCurrentEXP()
+    {
+        return Expcount;
+    }
+
     void LoadExpData()
     {
        

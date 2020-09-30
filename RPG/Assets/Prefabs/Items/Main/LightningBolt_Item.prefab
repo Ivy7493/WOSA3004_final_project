@@ -97,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Lightning Bolt
   Spell: {fileID: 9051032994593478310, guid: 2861aa1a8c31b87489b6bb518bf1232a, type: 3}
-  Slot: Main
   Rarity: Common
-  ItemDesc: Shock the target location.
+  ItemDesc: Shoot a lightning bolt in the direction of the mouse. At max range or
+    on collision the Lightning bolt will explode
   Permanent: 0
   pickup_range: 5
 --- !u!61 &3997570621691734406

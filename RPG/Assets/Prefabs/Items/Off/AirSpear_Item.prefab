@@ -97,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Air Spear
   Spell: {fileID: 4658015910140567079, guid: dffe7328ac3b5f247bf6a337b09d048b, type: 3}
-  Slot: Off
   Rarity: Uncommon
-  ItemDesc: Throw An air spear pulling the player
+  ItemDesc: The player charges up and throws a spear in the direction of the mouse,
+    damaging and stunning enemies it hits.
   Permanent: 0
   pickup_range: 5
 --- !u!61 &5475625417914990598

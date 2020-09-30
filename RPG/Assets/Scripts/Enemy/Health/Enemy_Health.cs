@@ -129,7 +129,16 @@ public class Enemy_Health : MonoBehaviour
         {
             if(Motor != null)
             {
+
                 Motor.canMove = false;
+            }
+            try
+            {
+                GetComponent<Enemy_Status>().SetEnemyStun(1f);
+            }
+            catch
+            {
+
             }
             DeathCounter += Time.deltaTime;
             SpriteRenderer[] Renders = GetComponentsInChildren<SpriteRenderer>();

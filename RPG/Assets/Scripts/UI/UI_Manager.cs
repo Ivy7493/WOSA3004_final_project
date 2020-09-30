@@ -24,6 +24,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject DeathEffect;
     public GameObject PauseScreenUI;
     public GameObject TalentPanel;
+    public GameObject TalentNotification;
     public GameObject TalentNumber;
     public GameObject ZoneText;
     public GameObject ObjectInteractionTxt;
@@ -38,7 +39,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject HPSStat_txt;
     public GameObject MPSStat_txt;
     public GameObject PushNotif;
+    
     Resource_Manager RM;
+    Experience_Manager EM;
     Stat_Manager STM;
     GameObject Player;
     Queue<string> NotificationLog;
@@ -47,6 +50,7 @@ public class UI_Manager : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         PauseScreenUI.SetActive(false);
@@ -83,6 +87,7 @@ public class UI_Manager : MonoBehaviour
     public void ActiveTalentPanel()
     {
         TalentPanel.SetActive(true);
+        TalentNotification.SetActive(true);
     }
 
    public void SetCastBar(float _percent)
@@ -135,6 +140,7 @@ public class UI_Manager : MonoBehaviour
     public void DestroyTalentPanel()
     {
         TalentPanel.SetActive(false);
+        TalentNotification.SetActive(false);
     }
 
     public void SetTalentNumber(float _number)
@@ -145,7 +151,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateExpBar(float _percent)
     {
         ExpBar.GetComponent<Slider>().value = _percent;
-        ExpVal_txt.GetComponent<TextMeshProUGUI>().text = (int)(_percent) + "%";
+        ExpVal_txt.GetComponent<TextMeshProUGUI>().text = EM.ReturnCurrentEXP() + "/" + EM.ReturnMaxEXPforLevel() + "   " + (int)(_percent) + "%";
     }
 
 

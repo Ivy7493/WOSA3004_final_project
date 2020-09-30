@@ -50,9 +50,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 20
   Speed: 30
-  SlowPercent: 0.25
-  SlowDuration: 2
-  DamageScale: 5
+  SlowPercent: 0.75
+  SlowDuration: 3
+  DamageScale: 4
 --- !u!114 &6372697014322973411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 4
+  ManaScale: 3
 --- !u!114 &6372697014322973420
 MonoBehaviour:
   m_ObjectHideFlags: 0

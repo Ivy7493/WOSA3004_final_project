@@ -97,9 +97,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Arcane Explosion
   Spell: {fileID: 804567230079049289, guid: 5db5be5b9d7990443bde32be391b1ab9, type: 3}
-  Slot: Main
   Rarity: Rare
-  ItemDesc: Aoe Attack around player
+  ItemDesc: Create a blast of arcane magic damage on the players position
   Permanent: 0
   pickup_range: 5
 --- !u!61 &5758023291365410301

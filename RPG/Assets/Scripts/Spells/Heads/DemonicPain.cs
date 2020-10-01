@@ -9,7 +9,10 @@ public class DemonicPain : MonoBehaviour
     public float TickRate;
     public float Duration;
     public float Range;
+    public float SpreadRange;
     float Damage;
+    bool CanSpead = true;
+    float counter = 0f;
     GameObject Target;
     Vector3 pos;
     void Start()
@@ -18,8 +21,12 @@ public class DemonicPain : MonoBehaviour
         pos = new Vector3(pos.x, pos.y, 0f);
         transform.position = pos;
         Damage = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel() * DamageScale;
-        Setup();
-        InvokeRepeating("Spell", 0f, TickRate);
+        if(CanSpead == true)
+        {
+            Setup();
+        }
+       
+        InvokeRepeating("Spell", TickRate, TickRate);
     }
 
     void Setup()
@@ -43,6 +50,20 @@ public class DemonicPain : MonoBehaviour
        
     }
 
+    public void OverrideTarget(GameObject _Target)
+    {
+        Target = _Target;
+        CanSpead = false;
+        counter = 0f;
+        StartCoroutine(Retarget(_Target));
+    }
+
+    IEnumerator Retarget(GameObject _Target)
+    {
+        yield return new WaitForSeconds(0.2f);
+        Target = _Target;
+    }
+
     void Spell()
     {
         try
@@ -50,6 +71,7 @@ public class DemonicPain : MonoBehaviour
             if(Target != null)
             {
                 Target.GetComponent<Enemy_Health>().Damage(Damage);
+                
             }
             
         }
@@ -57,24 +79,48 @@ public class DemonicPain : MonoBehaviour
         {
             Debug.Log("No Enemy Health Component found");
         }
+
+        try
+        {
+            if(CanSpead == true)
+            {
+                GameObject[] Enemies = GameObject.FindGameObjectsWithTag("Damagable");
+                for (int i = 0; i < Enemies.Length; i++)
+                {
+                    if (Vector3.Distance(Target.transform.position, Enemies[i].transform.position) < SpreadRange && Target != Enemies[i])
+                    {
+                        Debug.Log("So we here which means its the prefab");
+                        GameObject NewSpread = Instantiate(gameObject, Enemies[i].transform.position, Quaternion.identity);
+                        NewSpread.GetComponent<DemonicPain>().OverrideTarget(Enemies[i]);
+
+                    }
+                }
+            }
+            
+
+        }
+        catch
+        {
+            Debug.Log("PPPPOOOOOOOO");
+        }
     }
 
     void Rotation()
     {
-        transform.Rotate(new Vector3(0f, 0f, 360 * Time.deltaTime));
+        transform.Rotate(new Vector3(0f, 0f, 90 * Time.deltaTime));
     }
 
     // Update is called once per frame
     void Update()
     {
         Rotation();
-        Duration -= Time.deltaTime;
+        counter += Time.deltaTime;
         if(Target != null)
         {
             transform.position = Target.transform.position;
         }
        
-        if (Duration <= 0)
+        if (counter >= Duration || Target == null)
         {
             Destroy(gameObject);
         }

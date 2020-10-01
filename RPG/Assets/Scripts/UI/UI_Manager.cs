@@ -39,6 +39,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject HPSStat_txt;
     public GameObject MPSStat_txt;
     public GameObject PushNotif;
+    public GameObject DamageTextCrit;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -243,10 +244,20 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
-    public void SpawnDamageText(Vector3 location, float damage)
+    public void SpawnDamageText(Vector3 location, float damage,bool crit)
     {
-        GameObject temp = Instantiate(DamageText, location, Quaternion.identity);
-        temp.GetComponent<TextMeshPro>().text = (int)damage + "";
+        if(crit == false)
+        {
+            GameObject temp = Instantiate(DamageText, location, Quaternion.identity);
+            temp.GetComponent<TextMeshPro>().text = (int)damage + "";
+        }else if(crit == true)
+        {
+
+            GameObject temp = Instantiate(DamageTextCrit, location, Quaternion.identity);
+            temp.GetComponent<TextMeshPro>().text = (int)damage + "";
+        }
+
+
     }
 
     public void SpawnStatusText(Vector3 location, string Effect)

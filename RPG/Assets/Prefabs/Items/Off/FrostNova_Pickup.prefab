@@ -97,9 +97,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Frost Nova
   Spell: {fileID: 1946706513414914341, guid: b391f840ce24bb549b92fd393a114d17, type: 3}
-  Rarity: Epic
-  ItemDesc: Creates a field of lightning around the player, enemies that walk in
-    it will be damaged and slowed
+  Rarity: Rare
+  ItemDesc: Creates a field of frost around the player, enemies that walk in it will
+    be damaged and slowed
   Permanent: 0
   pickup_range: 5
 --- !u!61 &8209652529460080714

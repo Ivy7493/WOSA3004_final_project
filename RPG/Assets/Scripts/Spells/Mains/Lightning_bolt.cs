@@ -13,6 +13,7 @@ public class Lightning_bolt : MonoBehaviour
     public float Speed;
     public float ExplosionRange;
     public float DamageScale;
+    public float SelfDamageScale;
     float Damage;
     float PlayerLevel;
     void Start()
@@ -27,6 +28,7 @@ public class Lightning_bolt : MonoBehaviour
         CurrenPos = transform.position;
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = DamageScale * PlayerLevel;
+        GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(PlayerLevel * SelfDamageScale);
         Direction = (pos - Player.transform.position).normalized;
         FixRotation();
 

@@ -57,6 +57,11 @@ public class Wind_Shear : MonoBehaviour
         }
     }
 
+    void RotationFunction()
+    {
+        transform.Rotate(0f, 0f, 360 * Time.deltaTime);
+    }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -84,6 +89,7 @@ public class Wind_Shear : MonoBehaviour
     void Update()
     {
         Spell();
+        RotationFunction();
       
     }
 }

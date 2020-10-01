@@ -9,6 +9,7 @@ public class Rain_Mover : MonoBehaviour
     public float Duration;
     public float Speed;
     public float TickRate;
+    public float Range;
     GameObject Player;
     Vector3 direction;
     float counter = 0f;
@@ -21,21 +22,22 @@ public class Rain_Mover : MonoBehaviour
 
     void Spell()
     {
-        for(int i = 0; i < 4; i++)
+       if(Vector3.Distance(Player.transform.position,transform.position) < Range)
         {
-            float Randx;
-            float Randy;
-            Randx = Random.Range(-2, 3f);
-            Randy = Random.Range(-2, 3f);
-           GameObject CurrentSpawn = Instantiate(FrostRain, new Vector3(transform.position.x + Randx, transform.position.y + Randy, 0f), Quaternion.Euler(0f,0f,165f));
-            CurrentSpawn.GetComponent<Frost_Rain>().SetDirection(direction);
+            GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().ReturnCurrentHP()/10);
         }
 
+    }
+
+    void FuckUnity()
+    {
+        transform.Rotate(0f, 0f, 360 * Time.deltaTime);
     }
 
     void Motion()
     {
         transform.position += direction * Speed * Time.deltaTime;
+        FuckUnity();
     }
 
     // Update is called once per frame

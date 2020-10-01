@@ -47,8 +47,9 @@ MonoBehaviour:
   FrostRain: {fileID: 7843129841888474913, guid: e17ac26be253e794faf3565f1ae92677,
     type: 3}
   Duration: 6
-  Speed: 8
+  Speed: 12
   TickRate: 0.3
+  Range: 4
 --- !u!212 &-358025184705146940
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -67,7 +68,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 462d9d446f21f4741969f0e3c1e76f5a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

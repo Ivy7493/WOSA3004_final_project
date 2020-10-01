@@ -32,7 +32,15 @@ public class Totem_Field : MonoBehaviour
         if(counter >= 0.2f && currentIndex < Totems.Length)
         {
             counter = 0f;
-            LR.SetPosition(currentIndex, new Vector3(Totems[currentIndex].transform.position.x, Totems[currentIndex].transform.position.y,-1f));
+            try
+            {
+                LR.SetPosition(currentIndex, new Vector3(Totems[currentIndex].transform.position.x, Totems[currentIndex].transform.position.y, -1f));
+            }
+            catch
+            {
+
+            }
+           
             currentIndex++;
 
 

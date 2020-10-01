@@ -216,12 +216,29 @@ public class Enemy_Health : MonoBehaviour
 
     public void Damage(float _damage)
     {
+        bool crit = false;
         float Diff = Random.Range(-1, 1f) * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel()/2;
         float TempDamage = STM.IsCrit(_damage);
+        if(TempDamage != _damage)
+        {
+            Debug.Log("SHould be here");
+            crit = true;
+        }
         TempDamage += Diff;
+        if(TempDamage < 0)
+        {
+            TempDamage = 0;
+        }
         Health -= TempDamage;
         EngagePlayer();
-        UIM.SpawnDamageText(new Vector3(transform.position.x,transform.position.y + 2, 0f), TempDamage);
+        if(TempDamage >= 1f)
+        {
+            
+                UIM.SpawnDamageText(new Vector3(transform.position.x, transform.position.y + 2, 0f), TempDamage,crit);
+           
+          
+        }
+       
         ///Will play the hit effect if not playing the hit effect
         if(EffectPlaying != true)
         {

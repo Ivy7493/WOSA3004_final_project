@@ -19,6 +19,14 @@ public class Damage_text_Effect : MonoBehaviour
         StartCol = Txt.color;
     }
 
+    public void IsCrit()
+    {
+        StartCol = Color.red;
+        Txt.color = Color.red;
+        Txt.fontSize *= 2f;
+        Debug.Log("OOOOOOOO");
+    }
+
     void Effect()
     {
         counter += Time.deltaTime*2;

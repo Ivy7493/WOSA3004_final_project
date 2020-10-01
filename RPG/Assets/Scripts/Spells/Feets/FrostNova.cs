@@ -9,6 +9,8 @@ public class FrostNova : MonoBehaviour
     public float DamageScale;
     public float TickRate;
     public float Duration;
+    public float SlowDuration;
+    public float Slow;
     float Damage;
     float counter;
     bool Switch = false;
@@ -20,7 +22,7 @@ public class FrostNova : MonoBehaviour
         SR = GetComponent<SpriteRenderer>();
         Player = GameObject.FindGameObjectWithTag("Player");
         InvokeRepeating("Spell", 0f, TickRate);
-        transform.localScale = new Vector3(Range, Range, 1f);
+        transform.localScale = new Vector3(0.3f + Range * 2,0.3f + Range * 2, 1f);
     }
 
     void Spell()
@@ -39,33 +41,24 @@ public class FrostNova : MonoBehaviour
             {
                 Debug.Log("Couldnt find Enemy Health component");
             }
+            try
+            {
+                if (Vector3.Distance(transform.position, Enemies[i].transform.position) < Range)
+                {
+                    Enemies[i].GetComponent<Enemy_Status>().SetEnemySlow(Slow,SlowDuration);
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 
     void Effect()
     {
-        transform.position = Player.transform.position;
-        switch (Switch)
-        {
-            case false:
-                counter += Time.deltaTime*2;
-                SR.color = Color.Lerp(Color.cyan,Color.clear, counter);
-                if(counter >= 1)
-                {
-                    counter = 0;
-                    Switch = true;
-                }
-                break;
-            case true:
-                counter += Time.deltaTime*2;
-                SR.color = Color.Lerp(Color.clear, Color.cyan, counter);
-                if (counter >= 1)
-                {
-                    counter = 0;
-                    Switch = false;
-                }
-                break;
-        }
+        transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - 0.5f,0f);
+       
     }
 
     // Update is called once per frame

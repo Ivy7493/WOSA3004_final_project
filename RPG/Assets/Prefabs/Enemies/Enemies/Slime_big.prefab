@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 30
   EngageRange: 15
-  AttackSpeed: 1
+  AttackSpeed: 1.5
   DamageScale: 2
   AttackRange: 3
   Slime: {fileID: 735037684219438122, guid: a05fe781a862e57499c815e309696732, type: 3}
@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 15
+  HealthScale: 20
   HUD: {fileID: 6172694817185284899}
   HitEffect: 0
 --- !u!114 &83661204774290342

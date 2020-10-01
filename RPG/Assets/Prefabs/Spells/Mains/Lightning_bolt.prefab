@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22003b3e0039864e8ebb294887eee0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 20
+  Range: 15
   Speed: 40
   ExplosionRange: 5
   DamageScale: 3

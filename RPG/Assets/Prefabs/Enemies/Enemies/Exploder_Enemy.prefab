@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79fd8853d726c4b87f6c586ce44668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EngageRange: 30
+  EngageRange: 20
   MaxRange: 45
-  DamageScale: 4.5
+  DamageScale: 5
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0

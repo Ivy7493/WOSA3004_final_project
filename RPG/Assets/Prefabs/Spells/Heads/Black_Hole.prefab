@@ -75,7 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 3
-  Range: 8
+  Range: 6
   PullStrength: 40
 --- !u!212 &4825106419489585483
 SpriteRenderer:

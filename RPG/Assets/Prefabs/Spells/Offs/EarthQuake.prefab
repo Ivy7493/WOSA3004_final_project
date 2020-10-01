@@ -60,11 +60,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccbbdecafb30d634f90a06c5a2bd749f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 7
+  Range: 6
   DamageScale: 3
   MiniStun: 0.3
   TickRate: 0.5
-  LifeScale: 4
+  LifeScale: 3
 --- !u!114 &4807967044106531889
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -214,10 +214,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRange: 25
-  EngageRange: 15
-  AbilityFrequency: 1
+  EngageRange: 13
+  AbilityFrequency: 0.6
   AttackRange: 5
-  DamageScale: 3
+  DamageScale: 2
   Ability: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c, type: 3}
 --- !u!114 &9010847026189783853
 MonoBehaviour:

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 1
+  ManaScale: 4
 --- !u!114 &1946706513414914343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,10 +75,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf360e52894cc046946f8ac239e7b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 7
-  DamageScale: 2
-  TickRate: 0.5
-  Duration: 4
+  Range: 6
+  DamageScale: 4
+  TickRate: 0.25
+  Duration: 2
 --- !u!212 &1946706513414914340
 SpriteRenderer:
   m_ObjectHideFlags: 0

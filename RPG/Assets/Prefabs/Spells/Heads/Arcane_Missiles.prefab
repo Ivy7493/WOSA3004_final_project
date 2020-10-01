@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 2
+  ManaScale: 5
 --- !u!114 &8381762872399352044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,8 +86,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5684197946a99428b82f432235c18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 0.9
-  Speed: 80
+  DamageScale: 1
+  Speed: 60
   Range: 6
   Duration: 1
   TickRate: 0.2

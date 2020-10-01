@@ -18,6 +18,8 @@ public class Blink : MonoBehaviour
     Player_motor PM;
     Vector3 StartPos;
     Player_Graphics PG;
+    GameObject PlayerGraphic;
+    Resource_Manager RM;
 
     void Start()
     {
@@ -25,8 +27,10 @@ public class Blink : MonoBehaviour
         {
             Player = GameObject.FindGameObjectWithTag("Player");
             RB = Player.GetComponent<Rigidbody2D>();
+            PlayerGraphic = GameObject.FindGameObjectWithTag("Player_Graphics");
         }
-      
+        RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
+        PlayerGraphic.transform.localPosition = new Vector3(1000f, 1000f, 0f);
         PlayerGraphics = Player.GetComponentsInChildren<SpriteRenderer>();
         PM = Player.GetComponent<Player_motor>();
         PG = Player.GetComponentInChildren<Player_Graphics>();
@@ -52,12 +56,8 @@ public class Blink : MonoBehaviour
         RB.velocity = DashDirection * Speed;
         GetComponent<SpriteRenderer>().material.SetVector("_Direction", DashDirection);
         GetComponent<SpriteRenderer>().material.SetFloat("_Speed", 3);
-        SpriteRenderer[] Renders = Player.GetComponentsInChildren<SpriteRenderer>();
-        for(int i = 0; i < Renders.Length; i++)
-        {
-            Renders[i].color = Color.clear;
-        }
-       // PM.StartBlink();
+        RM.SetGodModeOn();
+     
     }
 
     void EndBlink()
@@ -67,14 +67,8 @@ public class Blink : MonoBehaviour
         if(counter >= DashTime)
         {
             RB.velocity = Vector2.zero;
-           // PM.EndBlick();
-           
-            SpriteRenderer[] Renders = Player.GetComponentsInChildren<SpriteRenderer>();
-            for (int i = 0; i < Renders.Length; i++)
-            {
-                Renders[i].color = Color.white;
-            }
-            PG.ResetPlayerColor();
+            PlayerGraphic.transform.localPosition = Vector3.zero;
+            RM.SetGodModeOff();
             Destroy(gameObject);
         }
     }

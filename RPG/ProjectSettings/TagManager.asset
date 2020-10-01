@@ -31,6 +31,7 @@ TagManager:
   - PostProcessing
   - Sound_Manager
   - Blink_feet
+  - Player_Graphics
   layers:
   - Default
   - TransparentFX

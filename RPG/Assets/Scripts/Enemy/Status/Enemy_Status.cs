@@ -11,6 +11,7 @@ public class Enemy_Status : MonoBehaviour
     bool Stunned = false;
     float DefaultSpeed = 0f;
     UI_Manager UIM;
+    Enemy_Health EH;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Enemy_Status : MonoBehaviour
         {
             Debug.Log("Enemy Status, no motor" + gameObject.name);
         }
+        EH = GetComponent<Enemy_Health>();
     }
 
     public void SetEnemySlow(float SlowPercent, float time)
@@ -47,7 +49,10 @@ public class Enemy_Status : MonoBehaviour
         if(Stunned == false)
         {
             Stunned = true;
-            UIM.SpawnStatusText(transform.position, "Stunned");
+            if(EH.ReturnCurrentHealth() > 0) {
+                UIM.SpawnStatusText(transform.position, "Stunned");
+            }
+          
             StartCoroutine(Stun(time));
         }
     }

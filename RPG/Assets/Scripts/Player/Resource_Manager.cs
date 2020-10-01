@@ -18,6 +18,7 @@ public class Resource_Manager : MonoBehaviour
     public float MP_GenScale;
     public float HP_GenScale;
     float PlayerLevel;
+    bool GodMode = false;
     UI_Manager UIM;
     Game_Manager GM;
     Stat_Manager STM;
@@ -48,7 +49,9 @@ public class Resource_Manager : MonoBehaviour
     {
         CurrentHP = MaxHP;
         CurrentMP = MaxMP;
-        
+        UIM.UpdateHealth(CurrentHP / MaxHP);
+        UIM.UpdateMana(CurrentMP / MaxMP);
+
     }
 
     public void RecalculateStatValues()
@@ -84,22 +87,42 @@ public class Resource_Manager : MonoBehaviour
         return MaxMP;
     }
 
+    public void SetGodModeOn()
+    {
+        if(GodMode == false)
+        {
+            GodMode = true;
+        }
+    }
+
+    public void SetGodModeOff()
+    {
+        if(GodMode == true)
+        {
+            GodMode = false;
+        }
+    }
+
     public void Damage(float _damage)
     {
-        float Diff = Random.Range(-1, 1f) * EM.ReturnLevel() / 2;
-        CurrentHP -= (_damage + Diff);
-        Debug.Log(CurrentHP);
-        UIM.UpdateHealth(CurrentHP / MaxHP);
-        EFM.DamageEffect(0.1f);
-        if (CurrentHP <= 0)
+        if(GodMode == false)
         {
-            //Put death code here, IDK what this does yet
-            CurrentHP = MaxHP;
+            float Diff = Random.Range(-1, 1f) * EM.ReturnLevel() / 2;
+            CurrentHP -= (_damage + Diff);
+            Debug.Log(CurrentHP);
             UIM.UpdateHealth(CurrentHP / MaxHP);
-            GM.Death();
-            MM.PlayStartingArea();
-            
+            EFM.DamageEffect(0.1f);
+            if (CurrentHP <= 0)
+            {
+                //Put death code here, IDK what this does yet
+                CurrentHP = MaxHP;
+                UIM.UpdateHealth(CurrentHP / MaxHP);
+                GM.Death();
+                MM.PlayStartingArea();
+
+            }
         }
+       
     }
 
     public void MinusMana(float _mana)

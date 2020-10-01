@@ -14,9 +14,9 @@ public class Enemy_Health : MonoBehaviour
     Material Death;
 
 
-    public bool HitEffect;
+    bool HitEffect = true;
     bool EffectPlaying = false;
-    SpriteRenderer Graphics;
+    SpriteRenderer[] Graphics;
     float FlashCounter = 0f;
     Color32 StartCol;
     LootTable LT;
@@ -33,14 +33,14 @@ public class Enemy_Health : MonoBehaviour
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
-        Graphics = GetComponentInChildren<SpriteRenderer>();
+        Graphics = GetComponentsInChildren<SpriteRenderer>();
         Health = PlayerLevel * HealthScale;
         MaxHealth = Health;
         if(HUD != null)
         {
             HUD.GetComponent<UI_Enemy_HUD>().UpdateHealthBar(1f);
         }
-        StartCol = Graphics.color;
+        StartCol = Color.white;
         SystemQuery();
         DeathEffect = Resources.Load("Blood_Effect", typeof(GameObject)) as GameObject;
         CM = GameObject.FindGameObjectWithTag("Cursor_Manager").GetComponent<Cursor_Manager>();
@@ -101,12 +101,28 @@ public class Enemy_Health : MonoBehaviour
         if(HitEffect == true && EffectPlaying == true)
         {
             FlashCounter += Time.deltaTime*10;
-            Graphics.color = Color.Lerp(StartCol, Color.red, FlashCounter);
+            for(int i = 0; i < Graphics.Length; i++)
+            {
+                if(Graphics[i].gameObject.name != "Border" && Graphics[i].gameObject.name != "Background" && Graphics[i].gameObject.name != "Bar_sprite")
+                {
+                    Graphics[i].color = Color.Lerp(StartCol, Color.red, FlashCounter);
+                }
+               
+            }
+           
             if(FlashCounter >= 1)
             {
                 FlashCounter = 0f;
                 EffectPlaying = false;
-                Graphics.color = StartCol;
+                for(int j = 0; j < Graphics.Length; j++)
+                {
+                    if (Graphics[j].gameObject.name != "Border" && Graphics[j].gameObject.name != "Background" && Graphics[j].gameObject.name != "Bar_sprite")
+                    {
+                        Graphics[j].color = StartCol;
+                    }
+                      
+                }
+               
             }
         }
     }

@@ -105,8 +105,10 @@ public class Slime_AI : MonoBehaviour
     {
         if (EH.ReturnCurrentHealth() <= 0 && Recursion == true)
         {
-            GameObject Slime1 = Instantiate(Slime, transform.position, Quaternion.identity);
-            GameObject Slime2 = Instantiate(Slime, transform.position, Quaternion.identity);
+            float Randx = Random.Range(-1f, 1f);
+            float RandY = Random.Range(-1f, 1f);
+            GameObject Slime1 = Instantiate(Slime, new Vector3(transform.position.x + Randx,transform.position.y + RandY,0f), Quaternion.identity);
+            GameObject Slime2 = Instantiate(Slime, new Vector3(transform.position.x - Randx, transform.position.y - RandY, 0f), Quaternion.identity);
            
         }
     }

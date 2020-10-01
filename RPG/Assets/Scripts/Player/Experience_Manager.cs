@@ -40,7 +40,7 @@ public class Experience_Manager : MonoBehaviour
     public void AddExp(float _amount)
     {
         Expcount += _amount;
-        if(Expcount >= ExpForNextLevel)
+        if(Expcount >= ExpForNextLevel && CurrentLevel < MaxLevel)
         {
             CurrentLevel++;
             Expcount = 0;

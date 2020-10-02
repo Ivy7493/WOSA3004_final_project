@@ -283,7 +283,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 300
   HUD: {fileID: 792138804445430813}
-  HitEffect: 1
 --- !u!61 &1546225901808765283
 BoxCollider2D:
   m_ObjectHideFlags: 0

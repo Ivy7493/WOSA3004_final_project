@@ -6,6 +6,7 @@ public class Sound_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject SpawnPrefab;
+    public AudioClip PlayerDamage;
     void Start()
     {
         
@@ -15,6 +16,11 @@ public class Sound_Manager : MonoBehaviour
     {
         GameObject temp = Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
         temp.GetComponent<Sound_spawn>().SetSound(_clip);
+    }
+
+    public void PlayPlayerDamage()
+    {
+        PlaySound(PlayerDamage);
     }
     
 

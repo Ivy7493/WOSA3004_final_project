@@ -25,6 +25,7 @@ public class Resource_Manager : MonoBehaviour
     Music_Manager MM;
     Effect_Manager EFM;
     Experience_Manager EM;
+    Sound_Manager SM;
     
 
     void Awake()
@@ -41,6 +42,7 @@ public class Resource_Manager : MonoBehaviour
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         EFM = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
         EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
         RecalculateStatValues();
 
     }
@@ -112,6 +114,7 @@ public class Resource_Manager : MonoBehaviour
             Debug.Log(CurrentHP);
             UIM.UpdateHealth(CurrentHP / MaxHP);
             EFM.DamageEffect(0.1f);
+            SM.PlayPlayerDamage();
             if (CurrentHP <= 0)
             {
                 //Put death code here, IDK what this does yet

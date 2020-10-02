@@ -10,12 +10,13 @@ public class Effect_Manager : MonoBehaviour
     GameObject Post;
     public Volume _Profile;
     VolumeProfile _pro;
+    UI_Manager UIM;
     
     
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
-     
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         Post = GameObject.FindGameObjectWithTag("PostProcessing");
         _pro = _Profile.profile;
         Debug.Log(_pro.components[1]);
@@ -30,6 +31,7 @@ public class Effect_Manager : MonoBehaviour
        
         ScreenShake(Duration);
         ScreenFlare();
+        UIM.DamageEffectUI();
         
     }
 

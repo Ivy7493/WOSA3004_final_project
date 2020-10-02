@@ -40,6 +40,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject MPSStat_txt;
     public GameObject PushNotif;
     public GameObject DamageTextCrit;
+    public GameObject DamageEffect;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -191,6 +192,11 @@ public class UI_Manager : MonoBehaviour
             StatsMenu.SetActive(false);
         }
        
+    }
+
+    public void DamageEffectUI()
+    {
+        DamageEffect.SetActive(true);
     }
 
     public void TurnOffStatsMenu()

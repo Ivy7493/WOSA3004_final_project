@@ -14,6 +14,7 @@ public class Sound_spawn : MonoBehaviour
 
     public void SetSound(AudioClip _clip)
     {
+        AS = GetComponent<AudioSource>();
         Set = true;
         AS.clip = _clip;
         AS.Play();

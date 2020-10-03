@@ -41,6 +41,9 @@ public class UI_Manager : MonoBehaviour
     public GameObject PushNotif;
     public GameObject DamageTextCrit;
     public GameObject DamageEffect;
+    public GameObject HeadMana;
+    public GameObject MainMana;
+    public GameObject OffMana;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -155,7 +158,11 @@ public class UI_Manager : MonoBehaviour
         ExpBar.GetComponent<Slider>().value = _percent;
         ExpVal_txt.GetComponent<TextMeshProUGUI>().text = EM.ReturnCurrentEXP() + "/" + EM.ReturnMaxEXPforLevel() + "   " + (int)(_percent) + "%";
     }
-
+    /// <summary>
+    /// This section deals with ability infomation display on the UI
+    /// </summary>
+    /// <param name="_icon"></param>
+    /// <param name="_name"></param>
 
     public void SetHeadIcon(Sprite _icon, string _name)
     {
@@ -179,6 +186,56 @@ public class UI_Manager : MonoBehaviour
     {
         AbilityOff.GetComponent<Image>().sprite = _icon;
         GameObject.FindGameObjectWithTag("UI_OffName").GetComponent<Text>().text = _name;
+    }
+
+    public void SetOnManaEffectUI(string _slot)
+    {
+        switch (_slot)
+        {
+            case "Main":
+              if(MainMana.activeInHierarchy == false)
+                {
+                    MainMana.SetActive(true);
+                }
+                break;
+            case "Off":
+                if(OffMana.activeInHierarchy == false)
+                {
+                    OffMana.SetActive(true);
+                }
+                break;
+            case "Head":
+                if(HeadMana.activeInHierarchy == false)
+                {
+                    HeadMana.SetActive(true);
+                }
+                break;
+        }
+    }
+
+    public void SetOffManaEffectUI(string _slot)
+    {
+        switch (_slot)
+        {
+            case "Main":
+                if (MainMana.activeInHierarchy == true)
+                {
+                    MainMana.SetActive(false);
+                }
+                break;
+            case "Off":
+                if (OffMana.activeInHierarchy == true)
+                {
+                    OffMana.SetActive(false);
+                }
+                break;
+            case "Head":
+                if (HeadMana.activeInHierarchy == true)
+                {
+                    HeadMana.SetActive(false);
+                }
+                break;
+        }
     }
 
     public void ToggleStatMenu()

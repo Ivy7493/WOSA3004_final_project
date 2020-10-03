@@ -66,14 +66,16 @@ public class Player_Graphics : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") == 1)
         {
-            Up.SetActive(true);
+            
             Down.SetActive(false);
             Side.SetActive(false);
-        }else if (Input.GetAxisRaw("Vertical") == -1)
+            Up.SetActive(true);
+        }
+        else if (Input.GetAxisRaw("Vertical") == -1)
         {
             Up.SetActive(false);
-            Down.SetActive(true);
             Side.SetActive(false);
+            Down.SetActive(true);
         }
         else
         if (Input.GetAxisRaw("Horizontal") == 1)

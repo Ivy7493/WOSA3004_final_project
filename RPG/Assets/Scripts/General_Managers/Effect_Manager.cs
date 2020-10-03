@@ -11,6 +11,7 @@ public class Effect_Manager : MonoBehaviour
     public Volume _Profile;
     VolumeProfile _pro;
     UI_Manager UIM;
+    Sound_Manager SM;
     
     
     void Start()
@@ -18,6 +19,7 @@ public class Effect_Manager : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         Post = GameObject.FindGameObjectWithTag("PostProcessing");
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
         _pro = _Profile.profile;
         Debug.Log(_pro.components[1]);
         VolumeComponent CA = _pro.components[1];
@@ -33,6 +35,12 @@ public class Effect_Manager : MonoBehaviour
         ScreenFlare();
         UIM.DamageEffectUI();
         
+    }
+
+    public void NoManaEffect()
+    {
+        AudioClip Clip = Resources.Load("No Mana", typeof(AudioClip)) as AudioClip;
+        SM.PlaySound(Clip);
     }
 
 

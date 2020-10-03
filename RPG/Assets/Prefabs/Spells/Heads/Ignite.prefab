@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 5
+  ManaScale: 4
 --- !u!114 &4988719114982080982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,10 +125,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f17856b8aafc5241873649274ffd60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 1.5
+  DamageScale: 2
   TickRate: 0.5
   Duration: 3
-  Range: 6
+  Range: 5
   SpreadRange: 4
 --- !u!82 &8055282562796129930
 AudioSource:

@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageScale: 1
   Speed: 60
-  Range: 6
+  Range: 5
   Duration: 1
   TickRate: 0.2
   Missile: {fileID: 3129603236497611906, guid: 23ee8483f4c2a0347a61695463c67f41, type: 3}

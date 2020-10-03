@@ -18,11 +18,13 @@ public class Item_Pickup : MonoBehaviour
     UI_Manager UIM;
     Spell_Manager SM;
     Cursor_Manager CM;
+    SpriteRenderer SR;
     float DestoryRange = 30f;
     public float pickup_range=5f;
     
     void Start()
     {
+        SR = GetComponent<SpriteRenderer>();
         try
         {
             SM = GameObject.FindGameObjectWithTag("Spell_Manager").GetComponent<Spell_Manager>();
@@ -40,6 +42,31 @@ public class Item_Pickup : MonoBehaviour
         {
             Debug.Log("Caught loading error");
         }
+
+
+        try
+        {
+            switch (Rarity)
+            {
+                case "Common":
+                    SR.material.SetColor("_Rarity", Color.white);
+                    break;
+                case "Uncommon":
+                    SR.material.SetColor("_Rarity", Color.green);
+                    break;
+                case "Rare":
+                    SR.material.SetColor("_Rarity", Color.blue);
+                    break;
+                case "Epic":
+                    SR.material.SetColor("_Rarity", Color.magenta);
+                    break;
+            }
+        }
+        catch
+        {
+
+        }
+      
      
        
     }

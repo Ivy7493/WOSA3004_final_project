@@ -44,6 +44,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject HeadMana;
     public GameObject MainMana;
     public GameObject OffMana;
+    public GameObject LevelUp;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -249,6 +250,11 @@ public class UI_Manager : MonoBehaviour
             StatsMenu.SetActive(false);
         }
        
+    }
+
+    public void SetLevelUp()
+    {
+        LevelUp.SetActive(true);
     }
 
     public void DamageEffectUI()

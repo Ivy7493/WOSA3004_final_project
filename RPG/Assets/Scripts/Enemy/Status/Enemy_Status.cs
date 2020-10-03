@@ -64,7 +64,15 @@ public class Enemy_Status : MonoBehaviour
 
     IEnumerator Stun(float time)
     {
-        Motor.canMove = false;
+        try
+        {
+            Motor.canMove = false;
+        }
+        catch
+        {
+
+        }
+      
         yield return new WaitForSeconds(time);
         if(Motor != null)
         {

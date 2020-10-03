@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 9116f0d37f1cd5146b0013a9360d2f9c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Earth Quake
   Spell: {fileID: 1729003323192945251, guid: 24f34c263e278584782fa01298fe8096, type: 3}
-  Slot: Feet
   Rarity: 
   ItemDesc: Smash the ground, Performing an AOE attack
   Permanent: 0

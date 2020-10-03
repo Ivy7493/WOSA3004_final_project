@@ -12,6 +12,7 @@ public class Effect_Manager : MonoBehaviour
     VolumeProfile _pro;
     UI_Manager UIM;
     Sound_Manager SM;
+    public GameObject LevelEffect;
     
     
     void Start()
@@ -43,6 +44,23 @@ public class Effect_Manager : MonoBehaviour
         SM.PlaySound(Clip);
     }
 
+
+    //Level up effect
+    public void LevelUpEffect()
+    {
+        UIM.SetLevelUp();
+        Instantiate(LevelEffect, Player.transform.position, Quaternion.identity);
+       // Time.timeScale = 0.3f;
+       // StartCoroutine(SpeedUpTime(1f));
+    }
+
+    IEnumerator SpeedUpTime(float time)
+    {
+        float temp = Time.unscaledDeltaTime;
+        Time.timeScale = Mathf.Lerp(1, 0.5f, temp);
+        yield return new WaitForSeconds(time);
+        Time.timeScale = 1f;
+    }
 
     public void ScreenShake(float duration)
     {

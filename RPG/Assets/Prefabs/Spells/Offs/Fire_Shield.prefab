@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4724494798020186285}
   - component: {fileID: 2822999574784133118}
   - component: {fileID: -4106194947001934033}
-  m_Layer: 13
+  m_Layer: 16
   m_Name: Fire_Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}

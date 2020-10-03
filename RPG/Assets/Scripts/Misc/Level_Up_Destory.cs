@@ -8,10 +8,14 @@ public class Level_Up_Destory : MonoBehaviour
     public float Duration;
     public float OffsetX, OffsetY;
     GameObject Player;
+    Sound_Manager SM;
+    public AudioClip LevelUpSound;
     
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
+        SM.PlaySound(LevelUpSound);
 
     }
 

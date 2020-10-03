@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Ability_Manager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Ability_Manager : MonoBehaviour
     GameObject AbilityOff;
     Spell_Manager SM;
     UI_Manager UIM;
+    Resource_Manager RM;
+    Experience_Manager EM;
     GameObject Player;
     public float GCD;
     public float BlinkCD;
@@ -22,6 +25,8 @@ public class Ability_Manager : MonoBehaviour
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
+        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
     }
 
 
@@ -49,6 +54,65 @@ public class Ability_Manager : MonoBehaviour
         }
     }
 
+    void ManaCheck()
+    {
+        //Main Slot First
+        try
+        {
+            float TempMana = AbilityMain.GetComponent<Mana_cost>().ReturnManaScale() * EM.ReturnLevel();
+            if (RM.ReturnMana() < TempMana)
+            {
+                UIM.SetOnManaEffectUI("Main");
+            }
+            else if (RM.ReturnMana() >= TempMana)
+            {
+                UIM.SetOffManaEffectUI("Main");
+            }
+        }
+        catch
+        {
+            Debug.Log("Ability Main Doesnt Use Mana!");
+        }
+
+
+        //Off Slot
+        try
+        {
+            float TempMana = AbilityOff.GetComponent<Mana_cost>().ReturnManaScale() * EM.ReturnLevel();
+            if (RM.ReturnMana() < TempMana)
+            {
+                UIM.SetOnManaEffectUI("Off");
+            }
+            else if (RM.ReturnMana() >= TempMana)
+            {
+                UIM.SetOffManaEffectUI("Off");
+            }
+        }
+        catch
+        {
+            Debug.Log("Ability Off Doesnt Use Mana!");
+        }
+
+        //Head Slot
+        try
+        {
+            float TempMana = AbilityHead.GetComponent<Mana_cost>().ReturnManaScale() * EM.ReturnLevel();
+            if (RM.ReturnMana() < TempMana)
+            {
+                UIM.SetOnManaEffectUI("Head");
+            }
+            else if (RM.ReturnMana() >= TempMana)
+            {
+                UIM.SetOffManaEffectUI("Head");
+            }
+        }
+        catch
+        {
+            Debug.Log("Ability Head Doesnt Use Mana!");
+        }
+
+    }
+
     /// <summary>
     /// These functions are called when a player casts one of their abilities
     /// </summary>
@@ -56,7 +120,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseMain()
     {
-        if (Input.GetMouseButtonDown(0) && CanCast)
+        if (Input.GetMouseButtonDown(0) && CanCast && !IsMouseOverUI())
         {
             if(AbilityMain != null)
             {
@@ -69,7 +133,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseOff()
     {
-        if (Input.GetKeyDown(KeyCode.Q) && CanCast)
+        if (Input.GetKeyDown(KeyCode.Q) && CanCast && !IsMouseOverUI())
         {
             if (AbilityOff != null)
             {
@@ -82,7 +146,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseFeet()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && CanBlink)
+        if (Input.GetKeyDown(KeyCode.Space) && CanBlink && !IsMouseOverUI())
         {
             if(AbilityFeet != null)
             {
@@ -95,7 +159,7 @@ public class Ability_Manager : MonoBehaviour
 
     void UseHead()
     {
-        if (Input.GetMouseButtonDown(1) && CanCast)
+        if (Input.GetMouseButtonDown(1) && CanCast && !IsMouseOverUI())
         {
             if(AbilityHead != null)
             {
@@ -174,6 +238,11 @@ public class Ability_Manager : MonoBehaviour
         ///loading spellsetup
         LoadSpellState();
     }
+
+    bool IsMouseOverUI()
+    {
+        return EventSystem.current.IsPointerOverGameObject();
+    }
     
   
 
@@ -189,6 +258,7 @@ public class Ability_Manager : MonoBehaviour
         UseHead();
         UseOff();
         UseFeet();
+        ManaCheck();
         GCDCounter();
     }
 }

@@ -282,4 +282,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 12.5
   Speed: 17.5
-  DamageScale: 5
+  DamageScale: 4

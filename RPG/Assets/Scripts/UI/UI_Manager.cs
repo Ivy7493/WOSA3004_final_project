@@ -45,6 +45,10 @@ public class UI_Manager : MonoBehaviour
     public GameObject MainMana;
     public GameObject OffMana;
     public GameObject LevelUp;
+    public GameObject TutorialMenuUI;
+    public GameObject ControlsUI;
+    public GameObject HudUI;
+    public GameObject SpellsUI;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -389,6 +393,25 @@ public class UI_Manager : MonoBehaviour
         Time.timeScale = 0f;
         PauseScreenUI.SetActive(true);
     }
+
+    public void Tutorials()
+    {
+        PauseScreenUI.SetActive(false);
+        TutorialMenuUI.SetActive(true);
+    }
+
+    public void Controls()
+    {
+        TutorialMenuUI.SetActive(false);
+        ControlsUI.SetActive(true);
+    }
+
+    public void HUD()
+    {
+        TutorialMenuUI.SetActive(false);
+        HudUI.SetActive(true);
+    }
+    
 
     public void NewGame()
     {

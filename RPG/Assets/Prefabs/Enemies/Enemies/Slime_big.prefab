@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 83661204774290336}
   - component: {fileID: 83661204774290338}
   - component: {fileID: -2658400328100958447}
+  - component: {fileID: 5745430075186588199}
   m_Layer: 11
   m_Name: Slime_big
   m_TagString: Damagable
@@ -154,7 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 20
   HUD: {fileID: 6172694817185284899}
-  HitEffect: 0
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!114 &83661204774290342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,6 +273,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329e83d8116f89340a766c7e61861bfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &5745430075186588199
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 83661204774290344}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88ae74824f2d36b4a85e00307a17fc85, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &83661204557044378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +313,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228882514983612157, guid: f9f5aed7c481c674b92829941de3a79d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.4889917
+      objectReference: {fileID: 0}
+    - target: {fileID: 1228882514983612157, guid: f9f5aed7c481c674b92829941de3a79d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.097768
       objectReference: {fileID: 0}
     - target: {fileID: 1277921438142494486, guid: f9f5aed7c481c674b92829941de3a79d,
         type: 3}
@@ -366,7 +397,7 @@ PrefabInstance:
     - target: {fileID: 6770624990043694644, guid: f9f5aed7c481c674b92829941de3a79d,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.00000047683716
+      value: -0.023468494
       objectReference: {fileID: 0}
     - target: {fileID: 6770624990043694644, guid: f9f5aed7c481c674b92829941de3a79d,
         type: 3}
@@ -377,6 +408,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
       value: 4.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770624990043694644, guid: f9f5aed7c481c674b92829941de3a79d,
+        type: 3}
+      propertyPath: m_Bounds.m_Extent.x
+      value: 4.1165323
       objectReference: {fileID: 0}
     - target: {fileID: 6782520500143711546, guid: f9f5aed7c481c674b92829941de3a79d,
         type: 3}

@@ -41,10 +41,17 @@ public class Effect_Manager : MonoBehaviour
     public void NoManaEffect()
     {
         AudioClip Clip = Resources.Load("No Mana", typeof(AudioClip)) as AudioClip;
-        SM.PlaySound(Clip);
+        try
+        {
+            SM.PlaySound(Clip);
+        }
+        catch
+        {
+
+        }
+
+
     }
-
-
     //Level up effect
     public void LevelUpEffect()
     {

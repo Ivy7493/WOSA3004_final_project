@@ -11,6 +11,10 @@ public class Enemy_Health : MonoBehaviour
     float MaxHealth;
     float PlayerLevel;
     public GameObject HUD;
+    public AudioClip HurtSound;
+    public AudioClip DeathSound;
+    private static float HurtSoundGCD = 0.7f;
+    private float SoundCounter = 0f;
     Material Death;
 
 
@@ -25,6 +29,7 @@ public class Enemy_Health : MonoBehaviour
     GameObject DeathEffect;
     Cursor_Manager CM;
     UI_Manager UIM;
+    Sound_Manager SM;
     AIPath Motor;
     float DeathCounter = 0f;
     bool DeathOn = false;
@@ -33,6 +38,7 @@ public class Enemy_Health : MonoBehaviour
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         STM = GameObject.FindGameObjectWithTag("Stat_Manager").GetComponent<Stat_Manager>();
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
         Graphics = GetComponentsInChildren<SpriteRenderer>();
         Health = PlayerLevel * HealthScale;
         MaxHealth = Health;
@@ -229,8 +235,22 @@ public class Enemy_Health : MonoBehaviour
         {
             TempDamage = 0;
         }
-        Health -= TempDamage;
+        Health -= TempDamage;       
         EngagePlayer();
+        try
+        {
+            if(SoundCounter >= HurtSoundGCD)
+            {
+                SM.PlaySound(HurtSound);
+                SoundCounter = 0f;
+            }
+          
+        }
+        catch
+        {
+            Debug.Log("No Hurt sound for enemy");
+        }
+       
         if(TempDamage >= 1f)
         {
             
@@ -263,7 +283,17 @@ public class Enemy_Health : MonoBehaviour
             }
             Instantiate(DeathEffect, transform.position, Quaternion.identity);
             */
+            try
+            {
+                SM.PlaySound(DeathSound);
+            }
+            catch
+            {
+                Debug.Log("No Death Sound Found for enemy");
+            }
+           
             Disolve();
+            
            // Destroy(gameObject);
         }
     }
@@ -282,9 +312,15 @@ public class Enemy_Health : MonoBehaviour
         }
     }
 
+    void SoundTimer()
+    {
+        SoundCounter += Time.deltaTime;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        SoundTimer();
         DamageEffect();
         DeathEffectFuc();
     }

@@ -54,8 +54,10 @@ public class UI_Manager : MonoBehaviour
     Experience_Manager EM;
     Stat_Manager STM;
     GameObject Player;
+
     Queue<string> NotificationLog;
     Queue<float> NotificantionDuration;
+    Stack<string> WindowStack;
     public static bool GameIsPaused = false;
     void Start()
     {
@@ -335,7 +337,6 @@ public class UI_Manager : MonoBehaviour
 
     public void SpawnStatusText(Vector3 location, string Effect)
     {
-        Debug.Log("HERE YOU SILLY GOOSE");
         GameObject temp = Instantiate(DamageText, location + new Vector3(0,1,0), Quaternion.identity);
         temp.GetComponent<TextMeshPro>().text = Effect;
     }
@@ -410,6 +411,23 @@ public class UI_Manager : MonoBehaviour
     {
         TutorialMenuUI.SetActive(false);
         HudUI.SetActive(true);
+    }
+
+    public void Back()
+    {
+       if(HudUI.activeInHierarchy == true)
+        {
+            HudUI.SetActive(false);
+            TutorialMenuUI.SetActive(true);
+        }else if(ControlsUI.activeInHierarchy == true)
+        {
+            ControlsUI.SetActive(false);
+            TutorialMenuUI.SetActive(true);
+        }else if(TutorialMenuUI.activeInHierarchy == true)
+        {
+            TutorialMenuUI.SetActive(false);
+            PauseScreenUI.SetActive(true);
+        }
     }
     
 

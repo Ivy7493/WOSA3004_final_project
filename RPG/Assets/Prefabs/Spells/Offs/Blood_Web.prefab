@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1729003323192945250}
   - component: {fileID: 4807967044106531889}
   m_Layer: 0
-  m_Name: EarthQuake
+  m_Name: Blood_Web
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Blood Web
-  Icon: {fileID: 21300000, guid: 929fdb42c9095e740b87e32e570bb931, type: 3}
+  Icon: {fileID: 21300000, guid: c65ec8c19b08903468b1f0c318aa6bd0, type: 3}
 --- !u!114 &1729003323192945250
 MonoBehaviour:
   m_ObjectHideFlags: 0

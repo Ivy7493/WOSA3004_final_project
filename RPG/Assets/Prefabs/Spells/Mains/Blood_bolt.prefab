@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 7366132230162335258}
   - component: {fileID: 3235943565820131848}
   m_Layer: 13
-  m_Name: Lightning_bolt
+  m_Name: Blood_bolt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Blood Bolt
-  Icon: {fileID: 21300000, guid: 121216c9c3766b84cadde801d18efc80, type: 3}
+  Icon: {fileID: 21300000, guid: 056ae729b39df8646a464b8d97063c9e, type: 3}
 --- !u!61 &9051032994593478308
 BoxCollider2D:
   m_ObjectHideFlags: 0

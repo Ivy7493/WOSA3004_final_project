@@ -98,7 +98,7 @@ MonoBehaviour:
   Name: Blood Bomb
   Spell: {fileID: 1423831258971103850, guid: 7d8a5c5fb0f460b44b2fd97a82803a2d, type: 3}
   Rarity: Epic
-  ItemDesc: Spawn an orb of damaging blood
+  ItemDesc: 'Spawn an orb of damaging blood '
   Permanent: 0
   pickup_range: 5
 --- !u!61 &7660522417821616842

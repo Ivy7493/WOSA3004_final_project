@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f96ee3a30805242b33bde1ab897d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Fire Shield
+  Name: 'Fire shield '
   Spell: {fileID: 2906368874781742930, guid: 3968067dd0c993e4aace38740ac2ef16, type: 3}
   Rarity: Common
   ItemDesc: Create a protective barrier of Fire around the player

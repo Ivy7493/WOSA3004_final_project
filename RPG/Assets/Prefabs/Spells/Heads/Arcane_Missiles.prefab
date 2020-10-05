@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Arcane_Missiles
-  Icon: {fileID: 21300000, guid: 846ed15ee785e9c44b2537f22489b26a, type: 3}
+  Icon: {fileID: 21300000, guid: 58f12c5963ae60b45b5c29938c57f561, type: 3}
 --- !u!114 &8381762872399352046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 5
+  ManaScale: 4
 --- !u!114 &8381762872399352044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5684197946a99428b82f432235c18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 1
+  DamageScale: 5
   Speed: 60
   Range: 5
   Duration: 1

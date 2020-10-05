@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Ignite
-  Icon: {fileID: 21300000, guid: d6ad7c9e943085a498fd8f3071a1a039, type: 3}
+  Icon: {fileID: 21300000, guid: 538adb00a8fdd244f8017255dac9395d, type: 3}
 --- !u!212 &4988719114982080981
 SpriteRenderer:
   m_ObjectHideFlags: 0

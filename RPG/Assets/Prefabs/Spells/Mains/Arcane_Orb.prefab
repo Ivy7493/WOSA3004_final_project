@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Arcane Orb
-  Icon: {fileID: 21300000, guid: 465e0eb6c99b32b44bed1076307425d4, type: 3}
+  Icon: {fileID: 21300000, guid: 87c9801f64d88f743b228a91c548ccf5, type: 3}
 --- !u!212 &3795369454528019292
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -154,7 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 5
   HUD: {fileID: 6823948177093698721}
-  HitEffect: 0
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!114 &735037684219438116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 13
+  maxSpeed: 12
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

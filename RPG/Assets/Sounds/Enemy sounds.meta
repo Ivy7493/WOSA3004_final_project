@@ -1,5 +1,6 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:RPG/Assets/place holders/FLOORS/final floors/lava/stairs.meta
 guid: 4ac044a00f76e9f479b44db989900030
 =======
@@ -11,6 +12,16 @@ guid: bef9387d34aa7dd41bdd16473ddedce1
 >>>>>>> 94ac5deba48349006766ea523f82444fb906db74:RPG/Assets/Sounds/Enemy sounds.meta
 folderAsset: yes
 DefaultImporter:
+=======
+<<<<<<< HEAD:RPG/Assets/Prefabs/Items/Environment/Btttm Torch 1.prefab.meta
+guid: 27af3e44599972c4f860a86219901034
+PrefabImporter:
+=======
+guid: bef9387d34aa7dd41bdd16473ddedce1
+folderAsset: yes
+DefaultImporter:
+>>>>>>> 94ac5deba48349006766ea523f82444fb906db74:RPG/Assets/Sounds/Enemy sounds.meta
+>>>>>>> 94ac5deba48349006766ea523f82444fb906db74
   externalObjects: {}
   userData: 
   assetBundleName: 

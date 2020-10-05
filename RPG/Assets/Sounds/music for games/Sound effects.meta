@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD:RPG/Assets/Sounds/music for games/Sound effects.meta
 guid: 2bc6fd63389ee8d42baa520bbc57cce8
+=======
+guid: 985595c2b78a9d94d9c16da480839334
+>>>>>>> 94ac5deba48349006766ea523f82444fb906db74:RPG/Assets/Fonts.meta
+=======
+guid: 2bc6fd63389ee8d42baa520bbc57cce8
+>>>>>>> 94ac5deba48349006766ea523f82444fb906db74
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

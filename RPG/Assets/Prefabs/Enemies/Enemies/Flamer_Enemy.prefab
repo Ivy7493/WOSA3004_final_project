@@ -357,7 +357,7 @@ MonoBehaviour:
   HealthScale: 15
   HUD: {fileID: 6622557131255535480}
   HurtSound: {fileID: 0}
-  DeathSound: {fileID: 0}
+  DeathSound: {fileID: 8300000, guid: 53dd0863ed6505644b8e8193d428d7fd, type: 3}
 --- !u!114 &-2978916136817474067
 MonoBehaviour:
   m_ObjectHideFlags: 0

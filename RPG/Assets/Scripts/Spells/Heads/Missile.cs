@@ -15,8 +15,12 @@ public class Missile : MonoBehaviour
     GameObject Player;
     bool Set = false;
     bool Phase = false;
+    Sound_Manager SM;
+    public AudioClip shootSound;
+
     void Start()
     {
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
         Player = GameObject.FindGameObjectWithTag("Player");
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
@@ -32,6 +36,8 @@ public class Missile : MonoBehaviour
         Range = _range;
         Speed = _speed;
         Set = true;
+        SM.PlaySound(shootSound);
+        GetComponent<AudioSource>().clip = null;
     }
 
     void FixRotation()
@@ -96,7 +102,7 @@ public class Missile : MonoBehaviour
     {
         if(Set == true)
         {
-           
+            
             Spell();
         }
       

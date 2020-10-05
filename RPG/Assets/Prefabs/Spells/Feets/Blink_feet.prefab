@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 769f509e25ac8c4469e13fc6a2176667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BlinkSound: {fileID: 8300000, guid: 0b931adb8498c4349a264ffc61580006, type: 3}
   Distance: 10
   Speed: 20
   DashTime: 0.3

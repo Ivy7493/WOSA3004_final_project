@@ -20,8 +20,10 @@ public class Arcane_Missiles : MonoBehaviour
     public float KnockBack;
     float Damage;
     bool Channeling = true;
+    Queue<GameObject> MissileList;
     void Start()
     {
+        MissileList = new Queue<GameObject>();
         UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         Player = GameObject.FindGameObjectWithTag("Player");
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -33,6 +35,10 @@ public class Arcane_Missiles : MonoBehaviour
         Debug.Log(GameObject.FindGameObjectsWithTag("Arcane_Missiles").Length + " : Active spells");
         if(GameObject.FindGameObjectsWithTag("Arcane_Missiles").Length > 1)
         {
+            for(int i = 0; i < MissileList.Count; i++)
+            {
+                Destroy(MissileList.Dequeue());
+            }
             Destroy(gameObject);
         }
     }
@@ -47,11 +53,14 @@ public class Arcane_Missiles : MonoBehaviour
             try
             {
                 CurrentMissile.GetComponent<Missile>().SetValues(Damage / 2, Range, Speed);
-            }
+                MissileList.Enqueue(CurrentMissile);
+              }
             catch
             {
                 Debug.Log("YPPPPPP:");
             }
+
+    
 
         
 

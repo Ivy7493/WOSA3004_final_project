@@ -96,11 +96,13 @@ public class Player_Graphics : MonoBehaviour
         }
         if(Input.GetAxisRaw("Vertical") == 0 && Input.GetAxisRaw("Horizontal") == 0)
         {
+            
             Up.SetActive(false);
             Down.SetActive(false);
             Side.SetActive(true);
             Side.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             SideAnim.SetBool("running", false);
+           
         }
     }
     private void Update()

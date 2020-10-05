@@ -20,6 +20,7 @@ public class Frost_Shaman_AI : MonoBehaviour
     float counter = 0f;
     GameObject CurrentTotem;
     Enemy_Status ES;
+    Animator Anim;
     void Start()
     {
         if (StartTransform == null)
@@ -33,7 +34,7 @@ public class Frost_Shaman_AI : MonoBehaviour
         Motor = GetComponent<AIDestinationSetter>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PathControl = GetComponent<AIPath>();
-
+        Anim = GetComponentInChildren<Animator>();
         if (StartPos == null)
         {
             Debug.Log("Its The StartPos");
@@ -53,15 +54,17 @@ public class Frost_Shaman_AI : MonoBehaviour
     {
         if (Vector3.Distance(StartPos.position, transform.position) > MaxRange)
         {
-            if (transform.position == StartPos.transform.position)
+            if (Vector3.Distance(transform.position,StartPos.transform.position) < 0.1f)
             {
                 Motor.target = null;
                 PathControl.canMove = false;
+                Anim.SetTrigger("Idle");
             }
             else
             {
                 PathControl.canMove = true;
                 Motor.target = StartPos;
+                Anim.SetTrigger("Running");
             }
 
         }
@@ -73,17 +76,20 @@ public class Frost_Shaman_AI : MonoBehaviour
                 if (Player.transform != null)
                 {
                     Motor.target = Player.transform;
+                    Anim.SetTrigger("Running");
                 }
             }
             else if (Vector3.Distance(transform.position, Player.transform.position) < KiteDistance)
             {
                 PathControl.canMove = true;
                 Motor.target = StartPos;
+                Anim.SetTrigger("Running");
             }
             else
             {
                 Motor.target = null;
                 PathControl.canMove = false;
+                Anim.SetTrigger("Idle");
             }
 
 
@@ -106,8 +112,17 @@ public class Frost_Shaman_AI : MonoBehaviour
                 {
                     Destroy(CurrentTotem);
                 }
+                
                CurrentTotem = Instantiate(Totem, result, Quaternion.identity);
             }
+        }
+    }
+
+    void AttackAnimation()
+    {
+        if(CurrentTotem != null)
+        {
+            Anim.SetTrigger("Attack");
         }
     }
 
@@ -118,6 +133,7 @@ public class Frost_Shaman_AI : MonoBehaviour
         {
             Movement();
             Encounter();
+            AttackAnimation();
         }
     
     }

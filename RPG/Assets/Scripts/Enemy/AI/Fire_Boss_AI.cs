@@ -7,6 +7,7 @@ public class Fire_Boss_AI : MonoBehaviour
     // Start is called before the first frame update
     public GameObject[] FireLocations;
     public GameObject FireBombs;
+    public GameObject Indicator;
     public GameObject FireBall;
     GameObject Player;
     Game_Manager GM;
@@ -121,6 +122,53 @@ public class Fire_Boss_AI : MonoBehaviour
 
     }
 
+    void IndicatorRainFire()
+    {
+        //right
+        Vector3 Pos = new Vector3(Player.transform.position.x + 4, Player.transform.position.y, 0f);
+        GameObject Right = Instantiate(Indicator, Pos, Quaternion.identity);
+        Right.GetComponent<Indicator>().SetDirection("Right");
+        //left
+        Pos = new Vector3(Player.transform.position.x - 4, Player.transform.position.y, 0f);
+        GameObject Left = Instantiate(Indicator, Pos, Quaternion.identity);
+        Left.GetComponent<Indicator>().SetDirection("Left");
+        //up
+        Pos = new Vector3(Player.transform.position.x, Player.transform.position.y + 4, 0f);
+        GameObject Up = Instantiate(Indicator, Pos, Quaternion.identity);
+        Up.GetComponent<Indicator>().SetDirection("Up");
+        //down
+        Pos = new Vector3(Player.transform.position.x, Player.transform.position.y - 4, 0f);
+        GameObject Down = Instantiate(Indicator, Pos, Quaternion.identity);
+        Down.GetComponent<Indicator>().SetDirection("Down");
+    }
+
+    IEnumerator MoveIndicator(GameObject _Object,string _pos)
+    {
+        float Timer = 0f;
+        while(Timer < 1f)
+        {
+            switch (_pos)
+            {
+                case "Right":
+                    _Object.transform.position = new Vector3(Player.transform.position.x + 4, Player.transform.position.y, 0f);
+                    break;
+                case "Left":
+                    _Object.transform.position = new Vector3(Player.transform.position.x - 4, Player.transform.position.y, 0f);
+                    break;
+                case "Up":
+                    _Object.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y + 4, 0f);
+                    break;
+                case "Down":
+                    _Object.transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y - 4, 0f);
+                    break;
+            }
+            Timer += Time.deltaTime;
+        }
+        
+        yield return new WaitForSeconds(1f);
+        Destroy(_Object);
+    }
+
 
     //melee swipe of the boss, missing animation!
     void Swipe()
@@ -206,6 +254,7 @@ public class Fire_Boss_AI : MonoBehaviour
                     case 2:
                         Anim.SetTrigger("Conjure");
                         // FireBalls();
+                        IndicatorRainFire();
                         StartCoroutine(ExecuteAfterTime(1, "Conjure"));
                         CurrentStage = 0f;
                         break;

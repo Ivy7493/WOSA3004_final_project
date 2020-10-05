@@ -19,6 +19,7 @@ public class Frost_Giant_AI : MonoBehaviour
     Resource_Manager RM;
     Experience_Manager EM;
     Enemy_Health EH;
+    Animator Anim;
     float counter = 0f;
     float Damage;
     public float EnrageThresold;
@@ -40,6 +41,7 @@ public class Frost_Giant_AI : MonoBehaviour
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PathControl = GetComponent<AIPath>();
         EH = GetComponent<Enemy_Health>();
+        Anim = GetComponentInChildren<Animator>();
         try
         {
             ES = GetComponent<Enemy_Status>();
@@ -64,6 +66,7 @@ public class Frost_Giant_AI : MonoBehaviour
             }
             else
             {
+                Anim.SetTrigger("Running");
                 Motor.target = StartPos;
             }
 
@@ -72,6 +75,7 @@ public class Frost_Giant_AI : MonoBehaviour
         {
             if (Player.transform != null)
             {
+                Anim.SetTrigger("Running");
                 Motor.target = Player.transform;
             }
 
@@ -91,6 +95,26 @@ public class Frost_Giant_AI : MonoBehaviour
         }
     }
 
+    IEnumerator DamageTiming(float time)
+    {
+        counter = 0f;
+        yield return new WaitForSeconds(time);
+        if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
+        {
+            if (enraged == false)
+            {
+                RM.Damage(Damage);
+            }
+            else if (enraged == true)
+            {
+                RM.Damage(Damage * 2);
+            }
+        }
+            
+
+      
+    }
+
     void Encounter()
     {
         if (Vector3.Distance(transform.position, Player.transform.position) <= EngageRange)
@@ -103,15 +127,8 @@ public class Frost_Giant_AI : MonoBehaviour
                 if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
                 {
                     Damage = DamageScale * EM.ReturnLevel();
-                    if(enraged == false)
-                    {
-                        RM.Damage(Damage);
-                    }else if(enraged == true)
-                    {
-                        RM.Damage(Damage * 2);
-                    }
-                    
-                    counter = 0f;
+                    Anim.SetTrigger("Attack");
+                    StartCoroutine(DamageTiming(1f));
 
                 }
             }

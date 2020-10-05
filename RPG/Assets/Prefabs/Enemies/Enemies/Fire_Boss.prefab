@@ -261,6 +261,8 @@ MonoBehaviour:
   - {fileID: 1739284154860656290}
   FireBombs: {fileID: 8884107408079757856, guid: 9334042503a9e8e4985be0431ad6f93c,
     type: 3}
+  Indicator: {fileID: 1250472483142928569, guid: 7aa5147675e82d34db7d66d5b45b7e04,
+    type: 3}
   FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
     type: 3}
   StageTime: 2
@@ -283,6 +285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 300
   HUD: {fileID: 792138804445430813}
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!61 &1546225901808765283
 BoxCollider2D:
   m_ObjectHideFlags: 0

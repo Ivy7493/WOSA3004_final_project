@@ -19,6 +19,7 @@ public class Frost_Slicer_AI : MonoBehaviour
     Resource_Manager RM;
     float counter = 0f;
     Enemy_Status ES;
+    Animator Anim;
     void Start()
     {
         if (StartTransform == null)
@@ -32,7 +33,7 @@ public class Frost_Slicer_AI : MonoBehaviour
         Motor = GetComponent<AIDestinationSetter>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PathControl = GetComponent<AIPath>();
-
+        Anim = GetComponentInChildren<Animator>();
         if(StartPos == null)
         {
             Debug.Log("Its The StartPos");
@@ -60,6 +61,7 @@ public class Frost_Slicer_AI : MonoBehaviour
                 Vector3 result = (TempLocation2 - TempLocation1).normalized * -1f;
                 result = result + transform.position;
                 Instantiate(AttackSpell, result, Quaternion.identity);
+                Anim.SetTrigger("Attack");
             }
         }
     }
@@ -77,6 +79,7 @@ public class Frost_Slicer_AI : MonoBehaviour
             {
                 PathControl.canMove = true;
                 Motor.target = StartPos;
+                Anim.SetTrigger("Running");
             }
 
         }
@@ -88,12 +91,15 @@ public class Frost_Slicer_AI : MonoBehaviour
                 if (Player.transform != null)
                 {
                     Motor.target = Player.transform;
+                    Anim.SetTrigger("Running");
                 }
             }else if(Vector3.Distance(transform.position,Player.transform.position) < AttackRangeMax )
             {
                 PathControl.canMove = true;
                 Motor.target = StartPos;
-            }else{
+                Anim.SetTrigger("Running");
+            }
+            else{
                 Motor.target = null;
                 PathControl.canMove = false;
             }

@@ -245,6 +245,14 @@ public class UI_Manager : MonoBehaviour
         }
     }
 
+    void StatUpdate()
+    {
+        if(StatsMenu.activeInHierarchy == true)
+        {
+            SetStats();
+        }
+    }
+
     public void ToggleStatMenu()
     {
         if(StatsMenu.activeInHierarchy == false)
@@ -451,6 +459,7 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         NotificationDisplayControl();
+        StatUpdate();
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             if(GameIsPaused)

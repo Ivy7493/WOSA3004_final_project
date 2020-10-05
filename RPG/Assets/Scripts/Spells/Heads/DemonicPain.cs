@@ -15,6 +15,7 @@ public class DemonicPain : MonoBehaviour
     float counter = 0f;
     GameObject Target;
     Vector3 pos;
+    
     void Start()
     {
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);

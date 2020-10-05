@@ -6,6 +6,8 @@ public class Blink : MonoBehaviour
 {
     // Start is called before the first frame update
     GameObject Player;
+    
+    public AudioClip BlinkSound;
     public float Distance;
     public float Speed;
     public float DashTime;
@@ -20,6 +22,7 @@ public class Blink : MonoBehaviour
     Player_Graphics PG;
     GameObject PlayerGraphic;
     Resource_Manager RM;
+    Sound_Manager SM;
 
     void Start()
     {
@@ -29,12 +32,14 @@ public class Blink : MonoBehaviour
             RB = Player.GetComponent<Rigidbody2D>();
             PlayerGraphic = GameObject.FindGameObjectWithTag("Player_Graphics");
         }
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         PlayerGraphic.transform.localPosition = new Vector3(1000f, 1000f, 0f);
         PlayerGraphics = Player.GetComponentsInChildren<SpriteRenderer>();
         PM = Player.GetComponent<Player_motor>();
         PG = Player.GetComponentInChildren<Player_Graphics>();
         StartPos = Player.transform.position;
+        SM.PlaySound(BlinkSound);
          NewBlink();
        
     }

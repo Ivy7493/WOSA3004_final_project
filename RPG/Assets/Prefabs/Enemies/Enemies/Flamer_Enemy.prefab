@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2803347507692571500}
   m_LocalRotation: {x: -0, y: -0, z: 0.01454429, w: 0.99989426}
-  m_LocalPosition: {x: 0, y: -3.81, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -1.9049995, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 9010847024294549190}
-  m_RootOrder: 0
+  m_Father: {fileID: 9010847026189783854}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5663378788807117524
 MonoBehaviour:
@@ -131,8 +131,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_Children:
-  - {fileID: 2905000118154395656}
+  m_Children: []
   m_Father: {fileID: 9010847026189783854}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -226,6 +225,7 @@ Transform:
   m_Children:
   - {fileID: 1011771198430894055}
   - {fileID: 9010847024294549190}
+  - {fileID: 2905000118154395656}
   - {fileID: 6622557131255535483}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
   HealthScale: 15
   HUD: {fileID: 6622557131255535480}
   HurtSound: {fileID: 0}
-  DeathSound: {fileID: 0}
+  DeathSound: {fileID: 8300000, guid: 53dd0863ed6505644b8e8193d428d7fd, type: 3}
 --- !u!114 &-2978916136817474067
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 6089122158693145790, guid: 4c7a0659438ef7e419c4d754e065c370,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6089122158693145790, guid: 4c7a0659438ef7e419c4d754e065c370,
         type: 3}

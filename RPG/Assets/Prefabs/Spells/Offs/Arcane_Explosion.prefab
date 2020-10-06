@@ -80,6 +80,7 @@ MonoBehaviour:
   Range: 8
   Speed: 1.25
   DamageScale: 4
+  Sound: {fileID: 8300000, guid: 971657ace1be16346a8e34efd078f84c, type: 3}
 --- !u!212 &485284724696468206
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -173,10 +174,10 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804567230079049289}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b03c1059f520264a8633ee9098ba3df, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 971657ace1be16346a8e34efd078f84c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1.3

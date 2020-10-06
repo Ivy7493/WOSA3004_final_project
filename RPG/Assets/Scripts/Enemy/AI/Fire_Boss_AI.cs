@@ -14,6 +14,7 @@ public class Fire_Boss_AI : MonoBehaviour
     Enemy_Health EM;
     Music_Manager MM;
     Animator Anim;
+    Effect_Manager EF;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -37,6 +38,7 @@ public class Fire_Boss_AI : MonoBehaviour
         EM = GetComponent<Enemy_Health>();
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         Anim = GetComponentInChildren<Animator>();
+        EF = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
     }
 
 
@@ -93,6 +95,7 @@ public class Fire_Boss_AI : MonoBehaviour
         {
             case "Smash":
                 Swipe();
+                EF.ScreenShake(0.2f);
                 break;
             case "Conjure":
                 RainFire();

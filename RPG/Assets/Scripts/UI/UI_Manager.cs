@@ -367,6 +367,7 @@ public class UI_Manager : MonoBehaviour
     public void CallDeathEffect()
     {
         DeathEffect.SetActive(true);
+        GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>().PlayDeathSound();
     }
 
     public void DestoryItemDisplay()

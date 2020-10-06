@@ -9,6 +9,8 @@ public class Arcane_Explosion : MonoBehaviour
     public float Speed;
     public float DamageScale;
     float Damage;
+    public AudioClip Sound;
+    Sound_Manager SM;
     GameObject Player;
     SpriteRenderer SR;
     float counter = 0f;
@@ -17,6 +19,8 @@ public class Arcane_Explosion : MonoBehaviour
         Damage = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel() * DamageScale;
         SR = GetComponent<SpriteRenderer>();
         Player = GameObject.FindGameObjectWithTag("Player");
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
+        SM.PlaySound(Sound);
     }
 
 

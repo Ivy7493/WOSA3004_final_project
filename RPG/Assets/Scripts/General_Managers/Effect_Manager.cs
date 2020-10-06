@@ -12,6 +12,7 @@ public class Effect_Manager : MonoBehaviour
     VolumeProfile _pro;
     UI_Manager UIM;
     Sound_Manager SM;
+    public AudioClip DeathSound;
     public GameObject LevelEffect;
     
     

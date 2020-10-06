@@ -155,8 +155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 5
   HUD: {fileID: 6823948177093698721}
-  HurtSound: {fileID: 0}
-  DeathSound: {fileID: 0}
+  HurtSound: {fileID: 8300000, guid: 73ce086e90dcaee438a0cdf89d434842, type: 3}
+  DeathSound: {fileID: 8300000, guid: 432addc2b5c09174eb4620b57d766d9c, type: 3}
 --- !u!114 &735037684219438116
 MonoBehaviour:
   m_ObjectHideFlags: 0

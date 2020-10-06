@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Ignite
   Spell: {fileID: 4988719114982080979, guid: 8692dd142e25b004296e5034598a9e99, type: 3}
-  Rarity: Uncommon
+  Rarity: Common
   ItemDesc: Brand the nearest enemy from your mouse with fire, dealing damage over
     time and spreading to nearby enemies
   Permanent: 0

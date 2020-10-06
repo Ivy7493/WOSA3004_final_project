@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3f96ee3a30805242b33bde1ab897d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: issilesMissiles
+  Name: Arcane Missiles
   Spell: {fileID: 8381762872399352040, guid: 99c10d684d5344d4c9465c2a02cf94b1, type: 3}
   Rarity: Rare
   ItemDesc: Summon orbs around you that damage enemies on hit.

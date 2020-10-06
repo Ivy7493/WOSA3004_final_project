@@ -8,6 +8,8 @@ public class Music_Manager : MonoBehaviour
     public AudioClip StartingArea;
     public AudioClip FireArea;
     public AudioClip BossFight;
+    public AudioClip IceBoss;
+    public AudioClip IceArea;
     AudioSource AS;
     void Start()
     {
@@ -22,6 +24,24 @@ public class Music_Manager : MonoBehaviour
             AS.Play();
         }
        
+    }
+
+    public void PlayIceArea()
+    {
+        if(AS.clip != IceArea)
+        {
+            AS.clip = IceArea;
+            AS.Play();
+        }
+    }
+
+    public void PlayIceBoss()
+    {
+        if(AS.clip != IceBoss)
+        {
+            AS.clip = IceBoss;
+            AS.Play();
+        }
     }
 
     public void PlayFireArea()

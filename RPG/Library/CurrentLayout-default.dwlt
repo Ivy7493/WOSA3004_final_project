@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1536
     height: 781
-  m_MinSize: {x: 875, y: 521}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 471}
-  m_MaxSize: {x: 14001, y: 14021}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 15276
+  controlID: 1649
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1059
     height: 731
-  m_MinSize: {x: 403, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 15232
+  controlID: 1650
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 15233
+  controlID: 1651
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -397,9 +397,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 5a8b0000
       m_LastClickedID: 0
-      m_ExpandedIDs: d49affff009bffff549bffff689bffffba9bffffd29bffffe89bffff4a9cffff58a7ffff426b0000166d0000566e0000986e0000c26e00006a7300000c75000064750000
+      m_ExpandedIDs: 147bffff44810000468300001e8400001c850000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 217.85332, y: -25.16409, z: -12.339844}
+    m_Target: {x: 270.95663, y: 109.44277, z: -69.748344}
     speed: 2
-    m_Value: {x: -4.8595543, y: 2.3890913, z: -2.8870676}
+    m_Value: {x: 276.31628, y: 113.949936, z: -67.298904}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -511,9 +511,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.331174
+    m_Target: 568.5041
     speed: 2
-    m_Value: 4.559292
+    m_Value: 544.0231
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -813,20 +813,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Spells/Mains
+    - Assets/Prefabs/Items/Head
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Spells/Mains
+  - Assets/Prefabs/Items/Head
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\2020\GD Github\WOSA3004_final_project (rep)\RPG
+  m_LastProjectPath: D:\GIT\WOSA3004_final_project\RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 725}
-    m_SelectedIDs: cc8c0000
-    m_LastClickedID: 36044
-    m_ExpandedIDs: 0000000078490000788600007a8600007c8600007e860000828600008486000086860000888600008a860000348700004087000042870000b8870000a28c000000ca9a3b
+    scrollPos: {x: 0, y: 597}
+    m_SelectedIDs: 26950000
+    m_LastClickedID: 38182
+    m_ExpandedIDs: 00000000624c0000f6930000f8930000fa930000fc930000fe93000000940000029400000494000006940000089400000a9400000c9400000e9400003c95000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -854,7 +854,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000078490000788600007a8600007c8600007e8600008286000084860000888600008a860000348700004087000042870000b8870000a28c000000ca9a3b
+    m_ExpandedIDs: 00000000624c0000f6930000f8930000fa930000fc930000fe93000000940000029400000494000006940000089400000a9400000c9400000e94000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -973,7 +973,7 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 100
+  m_LastVerticalScrollValue: 480
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

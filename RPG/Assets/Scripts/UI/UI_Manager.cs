@@ -163,7 +163,7 @@ public class UI_Manager : MonoBehaviour
     public void UpdateExpBar(float _percent)
     {
         ExpBar.GetComponent<Slider>().value = _percent;
-        ExpVal_txt.GetComponent<TextMeshProUGUI>().text = EM.ReturnCurrentEXP() + "/" + EM.ReturnMaxEXPforLevel();
+        ExpVal_txt.GetComponent<TextMeshProUGUI>().text = (int)EM.ReturnCurrentEXP() + "/" + (int)EM.ReturnMaxEXPforLevel();
     }
     /// <summary>
     /// This section deals with ability infomation display on the UI

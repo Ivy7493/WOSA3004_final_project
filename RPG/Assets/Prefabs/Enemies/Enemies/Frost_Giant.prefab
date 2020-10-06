@@ -70,7 +70,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 30
   HUD: {fileID: 7934789900005433685}
-  HitEffect: 0
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!114 &4224060927207316568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,7 +197,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 1
+  maxSpeed: 4
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -286,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 2474781247204329484, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.03500223
+      value: 0.45640755
       objectReference: {fileID: 0}
     - target: {fileID: 4502447573567916338, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
@@ -346,12 +347,12 @@ PrefabInstance:
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -3.13255
+      value: -3.1251068
       objectReference: {fileID: 0}
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 2.4490197
+      value: 2.4564629
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8fa6fec997b8c4bb5f9e2ce545005b, type: 3}

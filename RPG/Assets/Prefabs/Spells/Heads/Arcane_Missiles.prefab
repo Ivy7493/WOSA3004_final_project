@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d5684197946a99428b82f432235c18f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 5
+  DamageScale: 6
   Speed: 60
   Range: 5
   Duration: 1

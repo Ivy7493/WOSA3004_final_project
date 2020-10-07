@@ -51,7 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 15
   Speed: 30
-  SlowPercent: 0.75
+  SlowPercent: 0.5
   SlowDuration: 3
   DamageScale: 3
 --- !u!114 &6372697014322973411

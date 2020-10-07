@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRange: 20
-  EngageRange: 10
+  EngageRange: 8
   AttackFrequency: 1
   AttackRange: 3
-  DamageScale: 20
+  DamageScale: 15
   EnrageThresold: 0.4
   EnrageHealthLose: 0.02
 --- !u!50 &4224060927207316551
@@ -197,7 +197,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 8
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2

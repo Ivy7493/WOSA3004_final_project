@@ -49,6 +49,7 @@ public class UI_Manager : MonoBehaviour
     public GameObject ControlsUI;
     public GameObject HudUI;
     public GameObject SpellsUI;
+    public GameObject TalentsUI;
     
     Resource_Manager RM;
     Experience_Manager EM;
@@ -422,6 +423,18 @@ public class UI_Manager : MonoBehaviour
         HudUI.SetActive(true);
     }
 
+    public void Spells()
+    {
+        TutorialMenuUI.SetActive(false);
+        SpellsUI.SetActive(true);
+    }
+
+    public void Talents()
+    {
+        TutorialMenuUI.SetActive(false);
+        TalentsUI.SetActive(true);
+    }
+
     public void Back()
     {
        if(HudUI.activeInHierarchy == true)
@@ -436,6 +449,14 @@ public class UI_Manager : MonoBehaviour
         {
             TutorialMenuUI.SetActive(false);
             PauseScreenUI.SetActive(true);
+        }else if(SpellsUI.activeInHierarchy == true)
+        {
+            SpellsUI.SetActive(false);
+            TutorialMenuUI.SetActive(true);
+        }else if(TalentsUI.activeInHierarchy == true)
+        {
+            TalentsUI.SetActive(false);
+            TutorialMenuUI.SetActive(true);
         }
     }
     

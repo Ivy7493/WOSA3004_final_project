@@ -115,9 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 9
+  HealthScale: 12
   HUD: {fileID: 7832959821262136647}
-  HitEffect: 0
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!114 &4050050134256623163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 10
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -222,9 +223,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxRange: 30
-  EngageRange: 20
-  AbilityFrequency: 2
-  AttackRangeMax: 15
+  EngageRange: 15
+  AbilityFrequency: 1
+  AttackRangeMax: 18
   AttackSpell: {fileID: 6067395156520122242, guid: 16638413cf720484fbcb0bcc4df81b04,
     type: 3}
 --- !u!114 &-2989137947898186658

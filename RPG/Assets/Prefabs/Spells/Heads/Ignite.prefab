@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 4
+  ManaScale: 3.5
 --- !u!114 &4988719114982080982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,11 +126,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f17856b8aafc5241873649274ffd60e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 2
-  TickRate: 0.5
+  DamageScale: 1
+  TickRate: 0.15
   Duration: 3
   Range: 5
-  SpreadRange: 4
+  SpreadRange: 5
 --- !u!82 &8055282562796129930
 AudioSource:
   m_ObjectHideFlags: 0
@@ -143,7 +143,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 013ef335df4f04d44800bdea5f1fa20a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.7
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -250,9 +250,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: db01289fce63d3740a6006b12db7d48f, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

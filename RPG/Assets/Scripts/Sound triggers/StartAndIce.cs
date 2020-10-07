@@ -19,7 +19,8 @@ public class StartAndIce : MonoBehaviour
         if (Player.transform.position.y > transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)
         {
             MM.PlayIceArea();
-
+            MM.PlayIceAreaAmbient();
+            
 
         }
         else if (Player.transform.position.y < transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)

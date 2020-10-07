@@ -151,9 +151,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 15
   Speed: 10
-  ExplosionRange: 5
+  ExplosionRange: 10
   DamageScale: 8
-  SelfDamageScale: 2.5
+  SelfDamageScale: 1.25
 --- !u!114 &9051032994593478307
 MonoBehaviour:
   m_ObjectHideFlags: 0

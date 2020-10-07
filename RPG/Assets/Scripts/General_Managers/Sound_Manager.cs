@@ -8,6 +8,7 @@ public class Sound_Manager : MonoBehaviour
     public GameObject SpawnPrefab;
     public AudioClip PlayerDamage;
     public AudioClip PlayerDeath;
+    public AudioClip PlayerDeath2;
 
 
     void Start()
@@ -24,6 +25,7 @@ public class Sound_Manager : MonoBehaviour
     public void PlayDeathSound()
     {
         PlaySound(PlayerDeath);
+        PlaySound(PlayerDeath2);
     }
 
     public void PlayPlayerDamage()

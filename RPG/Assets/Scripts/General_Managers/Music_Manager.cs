@@ -7,9 +7,14 @@ public class Music_Manager : MonoBehaviour
     // Start is called before the first frame update
     public AudioClip StartingArea;
     public AudioClip FireArea;
+    public AudioClip FireAreaAmbient;
+
     public AudioClip BossFight;
     public AudioClip IceBoss;
     public AudioClip IceArea;
+    public AudioClip IceAreaAmbient;
+    public AudioClip IceAreaAmbient2;
+
     AudioSource AS;
     void Start()
     {
@@ -31,6 +36,24 @@ public class Music_Manager : MonoBehaviour
         if(AS.clip != IceArea)
         {
             AS.clip = IceArea;
+            AS.Play();
+        }
+    }
+
+    public void PlayIceAreaAmbient()
+    {
+        if (AS.clip != IceAreaAmbient)
+        {
+            AS.clip = IceAreaAmbient;
+            AS.Play();
+        }
+    }
+
+    public void PlayIceAreaAmbient2()
+    {
+        if (AS.clip != IceAreaAmbient2)
+        {
+            AS.clip = IceAreaAmbient2;
             AS.Play();
         }
     }

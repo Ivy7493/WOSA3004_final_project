@@ -64,7 +64,7 @@ MonoBehaviour:
   DamageScale: 3
   MiniStun: 0.3
   TickRate: 0.5
-  LifeScale: 3
+  LifeScale: 2.5
 --- !u!114 &4807967044106531889
 MonoBehaviour:
   m_ObjectHideFlags: 0

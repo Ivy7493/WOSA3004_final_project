@@ -19,11 +19,15 @@ public class BossAndIce : MonoBehaviour
         if (Player.transform.position.y > transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)
         {
             MM.PlayIceBoss();
+            MM.PlayIceAreaAmbient();
+            MM.PlayIceAreaAmbient2();
 
         }
         else if (Player.transform.position.y < transform.position.y && Vector3.Distance(transform.position, Player.transform.position) < TriggerDistance)
         {
             MM.PlayIceArea();
+            MM.PlayIceAreaAmbient();
+            MM.PlayIceAreaAmbient2();
         }
     }
 

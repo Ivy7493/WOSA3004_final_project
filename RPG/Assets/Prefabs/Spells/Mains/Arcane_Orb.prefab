@@ -4968,7 +4968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 2.5
+  ManaScale: 1.5
 --- !u!114 &3795369454528019280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4981,9 +4981,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf9bc5cff70dd1459dbec134aa3b296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 3
+  DamageScale: 3.5
   Speed: 40
-  Range: 12
+  Range: 20
   KnockBack: 60
 --- !u!114 &3795369454528019295
 MonoBehaviour:
@@ -5085,7 +5085,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5b03c1059f520264a8633ee9098ba3df, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f0f7aee4e3e013346be5220d7d64e1c9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

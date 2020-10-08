@@ -26,6 +26,39 @@ TextureImporter:
   - first:
       213: -1352600731982569236
     second: walls large_7
+  - first:
+      213: 1733225447705588738
+    second: walls large_0
+  - first:
+      213: -5292918935566485124
+    second: walls large_1
+  - first:
+      213: 8057645150890157454
+    second: walls large_2
+  - first:
+      213: -5124734809032796689
+    second: walls large_3
+  - first:
+      213: -3317023940856084146
+    second: walls large_4
+  - first:
+      213: 9025623064225281863
+    second: walls large_5
+  - first:
+      213: -5791561513020129982
+    second: walls large_6
+  - first:
+      213: -2172577904630798779
+    second: walls large_7
+  - first:
+      213: 1580795747419547329
+    second: walls large_8
+  - first:
+      213: -5973372583325834826
+    second: walls large_9
+  - first:
+      213: -4450340304571827327
+    second: walls large_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,19 +159,19 @@ TextureImporter:
       name: walls large_0
       rect:
         serializedVersion: 2
-        x: 600
+        x: 0
         y: 900
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5cb95e3296b20f60800000000000000
-      internalID: 7999156627390970974
+      spriteID: 204b8269c57ad0810800000000000000
+      internalID: 1733225447705588738
       vertices: []
       indices: 
       edges: []
@@ -147,19 +180,19 @@ TextureImporter:
       name: walls large_1
       rect:
         serializedVersion: 2
-        x: 900
+        x: 300
         y: 900
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 264f8e695468d57f0800000000000000
-      internalID: -622193540064545694
+      spriteID: c79fe9c6546cb86b0800000000000000
+      internalID: -5292918935566485124
       vertices: []
       indices: 
       edges: []
@@ -169,18 +202,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 600
-        y: 600
+        y: 900
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7832616e3607f150800000000000000
-      internalID: 5906196301311260797
+      spriteID: e85e4f0d29182df60800000000000000
+      internalID: 8057645150890157454
       vertices: []
       indices: 
       edges: []
@@ -190,18 +223,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 900
-        y: 600
+        y: 898
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba5602a557e485df0800000000000000
-      internalID: -191316718233033301
+      spriteID: fe5558bd7d841e8b0800000000000000
+      internalID: -5124734809032796689
       vertices: []
       indices: 
       edges: []
@@ -210,19 +243,19 @@ TextureImporter:
       name: walls large_4
       rect:
         serializedVersion: 2
-        x: 600
-        y: 300
+        x: 300
+        y: 600
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4110bc4577f9b0450800000000000000
-      internalID: 6056109458802278676
+      spriteID: e498ec5dc4097f1d0800000000000000
+      internalID: -3317023940856084146
       vertices: []
       indices: 
       edges: []
@@ -231,19 +264,19 @@ TextureImporter:
       name: walls large_5
       rect:
         serializedVersion: 2
-        x: 900
-        y: 300
+        x: 598
+        y: 598
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4d5bb873335ba40800000000000000
-      internalID: 5383265243251463354
+      spriteID: 74778bb6b54714d70800000000000000
+      internalID: 9025623064225281863
       vertices: []
       indices: 
       edges: []
@@ -252,19 +285,19 @@ TextureImporter:
       name: walls large_6
       rect:
         serializedVersion: 2
-        x: 600
-        y: 0
+        x: 900
+        y: 598
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 369697244ca120cc0800000000000000
-      internalID: -3746402509787666077
+      spriteID: 24d7c992d7d30afa0800000000000000
+      internalID: -5791561513020129982
       vertices: []
       indices: 
       edges: []
@@ -273,19 +306,82 @@ TextureImporter:
       name: walls large_7
       rect:
         serializedVersion: 2
-        x: 900
-        y: 0
+        x: 604
+        y: 289
         width: 300
         height: 300
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce0ee37fcc89a3de0800000000000000
-      internalID: -1352600731982569236
+      spriteID: 5466e9318e379d1e0800000000000000
+      internalID: -2172577904630798779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls large_8
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 300
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6e36b5b5d10f510800000000000000
+      internalID: 1580795747419547329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls large_9
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b16ec3a8415a1da0800000000000000
+      internalID: -5973372583325834826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: walls large_10
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 300
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18b746862173d32c0800000000000000
+      internalID: -4450340304571827327
       vertices: []
       indices: 
       edges: []

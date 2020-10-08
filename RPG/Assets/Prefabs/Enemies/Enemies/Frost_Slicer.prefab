@@ -224,7 +224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 30
   EngageRange: 15
-  AbilityFrequency: 1
+  AbilityFrequency: 0.8
   AttackRangeMax: 18
   AttackSpell: {fileID: 6067395156520122242, guid: 16638413cf720484fbcb0bcc4df81b04,
     type: 3}

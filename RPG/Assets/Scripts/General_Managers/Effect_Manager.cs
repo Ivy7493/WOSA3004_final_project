@@ -82,7 +82,7 @@ public class Effect_Manager : MonoBehaviour
 
     IEnumerator Flare(float Duration)
     {
-        for (float ft = 1f; ft >= 0; ft -= 0.1f)
+        for (float ft = 0.1f; ft >= 0; ft -= 0.01f)
         {
            // CA.intensity.Override(ft);
             yield return null;
@@ -94,8 +94,8 @@ public class Effect_Manager : MonoBehaviour
         float counter = 0f;
         while(counter < duration)
         {
-            float x = Random.Range(-1, 1f)*1;
-            float y = Random.Range(-1, 1f)*1;
+            float x = Random.Range(-0.1f, 0.1f)*1;
+            float y = Random.Range(-0.1f, 0.1f)*1;
             Camera.main.gameObject.transform.localPosition = new Vector3(Player.transform.position.x + x, Player.transform.position.y + y, -10);
             counter += Time.deltaTime;
             yield return null;

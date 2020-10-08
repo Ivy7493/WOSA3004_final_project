@@ -12,8 +12,8 @@ public class Music_Manager : MonoBehaviour
     public AudioClip BossFight;
     public AudioClip IceBoss;
     public AudioClip IceArea;
-    public AudioClip IceAreaAmbient;
-    public AudioClip IceAreaAmbient2;
+    public AudioClip IceArea2;
+
 
     AudioSource AS;
     Sound_Manager SM;
@@ -33,16 +33,7 @@ public class Music_Manager : MonoBehaviour
        
     }
 
-    void AmbientSound()
-    {
-        if(AS.clip == IceBoss || AS.clip == IceArea)
-        {
-            float Time = IceAreaAmbient.length;
-            StartCoroutine(PlaySoundOnDelay(IceAreaAmbient, Time));
-            Time = IceAreaAmbient2.length;
-            StartCoroutine(PlaySoundOnDelay(IceAreaAmbient2, Time));
-        }
-    }
+   
 
     IEnumerator PlaySoundOnDelay(AudioClip _clip, float time)
     {
@@ -53,30 +44,24 @@ public class Music_Manager : MonoBehaviour
 
     public void PlayIceArea()
     {
-        if(AS.clip != IceArea)
+        if(AS.clip != IceArea || AS.clip != IceArea2)
         {
-            AS.clip = IceArea;
-            AS.Play();
+            float RandomNum = Random.Range(1f, 3f);
+            if(RandomNum == 1f)
+            {
+                AS.clip = IceArea;
+                AS.Play();
+            }
+            else if (RandomNum == 2f)
+            {
+                AS.clip = IceArea2;
+                AS.Play();
+            }
+            
         }
     }
 
-    public void PlayIceAreaAmbient()
-    {
-        if (AS.clip != IceAreaAmbient)
-        {
-            AS.clip = IceAreaAmbient;
-            AS.Play();
-        }
-    }
-
-    public void PlayIceAreaAmbient2()
-    {
-        if (AS.clip != IceAreaAmbient2)
-        {
-            AS.clip = IceAreaAmbient2;
-            AS.Play();
-        }
-    }
+   
 
     public void PlayIceBoss()
     {

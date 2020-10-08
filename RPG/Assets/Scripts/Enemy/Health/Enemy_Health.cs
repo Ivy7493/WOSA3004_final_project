@@ -13,7 +13,7 @@ public class Enemy_Health : MonoBehaviour
     public GameObject HUD;
     public AudioClip HurtSound;
     public AudioClip DeathSound;
-    private static float HurtSoundGCD = 0.7f;
+    private static float HurtSoundGCD = 1.5f;
     private float SoundCounter = 0f;
     Material Death;
 

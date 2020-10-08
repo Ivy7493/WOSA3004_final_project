@@ -22,6 +22,13 @@ public class Sound_Manager : MonoBehaviour
         temp.GetComponent<Sound_spawn>().SetSound(_clip);
     }
 
+    public void PlaySound(AudioClip _clip, float volume)
+    {
+        GameObject temp = Instantiate(SpawnPrefab, transform.position, Quaternion.identity);
+        temp.GetComponent<Sound_spawn>().SetSound(_clip);
+        temp.GetComponent<AudioSource>().volume = volume;
+    }
+
     public void PlayDeathSound()
     {
         PlaySound(PlayerDeath);
@@ -30,7 +37,16 @@ public class Sound_Manager : MonoBehaviour
 
     public void PlayPlayerDamage()
     {
-        PlaySound(PlayerDamage);
+        //float RandomNum = Random.Range(1f, 2f);
+        //if (RandomNum == 1f) 
+        //{
+            PlaySound(PlayerDamage, 0.4f); 
+        //}
+        //else
+        //{
+
+        //}
+        
     }
     
 

@@ -83,8 +83,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 12
   HUD: {fileID: 8186395043630712049}
-  HurtSound: {fileID: 0}
-  DeathSound: {fileID: 0}
+  HurtSound: {fileID: 8300000, guid: 339d894e9952a9744acbe5fa56e7f8aa, type: 3}
+  DeathSound: {fileID: 8300000, guid: c776c17f20dc88e47ae5dd7ee900cf70, type: 3}
 --- !u!114 &2673733810732552869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28fc6595324e161448eeebcaa3b7bd5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxRange: 20
-  EngageRange: 15
-  TotemReplaceTime: 5
+  MaxRange: 30
+  EngageRange: 20
+  TotemReplaceTime: 2.5
   KiteDistance: 12
   Totem: {fileID: 2240554531716902997, guid: ac4f7ac57e9e7c848b2af4f691a51239, type: 3}
 --- !u!114 &2673733810732552866

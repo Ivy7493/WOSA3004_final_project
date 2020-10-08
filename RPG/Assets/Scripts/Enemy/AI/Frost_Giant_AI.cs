@@ -13,6 +13,8 @@ public class Frost_Giant_AI : MonoBehaviour
     public float AttackFrequency;
     public float AttackRange;
     public float DamageScale;
+    public float EngageSpeedIncr;
+    public float EngageAttacRateIncr;
     GameObject Player;
     AIDestinationSetter Motor;
     AIPath PathControl;
@@ -87,8 +89,8 @@ public class Frost_Giant_AI : MonoBehaviour
         if(EH.ReturnCurrentHealthPercent() < EnrageThresold && enraged == false)
         {
             enraged = true;
-            AttackFrequency /= 3;
-            PathControl.maxSpeed *= 5;
+            AttackFrequency /= EngageAttacRateIncr;
+            PathControl.maxSpeed *= EngageSpeedIncr;
         }else if(enraged == true)
         {
             EH.Damage(EH.ReturnMaxHealth() * EnrageHealthLose * Time.deltaTime);

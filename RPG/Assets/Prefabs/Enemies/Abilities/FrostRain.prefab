@@ -193,5 +193,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 3
   Duration: 1
-  DamageScale: 2
+  DamageScale: 5
   Speed: 10

@@ -48,9 +48,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 15
-  DamageScale: 1
-  SlowPercent: 0.75
-  SlowDuration: 0.75
+  DamageScale: 5
+  SlowPercent: 0.5
+  SlowDuration: 1
 --- !u!50 &6067395156520122244
 Rigidbody2D:
   serializedVersion: 4

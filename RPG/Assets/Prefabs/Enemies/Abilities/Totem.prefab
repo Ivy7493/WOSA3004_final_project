@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e14ac24d0284ba409b8b1bd05966264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 0.1
+  DamageScale: 0.3
   TickRate: 0.1
   Duration: 6
   AttackRange: 10

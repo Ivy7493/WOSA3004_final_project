@@ -113,9 +113,9 @@ MonoBehaviour:
     width: 1920
     height: 947
   m_MinSize: {x: 678, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MaxSize: {x: 18003, y: 14042}
   vertical: 0
-  controlID: 33010
+  controlID: 11648
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1328
     height: 947
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 32936
+  controlID: 11649
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 1328
     height: 597
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 32937
+  controlID: 11650
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 32905
+  controlID: 11604
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -447,9 +447,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 6a650000
       m_LastClickedID: 0
-      m_ExpandedIDs: 905fffffe28b0000188d0000368d000002900000a6920000aa920000
+      m_ExpandedIDs: da690100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -502,16 +502,16 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 2acca500b18148d46b4675f821173910
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -16.046148, y: 1.388897, z: -239.47084}
+    m_Target: {x: 13.971, y: -184.807, z: -0.033904374}
     speed: 2
-    m_Value: {x: 13.971, y: -184.807, z: -0.033904374}
+    m_Value: {x: 0, y: 1.6, z: -10}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -524,7 +524,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 0
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -561,9 +561,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.830291
+    m_Target: 185.87752
     speed: 2
-    m_Value: 185.87752
+    m_Value: 10
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -680,20 +680,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies/Abilities
+    - Assets/Sounds
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies/Abilities
+  - Assets/Sounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\GitHub repositories\WOSA3004_final_project\RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 179}
-    m_SelectedIDs: 2ea00000
-    m_LastClickedID: 41006
-    m_ExpandedIDs: 00000000824d0000729f0000749f0000769f0000789f00007a9f00007c9f00007e9f0000809f0000b89f0000c09f0000c29f0000d09f0000d49f0000da9f000000ca9a3b
+    scrollPos: {x: 0, y: 235}
+    m_SelectedIDs: fe750000
+    m_LastClickedID: 30206
+    m_ExpandedIDs: 0000000040430000ea750000ec750000ee750000f0750000f6750000f8750000fa750000fe7500000076000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -721,7 +721,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000824d0000729f0000749f0000769f0000789f00007a9f00007c9f00007e9f0000809f0000b89f0000c09f0000c29f0000d09f0000d49f0000da9f000000ca9a3b
+    m_ExpandedIDs: 0000000040430000ea750000ec750000ee750000f0750000f6750000f875000000760000027600000476000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -773,7 +773,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 288}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 187
@@ -831,7 +831,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 408058
+  m_LastSelectedObjectID: 90286
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52

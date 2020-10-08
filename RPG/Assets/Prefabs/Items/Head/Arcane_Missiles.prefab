@@ -97,7 +97,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Arcane Missiles
   Spell: {fileID: 8381762872399352040, guid: 99c10d684d5344d4c9465c2a02cf94b1, type: 3}
-  Rarity: Rare
+  Rarity: Uncommon
   ItemDesc: Summon orbs around you that damage enemies on hit.
   Permanent: 0
   pickup_range: 5

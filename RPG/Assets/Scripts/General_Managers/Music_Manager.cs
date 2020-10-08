@@ -14,6 +14,7 @@ public class Music_Manager : MonoBehaviour
     public AudioClip IceArea;
     public AudioClip IceArea2;
 
+    bool IceAreaMusic = false;
 
     AudioSource AS;
     Sound_Manager SM;
@@ -46,18 +47,19 @@ public class Music_Manager : MonoBehaviour
     {
         if(AS.clip != IceArea || AS.clip != IceArea2)
         {
-            float RandomNum = Random.Range(1f, 3f);
-            if(RandomNum == 1f)
+            switch(IceAreaMusic)
             {
-                AS.clip = IceArea;
-                AS.Play();
+                case true:
+                    AS.clip = IceArea;
+                    AS.Play();
+                    IceAreaMusic = false;
+                    break;
+                case false:
+                    AS.clip = IceArea2;
+                    AS.Play();
+                    IceAreaMusic = true;
+                    break;
             }
-            else if (RandomNum == 2f)
-            {
-                AS.clip = IceArea2;
-                AS.Play();
-            }
-            
         }
     }
 

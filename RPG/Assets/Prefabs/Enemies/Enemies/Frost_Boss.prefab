@@ -51,7 +51,7 @@ GameObject:
   m_TagString: Damagable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5521114836677079839
 Transform:
@@ -109,7 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthScale: 75
   HUD: {fileID: 1737853883003897344}
-  HitEffect: 0
+  HurtSound: {fileID: 0}
+  DeathSound: {fileID: 0}
 --- !u!114 &5521114836677079837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +521,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5521114836677079839}
     m_Modifications:
+    - target: {fileID: 6089122157696873268, guid: 4c7a0659438ef7e419c4d754e065c370,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6089122158693145789, guid: 4c7a0659438ef7e419c4d754e065c370,
         type: 3}
       propertyPath: m_Name

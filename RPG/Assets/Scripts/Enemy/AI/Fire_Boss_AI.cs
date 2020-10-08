@@ -15,6 +15,7 @@ public class Fire_Boss_AI : MonoBehaviour
     Music_Manager MM;
     Animator Anim;
     Effect_Manager EF;
+    Vector3 Startpos;
     float CurrentStage = 0;
     float counter = 0f;
     public float StageTime;
@@ -39,6 +40,7 @@ public class Fire_Boss_AI : MonoBehaviour
         MM = GameObject.FindGameObjectWithTag("Music_Manager").GetComponent<Music_Manager>();
         Anim = GetComponentInChildren<Animator>();
         EF = GameObject.FindGameObjectWithTag("Effect_Manager").GetComponent<Effect_Manager>();
+        Startpos = transform.position;
     }
 
 
@@ -272,5 +274,6 @@ public class Fire_Boss_AI : MonoBehaviour
     void Update()
     {
         SelectAbility();
+        transform.position = Startpos;
     }
 }

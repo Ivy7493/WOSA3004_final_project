@@ -33,6 +33,7 @@ public class Enemy_Health : MonoBehaviour
     AIPath Motor;
     float DeathCounter = 0f;
     bool DeathOn = false;
+    bool DeathSoundPlayed = false;
     void Start()
     {
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
@@ -285,7 +286,12 @@ public class Enemy_Health : MonoBehaviour
             */
             try
             {
-                SM.PlaySound(DeathSound);
+                if(DeathSoundPlayed == false)
+                {
+                    DeathSoundPlayed = true;
+                    SM.PlaySound(DeathSound);
+                }
+               
             }
             catch
             {

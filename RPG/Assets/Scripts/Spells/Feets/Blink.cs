@@ -62,6 +62,7 @@ public class Blink : MonoBehaviour
         GetComponent<SpriteRenderer>().material.SetVector("_Direction", DashDirection);
         GetComponent<SpriteRenderer>().material.SetFloat("_Speed", 3);
         RM.SetGodModeOn();
+        Player.layer = 17;
      
     }
 
@@ -74,6 +75,7 @@ public class Blink : MonoBehaviour
             RB.velocity = Vector2.zero;
             PlayerGraphic.transform.localPosition = Vector3.zero;
             RM.SetGodModeOff();
+            Player.layer = 10;
             Destroy(gameObject);
         }
     }

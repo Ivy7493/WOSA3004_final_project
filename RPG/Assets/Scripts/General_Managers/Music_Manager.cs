@@ -16,9 +16,11 @@ public class Music_Manager : MonoBehaviour
     public AudioClip IceAreaAmbient2;
 
     AudioSource AS;
+    Sound_Manager SM;
     void Start()
     {
         AS = GetComponent<AudioSource>();
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
     }
 
     public void PlayStartingArea()
@@ -29,6 +31,24 @@ public class Music_Manager : MonoBehaviour
             AS.Play();
         }
        
+    }
+
+    void AmbientSound()
+    {
+        if(AS.clip == IceBoss || AS.clip == IceArea)
+        {
+            float Time = IceAreaAmbient.length;
+            StartCoroutine(PlaySoundOnDelay(IceAreaAmbient, Time));
+            Time = IceAreaAmbient2.length;
+            StartCoroutine(PlaySoundOnDelay(IceAreaAmbient2, Time));
+        }
+    }
+
+    IEnumerator PlaySoundOnDelay(AudioClip _clip, float time)
+    {
+        yield return new WaitForSeconds(time);
+        SM.PlaySound(_clip);
+
     }
 
     public void PlayIceArea()

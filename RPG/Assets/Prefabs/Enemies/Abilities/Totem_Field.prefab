@@ -55,7 +55,7 @@ MonoBehaviour:
   - {fileID: 6861734959663749417}
   - {fileID: 6861734959279167099}
   - {fileID: 6861734960076270591}
-  DamageScale: 3
+  DamageScale: 4
 --- !u!120 &8897152982680819230
 LineRenderer:
   m_ObjectHideFlags: 0

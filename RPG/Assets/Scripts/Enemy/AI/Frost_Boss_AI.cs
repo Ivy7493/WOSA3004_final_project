@@ -17,6 +17,7 @@ public class Frost_Boss_AI : MonoBehaviour
     public GameObject[] Location;
     public GameObject TotemCenter;
     GameObject CurrentTotem;
+    Vector3 StartPos;
     public float StageTime;
     public float EngageRange;
     float CurrentStage = 1f;
@@ -30,6 +31,7 @@ public class Frost_Boss_AI : MonoBehaviour
         Anim = GetComponentInChildren<Animator>();
         status = GM.ReturnBossStatus("FROST");
         CameraStart = Camera.main.orthographicSize;
+        StartPos = transform.position;
         CheckBossStatus();
 
 
@@ -133,5 +135,6 @@ public class Frost_Boss_AI : MonoBehaviour
     void Update()
     {
         SelectAbility();
+        transform.position = StartPos;
     }
 }

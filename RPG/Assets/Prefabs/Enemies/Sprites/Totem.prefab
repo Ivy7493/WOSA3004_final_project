@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 2612315283488140660}
   - component: {fileID: 2612315283488140661}
   - component: {fileID: 2612315283488140662}
-  - component: {fileID: 2612315283488140663}
   m_Layer: 11
   m_Name: Totem
   m_TagString: Damagable
@@ -112,21 +111,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.3498383, y: 3.6512985}
   m_EdgeRadius: 0
---- !u!114 &2612315283488140663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2612315283488140648}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthScale: 0.1
-  HUD: {fileID: 0}
-  HitEffect: 0
 --- !u!1001 &2612315282856375074
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class Game_Manager : MonoBehaviour
     float KeyCount = 0;
     float FirstBoss = 0;
     float FrostBoss = 0f;
+    public GameObject DefaultSpawn;
+    public GameObject CenteralSpawn;
     private void Awake()
     {
         LoadGameData();
@@ -81,10 +83,30 @@ public class Game_Manager : MonoBehaviour
     }
 
 
+    bool CheckSpawn()
+    {
+        if(PlayerPrefs.GetFloat("CenterSpawn",0) == 1f){
+            return true;
+        }
+        return false;
+    }
+
+
     //When the player dies the game manager looks for the closest respawn point and teleports the player to that resapwn point
     // it also calls the UI Death effect
     public void Death()
     {
+        if(CheckSpawn() == true)
+        {
+            UIM.CallDeathEffect();
+            Player.transform.position = CenteralSpawn.transform.position;
+        }else if(CheckSpawn() == false)
+        {
+            UIM.CallDeathEffect();
+            Player.transform.position = DefaultSpawn.transform.position;
+        }
+      
+        /*
         GameObject[] SpawnPoints = GameObject.FindGameObjectsWithTag("RespawnPoint");
         float ShortDistance = 1000f;
         int SavedIndex = 0;
@@ -101,11 +123,20 @@ public class Game_Manager : MonoBehaviour
         }
         UIM.CallDeathEffect();
         Player.transform.position = SpawnPoints[SavedIndex].transform.position;
+        */
+    }
+
+    void SetSpawnCenter()
+    {
+        if(Vector3.Distance(Player.transform.position,CenteralSpawn.transform.position) < 3 && PlayerPrefs.GetFloat("CenterSpawn",0f) == 0f)
+        {
+            PlayerPrefs.SetFloat("CenterSpawn", 1f);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SetSpawnCenter();
     }
 }

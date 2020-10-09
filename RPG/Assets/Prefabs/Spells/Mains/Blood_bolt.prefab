@@ -153,7 +153,7 @@ MonoBehaviour:
   Speed: 10
   ExplosionRange: 10
   DamageScale: 8
-  SelfDamageScale: 1.25
+  SelfDamageScale: 1
 --- !u!114 &9051032994593478307
 MonoBehaviour:
   m_ObjectHideFlags: 0

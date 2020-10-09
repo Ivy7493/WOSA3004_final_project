@@ -4981,7 +4981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf9bc5cff70dd1459dbec134aa3b296, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DamageScale: 3.5
+  DamageScale: 3
   Speed: 40
   Range: 20
   KnockBack: 60

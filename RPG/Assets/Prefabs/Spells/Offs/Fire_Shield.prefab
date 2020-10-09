@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65b095f2e16496e41b078e1367be2be1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Mana Shield
+  Name: Fire Shield
   Icon: {fileID: 21300000, guid: 27754d0fbf969b14d9ade1613df2e24b, type: 3}
 --- !u!114 &2906368874781742931
 MonoBehaviour:
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 6
+  ManaScale: 5
 --- !u!114 &2906368874781742932
 MonoBehaviour:
   m_ObjectHideFlags: 0

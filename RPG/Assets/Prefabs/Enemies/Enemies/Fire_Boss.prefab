@@ -422,6 +422,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alpha Fire Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 4510499777439243537, guid: 322d894ee6b7e7e49b88dedd81c43116,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 4510499777439243566, guid: 322d894ee6b7e7e49b88dedd81c43116,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.9
+      objectReference: {fileID: 0}
     - target: {fileID: 5048485865167859427, guid: 322d894ee6b7e7e49b88dedd81c43116,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -521,6 +531,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.09885936
+      objectReference: {fileID: 0}
+    - target: {fileID: 8674956851603244453, guid: 322d894ee6b7e7e49b88dedd81c43116,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 322d894ee6b7e7e49b88dedd81c43116, type: 3}

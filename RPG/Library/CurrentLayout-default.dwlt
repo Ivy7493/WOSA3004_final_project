@@ -115,7 +115,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 25693
+  controlID: 2796
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 14003, y: 14042}
   vertical: 1
-  controlID: 25694
+  controlID: 2797
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 25695
+  controlID: 2798
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_MinSize: {x: 333, y: 271}
   m_MaxSize: {x: 14003, y: 10021}
   vertical: 0
-  controlID: 25799
+  controlID: 2935
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -445,10 +445,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c5a0000
+      scrollPos: {x: 0, y: 334}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 2afbffff
+      m_ExpandedIDs: f491ffffd8a4ffff86aeffffc0aeffff126f0000e0740000187c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -508,9 +508,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 252.66939, y: 97.00237, z: -390.08588}
+    m_Target: {x: 172.45813, y: -150.25931, z: -408.10938}
     speed: 2
-    m_Value: {x: 250.1037, y: 96.76527, z: -389.3575}
+    m_Value: {x: 172.45813, y: -150.25931, z: -408.10938}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -560,9 +560,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 169.07039
+    m_Target: 83.33442
     speed: 2
-    m_Value: 161.78984
+    m_Value: 79.74586
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -652,20 +652,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies/Enemies
+    - Assets/Animations/Protagonist Directions
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies/Enemies
+  - Assets/Animations/Protagonist Directions
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Wits\Third Year\WSOA3004\Game_design_repo\WOSA3004_final_project\RPG
+  m_LastProjectPath: D:\2020\GD Github\WOSA3004_final_project (rep)\RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 106}
-    m_SelectedIDs: 3c780000
-    m_LastClickedID: 30780
-    m_ExpandedIDs: 0000000040430000fe77000000780000027800000478000006780000087800000a7800000c7800002278000000ca9a3b
+    scrollPos: {x: 0, y: 170}
+    m_SelectedIDs: 7e8f0000
+    m_LastClickedID: 36734
+    m_ExpandedIDs: 00000000fc450000a48d0000a68d0000a88d0000aa8d0000ac8d0000ae8d0000b08d0000b28d0000c48d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,7 +693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fe77000000780000027800000478000006780000087800000a7800000c78000000ca9a3b
+    m_ExpandedIDs: 00000000fc450000a48d0000a68d0000a88d0000aa8d0000ac8d0000ae8d0000b08d0000b28d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -720,8 +720,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000a2470000d08b0000de4c00008c5800006a5a0000f07f0000fa7f00003e4500009c82000028940000349400009a9d0000000000005a520000
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000a2470000d08b0000de4c00008c5800006a5a0000f07f0000fa7f00003e4500009c82000028940000349400009a9d0000000000005a52000076900000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -436836
+  m_LastSelectedObjectID: 39728
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

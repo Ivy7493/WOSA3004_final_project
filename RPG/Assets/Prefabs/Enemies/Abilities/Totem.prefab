@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DamageScale: 0.4
   TickRate: 0.25
-  Duration: 6
+  Duration: 4
   AttackRange: 10
   SlowPercent: 0.3
   SlowDuration: 2

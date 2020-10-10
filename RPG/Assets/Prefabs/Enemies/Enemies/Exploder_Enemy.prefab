@@ -202,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EngageRange: 20
   MaxRange: 45
-  DamageScale: 5
+  DamageScale: 6
 --- !u!114 &7234259118866252233
 MonoBehaviour:
   m_ObjectHideFlags: 0

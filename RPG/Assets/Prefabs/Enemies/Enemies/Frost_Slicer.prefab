@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicFind: 30
+  MagicFind: 45
 --- !u!114 &4050050134256623162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,8 +224,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 30
   EngageRange: 15
-  AbilityFrequency: 0.8
-  AttackRangeMax: 18
+  AbilityFrequency: 1
+  AttackRangeMax: 15
   AttackSpell: {fileID: 6067395156520122242, guid: 16638413cf720484fbcb0bcc4df81b04,
     type: 3}
 --- !u!114 &-2989137947898186658

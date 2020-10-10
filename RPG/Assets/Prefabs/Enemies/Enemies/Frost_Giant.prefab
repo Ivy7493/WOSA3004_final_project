@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffed45b9d41a9bb478d3c9cc8d547d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ExpRewardScale: 7
+  ExpRewardScale: 25
   BaseExp: 10
 --- !u!114 &4224060927207316569
 MonoBehaviour:
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 100
+  HealthScale: 85
   HUD: {fileID: 7934789900005433685}
   HurtSound: {fileID: 8300000, guid: f270624371adcb047b01607414427146, type: 3}
   DeathSound: {fileID: 8300000, guid: fb932b9e1c18f5b49bfa19345f1139c3, type: 3}
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b9f4b6ea6c21f44bfeb238c5a135fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MagicFind: 40
+  MagicFind: 70
 --- !u!114 &4224060927207316570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   DamageScale: 5
   EngageSpeedIncr: 6
   EngageAttacRateIncr: 4
-  EnrageThresold: 0.4
+  EnrageThresold: 0.3
   EnrageHealthLose: 0.015
 --- !u!50 &4224060927207316551
 Rigidbody2D:

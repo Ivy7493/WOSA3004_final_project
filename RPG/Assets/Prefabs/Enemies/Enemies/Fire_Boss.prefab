@@ -269,7 +269,7 @@ MonoBehaviour:
   EngageRange: 35
   CameraZoom: 15
   SwipeRange: 10
-  SwipeDamageScale: 35
+  SwipeDamageScale: 40
   NumOfFireBall: 5
 --- !u!114 &4903499149294156905
 MonoBehaviour:
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 300
+  HealthScale: 2000
   HUD: {fileID: 792138804445430813}
   HurtSound: {fileID: 0}
   DeathSound: {fileID: 0}

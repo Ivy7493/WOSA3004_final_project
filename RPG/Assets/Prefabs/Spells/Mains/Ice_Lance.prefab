@@ -49,11 +49,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f67a092b6e7084b956b7a754b5e57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Range: 25
-  Speed: 30
+  Range: 16
+  Speed: 18
   SlowPercent: 0.75
-  SlowDuration: 3
-  DamageScale: 6
+  SlowDuration: 1
+  DamageScale: 3
 --- !u!114 &6372697014322973411
 MonoBehaviour:
   m_ObjectHideFlags: 0

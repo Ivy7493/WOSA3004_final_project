@@ -150,10 +150,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 15
-  Speed: 10
-  ExplosionRange: 10
+  Speed: 12
+  ExplosionRange: 6
   DamageScale: 8
-  SelfDamageScale: 1
+  SelfDamageScale: 2
 --- !u!114 &9051032994593478307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +201,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9051032994593478310}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 475843b2e9d85bb4498dde8e3864f1a4, type: 3}

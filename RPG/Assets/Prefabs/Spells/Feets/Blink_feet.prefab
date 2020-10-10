@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BlinkSound: {fileID: 8300000, guid: 0b931adb8498c4349a264ffc61580006, type: 3}
-  Distance: 10
+  Distance: 8
   Speed: 20
   DashTime: 0.3
   BlinkEffect: {fileID: 2100000, guid: 908b7bed920999c4582fd28162e9c9ce, type: 2}

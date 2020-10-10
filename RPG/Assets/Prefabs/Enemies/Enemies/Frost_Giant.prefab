@@ -99,9 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxRange: 20
   EngageRange: 10
-  AttackFrequency: 1.5
-  AttackRange: 4
-  DamageScale: 5
+  AttackFrequency: 1
+  AttackRange: 5
+  DamageScale: 10
   EngageSpeedIncr: 6
   EngageAttacRateIncr: 4
   EnrageThresold: 0.3

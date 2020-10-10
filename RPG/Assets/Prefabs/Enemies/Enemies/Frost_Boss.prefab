@@ -189,7 +189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2d5f9e59022336489e8b9c4ff076207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthScale: 75
+  HealthScale: 2000
   HUD: {fileID: 1737853883003897344}
   HurtSound: {fileID: 8300000, guid: af5405e5d0720a241b86176f29f060a8, type: 3}
   DeathSound: {fileID: 0}

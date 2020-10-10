@@ -78,11 +78,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Range: 12
-  DamageScale: 1.25
+  DamageScale: 1.5
   TickRate: 0.35
   Duration: 2.5
   SlowDuration: 2
-  Slow: 0.4
+  Slow: 0.6
 --- !u!212 &1946706513414914340
 SpriteRenderer:
   m_ObjectHideFlags: 0

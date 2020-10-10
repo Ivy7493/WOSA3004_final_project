@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 3
+  ManaScale: 4
 --- !u!114 &3972411313567099464
 MonoBehaviour:
   m_ObjectHideFlags: 0

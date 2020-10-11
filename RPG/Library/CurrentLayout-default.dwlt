@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 18004, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 18001, y: 14042}
   vertical: 0
-  controlID: 2796
+  controlID: 2424
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,9 +138,9 @@ MonoBehaviour:
     width: 1184
     height: 731
   m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 14003, y: 14042}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 1
-  controlID: 2797
+  controlID: 2430
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 2798
+  controlID: 2431
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -241,10 +241,10 @@ MonoBehaviour:
     y: 460
     width: 1184
     height: 271
-  m_MinSize: {x: 333, y: 271}
-  m_MaxSize: {x: 14003, y: 10021}
+  m_MinSize: {x: 331, y: 271}
+  m_MaxSize: {x: 14001, y: 10021}
   vertical: 0
-  controlID: 2935
+  controlID: 2392
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -445,10 +445,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 334}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: f491ffffd8a4ffff86aeffffc0aeffff126f0000e0740000187c0000
+      scrollPos: {x: 0, y: 174}
+      m_SelectedIDs: 4295ffff
+      m_LastClickedID: -27326
+      m_ExpandedIDs: 04acffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -508,9 +508,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 172.45813, y: -150.25931, z: -408.10938}
+    m_Target: {x: 179.78523, y: -118.82446, z: -5.040625}
     speed: 2
-    m_Value: {x: 172.45813, y: -150.25931, z: -408.10938}
+    m_Value: {x: 179.78523, y: -118.82446, z: -5.040625}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -560,9 +560,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 83.33442
+    m_Target: 41.36097
     speed: 2
-    m_Value: 79.74586
+    m_Value: 39.579876
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -652,20 +652,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/Protagonist Directions
+    - Assets/Scripts/Misc
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations/Protagonist Directions
+  - Assets/Scripts/Misc
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\2020\GD Github\WOSA3004_final_project (rep)\RPG
+  m_LastProjectPath: D:\Wits\Third Year\WSOA3004\Game_design_repo\WOSA3004_final_project\RPG
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 170}
-    m_SelectedIDs: 7e8f0000
-    m_LastClickedID: 36734
-    m_ExpandedIDs: 00000000fc450000a48d0000a68d0000a88d0000aa8d0000ac8d0000ae8d0000b08d0000b28d0000c48d000000ca9a3b
+    scrollPos: {x: 0, y: 186}
+    m_SelectedIDs: 44960000
+    m_LastClickedID: 38468
+    m_ExpandedIDs: 0000000014460000c08d0000c28d0000c48d0000c68d0000c88d0000ca8d0000cc8d0000ce8d0000f88d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -693,7 +693,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000fc450000a48d0000a68d0000a88d0000aa8d0000ac8d0000ae8d0000b08d0000b28d000000ca9a3b
+    m_ExpandedIDs: 00000000c08d0000c28d0000c48d0000c68d0000c88d0000ca8d0000cc8d0000ce8d0000f88d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -745,7 +745,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 4}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 187
@@ -803,7 +803,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 39728
+  m_LastSelectedObjectID: -27326
 --- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52

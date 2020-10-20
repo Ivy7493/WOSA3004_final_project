@@ -8,6 +8,7 @@ public class Fire_Boss_AI : MonoBehaviour
     public GameObject[] FireLocations;
     public GameObject FireBombs;
     public GameObject Indicator;
+    public GameObject BasicIndicator;
     public GameObject FireBall;
     GameObject Player;
     Game_Manager GM;
@@ -181,6 +182,7 @@ public class Fire_Boss_AI : MonoBehaviour
         if(Vector3.Distance(Player.transform.position, transform.position) < SwipeRange)
         {
             float Damage = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel() * SwipeDamageScale;
+            Player.GetComponent<Player_motor>().SetPlayerStun(1f);
             GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
         }
     }
@@ -252,6 +254,8 @@ public class Fire_Boss_AI : MonoBehaviour
                     case 1:
                         Anim.SetTrigger("Smash");
                         //Swipe();
+                        GameObject temp = Instantiate(BasicIndicator,new Vector3(transform.position.x,transform.position.y - 2f, 0f), Quaternion.identity);
+                        temp.GetComponent<Basic_Indicator>().SetIndicator(1f, SwipeRange);
                         StartCoroutine(ExecuteAfterTime(1, "Smash"));
                         CurrentStage = 2f;
                         

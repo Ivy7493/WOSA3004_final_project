@@ -12,13 +12,17 @@ public class Wind_Shear : MonoBehaviour
     Vector3 StartPos;
     Vector3 Direction;
     GameObject Player;
+    Sound_Manager SM;
     public float KnockBack;
+    public AudioClip Sound;
 
     float Damage;
    
     void Start()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
+        SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
+        SM.PlaySound(Sound);
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();

@@ -254,10 +254,14 @@ public class Ability_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        UseMain();
-        UseHead();
-        UseOff();
-        UseFeet();
+        if(Player.GetComponent<Player_motor>().ReturnStunStatus() == false)
+        {
+            UseMain();
+            UseHead();
+            UseOff();
+            UseFeet();
+        }
+       
         ManaCheck();
         GCDCounter();
     }

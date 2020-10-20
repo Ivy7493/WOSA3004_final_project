@@ -21,7 +21,7 @@ public class UI_Enemy_HUD : MonoBehaviour
           SpriteRenderer SR = BarSprite.GetComponent<SpriteRenderer>();
            if(SR.color == Startcol)
             {
-                SR.color = Color.white;
+                SR.color = Color.clear;
             }else if(SR.color != Startcol)
             {
                 SR.color = Startcol;

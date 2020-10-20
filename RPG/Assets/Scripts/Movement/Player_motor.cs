@@ -16,17 +16,20 @@ public class Player_motor : MonoBehaviour
     GameObject CurrentTransform;
     Vector3 mousePosition;
     Vector2 direction;
+    UI_Manager UIM;
     public GameObject Mouse_Effect;
     public GameObject DefaultSpawn;
     bool Slowed = false;
     bool blink = false;
+    bool Stunned = false;
     private void Awake()
     {
         LoadPlayerPosition();
     }
     void Start()
     {
-        RB = GetComponent<Rigidbody2D>();  
+        RB = GetComponent<Rigidbody2D>();
+        UIM = GameObject.FindGameObjectWithTag("UI_Manager").GetComponent<UI_Manager>();
         DefaultSpeed = _speed;
     }
 
@@ -37,10 +40,37 @@ public class Player_motor : MonoBehaviour
             Slowed = true;
             float ActualSlow = 1 - SlowPercent;
             _speed = _speed * (ActualSlow);
+            UIM.SpawnStatusText(transform.position, "Slowed");
             StartCoroutine(Slow(time));
         }
        
     }
+
+
+    //Stuff to do with stunning a player
+    public void SetPlayerStun(float time)
+    {
+        if(Stunned == false)
+        {
+            Stunned = true;
+            UIM.SpawnStatusText(transform.position, "Stunned");
+            StartCoroutine(Stun(time));
+        }
+    }
+
+    IEnumerator Stun(float time)
+    {
+        yield return new WaitForSeconds(time);
+        Stunned = false;
+    }
+
+    public bool ReturnStunStatus()
+    {
+        return Stunned;
+    }
+
+    //end of stun section
+    ////////////////////
 
     public void StartBlink()
     {
@@ -156,7 +186,11 @@ public class Player_motor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         Motion();
+        if(Stunned == false)
+        {
+            Motion();
+        }
+        
        // ClickMotion();
     }
 }

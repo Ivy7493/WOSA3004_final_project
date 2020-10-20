@@ -11,6 +11,9 @@ public class Slime_AI : MonoBehaviour
     public float AttackSpeed;
     public float DamageScale;
     public float AttackRange;
+    public float ExplosionRange = 5f;
+    public float ExplosionSlow = 1f;
+    public float SlowDuration = 2f;
     float counter = 0f;
     float Damage;
     GameObject Player;
@@ -110,6 +113,13 @@ public class Slime_AI : MonoBehaviour
             GameObject Slime1 = Instantiate(Slime, new Vector3(transform.position.x + Randx,transform.position.y + RandY,0f), Quaternion.identity);
             GameObject Slime2 = Instantiate(Slime, new Vector3(transform.position.x - Randx, transform.position.y - RandY, 0f), Quaternion.identity);
            
+        }
+        if(EH.ReturnCurrentHealth() <= 0)
+        {
+            if(Vector3.Distance(Player.transform.position,transform.position) <= ExplosionRange)
+            {
+                Player.GetComponent<Player_motor>().SetPlayerSlow(ExplosionSlow, SlowDuration);
+            }
         }
     }
 

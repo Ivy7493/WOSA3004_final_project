@@ -102,6 +102,7 @@ public class Exploder_AI : MonoBehaviour
                 if (GetComponent<Enemy_Status>().ReturnStunStatus() == false)
                 {
                     GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>().Damage(Damage);
+                    Player.GetComponent<Player_motor>().SetPlayerStun(1f);
                     Destroy(gameObject);
                 }
             }

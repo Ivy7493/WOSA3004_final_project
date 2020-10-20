@@ -16,12 +16,15 @@ public class Music_Manager : MonoBehaviour
 
     bool IceAreaMusic = false;
 
+    string CurrentClip;
+
     AudioSource AS;
     Sound_Manager SM;
     void Start()
     {
         AS = GetComponent<AudioSource>();
         SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
+        DetermineMusic(CurrentClip);
     }
 
     public void PlayStartingArea()
@@ -30,6 +33,8 @@ public class Music_Manager : MonoBehaviour
         {
             AS.clip = StartingArea;
             AS.Play();
+            CurrentClip = "StartingArea";
+            
         }
        
     }
@@ -52,14 +57,17 @@ public class Music_Manager : MonoBehaviour
                 case true:
                     AS.clip = IceArea;
                     AS.Play();
+                    
                     IceAreaMusic = false;
                     break;
                 case false:
                     AS.clip = IceArea2;
                     AS.Play();
+                   
                     IceAreaMusic = true;
                     break;
             }
+            CurrentClip = "IceArea";
         }
     }
 
@@ -70,6 +78,7 @@ public class Music_Manager : MonoBehaviour
         if(AS.clip != IceBoss)
         {
             AS.clip = IceBoss;
+            CurrentClip = "IceBoss";
             AS.Play();
         }
     }
@@ -79,6 +88,7 @@ public class Music_Manager : MonoBehaviour
         if(AS.clip != FireArea)
         {
             AS.clip = FireArea;
+            CurrentClip = "FireArea";
             AS.Play();
         }
        
@@ -89,15 +99,53 @@ public class Music_Manager : MonoBehaviour
         if(AS.clip != BossFight)
         {
             AS.clip = BossFight;
+            CurrentClip = "BossFight";
             AS.Play();
         }
        
     }
 
-    public void DetermineMusic()
+    void SaveMusic()
     {
+      
+        
+    }
+
+    public void DetermineMusic(string Music)
+    {
+        switch (Music)
+        {
+            case "StartingArea":
+                PlayStartingArea();
+                break;
+            case "BossFight":
+                PlayBossFight();
+                break;
+            case "FireArea":
+                PlayFireArea();
+                break;
+            case "IceBoss":
+                PlayIceBoss();
+                break;
+            case "IceArea":
+                PlayIceArea();
+                break;
+        }
+    }
+
+    private void Awake()
+    {
+        CurrentClip = PlayerPrefs.GetString("CurrentMusic", "StartingArea");
+       
 
     }
+
+    private void OnDestroy()
+    {
+        PlayerPrefs.SetString("CurrentMusic", CurrentClip);
+    }
+
+
 
     // Update is called once per frame
     void Update()

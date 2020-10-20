@@ -263,13 +263,15 @@ MonoBehaviour:
     type: 3}
   Indicator: {fileID: 1250472483142928569, guid: 7aa5147675e82d34db7d66d5b45b7e04,
     type: 3}
+  BasicIndicator: {fileID: 217529229572912797, guid: 9228450044ea1d141b4f705601bcaabd,
+    type: 3}
   FireBall: {fileID: 8602010791685454989, guid: b4ef1716dcf4c7c42900194679d50ca0,
     type: 3}
   StageTime: 2
   EngageRange: 35
   CameraZoom: 15
-  SwipeRange: 10
-  SwipeDamageScale: 40
+  SwipeRange: 20
+  SwipeDamageScale: 10
   NumOfFireBall: 5
 --- !u!114 &4903499149294156905
 MonoBehaviour:

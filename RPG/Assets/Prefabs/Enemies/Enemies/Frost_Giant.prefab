@@ -100,8 +100,8 @@ MonoBehaviour:
   MaxRange: 20
   EngageRange: 10
   AttackFrequency: 1
-  AttackRange: 5
-  DamageScale: 10
+  AttackRange: 7.5
+  DamageScale: 6
   EngageSpeedIncr: 6
   EngageAttacRateIncr: 4
   EnrageThresold: 0.3
@@ -289,17 +289,17 @@ PrefabInstance:
     - target: {fileID: 2474781247204329484, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: 0.45640445
+      value: 0.45640755
       objectReference: {fileID: 0}
     - target: {fileID: 2474781247204329484, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.05104351
+      value: -0.051045418
       objectReference: {fileID: 0}
     - target: {fileID: 2474781247204329484, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 3.1264052
+      value: 3.126408
       objectReference: {fileID: 0}
     - target: {fileID: 4502447573567916338, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
@@ -359,22 +359,22 @@ PrefabInstance:
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -3.1251202
+      value: -3.1251068
       objectReference: {fileID: 0}
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 2.4564662
+      value: 2.4564629
       objectReference: {fileID: 0}
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: -0.048789978
+      value: -0.04878974
       objectReference: {fileID: 0}
     - target: {fileID: 8379908069260051785, guid: ed8fa6fec997b8c4bb5f9e2ce545005b,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 3.1115303
+      value: 3.11153
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed8fa6fec997b8c4bb5f9e2ce545005b, type: 3}

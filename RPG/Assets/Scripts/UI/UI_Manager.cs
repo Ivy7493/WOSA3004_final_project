@@ -163,7 +163,8 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateExpBar(float _percent)
     {
-        ExpBar.GetComponent<Slider>().value = _percent;
+     //   ExpBar.GetComponent<Slider>().value = _percent;
+        ExpBar.GetComponent<Image>().fillAmount = _percent/100f;
         ExpVal_txt.GetComponent<TextMeshProUGUI>().text = (int)EM.ReturnCurrentEXP() + "/" + (int)EM.ReturnMaxEXPforLevel();
     }
     /// <summary>
@@ -353,7 +354,8 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateHealth(float _health)
     {
-        HealthBar.GetComponent<Slider>().value = _health;
+      //  HealthBar.GetComponent<Slider>().value = _health;
+        HealthBar.GetComponent<Image>().fillAmount = _health;
         HPVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnCurrentHP() + "/" + (int)RM.returnMaxHP();
 
 
@@ -361,7 +363,8 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateMana(float _Mana)
     {
-        ManaBar.GetComponent<Slider>().value = _Mana;
+        //ManaBar.GetComponent<Slider>().value = _Mana;
+        ManaBar.GetComponent<Image>().fillAmount = _Mana;
         ManaVal_txt.GetComponent<TextMeshProUGUI>().text = (int)RM.ReturnMana() + "/" + +(int)RM.returnMaxMP();
     }
 

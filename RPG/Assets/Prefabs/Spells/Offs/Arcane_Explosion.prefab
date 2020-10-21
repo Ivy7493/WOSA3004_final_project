@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03d4fba989abc2642a255135e0b5c9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaScale: 4
+  ManaScale: 3
 --- !u!114 &3972411313567099464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Range: 8
   Speed: 1.25
-  DamageScale: 4
+  DamageScale: 3
   Sound: {fileID: 8300000, guid: 971657ace1be16346a8e34efd078f84c, type: 3}
 --- !u!212 &485284724696468206
 SpriteRenderer:

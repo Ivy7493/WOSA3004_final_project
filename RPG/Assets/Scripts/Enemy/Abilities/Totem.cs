@@ -25,7 +25,7 @@ public class Totem : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player");
         RM = GameObject.FindGameObjectWithTag("Resource_Manager").GetComponent<Resource_Manager>();
         LR = GetComponent<LineRenderer>();
-        LR.material.SetColor("_color", Color.blue);
+        LR.material.SetColor("_color", Color.grey);
         InvokeRepeating("Spell", 0f, TickRate);
         StartColor = LR.startColor;
         EndColor = LR.endColor;

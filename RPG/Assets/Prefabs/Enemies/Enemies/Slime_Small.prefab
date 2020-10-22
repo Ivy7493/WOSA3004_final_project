@@ -91,6 +91,9 @@ MonoBehaviour:
   AttackSpeed: 0.5
   DamageScale: 2
   AttackRange: 3
+  ExplosionRange: 5
+  ExplosionSlow: 0.45
+  SlowDuration: 2
   Slime: {fileID: 735037684219438122}
   Recursion: 0
 --- !u!50 &735037684219438120

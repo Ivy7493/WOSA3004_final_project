@@ -10,6 +10,12 @@ public class Staff_Manager : MonoBehaviour
     public GameObject Off;
     public GameObject Lamb;
 
+    public Material fireMat;
+    public Material arcaneMat;
+    public Material bloodMat;
+    public Material frostMat;
+    public Material defaultMat;
+
     string CurrentHead;
     string CurrentMain;
     string CurrentOff;
@@ -37,22 +43,27 @@ public class Staff_Manager : MonoBehaviour
             switch (CurrentHead)
             {
                 case "Fire":
-                    Lamb.GetComponent<SpriteRenderer>().color = FireColor;
+                    Lamb.GetComponent<SpriteRenderer>().color = Color.white;
+                    Lamb.GetComponent<SpriteRenderer>().material = fireMat;
                     break;
                 case "Arcane":
-                    Lamb.GetComponent<SpriteRenderer>().color = ArcaneColor;
+                   Lamb.GetComponent<SpriteRenderer>().color = Color.white;
+                    Lamb.GetComponent<SpriteRenderer>().material = arcaneMat;
                     break;
                 case "Frost":
-                    Lamb.GetComponent<SpriteRenderer>().color = FrostColor;
+                   Lamb.GetComponent<SpriteRenderer>().color = Color.white;
+                    Lamb.GetComponent<SpriteRenderer>().material = frostMat;
                     break;
                 case "Blood":
-                    Lamb.GetComponent<SpriteRenderer>().color = BloodColor;
+                    Lamb.GetComponent<SpriteRenderer>().color = Color.white;
+                    Lamb.GetComponent<SpriteRenderer>().material = bloodMat;
                     break;
             }
         }
         else
         {
             Lamb.GetComponent<SpriteRenderer>().color = DefaultColor;
+            Lamb.GetComponent<SpriteRenderer>().material = defaultMat;
         }
     }
 
@@ -103,6 +114,7 @@ public class Staff_Manager : MonoBehaviour
         CurrentHead = PlayerPrefs.GetString("CurrentHead", "Default");
         CurrentMain = PlayerPrefs.GetString("CurrentMain", "Default");
         CurrentOff = PlayerPrefs.GetString("CurrentOff", "Default");
+        defaultMat = Lamb.GetComponent<SpriteRenderer>().material;
     }
 
     // Update is called once per frame

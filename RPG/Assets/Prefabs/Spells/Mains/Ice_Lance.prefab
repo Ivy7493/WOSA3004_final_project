@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 6372697014322973421}
   - component: {fileID: 6372697014322973422}
   - component: {fileID: 1473407707215594247}
+  - component: {fileID: 4700700405584829355}
   m_Layer: 13
   m_Name: Ice_Lance
   m_TagString: Untagged
@@ -614,6 +615,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4700700405584829355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372697014322973409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55c322a8ead3246a7e961ba4b8fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Marker: {fileID: 8469472748552754425, guid: ff785cc8fb3d5764995bc3a0a111cafd, type: 3}
 --- !u!1 &6372697015547916835
 GameObject:
   m_ObjectHideFlags: 0

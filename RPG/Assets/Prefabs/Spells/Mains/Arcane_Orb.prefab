@@ -4931,6 +4931,7 @@ GameObject:
   - component: {fileID: 3795369454528019292}
   - component: {fileID: 3795369454528019293}
   - component: {fileID: 5574187381282717901}
+  - component: {fileID: 4698411066618746362}
   m_Layer: 13
   m_Name: Arcane_Orb
   m_TagString: Untagged
@@ -5088,6 +5089,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slot: Main
+--- !u!114 &4698411066618746362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3795369454528019290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55c322a8ead3246a7e961ba4b8fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Marker: {fileID: 639410448242244427, guid: c010707048cc00b4586cd26422fcbb71, type: 3}
 --- !u!1 &4089008079843847773
 GameObject:
   m_ObjectHideFlags: 0

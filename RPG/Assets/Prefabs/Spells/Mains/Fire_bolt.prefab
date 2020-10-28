@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 1346630116303822239}
   - component: {fileID: 960442303754094268}
   - component: {fileID: 8531109765656575141}
+  - component: {fileID: 2695397765026015792}
   m_Layer: 13
   m_Name: Fire_bolt
   m_TagString: Untagged
@@ -380,3 +381,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2695397765026015792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1346630116303822229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55c322a8ead3246a7e961ba4b8fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Marker: {fileID: 7960802652578546384, guid: 2319b06b494c2af41ab6e19c7633afe8, type: 3}

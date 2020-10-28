@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 9051032994593478308}
   - component: {fileID: 7366132230162335258}
   - component: {fileID: 3235943565820131848}
+  - component: {fileID: -2212044672415564122}
   m_Layer: 13
   m_Name: Blood_bolt
   m_TagString: Untagged
@@ -303,3 +304,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slot: Main
+--- !u!114 &-2212044672415564122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9051032994593478310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55c322a8ead3246a7e961ba4b8fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Marker: {fileID: 8757933390033101363, guid: 93f5a91063e30be49810ff616bbb25fe, type: 3}

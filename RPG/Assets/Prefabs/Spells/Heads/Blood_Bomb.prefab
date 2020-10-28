@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1423831258971103846}
   - component: {fileID: 1423831258971103849}
   - component: {fileID: 5601376567581670060}
+  - component: {fileID: 2548829502013362}
   m_Layer: 0
   m_Name: Blood_Bomb
   m_TagString: Untagged
@@ -131,6 +132,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slot: Head
+--- !u!114 &2548829502013362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1423831258971103850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d55c322a8ead3246a7e961ba4b8fb41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Marker: {fileID: 8757933390033101363, guid: 93f5a91063e30be49810ff616bbb25fe, type: 3}
 --- !u!1 &1784220045544790532
 GameObject:
   m_ObjectHideFlags: 0

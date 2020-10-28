@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4733910606019425177}
   - component: {fileID: 4218794979602525637}
   m_Layer: 0
-  m_Name: Head
+  m_Name: Off
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,8 +99,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5607774144765695536}
   m_Bounds:
-    m_Center: {x: 0.006815985, y: 0.0034968257, z: 0}
-    m_Extent: {x: 0.2168127, y: 0.62184054, z: 0}
+    m_Center: {x: 0.006815508, y: 0.003496766, z: 0}
+    m_Extent: {x: 0.21681271, y: 0.6218406, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1710391166877454526
@@ -437,14 +437,14 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 15
   m_Sprite: {fileID: 1382162733259260358, guid: 069c9d8da82acf141b2ec011ce470752,
     type: 3}
-  m_Color: {r: 0, g: 1, b: 0.83739424, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.93424654, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.81, y: 2.27}
+  m_Size: {x: 0.78, y: 1.13}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -466,8 +466,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5607774144765695536}
   m_Bounds:
-    m_Center: {x: -0.009231508, y: 0.0009887218, z: 0}
-    m_Extent: {x: 0.39864677, y: 1.1350231, z: 0}
+    m_Center: {x: -0.009231955, y: 0.0009883642, z: 0}
+    m_Extent: {x: 0.3986468, y: 1.1350231, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &4441294432215947764
@@ -496,7 +496,7 @@ Transform:
   m_GameObject: {fileID: 4441294432215947764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 16.3, y: -8.4, z: 0}
-  m_LocalScale: {x: 6.0109, y: 6.0109, z: 6.0109}
+  m_LocalScale: {x: 6, y: 6, z: 1}
   m_Children:
   - {fileID: 5607774144765695536}
   - {fileID: 2677681829950486393}
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1002608944031326288}
   - component: {fileID: 1048808337914553963}
   m_Layer: 0
-  m_Name: Mid OFF
+  m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -702,8 +702,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5607774144765695536}
   m_Bounds:
-    m_Center: {x: -0.00075507164, y: -0.00052958727, z: 0}
-    m_Extent: {x: 0.18628734, y: 0.8699065, z: 0}
+    m_Center: {x: -0.0007555485, y: -0.0005297661, z: 0}
+    m_Extent: {x: 0.18628736, y: 0.86990654, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5375452799692395532
@@ -778,7 +778,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 15
   m_Sprite: {fileID: 227227039876235950, guid: 069c9d8da82acf141b2ec011ce470752, type: 3}
-  m_Color: {r: 0, g: 1, b: 0.93424654, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -804,8 +804,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5607774144765695536}
   m_Bounds:
-    m_Center: {x: -0.02679345, y: 0.072164714, z: 0}
-    m_Extent: {x: 0.3086599, y: 0.43271708, z: 0}
+    m_Center: {x: -0.026794136, y: 0.072164506, z: 0}
+    m_Extent: {x: 0.30865994, y: 0.43271714, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6434662800728741523
@@ -861,13 +861,13 @@ MonoBehaviour:
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
+  m_AlphaBlendOnOverlap: 1
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.7341789
+  m_PointLightOuterRadius: 1
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5

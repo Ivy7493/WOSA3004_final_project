@@ -287,8 +287,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 4980567223721338181}
   m_Bounds:
-    m_Center: {x: -0.027250797, y: 0.0008985698, z: 0}
-    m_Extent: {x: 0.25919127, y: 0.38610762, z: 0}
+    m_Center: {x: -0.12468138, y: -0.004945159, z: 0}
+    m_Extent: {x: 0.26409134, y: 0.386833, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1648054450136725275
@@ -397,8 +397,8 @@ MonoBehaviour:
   - {fileID: 1615596806835622616}
   - {fileID: 5138670552357973966}
   m_Bounds:
-    m_Center: {x: -0.022153914, y: -0.0015285611, z: 0}
-    m_Extent: {x: 0.6184403, y: 0.9428257, z: 0}
+    m_Center: {x: -0.018700778, y: -0.0010117292, z: 0}
+    m_Extent: {x: 0.614987, y: 0.9423088, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &1654259678706720732
@@ -884,8 +884,8 @@ MonoBehaviour:
   - {fileID: 2310767274339741600}
   - {fileID: 2540453918869286548}
   m_Bounds:
-    m_Center: {x: 0.08199862, y: 0.93848467, z: 0}
-    m_Extent: {x: 0.2085565, y: 0.35562727, z: 0}
+    m_Center: {x: 0.18696873, y: 0.93326557, z: 0}
+    m_Extent: {x: 0.21215376, y: 0.3523637, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &3913358870368888561
@@ -1033,14 +1033,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4707511576619999629}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99793434, w: 0.06424245}
+  m_LocalRotation: {x: -0, y: -0, z: -0.99964726, w: 0.026558483}
   m_LocalPosition: {x: 0.11112211, y: -0.27650708, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
   - {fileID: 4980567223721338181}
   m_Father: {fileID: 7030620770447147347}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -172.63301}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -176.95601}
 --- !u!1 &4840708252617125886
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,8 +1216,8 @@ MonoBehaviour:
   - {fileID: 2050201744422119215}
   - {fileID: 7030620770447147347}
   m_Bounds:
-    m_Center: {x: -0.004112035, y: -0.010843217, z: 0}
-    m_Extent: {x: 0.36172223, y: 0.75811565, z: 0}
+    m_Center: {x: -0.037190348, y: -0.0036284924, z: 0}
+    m_Extent: {x: 0.32911098, y: 0.75090086, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5406412737197047821
@@ -1560,8 +1560,8 @@ MonoBehaviour:
   - {fileID: 4798140678996242155}
   - {fileID: 4980567223721338181}
   m_Bounds:
-    m_Center: {x: -0.094733685, y: 0.0018959641, z: 0}
-    m_Extent: {x: 0.19288382, y: 0.53791964, z: 0}
+    m_Center: {x: -0.25423077, y: 0.000826478, z: 0}
+    m_Extent: {x: 0.19283691, y: 0.53938234, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &6569947908440443691
@@ -1663,8 +1663,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 5138670552357973966}
   m_Bounds:
-    m_Center: {x: 0.013589472, y: 0.6687901, z: 0}
-    m_Extent: {x: 0.38096648, y: 0.6022048, z: 0}
+    m_Center: {x: 0.056886464, y: 0.66614115, z: 0}
+    m_Extent: {x: 0.35773516, y: 0.6022705, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &7100562751496502349
@@ -1771,7 +1771,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7368458730817320292}
-  m_LocalRotation: {x: -0, y: -0, z: 0.9992491, w: 0.03874561}
+  m_LocalRotation: {x: -0, y: -0, z: 0.9999901, w: 0.004466593}
   m_LocalPosition: {x: 0.10182792, y: 0.2842977, z: 0}
   m_LocalScale: {x: 1.0000001, y: 1.0000001, z: 1}
   m_Children:
@@ -1779,7 +1779,7 @@ Transform:
   - {fileID: 2310767274339741600}
   m_Father: {fileID: 7030620770447147347}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 175.559}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 179.488}
 --- !u!1 &7462456255775721727
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,8 +2131,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 2540453918869286548}
   m_Bounds:
-    m_Center: {x: 0.043803066, y: 0.6064619, z: 0}
-    m_Extent: {x: 0.25679544, y: 0.3968967, z: 0}
+    m_Center: {x: 0.13297954, y: 0.603232, z: 0}
+    m_Extent: {x: 0.26042724, y: 0.39794207, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &9050967429896913980

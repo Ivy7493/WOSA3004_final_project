@@ -13,6 +13,8 @@ public class Flamer_AI : MonoBehaviour
     public float AbilityFrequency;
     public float AttackRange;
     public float DamageScale;
+    public float SuckStrength;
+    public float SuckRange;
     float Damage;
     public GameObject Ability;
     GameObject Player;
@@ -23,6 +25,7 @@ public class Flamer_AI : MonoBehaviour
     Animator Anim;
     Enemy_Status ES;
     float counter;
+    float CurrentAbility = 1f;
     /// <summary>
     ///Start Transform 411
     ///okay so, we need to create an empty game object with a transform attached. That way we can spawn it at the start location of the enemy and have a reference to pass
@@ -54,6 +57,7 @@ public class Flamer_AI : MonoBehaviour
 
         }
 
+
     }
 
    
@@ -83,6 +87,24 @@ public class Flamer_AI : MonoBehaviour
         }
     }
 
+    void SucSuc3000()
+    {
+        if(Vector3.Distance(Player.transform.position,transform.position)< SuckRange)
+        {
+            Vector3 Direction = (transform.position - Player.transform.position).normalized;
+            Player.transform.position += Direction * SuckStrength * Time.deltaTime;
+        }
+    }
+
+    void ExplosiveJump()
+    {
+        Vector3 TempLocation1 = new Vector3(Player.transform.position.x, Player.transform.position.y, 0f);
+        Vector3 TempLocation2 = new Vector3(transform.position.x, transform.position.y, 0f);
+        Vector3 result = (TempLocation2 - TempLocation1).normalized * 1f;
+        result = result + transform.position;
+        Instantiate(Ability, result, Quaternion.identity);
+    }
+
     //Encounter is where the enmies does its moves
     void Encounter()
     {
@@ -92,12 +114,21 @@ public class Flamer_AI : MonoBehaviour
             counter += Time.deltaTime;
             if(counter >= AbilityFrequency)
             {
+                switch (CurrentAbility)
+                {
+                    case 1:
+                        CancelInvoke("SucSuc3000");
+                        ExplosiveJump();
+                        CurrentAbility = 2;
+                        break;
+                    case 2:
+                        Anim.SetTrigger("SUCTION!");
+                        InvokeRepeating("SucSuc3000", 0f, Time.deltaTime);
+                        CurrentAbility = 1f;
+                        break;
+                }
                 counter = 0;
-                Vector3 TempLocation1 = new Vector3(Player.transform.position.x, Player.transform.position.y, 0f);
-                Vector3 TempLocation2 = new Vector3(transform.position.x, transform.position.y, 0f);
-                Vector3 result = (TempLocation2 - TempLocation1).normalized * 1f;
-                result = result + transform.position;
-                Instantiate(Ability, result, Quaternion.identity);
+               
                
                 if (Vector3.Distance(transform.position, Player.transform.position) <= AttackRange)
                 {

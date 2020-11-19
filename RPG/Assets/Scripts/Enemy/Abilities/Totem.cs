@@ -16,6 +16,7 @@ public class Totem : MonoBehaviour
     Resource_Manager RM;
     Player_motor PM;
     LineRenderer LR;
+    Enemy_Health EH;
     float counter = 0;
     Color32 StartColor;
     Color32 EndColor;
@@ -30,6 +31,7 @@ public class Totem : MonoBehaviour
         StartColor = LR.startColor;
         EndColor = LR.endColor;
         PM = Player.GetComponent<Player_motor>();
+        EH = GetComponent<Enemy_Health>();
     }
 
     void Spell()
@@ -41,28 +43,37 @@ public class Totem : MonoBehaviour
     }
 
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("DEDO ON DEDO");
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(Player.transform.position, transform.position) <= AttackRange)
+        if(EH.ReturnCurrentHealth() >= 0)
         {
-            LR.startColor = StartColor;
-            LR.endColor = EndColor;
-            LR.SetPosition(1, new Vector3(transform.position.x, transform.position.y, -1f));
-            LR.SetPosition(0, new Vector3(Player.transform.position.x, Player.transform.position.y, -1));
-            PM.SetPlayerSlow(SlowPercent, SlowDuration);
+            if (Vector3.Distance(Player.transform.position, transform.position) <= AttackRange)
+            {
+                LR.startColor = StartColor;
+                LR.endColor = EndColor;
+                LR.SetPosition(1, new Vector3(transform.position.x, transform.position.y, -1f));
+                LR.SetPosition(0, new Vector3(Player.transform.position.x, Player.transform.position.y, -1));
+                PM.SetPlayerSlow(SlowPercent, SlowDuration);
+            }
+            else
+            {
+                LR.startColor = Color.clear;
+                LR.endColor = Color.clear;
+                LR.SetPosition(1, Vector3.one);
+                LR.SetPosition(0, Vector3.one);
+            }
+            counter += Time.deltaTime;
+            if (counter >= Duration)
+            {
+                Destroy(gameObject);
+            }
         }
-        else
-        {
-            LR.startColor = Color.clear;
-            LR.endColor = Color.clear;
-            LR.SetPosition(1, Vector3.one);
-            LR.SetPosition(0, Vector3.one);
-        }
-        counter += Time.deltaTime;
-        if(counter >= Duration)
-        {
-            Destroy(gameObject);
-        }
+       
     }
 }

@@ -16,11 +16,19 @@ public class Missile : MonoBehaviour
     bool Set = false;
     bool Phase = false;
     Sound_Manager SM;
+    Limit_Manager LM;
     public AudioClip shootSound;
+
+    private void Awake()
+    {
+        LM = GameObject.FindGameObjectWithTag("Limit_Manager").GetComponent<Limit_Manager>();
+        LimitCheck();
+    }
 
     void Start()
     {
         SM = GameObject.FindGameObjectWithTag("Sound_Manager").GetComponent<Sound_Manager>();
+        
         Player = GameObject.FindGameObjectWithTag("Player");
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
@@ -28,6 +36,14 @@ public class Missile : MonoBehaviour
         StartPos = transform.position;
        
        // FixRotation();
+    }
+
+    void LimitCheck()
+    {
+        if(LM.ReturnMissileCount() > 5)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void SetValues(float _damage, float _range, float _speed)

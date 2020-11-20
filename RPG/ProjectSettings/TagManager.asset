@@ -32,6 +32,8 @@ TagManager:
   - Sound_Manager
   - Blink_feet
   - Player_Graphics
+  - Limit_Manager
+  - Missile
   layers:
   - Default
   - TransparentFX

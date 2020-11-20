@@ -353,6 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slot: Off
+  _locationStaff: 0
 --- !u!114 &5059529877105381145
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Ability_Manager : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject StaffLocation;
     GameObject AbilityFeet;
     GameObject AbilityHead;
     GameObject AbilityMain;
@@ -124,7 +125,13 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityMain != null)
             {
-                Instantiate(AbilityMain, Player.transform.position, Quaternion.identity);
+                if(AbilityMain.GetComponent<Slot>().ReturnSpellLocation() == false)
+                {
+                    Instantiate(AbilityMain, Player.transform.position, Quaternion.identity);
+                }else if(AbilityMain.GetComponent<Slot>().ReturnSpellLocation() == true)
+                {
+                    Instantiate(AbilityMain, StaffLocation.transform.position, Quaternion.identity);
+                }
                 CanCast = false;
             }
            
@@ -137,7 +144,14 @@ public class Ability_Manager : MonoBehaviour
         {
             if (AbilityOff != null)
             {
-                Instantiate(AbilityOff, Player.transform.position, Quaternion.identity);
+                if(AbilityOff.GetComponent<Slot>().ReturnSpellLocation() == false)
+                {
+                    Instantiate(AbilityOff, Player.transform.position, Quaternion.identity);
+                }else if(AbilityOff.GetComponent<Slot>().ReturnSpellLocation() == true)
+                {
+                    Instantiate(AbilityOff, StaffLocation.transform.position, Quaternion.identity);
+                }
+               
                 CanCast = false;
             }
            
@@ -150,6 +164,7 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityFeet != null)
             {
+                
                 Instantiate(AbilityFeet, Player.transform.position, Quaternion.identity);
                 CanBlink = false;
             }
@@ -163,7 +178,14 @@ public class Ability_Manager : MonoBehaviour
         {
             if(AbilityHead != null)
             {
-                Instantiate(AbilityHead, Player.transform.position, Quaternion.identity);
+                if(AbilityHead.GetComponent<Slot>().ReturnSpellLocation() == false)
+                {
+                    Instantiate(AbilityHead, Player.transform.position, Quaternion.identity);
+                }else if(AbilityHead.GetComponent<Slot>().ReturnSpellLocation() == true)
+                {
+                    Instantiate(AbilityHead, StaffLocation.transform.position, Quaternion.identity);
+                }
+                
                 CanCast = false;
             }
            

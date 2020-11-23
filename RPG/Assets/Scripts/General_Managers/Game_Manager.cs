@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -74,6 +75,15 @@ public class Game_Manager : MonoBehaviour
        
     }
 
+    void EndGameState()
+    {
+        if(KeyCount >= 2)
+        {
+            PlayerPrefs.DeleteAll();
+            SceneManager.LoadScene(3);
+        }
+    }
+
 
    
     //Just saving data that needs to be saved here
@@ -138,5 +148,6 @@ public class Game_Manager : MonoBehaviour
     void Update()
     {
         SetSpawnCenter();
+        EndGameState();
     }
 }

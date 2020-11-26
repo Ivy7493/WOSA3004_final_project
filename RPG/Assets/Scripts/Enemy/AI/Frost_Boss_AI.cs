@@ -16,6 +16,7 @@ public class Frost_Boss_AI : MonoBehaviour
     public GameObject TotemFieldAbility;
     public GameObject[] Location;
     public GameObject TotemCenter;
+    public GameObject Key;
     GameObject CurrentTotem;
     Vector3 StartPos;
     public float StageTime;
@@ -50,7 +51,7 @@ public class Frost_Boss_AI : MonoBehaviour
     {
         if (EH.ReturnCurrentHealth() <= 0)
         {
-            GM.BossDefeated("FROST");
+            Instantiate(Key, transform.position, Quaternion.identity);
            // MM.PlayFireArea();
            //Destroy(GameObject.FindGameObjectWithTag("FireBoss_SoundPoint"));
         }

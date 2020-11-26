@@ -175,6 +175,7 @@ MonoBehaviour:
   - {fileID: 5521114836951209199}
   - {fileID: 5521114837076841628}
   TotemCenter: {fileID: 5521114838147933331}
+  Key: {fileID: 6135931826984636646, guid: b2a9eb26a5ab9de4b801611f818257e3, type: 3}
   StageTime: 2
   EngageRange: 60
 --- !u!114 &5521114836677079810
@@ -436,7 +437,7 @@ PrefabInstance:
     - target: {fileID: 410922686015056425, guid: e7732d5fee533444ca4ca58584befec8,
         type: 3}
       propertyPath: m_Bounds.m_Center.y
-      value: 0.0018997192
+      value: 0.0017695427
       objectReference: {fileID: 0}
     - target: {fileID: 410922686015056425, guid: e7732d5fee533444ca4ca58584befec8,
         type: 3}
@@ -446,7 +447,7 @@ PrefabInstance:
     - target: {fileID: 410922686015056425, guid: e7732d5fee533444ca4ca58584befec8,
         type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 3.3481007
+      value: 3.3482308
       objectReference: {fileID: 0}
     - target: {fileID: 1137675465232244525, guid: e7732d5fee533444ca4ca58584befec8,
         type: 3}

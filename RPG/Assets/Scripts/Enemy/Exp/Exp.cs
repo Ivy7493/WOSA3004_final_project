@@ -13,8 +13,16 @@ public class Exp : MonoBehaviour
     Experience_Manager EM;
     void Start()
     {
-        EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        try
+        {
+            EM = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>();
+            Player = GameObject.FindGameObjectWithTag("Player");
+        }
+        catch
+        {
+
+        }
+        
         
     }
 

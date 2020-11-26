@@ -10,6 +10,7 @@ public class Fire_Boss_AI : MonoBehaviour
     public GameObject Indicator;
     public GameObject BasicIndicator;
     public GameObject FireBall;
+    public GameObject Key;
     GameObject Player;
     Game_Manager GM;
     Enemy_Health EM;
@@ -61,7 +62,7 @@ public class Fire_Boss_AI : MonoBehaviour
     {
         if(EM.ReturnCurrentHealth() <= 0)
         {
-            GM.BossDefeated("FIRE");
+            Instantiate(Key, transform.position, Quaternion.identity);
             MM.PlayFireArea();
             Destroy(GameObject.FindGameObjectWithTag("FireBoss_SoundPoint"));
            

@@ -1922,6 +1922,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire_Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 1739284155574404020, guid: 3bd6a5df33d0a0545bc50b6b9fcadeb7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1739284155574404023, guid: 3bd6a5df33d0a0545bc50b6b9fcadeb7,
         type: 3}
       propertyPath: m_LocalPosition.x

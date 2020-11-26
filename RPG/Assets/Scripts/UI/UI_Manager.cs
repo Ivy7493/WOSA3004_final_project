@@ -496,5 +496,10 @@ public class UI_Manager : MonoBehaviour
                 PauseGame();
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            ToggleStatMenu();
+        }
     }
 }

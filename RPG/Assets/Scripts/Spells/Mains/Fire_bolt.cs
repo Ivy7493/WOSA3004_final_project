@@ -27,7 +27,7 @@ public class Fire_bolt : MonoBehaviour
         CurrenPos = transform.position;
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = DamageScale * PlayerLevel;
-        Direction = (pos - Player.transform.position).normalized;
+        Direction = (pos - transform.position).normalized;
         FixRotation();
         GetComponentInChildren<SpriteRenderer>().material.SetFloat("_Speed", Speed);
 

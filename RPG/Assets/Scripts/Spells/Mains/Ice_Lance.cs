@@ -28,7 +28,7 @@ public class Ice_Lance : MonoBehaviour
         CurrenPos = transform.position;
         PlayerLevel = GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
         Damage = DamageScale * PlayerLevel;
-        Direction = (pos - Player.transform.position).normalized;
+        Direction = (pos - transform.position).normalized;
         FixRotation();
 
 

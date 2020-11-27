@@ -26,7 +26,7 @@ public class Wind_Shear : MonoBehaviour
         pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pos = new Vector3(pos.x, pos.y, 0f);
         Damage = DamageScale * GameObject.FindGameObjectWithTag("Experience_Manager").GetComponent<Experience_Manager>().ReturnLevel();
-        Direction = (pos - Player.transform.position).normalized;
+        Direction = (pos - transform.position).normalized;
         StartPos = transform.position;
         FixRotation();
         Spell();

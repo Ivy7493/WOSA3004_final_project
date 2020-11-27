@@ -134,7 +134,7 @@ public class Flamer_AI : MonoBehaviour
                 {
                     Damage = DamageScale * EM.ReturnLevel();
                     RM.Damage(Damage);
-                    Anim.SetTrigger("Attack");
+                   // Anim.SetTrigger("Attack");
                     if (AS.isPlaying == false)
                     {
                         AS.Play();
